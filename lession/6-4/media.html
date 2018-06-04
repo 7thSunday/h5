@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Media</title>
+</head>
+<body>
+	<!-- 音频标签 -->
+	<!-- autoplay:自动播放 -->
+	<!-- controls:播放控制器 -->
+	<!-- loop:循环播放 -->
+	<audio src="media/bg.mp3" autoplay="autoplay" controls="controls" loop="loop">
+		<p>你的浏览器过时了</p>
+	</audio>
+
+	<!-- 通过source标签来定义多种格式的音频 -->
+	<!-- 当浏览器不支持第一个格式的音频时，会自动找到下一个音频进行播放，直到播放成功或者提示浏览器过时 -->
+	<audio controls="controls" autoplay>
+		<source src="media/bg.mp3" type="audio/mp3" />
+		<source src="media/bg.ogg" type="audio/ogg" />
+		<source src="media/bg.cda" type="audio/cda" />
+		<p>n你的浏览器过时了</p>
+	</audio>
+
+	<!-- 视频标签 -->
+	<!-- autoplay:自动播放 -->
+	<!-- controls:播放控制器 -->
+	<!-- loop:循环播放 -->
+	<!-- poster:视频封面 -->
+	<!-- muted:s设置视频为静音状态 -->
+	<video src="media/80s.mp4" controls="controls" loop="loop" poster="../5-30/img/city.jpg" muted="">
+		<p>你的浏览器过时了</p>
+	</video>
+
+	<!-- 通过source标签来定义多种格式的视频 -->
+	<!-- 当浏览器不支持第一个格式的视频时，会自动找到下一个视频进行播放，直到播放成功或者提示浏览器过时 -->
+	<video controls="controls">
+		<source src="media/80s.mp4" type="video/mp4" />
+		<source src="media/80s.ogv" type="video/ogv" />
+		<source src="media/bg.wav" type="video/" />
+		<p>n你的浏览器过时了</p>
+	</video>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>form</title>
+</head>
+<body>
+	<form action="" method="post">
+
+		<!-- html5新增的表单元素：
+			type:color
+				 date
+				 datetime
+				 month
+				 week
+				 time
+				 email
+				 range 
+			使用这些元素的时候注意考虑兼容性问题 -->
+
+		<!-- 下拉框分组 -->
+		<select name="" id="">
+			<optgroup label="广东">
+				<option value="guangzhou">广州</option>
+				<option value="shenzhen">深圳</option>
+			</optgroup>
+			<optgroup label="广西">
+				<option value="guilin">桂林</option>
+				<option value="liuzhou">柳州</option>
+			</optgroup>
+		</select><br>
+
+		<!-- 数值字段的滑动条 -->
+		<!-- 默认0到100 -->
+		<!-- min:定义最小值 -->
+		<!-- max:定义最大值 -->
+		<input type="range" name="num" min="10" max="20"><br><br>
+
+		<!-- maxlength:限制文本输入的字数 -->
+		<input type="text" maxlength="10"><br><br>
+
+		<!-- mailto：自动检测本机系统安装的邮箱，如果有会自动打开邮箱，如果没有会提示用户选择邮箱或者无反应 -->
+		<a href="mailto:1066666666@qq.com">到我的qq邮箱</a>
+
+		<a href="tel:16666666666">一键拨号</a>
+
+		<a href="sms:16666666666">一键发送短信</a>
+
+	</form>
+</body>
+</html>

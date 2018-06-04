@@ -13,10 +13,29 @@
 	<!-- align:设置单元格内容的水平对齐方式 -->
 	<!-- valign"设置单元格内容的垂直对齐方式 -->
 
+	<!-- frame:设置table的外边框
+			above:只显示顶部的边框
+			below:只显示底部的边框
+			lhs:只显示左边的边框
+			rhs:只显示右边的边框
+			hsides:只显示上下的边框
+			vsides:只显示所有的边框
+			border:显示所有的边框
+			void:不显示边框 -->
+
+	<!-- rules:设置table的内边框
+			cols:只显示列分割线
+			rows:只显示行分割线
+			none:不显示分割线
+			all:显示所有分割线 -->
+
+	<!-- summary:表格的描述 -->
+
 	<!-- 合并单元格
 	列合并：colspan
 	行合并：rowspan -->
 	<table border="5" cellpadding="5" cellspacing="10" width="500" height="500">
+		<summary>this is a test table</summary>
 		<tr>
 			<th colspan="4">Header</th>
 			<!-- <th>Header</th>
