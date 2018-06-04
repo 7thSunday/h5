@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>table</title>
+</head>
+<body>
+	<!-- 表头默认加粗居中 -->
+	<!-- border:设置表格边框
+	cellpadding:设置单元格的内边距
+	cellspacing:设置单元格之间的距离 -->
+
+	<!-- align:设置单元格内容的水平对齐方式 -->
+	<!-- valign"设置单元格内容的垂直对齐方式 -->
+
+	<!-- 合并单元格
+	列合并：colspan
+	行合并：rowspan -->
+	<table border="5" cellpadding="5" cellspacing="10" width="500" height="500">
+		<tr>
+			<th colspan="4">Header</th>
+			<!-- <th>Header</th>
+			<th>Header</th>
+			<th>Header</th> -->
+		</tr>
+		<tr>
+			<td>Data</td>
+			<td align="center">Data</td>
+			<td>Data</td>
+			<td rowspan="2">Data</td>
+		</tr>
+		<tr>
+			<td>Data</td>
+			<td align="right">Data</td>
+			<td>Data</td>
+			<!-- <td>Data</td> -->
+		</tr>
+		<tr>
+			<td>Data</td>
+			<td valign="bottom">Data</td>
+			<td valign="baseline">Data</td><!-- 基线对齐 -->
+			<td>Data</td>
+		</tr>
+	</table>
+
+	<!-- 实体字符 -->
+	&nbsp;空格<br>
+	&gt;大于号<br>
+	&lt;小于号<br>
+	&reg;注册商标<br>
+	&quot;引号<br>
+	&copy;版权<br>
+	&amp;&符号<br>
+
+	<!-- 无序列表 -->
+	<!-- type:可以改变项目符号的样式：
+		circle：空心圆
+		disc：实心圆（默认
+		square：矩形 -->
+	<ul type="circle">
+		<li>001</li>
+		<li>002</li>
+		<li>003</li>
+	</ul>
+
+	<!-- 有序列表 -->
+	<!-- 序号样式：type：
+	a
+	A
+	i
+	I
+
+	起始值：start:值为数字 -->
+	<ol type="A" start="2">
+		<li>item1</li>
+		<li>item2</li>
+		<li>item3</li>
+		<li>item4</li>
+		<li>item5</li>
+	</ol>
+
+	<!-- 定义列表 -->
+	<dl>
+		<dt>write your title here</dt>
+		<dd>here is content</dd>
+	</dl>
+</body>
+</html>

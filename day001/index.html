@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>this is my first page</title>
+		<link rel="icon"  href="#.ico"/><!--网站图标 -->
+		<meta name="Keywords" content="声明关键词，多个关键词用逗号隔开" /><!-- 2 keywords here -->
+		<meta name="Description" content="网站描述" />
+		<!-- 关键词和描述的作用：有利于搜索引擎优化（SEO），即可以通过这些关键词和描述使用户更容易找到你的网站。 -->
+	</head>
+	<body>
+
+		<a href="#mid">到中间</a>
+
+
+
+		<!-- 超文本标记语言：hypertext markup language -->
+		<!-- 由W3C和WHATWG合作发布 -->
+
+		<!-- 有开始标签和结束标签 -->
+
+		<!-- 常用标签 -->
+		<!-- 块级元素：占父级元素整行
+		行内元素：根据内容决定所占位置 -->
+		<div>容器：可以容纳其他各种标签和内容。</div>
+		<!-- h${内容$}*6 -->
+		<!-- 标题标签 块级元素 -->
+		<h1>h1标签</h1>
+		<h2>h2标签</h2>
+		<h3>h3标签</h3>
+		<h4>h4标签</h4>
+		<h5>h5标签</h5>
+		<h6 >h6标签</h6>
+
+		<!-- 文本标签 行内元素 -->
+		<span>001</span>
+		<span>002</span>
+		<span>003</span>
+
+		<!-- 段落和换行  br是一个空标签 -->
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa corporis, quaerat odio recusandae. <br/>Atque ad aspernatur aut voluptatem, rerum velit eveniet deserunt iure perspiciatis harum enim a ratione quisquam ut!</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium accusantium unde numquam voluptate eveniet cum iure eius maxime id veritatis amet labore quia, ducimus dolor laborum animi ea cupiditate nulla.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, dicta aliquam fugit magnam ut accusamus voluptas consequatur voluptates delectus omnis molestiae cumque. Eveniet soluta aspernatur porro, libero doloribus corrupti rerum.</p>
+
+		<b>加粗标签</b>
+		<strong>加粗，强调语气</strong>
+		<i>斜体</i>
+		<em>斜体，同样强调语气</em>
+
+		<!-- <img src="./img/city.jpg" alt="说明图片的用处，当图片加载失败时将显示这段说明。"> -->
+
+		<!-- 绝对路径：从文件根目录开始查找
+		相对路径：相对于文件的位置查找目标文件 -->
+		<img src="../../Demo/1.png" alt="">
+
+		<del>删除文本标签</del>
+		上标<sup>222</sup>
+		下标<sub>333</sub>
+		<ruby>王<rt>Wang</rt></ruby>
+
+		<a href="#" name="mid"></a>
+		<div style="height: 1000px;"></div>
+
+
+		<!-- 缩略词 -->
+		<abbr title="英雄联盟" style="text-decoration: none;">LOL</abbr>
+
+		<!-- 定义文本的排列顺序 -->
+		<bdo dir="rtl">定义文本的排列顺序</bdo><!-- rtl=right to left -->
+
+		<mark>标记文本</mark>
+
+		<!-- target:定义页面的跳转方式
+		_self:当前页面跳转（默认
+		_blank:在新的标签页面打开 -->
+		<a href="http://www.baidu.com" target="_blank">百度</a>
+
+		<!-- 锚点 -->
+		<a href="#" name="">回到顶部</a><!-- 默认回到顶部 -->
+		<a href="#mid" >到中间</a><!-- 跳转到name值为mid的a标签 -->
+		<!-- 注意只能跳转到a标签
+			跳转到其他标签需要用id -->
+
+		<!-- 锚点的跳转：	
+			1：在目标位置给一个a标签，给这个a标签加上name属性；
+			2：在点击的a标签的herf属性加上锚点#name。
+			不给a标签也能实现，需要指定目标的id。 -->
+
+		<!-- 页外跳转 -->
+		<!-- <a href="目标文件.html#目标id">跳转</a> -->
+	</body>
+</html>
