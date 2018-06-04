@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>form</title>
+	<style>
+		#question2 #signup {
+			height: 40px;
+			width: 120px;
+			color: #ff0000;
+			font-size: 25px;
+			margin-left: 5px;
+			margin-bottom: 10px;
+		}
+		#question2 .btn {
+			vertical-align: bottom;
+		}
+		#question3 tr {
+			line-height: 30px;
+		}
+		#question3 #footer a {
+			text-decoration: none;
+		}
+		#question3 #nav-bar {
+			background: #eee;
+		}
+		#question3 #content #side th {
+			color: #999;
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+	<!-- 第一题 -->
+	<div id="question1">
+		<form action="#" method="post" enctype="multipart/form-data">
+			<table cellpadding="3" align="center">
+				<tr>
+					<th>用户注册页面</th>
+				</tr>
+				<tr>
+					<td align="right"><label for="">用户名：</label></td>
+					<td><input type="text" name="userName1"></td>
+				</tr>
+				<tr>
+					<td align="right"><label for="">密码：</label></td>
+					<td><input type="password" name="psw1"></td>
+				</tr>
+				<tr>
+					<td align="right"><label for="">确认密码：</label></td>
+					<td><input type="password" name="cfpsw1"></td>
+				</tr>
+				<tr>
+					<td align="right"><label for="">性别：</label></td>
+					<td>
+						<input type="radio" id="male1" name="sex1" value="male1"><label for="male1">男</label>
+						<input type="radio" id="female1" name="sex1" value="female1"><label for="female1">女</label>
+					</td>
+				</tr>
+				<tr>
+					<td align="right"><label for="">爱好：</label></td>
+					<td>
+						<input type="checkbox" id="music1" name="hobby1" value="music"><label for="music1">听音乐</label>
+						<input type="checkbox" id="movie1" name="hobby1" value="movie"><label for="movie1">看电影</label>
+						<input type="checkbox" id="game1" name="hobby1" value="hobby"><label for="game1">打电动</label>
+					</td>
+				</tr>
+				<tr>
+					<td align="right"><label for="">你所在的城市：</label></td>
+					<td>
+						<select name="city1" id="city1">
+							<option value="Shanghai">上海</option>
+							<option value="Guangzhou">广州</option>
+							<option value="Shenzhen">深圳</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td align="right"><label for="">照片：</label></td>
+					<td>
+						<input type="text" disabled="disabled" name="photo1">
+						<input type="button" value="浏览">
+					</td>
+				</tr>
+				<tr>
+					<td align="right"><label for="">个人简介：</label></td>
+					<td>
+						<textarea name="intro1" id="intro1" cols="40" rows="5"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<input type="submit" value="提交">
+						<input type="reset" value="重写">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<br>
+	<br>
+	<br>
+	<!-- 第二题 -->
+	<div id="question2">
+		<form action="#" method="post" enctype="multipart/form-data">
+			<table border="1" cellpadding="5" align="center">
+				<tr>
+					<td><label for="">昵称：</label></td>
+					<td><input type="text" name="nickName2" placeholder="请输入昵称"></td>
+				</tr>
+				<tr>
+					<td><label for="">登录名：</label></td>
+					<td><input type="text" name="account2" placeholder="请输入登录名"></td>
+				</tr>
+				<tr>
+					<td><label for="">密码：</label></td>
+					<td><input type="password" name="psw2"></td>
+				</tr>
+				<tr>
+					<td><label for="">确认密码：</label></td>
+					<td><input type="password" name="cfpsw2"></td>
+				</tr>
+				<tr>
+					<td><label for="">性别：</label></td>
+					<td>
+						<input type="radio" id="unknow2" name="sex2" value="unknow2"><label for="unknow2">保密</label>
+						<input type="radio" id="male2" name="sex2" value="male2"><label for="male2">男</label>
+						<input type="radio" id="female2" name="sex2" value="female2"><label for="female2">女</label>
+					</td>
+				</tr>
+				<tr>
+					<td><label for="">喜欢的水果：</label></td>
+					<td>
+						<input type="checkbox" id="apple2" name="fruits2" value="apple2"><label for="apple2">苹果</label>
+						<input type="checkbox" id="pear2" name="fruits2" value="pear2"><label for="pear2">雪梨</label>
+						<input type="checkbox" id="mango2" name="fruits2" value="mango2"><label for="mango2">芒果</label>
+						<input type="checkbox" id="banana2" name="fruits2" value="banana2"><label for="banana2">香蕉</label>
+						<input type="checkbox" id="peach2" name="fruits2" value="peach2"><label for="peach2">水蜜桃</label>
+					</td>
+				</tr>
+				<tr>
+					<td><label for="">所在地区：</label></td>
+					<td>
+						<select name="city2" id="city2">
+							<option value="Shanghai">上海</option>
+							<option value="Guangzhou">广州</option>
+							<option value="Shenzhen">深圳</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td><label for="">上传头像：</label></td>
+					<td><input type="file" name="avatar2"></td>
+				</tr>
+				<tr>
+					<td><label for="">个人简介：</label></td>
+					<td><textarea name="intro2" id="intro2" cols="36" rows="4"></textarea></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<input type="submit" value="提交" class="btn">
+						<input type="reset" value="重置" class="btn">
+						<input type="button" value="注  册" id="signup">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<br>
+	<br>
+	<br>
+	<!-- 第三题 -->
+	<div id="question3" align="center">
+		<form action="" method="post" enctype="multipart/form-data">
+			<table width="1000">
+				<tr>
+					<table >
+						<tr>
+							<td rowspan="2"><img src="img/01.jpg" alt=""></td>
+							<td><img src="img/02.jpg" alt=""></td>
+						</tr>
+						<tr>
+							<td align="center">
+								<a href="">AAAA</a>&nbsp;|
+								<a href="">BBBB</a>&nbsp;|
+								<a href="">CCCC</a>&nbsp;|
+								<a href="">DDDD</a>&nbsp;|
+								<a href="">EEEE</a>&nbsp;|
+								<a href="">FFFF</a>&nbsp;|
+								<a href="">GGGG</a>&nbsp;|
+								<a href="">HHHH</a>&nbsp;|
+								<a href="">IIII</a>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" width="1000" id="nav-bar">
+								<table width="100%" cellspacing="10">
+									<tr align="center">
+										<th>Home</th>
+										<th>|</th>
+										<th>Our Services</th>
+										<th>|</th>
+										<th>Quality Control</th>
+										<th>|</th>
+										<th>Supplier Evaluation</th>
+										<th>|</th>
+										<th>Laboratroy Testing</th>
+										<th>|</th>
+										<th>About us</th>
+										<th>|</th>
+										<th>Careers</th>
+										<th>|</th>
+										<th>News</th>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</tr>
+			</table>
+			<table cellpadding="7" width="1000" border="1" cellspacing="0" id="content">
+				<tr>
+					<td width="25%" valign="top">
+						<table width="100%" id="side">
+							<tr>
+								<th>Careers</th>
+							</tr>
+							<tr>
+								<td>
+									<table>
+										<tr>
+											<td><img src="img/04.jpg" alt=""></td>
+											<td>Career Opportunities</td>
+										</tr>
+										<tr>
+											<td><img src="img/04.jpg" alt=""></td>
+											<td>Applications</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<th>Contact Us</th>
+							</tr>
+							<tr>
+								<td>
+									<table>
+										<tr>
+											<td><img src="img/05.jpg" alt=""></td>
+											<td>+86-20-89268309</td>
+										</tr>
+										<tr>
+											<td><img src="img/06.jpg" alt=""></td>
+											<td>+86-20-86673771</td>
+										</tr>
+										<tr>
+											<td></td>
+											<td>+86-20-86666927</td>
+										</tr>
+										<tr>
+											<td><img src="img/07.jpg" alt=""></td>
+											<td>CS@CantonFairlnspection.com</td>
+										</tr>
+										<tr>
+											<td><img src="img/08.jpg" alt=""></td>
+											<td>www.CantonFairQC.com</td>
+										</tr>
+										<tr>
+											<td></td>
+											<td>www.CantonFairlnspection.com</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td width="75%">
+						<table width="100%">
+							<tr>
+								<th colspan="4" align="left">Personal Details</th>
+							</tr>
+							<tr>
+								<td>Do you apply for an Inspector Job?</td>
+								<td></td>
+								<td>
+									<input type="radio" name="job" id="yes"><label for="yes">Yes</label>
+									<input type="radio" name="job" id="no"><label for="no">No</label>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>LastName*</td>
+								<td><input type="text"></td>
+								<td>FirstName*</td>
+								<td><input type="text"></td>
+							</tr>
+							<tr>
+								<td>Sex*</td>
+								<td>
+									<select name="" id="">
+										<option value="">male</option>
+										<option value="">female</option>
+									</select>
+								</td>
+								<td>Telephone*</td>
+								<td><input type="number"></td>
+							</tr>
+							<tr>
+								<td>Personal e-mail address*</td>
+								<td><input type="e-mail"></td>
+								<td>Mobile phone*</td>
+								<td><input type="number"></td>
+							</tr>
+							<tr>
+								<td>Address*</td>
+								<td colspan="3"><input type="text" style="width: 450px;"></td>
+							</tr>
+							<tr>
+								<td>Country of Residence*</td>
+								<td colspan="3"><input type="text" style="width: 450px;"></td>
+							</tr>
+							<tr>
+								<td>City*</td>
+								<td colspan="3"><input type="text" style="width: 450px;"></td>
+							</tr>
+							<tr>
+								<th colspan="4" align="left">Professional Referances</th>
+							</tr>
+							<tr>
+								<td colspan="4">Reference 1</td>
+							</tr>
+							<tr>
+								<td>Company Name</td>
+								<td><input type="text"></td>
+								<td>Contact Name</td>
+								<td><input type="text"></td>
+							</tr>
+							<tr>
+								<td>Address</td>
+								<td><input type="text"></td>
+								<td>E-mail</td>
+								<td><input type="text"></td>
+							</tr>
+							<tr>
+								<td>City</td>
+								<td><input type="text"></td>
+								<td>Mobile phone</td>
+								<td><input type="number"></td>
+							</tr>
+							<tr>
+								<td>Country/Region</td>
+								<td><input type="text"></td>
+								<td>Telephone</td>
+								<td><input type="number"></td>
+							</tr>
+							<tr>
+								<td>Company activity</td>
+								<td><input type="text"></td>
+								<td>Fax</td>
+								<td><input type="number"></td>
+							</tr>
+							<tr>
+								<td colspan="4">Reference 2</td>
+							</tr>
+							<tr>
+								<td>Company Name</td>
+								<td><input type="text"></td>
+								<td>Contact Name</td>
+								<td><input type="text"></td>
+							</tr>
+							<tr>
+								<td>Address</td>
+								<td><input type="text"></td>
+								<td>E-mail</td>
+								<td><input type="text"></td>
+							</tr>
+							<tr>
+								<td>City</td>
+								<td><input type="text"></td>
+								<td>Mobile phone</td>
+								<td><input type="number"></td>
+							</tr>
+							<tr>
+								<td>Country/Region</td>
+								<td><input type="text"></td>
+								<td>Telephone</td>
+								<td><input type="number"></td>
+							</tr>
+							<tr>
+								<td>Company activity</td>
+								<td><input type="text"></td>
+								<td>Fax</td>
+								<td><input type="number"></td>
+							</tr>
+							<tr>
+								<td colspan="4">Input here additional comments that you think can better support your appliacation</td>
+							</tr>
+							<tr>
+								<td colspan="4"><textarea name="" id="" cols="80" rows="5"></textarea></td>
+							</tr>
+							<tr>
+								<td colspan="4">Please attached here useful files</td>
+							</tr>
+							<tr>
+								<td>Picture</td>
+								<td colspan="3">
+									<input type="text">
+									<input type="button" value="浏览...">(.jpg preferred)
+								</td>
+							</tr>
+							<tr>
+								<td>CV*</td>
+								<td colspan="3">
+									<input type="text">
+									<input type="button" value="浏览...">
+								</td>
+							</tr>
+							<tr>
+								<td>Psaaport Scan</td>
+								<td colspan="3">
+									<input type="text">
+									<input type="button" value="浏览...">
+								</td>
+							</tr>
+							<tr>
+								<td>Please enter the security code</td>
+								<td colspan="3">
+									<input type="text" style="width: 50px;">
+									<img src="img/09.jpg" alt="">
+									<input type="submit" value="Confirm">
+									<input type="button" value="Cancel">
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</form>
+		<table width="1000" cellspacing="0" border="1" id="footer">
+			<tr align="center">
+				<td colspan="2">
+					<a href="">Site Map</a>&nbsp;|
+					<a href="">Career</a>&nbsp;|
+					<a href="">News</a>&nbsp;|
+					<a href="">FAQ</a>&nbsp;|
+					<a href="">China Tool Kit</a>&nbsp;|
+					<a href="">Partners and links</a>&nbsp;|
+					<a href="">Add to Favorites</a>&nbsp;|
+					<a href="">Contacts Us</a>
+				</td>
+			</tr>
+			<tr align="center">
+				<td>
+					<table  cellpadding="7" >
+						<tr align="center">
+							<td colspan="4"></td>
+							<td>
+								<img src="img/10.jpg" alt="">
+								<p>ISO 9001:2008</p>
+							</td>
+							<td>
+								<img src="img/11.jpg" alt="">
+								<p>AAA Certificate</p>
+							</td>
+							<td colspan="4"></td>
+						</tr>
+						<tr align="center">
+							<td colspan="10">Copyright&copy;1983-2012 All rights reserved 粤ICP备06035096号</td>
+						</tr>
+						<tr align="center">
+							<td colspan="10">
+								<a href="">Lab Test</a>&nbsp;|
+								<a href="">Quality Control</a>&nbsp;|
+								<a href="">REACH</a>&nbsp;|
+								<a href="">RoHS</a>&nbsp;|
+								<a href="">CPSIA</a>&nbsp;|
+								<a href="">Factory Audit</a>&nbsp;|
+								<a href="">EMC</a>&nbsp;|
+								<a href="">SVHC</a>&nbsp;|
+								<a href="">EN71</a>&nbsp;|
+								<a href="">Oeke-Tex 100</a>&nbsp;|
+								<a href="">Supplier Evaluation</a>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
