@@ -15,10 +15,11 @@
 
 	<!-- 通过source标签来定义多种格式的音频 -->
 	<!-- 当浏览器不支持第一个格式的音频时，会自动找到下一个音频进行播放，直到播放成功或者提示浏览器过时 -->
+	<!-- 目前只支持以下三种格式的音频 -->
 	<audio controls="controls" autoplay>
 		<source src="media/bg.mp3" type="audio/mp3" />
 		<source src="media/bg.ogg" type="audio/ogg" />
-		<source src="media/bg.cda" type="audio/cda" />
+		<source src="media/bg.wav" type="audio/wav" />
 		<p>n你的浏览器过时了</p>
 	</audio>
 
@@ -34,10 +35,11 @@
 
 	<!-- 通过source标签来定义多种格式的视频 -->
 	<!-- 当浏览器不支持第一个格式的视频时，会自动找到下一个视频进行播放，直到播放成功或者提示浏览器过时 -->
+	<!-- 目前只支持以下三种格式 -->
 	<video controls="controls">
 		<source src="media/80s.mp4" type="video/mp4" />
 		<source src="media/80s.ogv" type="video/ogv" />
-		<source src="media/bg.wav" type="video/" />
+		<source src="media/bg.webm" type="video/webm" />
 		<p>n你的浏览器过时了</p>
 	</video>
 </body>

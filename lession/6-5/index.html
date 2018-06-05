@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>new feature</title>
+</head>
+<body>
+	<!-- h5新增：
+			语义化标签：根据内容，选择相应的语义元素进行代码书写，便于开发者阅读和机器的解析。
+			一个语义化的标签能够描述其作用，比如：h1代表一级标题。
+
+		 语义化的优点：
+		 	1：在没有css的情况下，也能很好地展示页面的结构；
+		 	2：提高用户体验，比如：title标签和label标签；
+		 	3：有利于搜索引擎优化，和浏览器建立良好的沟通，有利于爬虫获得更多信息，可以根据使用的标签来确定各个关键词的权	  重；
+		 	4：有利于其他设备的解析，比如盲人阅读器，可以根据语义化的标签进行有感情的朗读；
+		 	5：有利于团队开发和维护，语义化更具有可读性；
+	 -->
+	<!-- h5新增的语义化标签： -->
+	<!-- 语义化的div，都是块级元素 -->
+	<header>代表头部</header>
+	<nav>导航</nav>
+	<section>代表一个独立的块</section>
+	<article>代表一个独立的内容</article>
+	<aside>代表和主要内容相关的信息，比如侧边栏</aside>
+	<footer>代表底部页脚</footer>
+
+	<!-- hgroup:将有关的标题进行联系。比如h1标题和h2标题的内容是相关的，可以用hgroup将h1和h2装起来。 -->
+	<hgroup>
+		<h1>这里是一级标题</h1>
+		<h2>这里是和一级标题相关的二级标题</h2>
+	</hgroup>
+
+	<!-- figure:用来规定独立的流内容（图片/表格） -->
+	<!-- 需要结合figcaption标签使用 -->
+	<figure>
+		<img src="../../../Demo/1.png" alt="">
+		<figcaption>用来说明此图片</figcaption>
+	</figure>
+
+	<!-- 多媒体 -->
+	<audio src=""></audio>
+	<video src=""></video>
+
+	<!-- 占位符 placeholder -->
+	<!-- 必填项 required -->
+	<!-- 自动获取焦点 autofocus -->
+	<input type="text" autofocus="" required="" placeholder="required:这里一定要填">
+
+	<!-- contenteditable:可以将元素变成可编辑的状态 -->
+	<div contenteditable="true">这里有一个div</div>
+	<div contenteditable="true">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum perspiciatis, id maxime. In commodi fuga hic earum dignissimos est aut distinctio autem eaque quae repellat aperiam expedita tempore, quia. Aspernatur?</p>
+		<img src="../../../Demo/1.png" alt="">
+	</div>
+
+
+	<!-- h5废弃元素 -->
+	<font></font>
+	<bigfont></bigfont>
+	<big></big>
+	<s></s>
+	<u></u>
+	<tt></tt>
+	<center></center>
+</body>
+</html>
