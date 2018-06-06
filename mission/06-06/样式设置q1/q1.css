@@ -1,0 +1,29 @@
+* {
+	font-size: 12px;
+}
+
+#dt1 {
+	background: gray;
+}
+
+#dt2 {
+	background: blue;
+}
+
+dd a {
+	color: red;
+}
+
+p {
+	background: gray;
+}
+
+#p2 {
+	font-size: 30px;
+}
+
+#p2 a:hover {
+	background: black;
+	color: white;
+	transition: 500ms;
+}

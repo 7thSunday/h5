@@ -1,0 +1,40 @@
+h3 {
+	font-weight: normal;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+	line-height: 15px;
+}
+
+a:hover {
+	background: #ff4400;
+	color: #fff;
+}
+
+#title1 {
+	color: #ff8863;
+}
+
+#title2 {
+	color: #6ec67d;
+}
+
+#title3 {
+	color: #e18fd1;
+}
+
+h3 {
+	font-weight: bold;
+}
+
+.short {
+	margin-right: 16px;
+}
+
+.title-block {
+	width: 310px;
+	border-bottom: 3px solid rgba(0,0,0,0.1);
+	margin-bottom: 40px;
+}

@@ -1,0 +1,53 @@
+* {
+	text-decoration: none;
+}
+
+.container {
+	width: 1166px;
+	margin: 0 auto;
+}
+
+#header {
+	border-bottom: 2px solid #b2b2b2;
+	margin-bottom: 30px;
+}
+
+.row {
+	margin-bottom: 40px;
+}
+
+#all-in-chn {
+	position: relative;
+	font-size: 20px;
+	top: -15px;
+}
+
+#all-in-en {
+	position: relative;
+	font-size: 12px;
+	font-family: "黑体";
+	left: -82px;
+}
+
+.item {
+	width: 200px;
+	font-size: 13px;
+	line-height: 1.5;
+	display: inline-block;
+}
+
+.not-last {
+	margin-right: 37px;
+}
+
+.item span {
+	margin: 3px;
+}
+
+.g-style {
+	color: #b2b2b2;
+}
+.row a span:hover {
+	color: blue;
+	transition: 500ms;
+}

@@ -1,0 +1,19 @@
+.nav {
+	height: 60px;
+}
+
+a {
+	text-decoration: none;
+	font-size: 14px;
+	color: white;
+
+}
+
+a:hover {
+	background: rgb(204,225,242);
+	color: rgb(26,80,127);
+}
+
+.title {
+	font-weight: bold;
+}
