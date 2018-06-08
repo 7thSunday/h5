@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/normalize/8.0.0/normalize.min.css">
+	<link rel="stylesheet" href="index.css">
+	<title>盒子模型</title>
+</head>
+<body>
+	<div class="test">this is a div element.</div>
+	<div class="test1">this is also a div element.</div>
+
+	<!-- 盒子模型 -->
+	<!-- content+padding+border+margin -->
+	<!-- <img src="1.png" alt="" title="盒子模型"> -->
+	<!-- 容器真正的宽度包括：content(width,height)+padding+border -->
+
+	<!-- 元素类型：
+			块级元素：
+				1.占满其父级元素的一整行；
+				2.可以设置宽度和高度；
+				3.可以设置四个方向的外边距；
+				4.可以设置四个方向的内边距；
+			行内元素：
+				1.内容多少就占多大的位置，可以并排排列；
+				2.不能设置宽度和高度；
+				3.不能设置顶部和底部的外边距；
+				4.可以设置四个方向的内边距，但是上下方向的不占据位置；
+				5.不能设置行高；
+
+			行内块元素：既有块级元素的特性又有行内元素的特性
+				如：既可以设置宽高，也可以在同一行内排列
+				例如:图片img,表单元素input -->
+
+	<!-- 当用到行内块元素的时候，通常会产生空白缝隙，可以通过设置字体大小为0来消除这个空隙。 -->
+	
+	<span class="sp">this is a span element.</span>
+	<p class="p">this is a p element.</p>
+	<a id="a1" href="">this is a link.</a>
+
+	<!-- display:表示元素类型
+			block:块级元素；
+			inline:行内元素；
+			inline-block:行内块元素； -->
+	<ul class="nav">
+		<li><a href="">link1</a></li>
+		<li><a href="">link2</a></li>
+		<li><a href="">link3</a></li>
+		<li><a href="">link4</a></li>
+		<li><a href="">link5</a></li>
+	</ul>
+
+	<div class="pic">
+		<img src="1.png" alt="">
+		<span>this is a span element.</span>
+	</div>
+</body>
+</html>

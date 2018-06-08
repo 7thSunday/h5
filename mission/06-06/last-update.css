@@ -1,0 +1,74 @@
+* {
+	text-decoration: none;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	width: 1207px;
+	margin: 0 auto;
+}
+/*logo样式*/
+header {
+	border-bottom: 1px solid #b1b1b1;
+	height: 36px;
+	padding-bottom: 5px;
+	width: 1166px;
+	margin: 0 auto;
+}
+header img {
+	height: 33px;
+}
+.pro-title {
+	display: inline-block;
+}
+.all-in-chn {
+	font-size: 18px;
+	letter-spacing: 2px;
+}
+.all-in-en {
+	font-size: 12px;
+	color: #8f8f8f;
+	/*letter-spacing:设置字符之间的间距*/
+	/*word-spacing:设置单词之间的间距*/
+	word-spacing: 5px;
+	/*font-family: "黑体";*/
+}
+
+/*产品列表*/
+section {
+	padding-top: 31px;
+}
+.item-list {
+	font-size: 0;
+}
+.item {
+	width: 200px;
+	display: inline-block;
+	/*当用到行内块元素的时候，通常会产生空白缝隙，可以通过设置字体大小为0来消除这个空隙。*/
+	font-size: 0;
+	margin-left: 20.5px;
+	margin-right: 20.5px;
+	margin-bottom: 42px;
+}
+.item img {
+	width: 100%;
+}
+.item h1 {
+	margin-top: 10px;
+	font-size: 14px;
+	color: #737373;
+	font-weight: lighter;
+	line-height: 20px;
+	padding: 0 5px;
+}
+.item span {
+	font-size: 13px;
+	color: #030303;
+	padding: 0 5px;
+	line-height: 20px;
+}
+.item em {
+	font-style: normal;
+}

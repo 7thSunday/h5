@@ -1,0 +1,121 @@
+* {
+	text-decoration: none;
+}
+
+.test {
+	width: 100px;
+	height: 100px;
+	background: skyblue;
+	
+	/*border:用来设置元素的边框*/
+	/*第一个值为边框大小，第二个值为边框的样式，第三个值为边框的颜色*/
+
+	/*border: 1px solid #000;*/
+
+	/*样式：*/
+		/*solid:实线;*/
+		/*double:双实线;*/
+		/*dashed:虚线;*/
+		/*dotted:点状虚线;*/
+
+	/*letter-spacing:设置字符之间的间距*/
+	/*word-spacing:设置单词之间的间距*/
+	border-width: 2px;
+	border-style: dashed;
+	border-color: red;
+}
+
+.test1 {
+	background: pink;
+	width: 200px;
+	height: 200px;
+
+	/*外边距:用来设置元素与元素之间的间距*/
+
+	/*margin-top: 20px;*/
+
+	margin: 20px;
+	/*只设置一个值：代表四个方向上的外边距；*/
+	/*设置2个值：第一个为上下外边距，第二个为左右外边距；*/
+	/*设置3个值：第一个代表顶部外边距，第二个代表左右外边距，第三个代表底部外边距；*/
+	/*设置4个值：按顺序分别代表上、右、下、左四个方向的外边距值；*/
+
+
+	/*内边距:用来设置内容与边框之间的距离;*/
+	/*用法和属性值同外边距*/
+	padding: 20px;
+}
+
+.sp {
+	width: 200px;/*无效*/
+	height: 200px;/*无效*/
+	margin-top: 50px;/*无效*/
+	margin-bottom: 50px;/*无效*/
+	margin-left: 50px;/*有效*/
+	margin-right: 50px;/*有效*/
+	padding-top: 30px;/*有效*/
+	padding-bottom: 30px;/*有效*/
+	padding-left: 30px;/*有效*/
+	padding-right: 30px;/*有效*/
+	background: gray;
+}
+
+.p {
+	background: blue;
+}
+
+#a1 {
+	background: red;
+	padding: 10px 5px;
+	color: white;
+}
+
+#a1:hover {
+	background: skyblue;
+	color: orange;
+}
+
+.nav {
+	/*清除列表的项目符号*/
+	list-style: none;
+	background: gray;
+	padding: 0;
+	width: 316px;
+	margin: 0 auto;
+}
+
+.nav li {
+	display: inline-block;
+	line-height: 30px;
+	text-align: center;
+	width: 60px;
+	height: 30px;
+}
+
+.nav li:hover {
+	background: white;
+}
+
+.nav li a {
+	padding: 7px 15px;
+	color: white;
+}
+
+.nav a:hover {
+	color: gray;
+}
+
+.pic {
+	height: 100px;
+	border: 2px solid #000;
+}
+
+/*vertical-align:垂直对齐*/
+	/*相对于其父级元素的行高进行对齐，只适用于行内元素和行内块元素*/
+.pic img {
+	height: 50px;
+	vertical-align: middle;
+}
+.pic span {
+	vertical-align: middle;
+}
