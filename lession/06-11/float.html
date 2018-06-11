@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>float</title>
+</head>
+<body>
+	<!-- 横向布局方式： -->
+		<!-- 行内块元素； -->
+		<!-- 浮动布局； -->
+			<!-- 元素设置了浮动后，该元素会脱离文档流，导致浮动元素不受其父级元素的控制。
+					其父级元素的高度会坍缩为0。 -->
+			<!-- 解决方案：清除浮动 -->
+				<!-- 1：直接在其父级元素上添加overflow属性设置为auto或hidden； -->
+				<!-- 2：在浮动元素的最后添加一个空的块级元素，给其添加clear:both属性； -->
+				<!-- 3：给其父级元素添加一个::after伪对象，然后给这个伪对象添加clear:both属性； -->
+			<!-- 伪对象：相当于动态的向html给结构中添加行内元素 -->
+	<style type="text/css">
+		* {
+			list-style: none;
+			text-decoration: none;
+		}
+		.nav {
+			/*overflow: hidden;*/
+		}
+		.nav::after {/*这个伪对象会作为.nav这个元素的最后一个子元素添加到html结构中*/
+			content:"";
+			display: block;
+			clear: both;
+		}
+		.nav::before {/*这里添加到了所有的li前方，但由于li具有浮动属性，在视觉上这个伪对象排列在了li后方*/
+			content: "this element was added by fade object.";
+		}
+		.nav .clearf {
+			clear: both;
+		}
+		.nav li {
+			float: left;
+		}
+		.test {
+			background: skyblue;
+		}
+	</style>
+	<ul class="nav">
+		<li><a href="">link1</a></li>
+		<li><a href="">link2</a></li>
+		<li><a href="">link3</a></li>
+		<li><a href="">link4</a></li>
+		<li><a href="">link5</a></li>
+		<!-- <div class="clearf"></div> -->
+	</ul>
+	<div class="test">1234567890</div>
+</body>
+</html>

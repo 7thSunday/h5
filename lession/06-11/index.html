@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="index.css">
+	<title>Document</title>
+</head>
+<body>
+	<!-- css选择器： -->
+		<!-- 群组选择器：用逗号表示，元素与元素之间用逗号隔开。 -->
+		<!-- 关系选择器： -->
+			<!-- 包含选择器：用空格表示； -->
+			<!-- 子选择器：用大于号(>)表示，用于选择到目标元素的直接子元素； -->
+			<!-- 兄弟选择器：用波浪线(~)表示，用于选择到目标元素 以后的所有 兄弟元素； -->
+			<!-- 相邻选择器：用加号(+)表示，用于选择到目标元素 以后的一个 相邻元素； -->
+		<!-- 伪类选择器： -->
+			<!-- :nth-child(n) 匹配父元素的第n个子元素； -->
+			<!-- :first-child 匹配父元素的第一个子元素； -->
+			<!-- :last-child 匹配父元素的最后一个子元素； -->
+			<!-- :nth-of-type(n) 匹配到同类型的第n个兄弟元素； -->
+			<!-- :first-of-type 匹配到同类型的第一个兄弟元素； -->
+			<!-- :last-of-type 匹配到同类型的最后一个兄弟元素； -->
+			<!-- :focus 当元素获取焦点时的样式； -->
+			<!-- :checked 当元素被选中时的样式； -->
+	<style type="text/css">
+		.nav>a {
+			font-style: italic;
+		}
+
+		.nav ul~a {
+			color: yellow;
+		}
+
+		ul+a {
+			background: gray;
+		} 
+		/*书写的顺序不能调换*/
+		/*link -> visited -> hover -> active*/
+		.test2:link {/*未被点击时的状态*/
+			color: red;
+		}
+		.test2:visited {/*点击后的状态*/
+			color: black;
+		}
+		.test2:hover {/*鼠标悬停在上方的状态*/
+			color: pink;
+		}
+		.test2:active {/*鼠标按下时的状态*/
+			color: skyblue;
+		}
+		.web div:nth-child(2n) {
+			background: #777;
+		}
+		.web div:nth-child(2n+1) {
+			background: pink;
+		}
+		.web div:first-child {
+			color: skyblue;
+		}
+		.web div:last-child {
+			color: red;
+		}
+		.web p:nth-of-type(2) {
+			color: green;
+		}
+		.txt:focus {
+			background: skyblue;
+		}
+		.cbox:checked {
+			width: 100px;
+			height: 100px;
+		}
+		.cbox:checked ~ #img1 {
+			display: none;
+		}
+		#img2 {
+			display: none;
+		}
+		.cbox {
+			display: none;
+		}
+		.cbox:checked ~ #img2 {
+			display: inline-block;
+		}
+	</style>
+	<input type="checkbox" class="cbox" id="check">
+	<label for="check"><span>click me to toggle the image.</span></label>
+	<img src="../../mission/06-08/images/1-1.jpg" alt="" id="img1">
+	<img src="../../mission/06-08/images/1-2.jpg" alt="" id="img2">
+	<input type="text" class="txt">
+	<div class="web">
+		<div>No.1</div>
+		<div>No.2</div>
+		<p>p NO.1</p>
+		<div>No.3</div>
+		<div>No.4</div>
+		<div>No.5</div>
+		<p>p No.2</p>
+		<div>No.6</div>
+	</div>
+	<div class="nav">
+		<ul>
+			<li>
+				<a href="">inside</a>
+			</li>
+		</ul>
+		<a href="">outside</a>
+	</div>
+	<a href="http://www.baidu.com" class="test2">123456</a>
+	<div>this is a div element.</div>
+	<p>this is a p element.</p>
+</body>
+</html>

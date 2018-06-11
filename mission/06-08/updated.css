@@ -1,0 +1,95 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.info {
+	width: 320px;
+	height: 267px;
+	font-size: 0;
+	margin: 0 auto;
+}
+
+.info-details {
+	border: 8px solid #dadfe7;
+	width: 129px;
+	height: 109px;
+	background: url(images/bg1.jpg) no-repeat;
+	background-position: 80px 62px;
+	display: inline-block;
+	margin-right: 7.5px;
+	margin-left: 7.5px;
+	margin-bottom: 17px;
+	vertical-align: top;
+}
+
+h1 {
+	font-size: 14px;
+	line-height: 14px;
+	margin-top: 11px;
+	margin-left: 10px;
+}
+
+.info p {
+	font-size: 12px;
+	color: #666;
+	line-height: 14px;
+	width: 66px;
+	height: 70px;
+	margin-left: 10px;
+	margin-top: 11px;
+
+	overflow: hidden;
+	-webkit-line-clamp: 5;
+	display: -webkit-box;
+	-webkit-box-orient:vertical;
+	/*多行文字溢出的处理方法
+		overflow: hidden;先给出容器高度，超出的部分进行隐藏；
+		-webkit-line-clamp: 5;定义文本显示的行数；
+		display: -webkit-box;用来兼容webkit内核的浏览器；
+		-webkit-box-orient:vertical;用...带代替显示被省略的文本；*/
+}
+
+/*一行文字溢出的处理*/
+.test {
+	/*font-size: 16px;*/
+	width: 220px;
+	border: 2px solid #000;
+	overflow: hidden;
+
+	/*强制文字一行显示*/
+	white-space: nowrap;
+
+	/*文字超出部分用省略号显示*/
+	text-overflow: ellipsis;
+}
+
+/*伪类选择器*/
+/*:nth-child(n);用来选择到第n个元素*/
+.info-details:nth-child(2) {
+	background: url(images/bg2.jpg) no-repeat;
+	background-position: 80px 62px;
+}
+
+.info-details:nth-child(3) {
+	background: url(images/bg3.jpg) no-repeat;
+	background-position: 80px 62px;
+}
+
+.info-details:nth-child(4) {
+	background: url(images/bg4.jpg) no-repeat;
+	background-position: 80px 62px;
+}
+
+.test1 p:nth-child(3) {
+	color: red;
+}
+
+.test1 div:nth-child(4) {
+	background: green;
+}
+
+/*html元素嵌套*/
+	/*特例：p元素不能嵌套跨级块级元素*/
+	/*1:块级元素嵌套块级/行内/行内块元素;*/
+	/*2:行内元素不能嵌套块级/行内块元素;*/
