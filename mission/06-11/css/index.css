@@ -1,0 +1,184 @@
+.section-title {
+	width: 143px;
+	height: 34px;
+	border: 1px solid #6db6ff;
+	margin: 0 auto;
+}
+
+.section-title .cn {
+	font-size: 24px;
+	font-weight: normal;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: -16px;
+	background: white;
+	width: 102px;
+}
+
+.section-title .en {
+	font-size: 16px;
+	font-family: "Arial";
+	font-weight: normal;
+	text-align: center;
+}
+/*关于我们*/
+.section-1 {
+	padding-top: 26px;
+	padding-bottom: 17px;
+	background: #fafafa;
+	width: 100%;
+}
+.section-1 ul h3 {
+	font-size: 16px;
+	line-height: 25px;
+	font-weight: normal;
+	text-align: center;
+}
+
+.section-1 ul {
+	font-size: 0;
+	text-align: center;
+	margin-top: 21px;
+	display: block;
+}
+
+.section-1 ul .cn {
+	margin-top: 11.5px;
+}
+
+.section-1 ul .en {
+	font-family: "Arial";
+	margin-bottom: 9.5px;
+}
+
+.section-1 ul li {
+	font-size: 0;
+	height: 319px;
+	background: #f7f7f7;
+	display: inline-block;
+	margin: 0 10px;
+}
+
+.section-1 ul p {
+	font-size: 12px;
+	line-height: 25px;
+	letter-spacing: 2px;
+	text-align: left;
+	margin: 0 auto;
+	color: #838383;
+}
+
+.section-1 ul li img {
+	display: block;
+	margin: 0 auto;
+	padding-top: 18px;
+}
+/*使命*/
+.section-1 #mission {
+	width: 267px;
+}
+
+.section-1 ul #mission p {
+	width: 244px;
+}
+/*团队*/
+.section-1 #team {
+	width: 322px;
+}
+
+.section-1 ul #team p {
+	width: 250px;
+}
+/*愿景*/
+.section-1 #vision {
+	width: 270px;
+}
+
+.section-1 ul #vision p {
+	width: 245px;
+}
+/*投资案例*/
+.section-2 {
+	margin-top: 17px;
+	width: 100%;
+}
+
+.section-2 ul {
+	font-size: 0;
+	text-align: center;
+	margin-top: 32px;
+}
+
+.section-2 ul li {
+	display: inline-block;
+	margin: 0 3.5px;
+	margin-bottom: 22px;
+	font-size: 0;
+}
+
+.section-2 img {
+	width: 293px;
+	height: 208px;
+	border: 1px solid #000;
+}
+
+.section-2 p {
+	font-size: 12px;
+	text-align: left;
+	line-height: 12px;
+	letter-spacing: 2px;
+	margin-top: 15px;
+	margin-left: 25px;
+	margin-bottom: 25px;
+}
+
+.section-2 a {
+	display: block;
+	width: 73px;
+	height: 17px;
+	font-size: 16px;
+	line-height: 16px;
+	font-weight: bold;
+	color: #fff;
+	background: #6db6ff;
+	padding: 6px 31px 4px 31px;
+	margin: 0 auto;
+}
+/*友情链接*/
+.section-3 {
+	margin: 0 auto;
+	margin-top: 24px;
+	margin-bottom: 26px;
+	width: 900px;
+	height: 303px;
+	border-top: 1px solid #000;
+	background-image: url(../img/img06.jpg);
+	background-size: cover;
+}
+
+.section-3 .inside {
+	overflow: hidden;
+	margin-top: 112px;
+	font-size: 0;
+}
+
+.section-3 .inside>input[type="image"], .section-3 .inside .img-group {
+	float: left;
+}
+
+.section-3 .la {
+	margin-top: 4px;
+	margin-left: 10px;
+}
+
+.section-3 .inside .img-group {
+	margin-left: 13px;
+}
+
+.section-3 .inside .img-group input {
+	margin-left: 22px;
+}
+
+.section-3 .ra {
+	margin-left: 40px;
+}
