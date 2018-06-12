@@ -118,8 +118,17 @@
 }
 
 /*页脚*/
+footer {
+	font-size: 0;
+	margin: 0 auto;
+	border-top: 1px solid #eaedf0;
+	padding-top: 45px;
+}
+
 .bottom-info {
 	font-size: 0;
+	display: inline-block;
+	margin-left: 50px;
 }
 
 .bottom-info li {
@@ -145,4 +154,77 @@
 	line-height: 12px;
 	margin-bottom: 10px;
 	color: #000;
+}
+
+.contact {
+	display: inline-block;
+	font-size: 0;
+	vertical-align: top;
+	width: 278px;
+}
+
+.contact .hotline, .subscribe {
+	display: inline-block;
+	font-size: 0;
+}
+
+.contact .hotline {
+	vertical-align: top;
+	width: 114px;
+	margin-right: 5px;
+}
+
+.contact .subscribe {
+	vertical-align: top;
+	width: 111px;
+}
+
+.contact p {
+	display: inline-block;
+	margin-bottom: 3px;
+	font-size: 16px;
+	line-height: 16px;
+	font-weight: bold;
+}
+
+.contact span {
+	display: block;
+	font-size: 10px;
+	line-height: 10px;
+}
+
+.contact .subscribe span {
+	line-height: 16px;
+}
+
+.contact .phone {
+	vertical-align: top;
+	margin-right: 5px;
+}
+
+.contact .sub {
+	margin-top: 4px;
+	margin-left: 38px;
+}
+
+.contact .qr img {
+	margin-left: -6px;
+	margin-right: 8px;
+}
+
+.contact .qr p {
+	vertical-align: top;
+	margin-top: 33px;
+}
+
+footer .copy {
+	height: 70px;
+	margin-top: 15px;
+	text-align: center;
+	background: #6db6ff;
+}
+
+footer .copy p {
+	padding-top: 43px;
+	font-size: 12px;
 }
