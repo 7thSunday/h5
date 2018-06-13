@@ -1,0 +1,163 @@
+section {
+	width: 900px;
+	margin: 0 auto;
+	margin-top: 45px;
+}
+/*当前位置*/
+section .current-position {
+	background: url(../img/frame-position.jpg) no-repeat;
+	background-size: 900px 30px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 16px;
+	margin-bottom: 30px;
+}
+
+section .current-position span:nth-child(1) {
+	margin-left: 5px;
+	color: #fff;
+}
+
+/*分类导航*/
+section ul {
+	margin-bottom: 24px;
+}
+
+section ul li{
+	font-size: 0;
+	margin-bottom: 8px;
+}
+
+section ul li> * {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+section ul li span {
+	font-size: 16px;
+}
+
+section ul li div {
+	margin-left: 9px;
+}
+
+section ul li div a:nth-child(2) {
+	font-size: 14px;
+	color: #6db6ff;
+	margin-right: 4px; 
+}
+
+section ul li div a:nth-child(2) ~ * {
+	font-size: 12px;
+	color: #000;
+	margin-right: 3px;
+}
+
+section ul li div a:last-child {
+	margin-left: 5px;
+}
+
+/*项目表*/
+
+section .t-head::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+section .t-head {
+	height: 38px;
+	background: url(../img/frame-title.png) no-repeat;
+}
+
+section .t-head h3 {
+	float: left;
+	font-size: 16px;
+	line-height: 16px;
+	font-weight: bold;
+	margin-top: 9px;
+}
+
+section .my-table {
+	border-bottom: 1px solid #b6daff
+}
+
+section .t-body {
+	padding-top: 19px;
+	padding-bottom: 17px;
+	background: #f5f5f5;
+}
+
+section .t-body .row {
+	font-size: 0;
+	margin-bottom: 23px;
+}
+
+section .t-body .row:last-child {
+	margin-bottom: 0;
+}
+
+section .t-body .row span {
+	display: inline-block;
+	text-align: center;
+	font-size: 12px;
+	line-height: 12px;
+}
+
+section .t-head {
+	text-align: center;
+}
+
+section .t-head .col-1, section .t-body .col-1 {
+	width: 168px;
+	padding-left: 69px;
+}
+
+section .t-head .col-2, section .t-body .col-2 {
+	width: 64px;
+	padding-left: 32px;
+}
+
+section .t-head .col-3, section .t-body .col-3 {
+	width: 49px;
+	padding-left: 91px;
+}
+
+section .t-head .col-4, section .t-body .col-4 {
+	width: 49px;
+	padding-left: 98px;
+}
+
+section .t-head .col-5, section .t-body .col-5 {
+	width: 67px;
+	padding-left: 87px;
+}
+
+section .btn-page {
+	font-size: 0;
+	width: 216px;
+	margin: 18px auto;
+}
+
+section .btn-page a {
+	font-size: 12px;
+	text-align: center;
+	display: inline-block;
+	background: #e5e5e5;
+	border: 1px solid #c9c9c9;
+	margin: 0 2px;
+}
+
+section .btn-page .number {
+	width: 16px;
+	height: 16px;
+}
+
+section .btn-page .arrow {
+	width: 47px;
+}
+
+section .btn-page a:nth-child(2) {
+	background: #6db6ff;
+	border-color: #aaa;
+}

@@ -182,3 +182,8 @@
 .section-3 .ra {
 	margin-left: 40px;
 }
+
+/*刁钻的页脚*/
+footer {
+	border-top: 1px solid #eaedf0;
+}

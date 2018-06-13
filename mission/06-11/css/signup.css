@@ -1,0 +1,174 @@
+/*标题*/
+.title {
+	border-top: 1px solid #9ac1c0;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 65px;
+	margin-bottom: 30px;
+	width: 339px;
+}
+
+.cn {
+	margin: 0 auto;
+	margin-bottom: 6px;
+	font-size: 14px;
+	line-height: 14px;
+	height: 14px;
+	margin-top: -13px;
+	padding: 0 20px;
+	width: 99px;
+	background: #fff;
+	text-align: justify;
+	text-align-last: justify;
+}
+
+.cn::after {
+	content: "";
+	display: inline-block;
+	overflow: hidden;
+	width: 100%;
+	height: 0;
+}
+
+.en {
+	font-size: 9px;
+	line-height: 9px;
+	word-spacing: -1px;
+	font-family: "Arial";
+}
+/*表单总体*/
+section {
+	font-size: 0;
+}
+
+section form {
+	font-size: 0;
+	display: block;
+	width: 654px;
+	margin-left: 198px;
+}
+
+section span {
+	font-size: 14px;
+	line-height: 14px;
+}
+
+section label,section a {
+	font-size: 12px;
+	line-height: 12px;
+	color: #ff2323;
+}
+
+section p {
+	font-size: 12px;
+	line-height: 12px;
+}
+
+section form>div {
+	margin-bottom: 23px;
+}
+
+section input {
+	font-size: 14px;
+	height: 16px;
+	line-height: 14px;
+}
+
+section input, section select {
+	margin-right: 22px;
+}
+
+section input[type="text"], section input[type="email"], section input[type="password"] {
+	width: 210px;
+}
+
+section input[type="text"], section input[type="email"], section input[type="password"], section select {
+	border: 1px solid #9ac1c0;
+} 
+
+section .critical {
+	font-size: 14px;
+}
+
+section .sex label, section .proto-check label, section .verif label {
+	color: #000;
+}
+/*表单详细*/
+section .alert {
+	display: block;
+	text-align: center;
+	margin-bottom: 42px;
+}
+
+section form .key-name {
+	display: inline-block;
+	width: 80px;
+}
+
+section form .sex input, .sex label {
+	display: inline-block;
+	margin-right: 4px;
+}
+
+section .sex > * {
+	vertical-align: middle;
+}
+
+section select {
+	width: 164px;
+	color: #7e7e7e;
+}
+
+section form .verif input {
+	width: 61px;
+	margin-right: 4px;
+}
+
+section form .verif img {
+	vertical-align: bottom;
+}
+
+section form .verif input ~ * {
+	margin-right: 4px;
+}
+
+section .proto-content {
+	display: inline-block;
+	width: 547px;
+	height: 114px;
+	border: 1px solid #9ac1c0;
+}
+
+section .proto span {
+	vertical-align: top;
+}
+
+section .proto-content p {
+	margin-left: 11px;
+	line-height: 17px;
+	width: 514px;
+}
+
+section .proto-content p:nth-child(1) {
+	margin-top: 6.5px;
+}
+
+section .proto-check img {
+	margin-left: 92px;
+	margin-right: 24px;
+}
+
+section input[type="submit"] {
+	font-size: 16px;
+	width: 121px;
+	height: 33px;
+	display: block;
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 35px;
+	color: #fff;
+	background: #6db6ff;
+	border: 0;
+	border-radius: 4px;
+	cursor: pointer;
+}
