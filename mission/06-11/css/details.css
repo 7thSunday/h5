@@ -3,13 +3,190 @@
 section .current-position {
 	background: url(../img/frame-position.jpg) no-repeat;
 	background-size: 900px 30px;
+	margin: 0 auto;
+	width: 900px;
 	height: 30px;
 	line-height: 30px;
 	font-size: 16px;
-	margin-bottom: 30px;
+	margin-top: 45px;
+	margin-bottom: 48px;
 }
 
 section .current-position span:nth-child(1) {
 	margin-left: 5px;
 	color: #fff;
+}
+
+/*主标题*/
+section .section-title {
+	font-size: 0;
+	text-align: center;
+}
+
+section .section-title::after {
+	content: "";
+	background: #6db6ff;
+	margin: 0 auto;
+	display: block;
+	height: 1px;
+	width: 157px;
+	margin-bottom: 39px;
+}
+
+section .section-title h1:nth-child(1) {
+	font-size: 18px;
+	line-height: 18px;
+	margin-bottom: 5px;
+}
+
+section .section-title h1:nth-child(2) {
+	font-size: 10px;
+	line-height: 10px;
+	font-family: "Arial";
+	margin-bottom: 9px;
+}
+
+/*分块内容总体*/
+section h2, section h3 {
+	text-align: center;
+	font-weight: normal;
+}
+section h2 {
+	font-size: 16px;
+	line-height: 16px;
+}
+
+section h3 {
+	font-size: 14px;
+	line-height: 14px;
+}
+
+section p {
+	font-size: 12px;
+	line-height: 23px;
+	text-indent: 2em;
+	width: 752px;
+	margin: 0 auto;
+	margin-bottom: 9.5px;
+}
+
+section .cn {
+	padding-top: 5px;
+}
+
+section .en {
+	font-size: 9px;
+	line-height: 9px;
+	font-family: "Arial";
+	margin-top: 3px;
+}
+section .content-title {
+	height: 38px;
+	width: 752px;
+	margin: 0 auto;
+}
+
+section .section-block {
+	font-size: 0;
+}
+
+section .all-content div:nth-child(2n+1) .content-title {
+	background: url(../img/frame-top.png) no-repeat;
+}
+
+section .all-content div:nth-child(2n) .content-title {
+	background: url(../img/frame-bottom.png) no-repeat;
+}
+
+section .all-content img {
+	display: block;
+	margin: 0 auto;
+}
+
+/*分块内容详细*/
+section .all-content .company-profile {
+	margin-bottom: 23px;
+}
+
+section .all-content .company-profile .content-title {
+	margin-bottom: 30px;
+}
+
+section .all-content .company-profile h3 {
+	margin-bottom: 11.5px;
+}
+
+section .all-content .company-vision {
+	margin-bottom: 27px;
+}
+
+section .all-content .company-vision .content-title {
+	margin-bottom: 18.5px;
+}
+
+section .all-content .company-mission {
+	margin-bottom: 22px;
+}
+
+section .all-content .company-mission .content-title {
+	margin-bottom: 19px;
+}
+
+section .all-content .company-mission h3 {
+	margin-bottom: 7.5px;
+}
+
+section .all-content .company-team {
+	margin-bottom: 31px;
+}
+
+section .all-content .company-team .content-title {
+	margin-bottom: 25.5px;
+}
+
+section .all-content .company-culture {
+	margin-bottom: 21px;
+}
+
+section .all-content .company-culture .content-title {
+	margin-bottom: 16px;
+}
+
+section .all-content .company-culture h3 {
+	margin-bottom: 3px;
+}
+
+section .all-content .company-core-values {
+	margin-bottom: 23px;
+}
+
+section .all-content .company-core-values .content-title {
+	margin-bottom: 22px;
+}
+
+section .all-content .company-core-values h3 {
+	width: 345px;
+	text-align: left;
+	margin: 0 auto;
+	margin-bottom: 4px;
+}
+
+section .all-content .company-core-values h3:nth-child(6) {
+	margin-bottom: 16px;
+}
+
+/*下方按钮*/
+section .btn-page {
+	font-size: 0;
+	width: 156px;
+	margin: 0 auto;
+}
+
+section .btn-page a {
+	display: inline-block;
+	font-size: 12px;
+	line-height: 12px;
+	color: #444 ;
+	margin: 0 6px;
+	margin-bottom: 21px;
 }
