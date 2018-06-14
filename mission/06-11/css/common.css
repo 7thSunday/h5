@@ -139,7 +139,7 @@ footer {
 .bottom-info li {
 	font-size: 0;
 	display: inline-block;
-	width: 167px;
+	width: 150px;
 }
 
 .bottom-info .last-one {
@@ -209,7 +209,7 @@ footer {
 
 .contact .sub {
 	margin-top: 4px;
-	margin-left: 38px;
+	margin-left: 60px;
 }
 
 .contact .qr img {
