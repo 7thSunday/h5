@@ -1,0 +1,142 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+/*当给相邻的父子元素的子元素一个顶部外边距的时候，由于浏览器解析的一些特性，父子元素的顶部外边框会重合在一起，这个外边距相当于给了其父元素。*/
+/*解决方法：*/
+	/*1.给父元素添加overflow:hidden;*/
+	/*2.给父元素添加一个边框;*/
+.web {
+	background: skyblue;
+	/*overflow: hidden;*/
+	border: 1px solid #fff;
+}
+
+.test {
+	margin-top: 50px;
+}
+
+/*当两个垂直相邻的元素同时设置了底部外边距和顶部外边距时，他们之间的距离为较大的那个值*/
+.test1, .test2 {
+	width: 200px;
+	height: 200px;
+	background: pink;
+}
+
+.test1 {
+	margin-bottom: 20px;
+}
+
+.test2 {
+	margin-top: 30px;
+}
+
+/*通过元素的边框来画形状*/
+/*通过设置边框为透明色transparent来设置形状*/
+/*透明色*/
+	/*transparent*/
+.test3 {
+	width: 0px;
+	height: 0px;
+	border-top: 15px solid #000;
+	border-right: 15px solid gold;
+	border-bottom: 15px solid pink;
+	border-left: 15px solid skyblue;
+	/*需要三角形的时候修改颜色为透明色或者注释*/
+	margin: 100px auto;
+	/*border-radius: 50%;*/
+}
+
+.test4 {
+	width: 0px;
+	height: 0px;
+	border-top: 15px solid skyblue;
+	border-right: 15px solid transparent;
+	/*border-bottom: 15px solid skyblue;*/
+	border-left: 15px solid transparent;
+	margin: 100px auto;
+}
+
+.test5 {
+	width: 0px;
+	height: 0px;
+	/*border-top: 15px solid skyblue;*/
+	/*border-right: 15px solid transparent;*/
+	border-bottom: 25px solid transparent;
+	border-left: 15px solid skyblue;
+	margin: 100px auto;
+}
+
+.test6 {
+	width: 0px;
+	height: 0px;
+	border-top: 15px solid skyblue;
+	border-right: 15px solid transparent;
+	/*border-bottom: 15px solid transparent;*/
+	border-left: 15px solid skyblue;
+	margin: 100px auto;
+}
+
+/*修改复选框的默认样式*/
+.test7 {
+	text-align: center;
+}
+#check {
+	display: none;
+}
+
+.test7 span {
+	display: inline-block;
+	width: 9px;
+	height: 10px;
+	border: 1px solid red;
+	line-height: 10px;
+}
+
+.test7 span::before {
+	content: "";
+	width: 5px;
+	height: 2px;
+	background: red;
+	display: none;
+	/*旋转*/
+	transform: rotate(45deg);
+	float: left;
+	margin-top: 5px;
+}
+
+.test7 span::after {
+	content: "";
+	width: 15px;
+	height: 2px;
+	background: red;
+	display: none;
+	/*旋转*/
+	transform: rotate(-45deg);
+	float: right;
+	margin-top: -4px;
+	margin-right: -8px;
+}
+
+#check:checked~label span::after, #check:checked~label span::before{
+	display: inline-block;
+}
+
+.test7>span>input {
+	width: 13px;
+	height: 13px;
+	margin: 0;
+	padding: 0;
+}
+
+.test7>span {
+	width: 13px;
+	height: 13px;
+	display: inline-block;
+	border: 2px solid blue;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 13px;
+}

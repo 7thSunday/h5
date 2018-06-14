@@ -158,9 +158,10 @@ section .proto-check input[type="checkbox"] {
 	margin-left: 92px;
 	margin-top: 3px;
 	margin-right: 24px;
+	display: none;
 }
 
-section .proto-check input[type="checkbox"]:checked {
+/*section .proto-check input[type="checkbox"]:checked {
 	opacity: 0;
 }
 
@@ -172,6 +173,51 @@ section .proto-check img {
 	display: none;
 	margin-left: -35px;
 	margin-right: 20px;
+}
+*/
+section .proto-check span {
+	vertical-align: bottom;
+	line-height: 10px;
+	display: inline-block;
+	width: 9px;
+	height: 10px;
+	border: 1px solid #ff2323;
+	margin-left: 92px;
+	margin-top: 3px;
+	margin-right: 24px;
+}
+
+section .proto-check span::before {
+	content: "";
+	display: none;
+	background: #ff2323;
+	width: 6px;
+	height: 2px;
+	transform: rotate(45deg);
+	float: left;
+	margin-top: 6px;
+	margin-left: -1px;
+}
+
+section .proto-check span::after {
+	content: "";
+	display: none;
+	background: #ff2323;
+	width: 12px;
+	height: 2px;
+	transform: rotate(-45deg);
+	float: right;
+	margin-top: -3px;
+	margin-right: -5px;
+}
+
+#cbox {
+	outline: none;
+}
+
+#cbox:checked + label span::before,
+#cbox:checked + label span::after {
+	display: inline-block;
 }
 
 section .proto-check > * {
