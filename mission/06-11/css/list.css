@@ -18,6 +18,10 @@ section .current-position span:nth-child(1) {
 	color: #fff;
 }
 
+section .current-position a {
+	color: #000;
+}
+
 /*分类导航*/
 section ul {
 	margin-bottom: 24px;
@@ -146,6 +150,7 @@ section .btn-page a {
 	background: #e5e5e5;
 	border: 1px solid #c9c9c9;
 	margin: 0 2px;
+	color: #000;
 }
 
 section .btn-page .number {
@@ -160,4 +165,5 @@ section .btn-page .arrow {
 section .btn-page a:nth-child(2) {
 	background: #6db6ff;
 	border-color: #aaa;
+	color: #fff;
 }

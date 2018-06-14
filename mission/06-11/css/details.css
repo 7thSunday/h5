@@ -17,6 +17,10 @@ section .current-position span:nth-child(1) {
 	color: #fff;
 }
 
+section .current-position a {
+	color: #000;
+}
+
 /*主标题*/
 section .section-title {
 	font-size: 0;
