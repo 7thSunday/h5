@@ -1,0 +1,246 @@
+
+/*图片适应大小*/
+section .section-2 .summary .leftside .img img {
+	height: 100%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+/*广告图片*/
+section .section-1 .img {
+	position: relative;
+	margin: 0;
+	width: 1280px;
+	height: 253px;
+}
+/*当前位置*/
+section .section-2 .position {
+	height: 14px;
+	line-height: 14px;
+	margin-top: 21px;
+	margin-bottom: 33px;
+	margin-left: 10px;
+}
+section .section-2 .position a {
+	color: #535353;
+	font-size: 14px;
+}
+/*产品概况*/
+section .section-2 {
+	margin-left: 153px;
+}
+
+section .section-2 .summary {
+	font-size: 0;
+	border-bottom: 1px solid #b4b4b4;
+	width: 1050px;
+	margin-bottom: 41px;
+}
+/*左侧区域*/
+section .section-2 .summary .leftside {
+	width: 486px;
+	display: inline-block;
+	margin-right: 60px;
+}
+
+section .section-2 .summary .leftside input {
+	display: none;
+}
+
+section .section-2 .summary .leftside .img {
+	height: 296px;
+	position: relative;
+	margin-bottom: 15px;
+}
+
+section .section-2 .summary .leftside .img img {
+	display: none;
+}
+
+section .section-2 .summary .leftside .control {
+	border: 0.5px solid #b4b4b4;
+	font-size: 0;
+}
+
+section .section-2 .summary .leftside .control label {
+	display: inline-block;
+	width: 97px;
+	height: 91px;
+	border: 0.5px solid #b4b4b4;
+	text-align: center;
+	/*float: left;*/
+}
+
+section .section-2 .summary .leftside .control label img {
+	height: 100%;
+}
+/*右侧区域*/
+section .section-2 .summary .rightside {
+	display: inline-block;
+	vertical-align: top;
+}
+
+section .section-2 .summary .rightside h2 {
+	font-weight: normal;
+}
+
+section .section-2 .summary .rightside h2:nth-child(1) {
+	font-size: 25px;
+	line-height: 25px;
+	color: #468bd9;
+	margin-top: 50px;
+	margin-bottom: 21px;
+}
+
+section .section-2 .summary .rightside h2:nth-child(2) {
+	font-size: 22px;
+	line-height: 22px;
+	margin-bottom: 26px;
+}
+
+section .section-2 .summary .rightside p:nth-child(3) {
+	font-size: 17px;
+	line-height: 17px;
+	margin-bottom: 8.5px;
+}
+
+section .section-2 .summary .rightside p:nth-child(4) {
+	font-size: 12px;
+	line-height: 21px;
+	margin-bottom: 40px;
+}
+
+section .section-2 .summary .rightside .btn-group {
+	font-size: 0;
+}
+
+section .section-2 .summary .rightside .btn-group input {
+	width: 170px;
+	height: 50px;
+	background: #b5b5b5;
+	color: #fff;
+	border-radius: 7px;
+}
+
+section .section-2 .summary .rightside .btn-group input:hover {
+	background: #468bd9;
+}
+
+section .section-2 .summary .rightside .btn-group input:nth-child(1) {
+	margin-left: 4px;
+	margin-right: 53px;
+}
+
+/*切换*/
+#p1:checked ~ .img #img1 {
+	display: block;
+}
+#p2:checked ~ .img #img2 {
+	display: block;
+}
+#p3:checked ~ .img #img3 {
+	display: block;
+}
+#p4:checked ~ .img #img4 {
+	display: block;
+}
+#p5:checked ~ .img #img5 {
+	display: block;
+}
+/*锚点？*/
+section .anchor {
+	background: #b5b5b5;
+}
+section .anchor::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+section .anchor a {
+	float: left;
+	width: 156px;
+	height: 100px;
+	text-align: center;
+	font-size: 20px;
+	line-height: 100px;
+	color: #fff;
+	/*background: #b5b5b5;*/
+	/*border-bottom: 7px solid #3c9cd3;*/
+}
+
+section .anchor a:hover {
+	background: #faf8f8;
+	color: #468bd9;
+	border-bottom: 7px solid #3c9cd3;
+}
+
+section .anchor > div {
+	margin-left: 153px;
+}
+/*分块内容*/
+section .section-3 {
+	margin-top: 73px;
+	margin-bottom: 82px;
+}
+section .section-3 .content-block {
+	font-size: 0;
+}
+section .section-3 .content-block h3 {
+	color: #0b5ae4;
+	font-size: 33px;
+	line-height: 33px;
+	font-weight: normal;
+	margin-top: 35px;
+}
+section .section-3 .content-block {
+	text-align: center;
+}
+
+section .section-3 .content-block span,
+section .section-3 .content-block p {
+	display: block;
+	color: #b6b6b6;
+	font-size: 12px;
+	line-height: 22px;
+	margin-top: 16px;
+}
+
+section .section-3 .content-block p {
+	margin-bottom: 40px;
+}
+
+section .section-3 .content-block .img img {
+	vertical-align: middle;
+}
+
+
+
+
+section .section-4 {
+	text-align: center;
+	font-size: 0;
+	padding-top: 84px;
+	padding-bottom: 120px;
+}
+
+section .section-5 a {
+	display: inline-block;
+	font-size: 0;
+}
+
+section .section-5 .img {
+	font-size: 0;
+	text-align: center;
+	height: 168px;
+	margin-top: 73px;
+	margin-bottom: 122px;
+}
+
+section .section-5 .img img {
+	height: 100%;
+	vertical-align: middle;
+	margin: 0 37px;
+}

@@ -1,0 +1,420 @@
+/*轮播图*/
+section .swiper-container {
+	height: 546px;
+	box-shadow: 0px 0px 10px 2px #a2d2e9;
+	/*margin-bottom: 72px;*/
+}
+
+section .swiper-container .swiper-slide {
+	position: relative;
+}
+/*限制图片大小*/
+section .swiper-container .swiper-slide img,
+section .section-1 .news .img img,
+section .section-1 .info .info-content .img img,
+/*section .section-3 .qr-code .img img*/ {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+/*section-1和section-2的背景颜色*/
+section .section-1,
+section .section-2 {
+	background: #f6f6f6;
+}
+
+/*内容*/
+/*介绍*/
+section .section-1{
+	width: 100%;
+ 	padding: 0 143.5px; 
+ 	padding-top: 72px;
+ 	padding-bottom: 61px;
+}
+
+section .section-1 .block {
+	width: 315px;
+	height: 473px;
+	text-align: center;
+	background: #fff;
+	float: left;
+	margin: 0 8px;
+	box-shadow: 2px 2px 5px 2px #e3e3e3;
+}
+
+section .section-1 .block .pin {
+	width: 0;
+	height: 0;
+	border-top: 20.5px solid black;
+	border-left: 20.5px solid transparent;
+	border-right: 20.5px solid transparent;
+	margin: 0 auto;
+}
+
+section .section-1 .block-title {
+	height: 168px;
+	overflow: hidden;
+}
+
+section .section-1 .block-title h2 {
+	color: #fff;
+	font-weight: normal;
+	font-family: "Adobe 黑体 Std";
+}
+
+section .section-1 .block-title h2:nth-child(2) {
+	font-size: 17px;
+	line-height: 17px;
+	margin-bottom: 16px;
+}
+
+section .section-1 .block-title h2:nth-child(3) {
+	font-size: 14px;
+	line-height: 14px;
+	letter-spacing: 1.5px;
+}
+
+section .section-1 .block-title h2:nth-child(3)::after {
+	content: "";
+	display: block;
+	margin-top: 6px;
+	width: 106px;
+	height: 1px;
+	background: #fff;
+	margin: 0 auto;
+}
+
+section .section-1 .block-title i {
+	line-height: 48px;
+	text-align: center;
+	display: block;
+	width: 53px;
+	height: 53px;
+	font-size: 30px;
+	color: #fff;
+	border:3px solid #fff;
+	border-radius: 50%;
+	margin: 16px auto;
+}
+/*news*/
+section .section-1 .news .pin {
+	border-top-color: #2395cb;
+}
+section .section-1 .news .block-title {
+	background: #2395cb;
+}
+
+section .section-1 .news h3 {
+	font-size: 15px;
+	line-height: 15px;
+	text-align: left;
+	margin-bottom: 17px;
+	margin-top: 8px;
+}
+
+section .section-1 .news .img {
+	width: 111px;
+	height: 98px;
+	position: relative;
+	margin-right: 26px;
+}
+
+section .section-1 .news .item-news {
+	border-bottom: 2px dotted #c4c4c4;
+	padding-bottom: 21px;
+	width: 283px;
+	margin: 0 auto;
+}
+
+section .section-1 .news .news-content {
+	width: 125px;
+	text-align: left;
+}
+
+section .section-1 .news .news-content p,
+section .section-1 .news .news-content a,
+section .section-1 .news .news-content span,
+section .section-2 .about-content .img img {
+	color: #000;
+	font-size: 14px;
+	line-height: 25px;
+	font-family: "Adobe 黑体 Std";
+}
+
+section .section-1 .news .news-content span {
+	font-size: 12px;
+	line-height: 12px;
+}
+
+section .section-1 .news ul {
+	text-align: left;
+	margin-left: 16px;
+	margin-top: 25px;
+}
+
+section .section-1 .news ul li {
+	height: 14px;
+	line-height: 14px;
+	margin-bottom: 10px;
+}
+
+section .section-1 .news ul li::before {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	width: 5px;
+	height: 5px;
+	background: #2395cb;
+	border-radius: 50%;
+	margin-right: 7px;
+}
+
+section .section-1 .news ul a {
+	font-size: 14px;
+	color: #000;
+	font-family: "Adobe 黑体 Std";
+}
+
+/*产品*/
+section .section-1 .products .pin {
+	border-top-color: #3ed1a4;
+}
+
+section .section-1 .products .block-title {
+	background: #3ed1a4;
+}
+
+section .section-1 .products .show {
+	width: 286px;
+	margin: 26px auto;
+}
+
+section .section-1 .products .show .img {
+	display: inline-block;
+}
+
+section .section-1 .products .show input {
+	margin-top: 77px;
+}
+
+section .section-1 .products p {
+	font-size: 12px;
+	line-height: 12px;
+	font-family: "Adobe 黑体 Std";
+	margin-top: 14px;
+}
+
+section .section-1 .products h3 a {
+	font-family: "Adobe 黑体 Std";
+	font-size: 14px;
+	line-height: 14px;
+	color: #2395cb;
+	font-weight: normal;
+}
+/*品牌介绍*/
+section .section-1 .info .pin {
+	border-top-color: #895ea3;
+}
+
+section .section-1 .info .block-title {
+	background: #895ea3;
+}
+
+section .section-1 .info .info-content {
+	width: 289px;
+	margin: 0 auto;
+	margin-top: 24px;
+}
+
+section .section-1 .info .info-content .img {
+	width: 100%;
+	position: relative;
+	margin-bottom: 34px;
+}
+
+section .section-1 .info .info-content .icon-lquot,
+section .section-1 .info .info-content .icon-rquot {
+	text-align: left;
+	font-size: 11px;
+	line-height: 11px;
+	color: #ceccd1;
+}
+
+section .section-1 .info .info-content .icon-rquot {
+	text-align: right;
+}
+
+section .section-1 .info .info-content .intro {
+	font-size: 12px;
+	line-height: 20px;
+	font-family: "Adobe 黑体 Std";
+	width: 207px;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+/****************************************/
+
+section .section-title h2 {
+	text-align: center;
+}
+
+section .section-title h2:nth-child(1) {
+	font-size: 18px;
+	line-height: 18px;
+	border-bottom: 1px solid #c9c9c9;
+	padding-bottom: 18px;
+}
+
+section .section-title h2:nth-child(2) {
+	font-size: 12px;
+	line-height: 12px;
+	color: #999;
+	background: #f6f6f6;
+	width: 110px;
+	height: 12px;
+	margin: 0 auto;
+	margin-top: -6px;
+}
+
+/*关于我们*/
+section .section-2 .section-title {
+	margin-bottom: 51px;
+}
+
+section .section-2 .about-content {
+	background: url(../img/bg001.png) no-repeat;
+	height: 342px;
+	background-size: auto;
+	/*margin-bottom: 33px;*/
+}
+
+section .section-2 .about-content p {
+	font-size: 14px;
+	line-height: 25px;
+	/*text-indent: 2em;*/
+	width: 932px;
+	text-align: center;
+	margin: 0 auto;
+	padding-top: 42.5px;
+}
+
+section .section-2 .about-content .img {
+	height: 167px;
+	border: 4px solid #fff;
+	width: 992px;
+	overflow: hidden;
+	margin: 0 auto;
+	background: #fff;
+	margin-top: 34.5px;
+	margin-bottom: 25px;
+}
+
+section .section-2 .about-content .img img {
+	margin-right: 13px;
+	height: 100%;
+}
+
+section .section-2 .about-content .img img:last-child {
+	margin: 0;
+}
+
+/*联系我们*/
+section .section-3 .section-content {
+	margin: 0 auto;
+	width: 1070px;
+	margin-bottom: 30px;
+}
+
+section .section-3 .left-area {
+	margin-right: 39px;
+}
+
+section .section-3 .section-title {
+	padding: 33px 0;
+	background: #f6f6f6;
+	margin-bottom: 52px;
+}
+
+section .section-3 .qr-code {
+	width: 141px;
+	height: 188px;
+	border: 1px solid #ebebeb;
+	padding-left: 6px;
+	padding-top: 6px;
+	margin-right: 25px;
+	margin-bottom: 40px;
+}
+
+section .section-3 .qr-code .img {
+	margin-bottom: 8px;
+	width: 100%;
+	position: relative;
+}
+
+section .section-3 .qr-code p {
+	font-size: 12px;
+	line-height: 12px;
+	text-align: center;
+	margin-bottom: 9px;
+}
+
+section .section-3 .contact-list i {
+	font-size: 16px;
+	line-height: 16px;
+	color: #3c9cd3;
+}
+
+section .section-3 .contact-list span {
+	font-size: 14px;
+	line-height: 14px;
+	color: #666;
+}
+
+section .section-3 .contact-list li {
+	margin-bottom: 12px;
+}
+
+section .section-3 .location {
+	width: 426px;
+	height: 195px;
+}
+
+section .section-3 form input,
+section .section-3 form textarea {
+	border: 1px dotted #d4d2d2;
+	background: #f9f8f8;
+	width: 604px;
+	padding-left: 3px;
+}
+
+section .section-3 form input {
+	height: 34px;
+}
+
+section .section-3 form textarea {
+	height: 120px;
+	padding: 3px;
+}
+
+section .section-3 form p {
+	font-size: 14px;
+	line-height: 14px;
+	color: #666;
+	margin-bottom: 9px;
+}
+
+section .section-3 form .row {
+	margin-bottom: 19px;
+}
+
+section .section-3 form input[type="submit"] {
+	width: 94px;
+	height: 30px;
+	font-size: 12px;
+	color: #fff;
+	background: #3c9cd3;
+	border: 0;
+}

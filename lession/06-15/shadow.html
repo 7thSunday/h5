@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>shadow</title>
+</head>
+<body>
+	<style type="text/css">
+		.test {
+			/*文字阴影*/
+			/*text-shadow: x轴偏移 y轴偏移 模糊度 颜色;*/
+			text-shadow: 2px 2px 5px #000;
+		}
+	</style>
+	<p class="test">this is a p element.</p>
+
+
+
+	<style type="text/css">
+		.test1 {
+			width: 100px;
+			height: 100px;
+			/*盒子阴影*/
+			/*box-shadow: inset(内阴影) x轴偏移 y轴偏移 模糊度 阴影大小(可省略) 颜色;*/
+			box-shadow: inset 3px 3px 10px 2px red,
+						3px 3px 10px 2px pink,
+						5px 5px 10px 2px blue;
+		}
+	</style>
+	<div class="test1"></div>
+
+	
+	<!-- 渐变 -->
+	<style type="text/css">
+		.test2 {
+			width: 200px;
+			height: 200px;
+			/*线性渐变*/
+			/*background: linear-gradient(渐变方向(方位词或角度), 颜色, 颜色(可以有多个颜色));*/
+			/*background: linear-gradient(to right bottom, skyblue, red);*/
+			background: linear-gradient(45deg, skyblue, red);
+		}
+
+		.test3 {
+			width: 200px;
+			height: 200px;
+			/*径向渐变*/
+				/*圆：第一组值为圆形的大小(或者为circle)和圆心的坐标，后面的为渐变的颜色*/
+				/*椭圆：第一组值为椭圆的x轴的焦距、y轴的焦距和圆心的坐标，后面的值为渐变的颜色*/
+			background: radial-gradient(100px 50px at 100px 100px,skyblue,pink);
+		}
+	</style>
+	<div class="test2"></div>
+	<div class="test3"></div>
+</body>
+</html>

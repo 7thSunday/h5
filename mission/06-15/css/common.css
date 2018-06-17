@@ -1,0 +1,166 @@
+/*字体*/
+.ado {
+	font-family: "Adobe 黑体 Std";
+}
+
+/*整体宽度*/
+.container {
+	width: 1280px;
+}
+
+/*头部*/
+header .head-line > div,
+header .nav-bar {
+	width: 996px;
+	margin-left: 150px;
+	margin-right: 135px;
+}
+/*顶部*/
+header .head-line {
+	background: #dfdfde;
+	height: 38px;
+	line-height: 38px;
+}
+
+header .head-line > div {
+	
+}
+
+header .head-line span,
+header .head-line a {
+	color: #202020;
+	font-size: 14px;
+	/*line-height: 14px;*/
+	vertical-align: middle;
+}
+
+header .head-line span {
+	margin-left: 8px;
+}
+
+header .head-line a {
+	margin-right: 25px;
+}
+/*导航*/
+header .nav-bar .brand {
+	display: inline-block;
+}
+
+header .nav-bar .brand .logo,
+header .nav-bar .brand .brand-title {
+	vertical-align: middle;
+}
+
+header .nav-bar .brand .logo {
+	display: inline-block;
+	margin-left: 15px;
+}
+
+header .nav-bar .brand .brand-title {
+	display: inline-block;
+}
+
+header .nav-bar .brand .cn {
+	font-size: 23px;
+}
+
+header .nav-bar .brand .en {
+	font-size: 13px;
+	font-weight: normal;
+	word-spacing: -3px;
+	letter-spacing: 0;
+}
+
+header .nav-bar .nav {
+	display: inline-block;
+	width: 574px;
+	margin-right: 10px;
+}
+
+header .nav-bar .nav li {
+	width: 82px;
+	height: 96px;
+	float: left;
+	text-align: center;
+}
+
+header .nav-bar .nav li a {
+	color: #000;
+	font-family: "Adobe 黑体 Std";
+	display: inline-block;
+	width: 82px;
+	height: 100%;
+	padding-top: 24.5px;
+	font-size: 14px;
+	line-height: 23px;
+	border-bottom: 3px solid #fff;
+}
+
+header .nav-bar .nav li a:hover {
+	border-bottom-color:  #3c9cd3;
+	background: #faf8f8;
+}
+
+header .nav-bar .nav li a span:last-child {
+	font-size: 12px;
+}
+
+/*页脚*/
+footer .foot {
+	background: #3c9cd3;
+	height: 102px;
+}
+
+footer .foot ul {
+	margin: 0 auto;
+	width: 406px;
+	margin-top: 18px;
+}
+
+footer .foot ul li {
+	float: left;
+	line-height: 12px;
+}
+
+footer .foot ul li:first-child ~ li::before {
+	content: "";
+	display: inline-block;
+	background: #fff;
+	width: 3px;
+	height: 3px;
+	vertical-align: middle;
+	margin-right: 6px;
+	margin-left: 5px;
+}
+
+footer .foot ul li a,
+footer .foot span {
+	font-size: 12px;
+	color: #fff;
+	letter-spacing: 2px;
+}
+
+footer .foot .sub {
+	text-align: center;
+	padding-top: 21px;
+}
+
+footer .foot .sub i {
+	font-size: 19px;
+	color: #33ccff;
+	line-height: 19px;
+	margin-right: 5px;
+}
+
+footer .copy {
+	background: #1c1b29;
+	height: 35px;
+}
+
+footer .copy p {
+	text-align: center;
+	font-size: 12px;
+	line-height: 35px;
+	color: #fff;
+	letter-spacing: 1px;
+}

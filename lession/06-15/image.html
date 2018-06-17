@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		.test .img {
+			width: 250px;
+			height: 200px;
+			overflow: hidden;
+			background: skyblue;
+			position: relative;
+		}
+
+		.test .img img {
+			width: 100%;
+			/*height: 100%;*/
+
+			/*居中方法一：*/
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+
+			/*方法二：*/
+			/*position: absolute;
+			left: -9999px;
+			right: -9999px;
+			top: -9999px;
+			bottom: -9999px;
+			margin: auto;*/
+		}
+	</style>
+</head>
+<body>
+	<!-- 一张图片使用一个容器包装，容器设置固定宽高，图片的宽高适应容器 -->
+	<div class="test">
+		<div class="img">
+			<img src="../sample.jpg" alt="">
+			<p>1234</p>
+		</div>
+	</div>
+</body>
+</html>

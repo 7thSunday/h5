@@ -1,0 +1,110 @@
+.test1 {
+	width: 200px;
+	height: 200px;
+	padding: 10px;
+	background: pink;
+
+	/*设置盒子模型*/
+	box-sizing: border-box;
+		/*默认值 content-box 设置元素的宽高不会包括padding和border*/
+		/*		 border-box 元素的padding和border都会计算到width和height里*/
+
+	/*定位 position: */
+		/*absolute 绝对定位*/
+			/*会使元素脱离文档流，不占据位置，类似于浮动*/
+			/*根据其祖先元素具有定位信息的最近的那一个祖先元素来进行定位*/
+
+		/*relative 相对定位*/
+			/*不会使元素脱离文档流*/
+			/*根据自身原来的位置进行定位*/
+
+		/*fixed    固定定位*/
+			/*会使元素脱离文档流*/
+			/*根据浏览器窗口进行定位*/
+
+	position: absolute;/*绝对定位*/
+	top: 100px;
+	left: 100px;
+}
+
+.test {
+	width: 100px;
+	height: 100px;
+	background: #eee;
+}
+
+.web {
+	width: 500px;
+	height: 500px;
+	background: skyblue;
+	position: absolute;
+	right: 0;
+	top: 100px;
+}
+
+.test2 {
+	width: 100px;
+	height: 100px;
+	background: gray;
+	margin-top: 30px;
+	position: relative;
+	left: 50px;
+	top: 30px;
+}
+
+.web2 {
+	width: 200px;
+	height: 200px;
+	background: skyblue;
+	margin-top: 20px;
+	overflow: hidden;
+}
+
+.test3 {
+	width: 100px;
+	height: 100px;
+	background: red;
+	position: fixed;
+	margin-bottom: 10px;
+	left: 0;
+	bottom: 0;
+}
+
+.web3 {
+	width: 200px;
+	height: 200px;
+	background: blue;
+	overflow: hidden;
+}
+
+/*多级导航菜单*/
+
+.web4 li {
+	width: 80px;
+	height: 35px;
+	text-align: center;
+	line-height: 35px;
+	background: gray;
+	float: left;
+
+	position: relative;
+}
+
+.web4 li:hover {
+	background: #000;
+}
+
+.web4 li:hover > .layer2 {
+	display: block;
+}
+
+.web4 li a {
+	color: #fff;
+}
+
+.layer2 {
+	display: none;
+	position: absolute;
+	top: 35px;
+	left: 0;
+}
