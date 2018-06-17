@@ -1,7 +1,7 @@
 /*轮播图*/
 section .swiper-container {
 	height: 546px;
-	box-shadow: 0px 0px 10px 2px #a2d2e9;
+	box-shadow: 0px 3px 7px 1px #a2d2e9;
 	/*margin-bottom: 72px;*/
 }
 

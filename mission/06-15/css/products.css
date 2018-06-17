@@ -44,6 +44,7 @@ section .section-2 .series li {
 	padding-top: 39px;
 	float: left;
 	margin: 0 3px;
+	cursor: pointer;
 }
 
 section .section-2 .series li:hover {

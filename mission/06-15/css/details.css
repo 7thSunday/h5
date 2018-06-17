@@ -123,6 +123,7 @@ section .section-2 .summary .rightside .btn-group input {
 	background: #b5b5b5;
 	color: #fff;
 	border-radius: 7px;
+	font-size: 20px;
 }
 
 section .section-2 .summary .rightside .btn-group input:hover {
