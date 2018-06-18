@@ -6,6 +6,7 @@
 /*整体宽度*/
 .container {
 	width: 1280px;
+	margin: 0 auto;
 }
 
 /*头部*/

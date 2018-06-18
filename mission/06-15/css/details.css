@@ -136,21 +136,14 @@ section .section-2 .summary .rightside .btn-group input:nth-child(1) {
 }
 
 /*切换*/
-#p1:checked ~ .img #img1 {
-	display: block;
-}
-#p2:checked ~ .img #img2 {
-	display: block;
-}
-#p3:checked ~ .img #img3 {
-	display: block;
-}
-#p4:checked ~ .img #img4 {
-	display: block;
-}
+#p1:checked ~ .img #img1,
+#p2:checked ~ .img #img2,
+#p3:checked ~ .img #img3,
+#p4:checked ~ .img #img4,
 #p5:checked ~ .img #img5 {
 	display: block;
 }
+
 /*锚点？*/
 section .anchor {
 	background: #b5b5b5;
