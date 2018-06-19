@@ -1,0 +1,38 @@
+.pro {
+	width: 481px;
+	overflow: hidden;
+	background: #f6f6f6;
+	border-right: 1px solid #b9b9b9;
+}
+
+.big {
+	width: 189px;
+	height: 251px;
+	margin: 0 auto;
+	margin-bottom: 14px;
+}
+
+.big img {
+	width: 100%;
+	display: none;
+}
+
+.big img:nth-child(1) {
+	display: block;
+}
+
+.small {
+	overflow: hidden;
+}
+
+.pro input[type="radio"] {
+	display: none;
+}
+
+.img {
+	float: left;width: 96px;
+	height: 91px;
+	overflow: hidden;
+	border: 1px solid #b9b9b9;
+	border-right: 0;
+}

@@ -5,16 +5,14 @@
 
 /*整体宽度*/
 .container {
-	width: 1280px;
-	margin: 0 auto;
+	width: 100%;
 }
 
 /*头部*/
 header .head-line > div,
 header .nav-bar {
 	width: 996px;
-	margin-left: 150px;
-	margin-right: 135px;
+	margin: 0 auto;
 }
 /*顶部*/
 header .head-line {
@@ -24,7 +22,7 @@ header .head-line {
 }
 
 header .head-line > div {
-	
+	width: 996px;
 }
 
 header .head-line span,

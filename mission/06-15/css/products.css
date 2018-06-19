@@ -17,11 +17,19 @@ section .section-2 .products-list li .img img {
 	margin: auto;
 }
 /*广告图片*/
+section .section-1 {
+	width: 100%;
+}
+
 section .section-1 .img {
 	position: relative;
 	margin: 0;
-	width: 1280px;
-	height: 220px;
+	width: 100%;
+	/*height: 220px;*/
+}
+
+section .section-1 .img img {
+	width: 100%;
 }
 /*当前位置*/
 section .section-2 .position {

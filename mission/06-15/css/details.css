@@ -13,9 +13,19 @@ section .section-2 .summary .leftside .img img {
 section .section-1 .img {
 	position: relative;
 	margin: 0;
-	width: 1280px;
-	height: 253px;
+	width: 100%;
+	/*height: 253px;*/
 }
+
+section .section-1 .img img {
+	width: 100%;
+}
+
+section .section-2 {
+	width: 1050px;
+	margin: 0 auto;
+}
+
 /*当前位置*/
 section .section-2 .position {
 	height: 14px;
@@ -30,7 +40,7 @@ section .section-2 .position a {
 }
 /*产品概况*/
 section .section-2 {
-	margin-left: 153px;
+	/*margin-left: 153px;*/
 }
 
 section .section-2 .summary {
@@ -42,8 +52,10 @@ section .section-2 .summary {
 /*左侧区域*/
 section .section-2 .summary .leftside {
 	width: 486px;
+	/*height: 413px;*/
 	display: inline-block;
 	margin-right: 60px;
+	border-right: 1px solid #b4b4b4;
 }
 
 section .section-2 .summary .leftside input {
@@ -53,6 +65,7 @@ section .section-2 .summary .leftside input {
 section .section-2 .summary .leftside .img {
 	height: 296px;
 	position: relative;
+	margin-top: 15px;
 	margin-bottom: 15px;
 }
 
@@ -61,7 +74,7 @@ section .section-2 .summary .leftside .img img {
 }
 
 section .section-2 .summary .leftside .control {
-	border: 0.5px solid #b4b4b4;
+	/*border: 1px solid #b4b4b4;*/
 	font-size: 0;
 }
 
@@ -69,13 +82,17 @@ section .section-2 .summary .leftside .control label {
 	display: inline-block;
 	width: 97px;
 	height: 91px;
-	border: 0.5px solid #b4b4b4;
+	border: 1px solid #b4b4b4;
+	border-right: 0;
+	border-bottom: 1px solid transparent;
 	text-align: center;
+	overflow: hidden;
 	/*float: left;*/
 }
 
 section .section-2 .summary .leftside .control label img {
 	height: 100%;
+
 }
 /*右侧区域*/
 section .section-2 .summary .rightside {
@@ -91,7 +108,7 @@ section .section-2 .summary .rightside h2:nth-child(1) {
 	font-size: 25px;
 	line-height: 25px;
 	color: #468bd9;
-	margin-top: 50px;
+	margin-top: 69px;
 	margin-bottom: 21px;
 }
 
@@ -107,14 +124,15 @@ section .section-2 .summary .rightside p:nth-child(3) {
 	margin-bottom: 8.5px;
 }
 
-section .section-2 .summary .rightside p:nth-child(4) {
+section .section-2 .summary .rightside p:nth-child(3) ~ p {
 	font-size: 12px;
-	line-height: 21px;
-	margin-bottom: 40px;
+	line-height: 12px;
+	margin-bottom: 9px;
 }
 
 section .section-2 .summary .rightside .btn-group {
 	font-size: 0;
+	margin-top: 40px;
 }
 
 section .section-2 .summary .rightside .btn-group input {
@@ -208,6 +226,50 @@ section .section-3 .content-block p {
 
 section .section-3 .content-block .img img {
 	vertical-align: middle;
+}
+
+section .section-3 .usage {
+	margin: 0 auto;
+	margin-top: 43px;
+	position: relative;
+	width: 772px;
+}
+
+section .section-3 .usage .item {
+	width: 168px;
+	height: 257px;
+	margin: 0 109px;
+	float: left;
+	margin-bottom: 15px;
+}
+
+section .section-3 .usage > .img {
+	position: absolute;
+	left: 292px;
+	top: 80px;
+}
+
+section .section-3 .usage .item h4 {
+	font-size: 16px;
+	line-height: 16px;
+	color: #414de8;
+	font-weight: normal;
+	margin: 5px 0;
+}
+
+section .section-3 .usage .item p {
+	margin: 0;
+	font-size: 12px;
+	line-height: 16px;
+	color: #2c2c2c;
+	text-align: left;
+	padding-left: 5px;
+}
+
+section .section-3 .usage .item .img {
+	width: 168px;
+	height: 168px;
+	border-radius: 50%;
 }
 
 

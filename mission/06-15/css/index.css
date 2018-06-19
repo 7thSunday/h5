@@ -1,18 +1,24 @@
 /*轮播图*/
 section .swiper-container {
-	height: 546px;
+	width: 100%;
 	box-shadow: 0px 3px 7px 1px #a2d2e9;
 	/*margin-bottom: 72px;*/
 }
 
 section .swiper-container .swiper-slide {
+	width: 100%;
 	position: relative;
+}
+
+section .swiper-container .swiper-slide img {
+	width: 100%;
 }
 /*限制图片大小*/
 section .swiper-container .swiper-slide img,
 section .section-1 .news .img img,
 section .section-1 .info .info-content .img img,
 /*section .section-3 .qr-code .img img*/ {
+	width: 100%;
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -24,15 +30,21 @@ section .section-1 .info .info-content .img img,
 section .section-1,
 section .section-2 {
 	background: #f6f6f6;
+	width: 100%;
+	margin: 0 auto;
 }
 
 /*内容*/
 /*介绍*/
-section .section-1{
-	width: 100%;
- 	padding: 0 143.5px; 
- 	padding-top: 72px;
+section .section-1 {
+	padding-top: 72px;
  	padding-bottom: 61px;
+}
+
+section .section-1 > div{
+	width: 993px;
+ 	/*padding: 0 143.5px; */
+ 	margin: 0 auto;
 }
 
 section .section-1 .block {
@@ -258,7 +270,9 @@ section .section-1 .info .info-content .intro {
 /****************************************/
 
 section .section-title h2 {
+	margin: 0 auto;
 	text-align: center;
+	width: 257px;
 }
 
 section .section-title h2:nth-child(1) {
@@ -287,7 +301,7 @@ section .section-2 .section-title {
 section .section-2 .about-content {
 	background: url(../img/bg001.png) no-repeat;
 	height: 342px;
-	background-size: auto;
+	background-size: cover;
 	/*margin-bottom: 33px;*/
 }
 
