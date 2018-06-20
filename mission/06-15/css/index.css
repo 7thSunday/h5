@@ -317,6 +317,16 @@ section .section-2 .about-content p {
 	padding-top: 42.5px;
 }
 
+section .section-2 .about-content .item {
+	position: absolute;
+	top: -999px;
+	bottom: -999px;
+	left: -999px;
+	right: -999px;
+	margin: auto;
+	height: 100%;
+}
+
 section .section-2 .about-content .img {
 	height: 167px;
 	border: 4px solid #fff;
@@ -326,16 +336,20 @@ section .section-2 .about-content .img {
 	background: #fff;
 	margin-top: 34.5px;
 	margin-bottom: 25px;
+	text-align: center;
+	white-space: nowrap;
+	position: relative;
+
 }
 
 section .section-2 .about-content .img img {
-	margin-right: 13px;
+	margin: 0 6.5px;
 	height: 100%;
 }
 
-section .section-2 .about-content .img img:last-child {
+/*section .section-2 .about-content .img img:last-child {
 	margin: 0;
-}
+}*/
 
 /*联系我们*/
 section .section-3 {
