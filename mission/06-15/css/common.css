@@ -1,3 +1,8 @@
+* {
+	/*min-width: 1280px;*/
+	margin: 0 auto;
+}
+
 /*字体*/
 .ado {
 	font-family: "Adobe 黑体 Std";
@@ -9,20 +14,25 @@
 }
 
 /*头部*/
+header {
+	min-width: 1280px;
+}
 header .head-line > div,
 header .nav-bar {
 	width: 996px;
+	/*min-width: 986px;*/
 	margin: 0 auto;
 }
 /*顶部*/
 header .head-line {
-	background: #dfdfde;
 	height: 38px;
 	line-height: 38px;
 }
 
-header .head-line > div {
-	width: 996px;
+header .head-line {
+	width: 100%;
+	min-width: 1280px;
+	background: #dfdfde;
 }
 
 header .head-line span,
@@ -105,8 +115,13 @@ header .nav-bar .nav li a span:last-child {
 }
 
 /*页脚*/
-footer .foot {
+footer {
+	width: 100%;
+	min-width: 1280px;
 	background: #3c9cd3;
+}
+
+footer .foot {
 	height: 102px;
 }
 

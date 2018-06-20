@@ -1,5 +1,6 @@
 section {
 	background: #f6f6f6;
+	min-width: 1280px;
 }
 section .section-2 {
 	width: 977px;
@@ -19,6 +20,7 @@ section .section-2 .products-list li .img img {
 /*广告图片*/
 section .section-1 {
 	width: 100%;
+	min-width: 1280px;
 }
 
 section .section-1 .img {
