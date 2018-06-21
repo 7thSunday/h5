@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.test {
+			width: 300px;
+			height: 200px;
+			padding-top: 50px;
+			margin: 0 auto;
+			position: relative;
+		}
+		.test::after {
+			content: "";
+			display:block;
+			clear: both;
+		}
+		.ball {
+			width: 50px;
+			height: 50px;
+			background: skyblue;
+			float: right;
+			border-radius: 50%;
+			animation-name: ball;
+			animation-duration: 0.5s;
+			animation-timing-function: cubic-bezier(.58,-0.59,.2,1.79);
+		}
+		.rect {
+			width: 200px;
+			height: 120px;
+			background: skyblue;
+			position: absolute;
+			top:110px;
+			right: 25px;
+			border-radius: 15px;
+			animation-name: rect;
+			animation-delay: 0.5s;
+			animation-duration: 0.5s;
+			animation-timing-function: cubic-bezier(.18,.48,.56,1.45);
+			animation-fill-mode: forwards;
+			transform-origin: top right;
+			transform: scale(0);
+		}
+
+		@keyframes ball {
+			from {
+				transform: translateX(50px);
+			}
+			to {
+				transform: translateX(0px);
+			}
+		}
+
+		@keyframes rect {
+			from {
+				transform: scale(0);
+			}
+			to {
+				transform: scale(1);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="test">
+		<div class="ball"></div>
+		<div class="rect"></div>
+	</div>
+</body>
+</html>
