@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.test {
+			width: 300px;
+			height: 180px;
+			overflow: hidden;
+		}
+		.test img {
+			width: 100%;
+			/*指定需要变换的属性*/
+			transition-property: transform;
+			/*指定变换的过渡时间*/
+			transition-duration: 3s;
+			/*指定动画的延迟时间*/
+			/*transition-delay: 500ms;*/
+			/*时间函数，定义变换过程的快慢*/
+			transition-timing-function: cubic-bezier(.19,.84,.74,.13);
+
+			/*也可以写在一行内*/
+			/*transition: transform 3s linear 500ms;*/
+		}
+		.test:hover img {
+			transform: scale(2);
+
+		}
+	</style>
+</head>
+<body>
+	<!-- 过渡动画 -->
+		<!-- transition -->
+	<div class="test"><img src="../sample.jpg" alt=""></div>
+	<!-- 自定义动画 -->
+	<style type="text/css">
+		.test2:hover {
+			animation-play-state: running;
+		}
+		.test2 {
+			width: 200px;
+			height: 200px;
+			background: skyblue;
+
+			/*指定动画名称*/
+			animation-name: anime;
+
+			/*指定动画的持续时间*/
+			animation-duration: 1s;
+
+			/*指定动画的延迟时间*/
+			animation-delay: 1s;
+
+			/*动画的时间函数*/
+			animation-timing-function: linear;
+
+			/*指定动画结束后的状态*/
+				/*forwards 停留在动画结束后的状态*/
+				/*backwards 默认，返回到动画开始播放前的状态*/
+			animation-fill-mode: backwards;
+
+			/*指定动画的播放方向*/
+				/*reverse 反向播放*/
+			animation-direction: alternate;
+
+			/*指定动画的循环次数，infinite无限循环*/
+			animation-iteration-count: infinite;
+
+			/*指定动画的初始状态为播放或暂停*/
+				/*running 默认，运动状态*/
+				/*paused 暂停状态*/
+			animation-play-state: paused;
+		}
+		/*@keyframes anime {
+			from {
+				transform: translate(0px,0px);
+			}
+			to {
+				transform: translate(500px,200px);
+			}
+		}*/
+		@keyframes anime {
+			0% {
+				transform: translate(0px,0px);
+			}
+			50% {
+				transform: translate(500px,0px);
+			}
+			100% {
+				transform: translate(0px,0px);
+			}
+		}
+	</style>
+	<div class="test2"></div>
+</body>
+</html>

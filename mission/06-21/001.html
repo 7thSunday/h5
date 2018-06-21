@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			text-decoration: none;
+			list-style: none;
+		}
+		.container {
+			background: #ddd;
+			height: 1080px;
+			width: 100%;
+		}
+		ul {
+			font-size: 0;
+			position: fixed;
+			top: 100px;
+			right: -145px;
+		}
+		ul:hover li {
+			transform: translateX(-145px);
+		}
+		li {
+			background: #fff;
+			margin-bottom: 3px;
+			width: 175px;
+			transition-property: transform;
+			transition-duration: 0.4s;
+		}
+		li:nth-child(2) {
+			transition-delay: 30ms;
+		}
+		li:nth-child(3) {
+			transition-delay: 60ms;
+		}
+		li:nth-child(4) {
+			transition-delay: 90ms;
+		}
+		li:nth-child(5) {
+			transition-delay: 120ms;
+		}
+		li:nth-child(6) {
+			transition-delay: 150ms;
+		}
+		li:nth-child(7) {
+			transition-delay: 180ms;
+		}
+		li:nth-child(8) {
+			transition-delay: 210ms;
+		}
+		li:nth-child(9) {
+			transition-delay: 240ms;
+		}
+		li:nth-child(10) {
+			transition-delay: 270ms;
+		}
+		li:nth-child(11) {
+			transition-delay: 300ms;
+		}
+		li:nth-child(12) {
+			transition-delay: 330ms;
+		}
+		a {
+			line-height: 30px;
+			height: 30px;
+			font-size: 0;
+			display: block;
+		}
+		a:hover > em {
+			background: #00b800;
+		}
+		a:hover > span {
+			color: blue;
+		}
+		em,span {
+			display: inline-block;
+			font-size: 15px;
+			line-height: 30px;
+			font-style: normal;
+		}
+		em {
+			width: 30px;
+			height: 30px;
+			font-size: 20px;
+			background: #0087ca;
+			text-align: center;
+			color: #fff;
+		}
+		span {
+			width: 135px;
+			height: 30px;
+			padding-left: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<ul>
+			<li>
+				<a href="">
+					<em>0</em>
+					<span>站长素材</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<em>1</em>
+					<span>书签切换</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<em>2</em>
+					<span>幻灯片</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<em>3</em>
+					<span>图片滚动-左</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<em>4</em>
+					<span>图片滚动-上</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<em>5</em>
+					<span>图片无缝滚动-左</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<em>6</em>
+					<span>图片无缝滚动-上</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<em>7</em>
+					<span>文字滚动-左</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<em>8</em>
+					<span>文字滚动-上</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<em>9</em>
+					<span>文字无缝滚动-左</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<em>10</em>
+					<span>文字无缝滚动-上</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<em>11</em>
+					<span>其他基础效果</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

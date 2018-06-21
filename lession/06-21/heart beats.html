@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		* {
+			margin: 0 auto;
+			padding: 0;
+			font-size: 0;
+		}
+		.heart {
+			width: 80px;
+			height: 60px;
+			margin-top: 250px;
+			animation-name: beats;
+			animation-duration: 1s;
+			animation-play-state: paused;
+			animation-iteration-count: infinite;
+			animation-timing-function: ease-in-out;
+		}
+		.heart:hover {
+			animation-play-state: running;
+		}
+		@keyframes beats {
+			0% {
+				transform: scale(1);
+			}
+			50% {
+				transform: scale(2);
+			}
+			100% {
+				transform: scale(1);
+			}
+		}
+		.top {
+			width: 80px;
+		}
+		.tri {
+			width: 0;
+			height: 0;
+			border-top: 44px solid red;
+			border-left: 38px solid transparent;
+			border-right: 38px solid transparent;
+			margin-top: -11px;
+		}
+		.halfc {
+			display: inline-block;
+			width: 40px;
+			height: 40px;
+			background: red;
+			border-top-right-radius: 50%;
+			border-top-left-radius: 50%;
+		}
+		.halfc:nth-child(1) {
+			border-bottom-left-radius: 50%;
+		}
+		.halfc:nth-child(2) {
+			border-bottom-right-radius: 50%;
+		}
+	</style>
+</head>
+<body>
+	<div class="heart">
+		<div class="top">
+			<div class="halfc"></div>
+			<div class="halfc"></div>
+		</div>
+		<div class="tri"></div>
+	</div>
+</body>
+</html>

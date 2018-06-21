@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			text-decoration: none;
+			list-style: none;
+		}
+		li {
+			background: #777;
+			text-align: center;
+			width: 80px;
+			height: 30px;
+		}
+		li a {
+			color: #fff;
+			vertical-align: middle;
+			line-height: 30px;
+			box-sizing: border-box;
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+		.layer1::after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+		.layer1 > li {
+			float: left;
+			position: relative;
+		}
+		.layer2 {
+			position: absolute;
+			top: 30px;
+			height: 0;
+		}
+		.layer2 > li {
+			/*display: block;*/
+			transition: transform opacity;
+			transition-duration: 500ms;
+			transform: rotateY(90deg) rotateX(-30deg);
+			opacity: 0;
+		}
+		li:hover > .layer2 > li:nth-child(1) {
+			transition-delay: 0ms;
+		}
+		li:hover > .layer2 > li:nth-child(2) {
+			transition-delay: 50ms;
+		}
+		li:hover > .layer2 > li:nth-child(3) {
+			transition-delay: 100ms;
+		}
+		li:hover > .layer2 > li:nth-child(4) {
+			transition-delay: 150ms;
+		}
+		li:hover > .layer2 > li:nth-child(5) {
+			transition-delay: 200ms;
+		}
+		.layer2 > li:nth-child(5) {
+			transition-delay: 0ms;
+		}
+		.layer2 > li:nth-child(4) {
+			transition-delay: 50ms;
+		}
+		.layer2 > li:nth-child(3) {
+			transition-delay: 100ms;
+		}
+		.layer2 > li:nth-child(2) {
+			transition-delay: 150ms;
+		}
+		.layer2 > li:nth-child(1) {
+			transition-delay: 200ms;
+		}
+		li:hover .layer2 > li {
+			/*display: block;*/
+			transform: rotateY(0deg) rotateX(0deg);
+			opacity: 1;
+		}
+		li:hover {
+			background: #555;
+		}
+	</style>
+</head>
+<body>
+	<ul class="layer1">
+		<li><a href="">link1</a></li>
+		<li><a href="">link2</a></li>
+		<li>
+			<a href="">link3</a>
+			<ul class="layer2">
+				<li><a href="">link6</a></li>
+				<li><a href="">link7</a></li>
+				<li><a href="">link8</a></li>
+				<li><a href="">link9</a></li>
+				<li><a href="">link10</a></li>
+			</ul>
+		</li>
+		<li><a href="">link4</a></li>
+		<li><a href="">link5</a></li>
+	</ul>
+</body>
+</html>

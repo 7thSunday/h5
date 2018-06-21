@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			text-decoration: none;
+			list-style: none;
+		}
+		.test {
+			width: 100px;
+			height: 100px;
+			float: left;
+			background: skyblue;
+			/*变换*/ /*注意变换的是坐标轴，而不是元素。*/
+				/*1.位移translate(x,y);x和y分别代表水平方向和垂直方向上的位移。*/
+					/*也可以分开写：translateX(),translateY()。*/
+					/*注意位移的像素不占位置，元素只占自身原来大小的位置，类似于相对定位。*/
+				/*2.缩放scale(x,y);x和y分别代表水平方向和垂直方向上的缩放倍数。*/
+				/*transform-origin: 设置元素变换的中心点位置。*/
+					/*默认为center。可以设置两个值，分别为水平方向和垂直方向的缩放中心点，可以是方位词，也可以是像素值。*/
+				/*3.斜切skew(x,y);x和y分别代表水平方向和垂直方向上的斜切程度。*/
+					/*注意当skewX或者skewY的值为90度时，有些浏览器会出现白屏问题。*/
+
+				/*4.旋转rotate(r);r代表坐标旋转角度。*/
+					/*rotateX()环绕x轴进行旋转。*/
+					/*rotateY()环绕y轴进行旋转。*/
+		}
+		.test:nth-child(odd) {
+			background: pink;
+		}
+		.test:nth-child(1) {/*位移*/
+			/*margin-left: 30px;*/
+			transform: translateX(30px);
+			/*transform: translate(30px,30px);*/
+		}
+		.test:nth-child(1):hover {
+			transform: translate(10px,10px);
+			transition: 3000ms;
+		}
+		.test:nth-child(2) {
+			transform: scale(0.5);
+		}
+		.test1:hover img {
+			/*transform: scale(2);*/
+			/*transition: 1500ms;*/
+			/*transform-origin: left;*/
+			/*transform-origin: left top;*/
+			transform: scaleX(2) scaleY(2) rotate(45deg);
+			/*transform-origin: 30px 20px;*/
+		}
+		.test1 {
+			width: 300px;
+			height: 200px;
+			overflow: hidden;
+			margin: 0 auto;
+		}
+		.test1 img {
+			width: 100%;
+		}
+		.test:nth-child(3) {
+			transform: skew(45deg,30deg);
+			/*transform: skewY(45deg);*/
+		}
+		.test:nth-child(4) {
+			/*transform: rotate(30deg,45deg);*/
+			transform: rotateX(30deg);
+		}
+	</style>
+</head>
+<body>
+	<div class="test"></div>
+	<div class="test"></div>
+	<div class="test"></div>
+	<div class="test"></div>
+	<div class="test"></div>
+	<div class="test"></div>
+
+	<div class="test1"><img src="../sample.jpg" alt=""></div>
+</body>
+</html>
