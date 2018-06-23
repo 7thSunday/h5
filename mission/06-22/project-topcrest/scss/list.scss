@@ -1,0 +1,211 @@
+@charset "utf-8";
+section {
+    background: #e7e9ec;
+    .innbox {
+//      min-width: 1280px;
+        width: 1280px;
+        height: 1401px;
+        margin: 0 auto;
+        background: url(../img/home-bg.png)no-repeat;
+        background-position: 0 -92px;
+        background-size: fill;
+        position: relative;
+        .section-content {
+            margin:0 auto;
+            width: 1030px;
+            overflow: hidden;
+            &::after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+            .leftside, .main {
+                float: left;
+            }
+            .leftside {
+                width: 223px;
+                height: 323px;
+                background: #f3f2f2;
+                margin-top: 59px;
+                ul {
+                    padding-top: 27px;
+                    margin-bottom: 52px;
+                    li {
+                        margin-bottom: 8px;
+                        a {
+                            padding-left: 15px;
+                            display: block;
+                            color: #7c7979;
+                            &:hover {
+                                background: #58636d;
+                                color: #fff;
+                            }
+                        }
+                        height: 30px;
+                        span {
+                            font-size: 16px;
+                            line-height: 30px;
+                        }
+                    }
+                }
+                .phone {
+                    i {
+                        float: left;
+                        height: 100%;
+                    }
+                    &::after {
+                        content: "";
+                        display: block;
+                        clear: both;
+                    }
+                    width: 110px;
+                    height: 35px;
+                    font-size: 12px;
+                    line-height: 20px;
+                    font-family: "微软雅黑";
+                    color: #7c7c7c;
+                    margin-left: 38px;
+                }
+            }
+            .main {
+                margin-left: 60px;
+                width: 681px;
+                margin-top: 86px;
+                .title {
+                    width: 652px;
+                    padding-bottom: 3px;
+                    border-bottom: 2px solid #fff;
+                    margin: 0 auto;
+                    margin-bottom: 44px;
+                    &::after {
+                        content: "";
+                        display: block;
+                        clear: both;
+                    }
+                    h1 {
+                        font-size: 26px;
+                        color: #fff;
+                        float: right;
+                        line-height: 26px;
+                        &:nth-child(1) {
+                            font-family: "宋体";
+                            float: left;
+                        }
+                    }
+                }
+                .content {
+                    background: #fff;
+                    padding-top: 23px;
+                    padding-bottom: 31px;
+                    .position {
+                        margin: 0 auto;
+                        width: 602px;
+                        height: 26px;
+                        line-height: 26px;
+                        position: relative;
+                        border-bottom: 1px solid #c4c4c5;
+                        span, a {
+                            font-size: 14px;
+                            line-height: 26px;
+                            color: #000;
+                            vertical-align: middle;
+                        }
+                        span {
+                            position: absolute;
+                            right: 0;
+                        }
+                    }
+                    ul {
+                        width: 681px;
+                        padding-top: 31px;
+                        li {
+                            margin: 0 auto;
+                            width: 652px;
+                            height: 330px;
+                            h2,h3 {
+                                text-align: center;
+                                font-size: 16px;
+                                line-height: 16px;
+                                font-weight: normal;
+                                margin-bottom: 18px;
+                            }
+                            h3 {
+                                font-size: 12px;
+                                line-height: 12px;
+                                margin-bottom: 14px;
+                                color: #858788;
+                            }
+                            p {
+                                margin-top: 12px;
+                                font-size: 12px;
+                                line-height: 18px;
+                                color: #5f5b5b;
+                            }
+                            .img {
+                                width: 652px;
+                                height: 210px;
+                                position: relative;
+                                img {
+                                    position: absolute;
+                                    top: 0;
+                                    bottom: 0;
+                                    left: 0;
+                                    right: 0;
+                                    margin: auto;
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                    .page {
+                        &::after {
+                            content: "";
+                            display: block;
+                            clear:both;
+                        }
+                        width: 209px;
+                        margin: 0 auto;
+                        margin-top: 15px;
+                        .current {
+                            border-color: #000;
+                        }
+                        a {
+                            color: #000;
+                            margin: 0 1.5px;
+                            font-size: 12px;
+                            line-height: 21px;
+                            text-align: center;
+                            width: 18px;
+                            height: 21px;
+                            float: left;
+                            border: 1px solid #ccc;
+                            &:nth-last-child(2) {
+                                width: 58px;
+                            }
+                            &:last-child {
+                                width: 40px;
+                            }
+                            &:hover {
+                                border-color: #000;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .headphone-img {
+            width: 400px;
+            height: 478px;
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            img {
+                height: 100%;
+                position: absolute;
+                right: 0;
+            }
+        }
+    }
+    
+}

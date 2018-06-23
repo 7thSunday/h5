@@ -1,0 +1,208 @@
+.container header {
+  width: 982px;
+  margin: 0 auto;
+  margin-bottom: 31px; }
+  .container header .headline {
+    width: 982px;
+    height: 49px; }
+    .container header .headline ul {
+      width: 388px;
+      float: right;
+      margin-top: 12px;
+      padding-left: 50px; }
+      .container header .headline ul li {
+        float: left; }
+        .container header .headline ul li a {
+          font-size: 12px;
+          color: #b3b2b2;
+          vertical-align: top; }
+        .container header .headline ul li:nth-child(1) ~ li::before {
+          content: "";
+          display: inline-block;
+          width: 1.5px;
+          height: 14px;
+          background: #b3b2b2;
+          margin: 0 4px; }
+      .container header .headline ul::after {
+        content: "";
+        display: block;
+        clear: both; }
+  .container header .nav-bar {
+    width: 982px;
+    height: 45px;
+    position: relative; }
+    .container header .nav-bar .logo {
+      display: inline-block;
+      font-size: 0;
+      vertical-align: top; }
+    .container header .nav-bar .nav {
+      display: inline-block;
+      margin-top: 13px;
+      position: absolute;
+      right: 0; }
+      .container header .nav-bar .nav li {
+        float: left;
+        height: 32px;
+        width: 78px;
+        text-align: center; }
+        .container header .nav-bar .nav li a {
+          font-size: 14px;
+          line-height: 32px;
+          color: #7a7878;
+          width: 100%;
+          height: 100%;
+          display: inline-block;
+          vertical-align: middle;
+          word-spacing: 1px; }
+          .container header .nav-bar .nav li a:hover {
+            border-bottom: 4px solid #1abc9c;
+            color: #f64f5b; }
+      .container header .nav-bar .nav::after {
+        content: "";
+        display: block;
+        clear: both; }
+    .container header .nav-bar::after {
+      content: "";
+      display: block;
+      clear: both; }
+.container footer {
+  background: #38373d;
+  width: 100%;
+  min-width: 1280px; }
+  .container footer .pin {
+    width: 0;
+    height: 0;
+    border-bottom: 27px solid #2c3e50;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    margin: 0 auto;
+    margin-top: 22px; }
+  .container footer .contact {
+    width: 982px;
+    margin: 0 auto;
+    overflow: hidden; }
+    .container footer .contact::after {
+      content: "";
+      display: block;
+      clear: both; }
+    .container footer .contact .leftside, .container footer .contact .rightside {
+      float: left; }
+    .container footer .contact .leftside {
+      height: 140px;
+      width: 503px;
+      font-size: 0;
+      margin-top: 194px; }
+      .container footer .contact .leftside .qr, .container footer .contact .leftside .contact-ways {
+        display: inline-block;
+        color: #fff;
+        vertical-align: top; }
+      .container footer .contact .leftside .qr {
+        width: 161px;
+        margin-right: 15px; }
+        .container footer .contact .leftside .qr p {
+          font-size: 12px;
+          line-height: 12px;
+          font-weight: bold;
+          margin-top: 9px;
+          text-align: center; }
+        .container footer .contact .leftside .qr .img {
+          width: 119px;
+          height: 119px;
+          position: relative;
+          margin: 0 auto; }
+          .container footer .contact .leftside .qr .img img {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto; }
+      .container footer .contact .leftside .contact-ways p {
+        font-size: 16px;
+        line-height: 16px;
+        margin-bottom: 24px; }
+      .container footer .contact .leftside .contact-ways span {
+        display: inline-block;
+        font-size: 14px;
+        line-height: 14px;
+        margin-right: 6px;
+        margin-top: 3px;
+        margin-bottom: 5px; }
+      .container footer .contact .leftside .contact-ways .block {
+        width: 240px; }
+        .container footer .contact .leftside .contact-ways .block::after {
+          content: "";
+          display: block;
+          clear: both; }
+        .container footer .contact .leftside .contact-ways .block:nth-child(3) {
+          margin-top: 5px;
+          margin-bottom: 10px; }
+        .container footer .contact .leftside .contact-ways .block:last-child {
+          width: 324px; }
+        .container footer .contact .leftside .contact-ways .block i {
+          float: left;
+          width: 24px;
+          height: 24px;
+          font-size: 18px; }
+    .container footer .contact .rightside {
+      font-size: 0;
+      width: 460px;
+      margin-top: 61px;
+      color: #fff;
+      margin-left: 15px; }
+      .container footer .contact .rightside p {
+        font-size: 16px;
+        line-height: 16px;
+        margin-bottom: 12px; }
+      .container footer .contact .rightside form::after {
+        content: "";
+        display: block;
+        clear: both; }
+      .container footer .contact .rightside form input, .container footer .contact .rightside form textarea {
+        background: #5d6d7e;
+        border: 0;
+        border-radius: 4px;
+        margin-bottom: 11px;
+        padding: 0 12px;
+        color: #fff; }
+      .container footer .contact .rightside form input::-webkit-input-placeholder,
+      .container footer .contact .rightside form textarea::-webkit-input-placeholder {
+        color: #c8cdd1; }
+      .container footer .contact .rightside form textarea {
+        width: 391px;
+        height: 144px;
+        display: block;
+        padding-top: 10px; }
+      .container footer .contact .rightside form input {
+        height: 40px; }
+      .container footer .contact .rightside form input:nth-child(1) {
+        width: 170px;
+        margin-right: 21px; }
+      .container footer .contact .rightside form input:nth-child(2) {
+        width: 200px; }
+      .container footer .contact .rightside form input:nth-child(3) {
+        width: 391px; }
+      .container footer .contact .rightside form input[type="submit"] {
+        width: 98px;
+        height: 30px;
+        font-size: 14px;
+        background: #3498db;
+        border-radius: 4px;
+        float: right;
+        margin-right: 69px; }
+  .container footer .copy {
+    color: #fff;
+    background: #2c3e50;
+    height: 103px;
+    padding-top: 45px; }
+    .container footer .copy p {
+      text-align: center; }
+      .container footer .copy p:nth-child(1) {
+        font-size: 14px;
+        line-height: 14px;
+        margin-bottom: 10px; }
+      .container footer .copy p:nth-child(2) {
+        font-size: 12px;
+        line-height: 12px; }
+
+/*# sourceMappingURL=common.css.map */

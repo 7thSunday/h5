@@ -1,0 +1,138 @@
+@charset "UTF-8";
+section {
+  background: #e7e9ec;
+  width: 100%;
+  min-width: 1280px; }
+  section .innbox {
+    min-width: 1280px;
+    width: 1280px;
+    margin: 0 auto;
+    background: url(../img/home-bg.png) no-repeat;
+    background-position: 0 -92px;
+    background-size: fill;
+    position: relative; }
+    section .innbox .section-content {
+      margin: 0 auto;
+      width: 977px;
+      overflow: hidden;
+      padding-top: 127px; }
+      section .innbox .section-content::after {
+        content: "";
+        display: block;
+        clear: both; }
+      section .innbox .section-content .leftside, section .innbox .section-content .main {
+        float: left; }
+      section .innbox .section-content .leftside {
+        width: 223px;
+        height: 323px;
+        background: #f3f2f2; }
+        section .innbox .section-content .leftside ul {
+          padding-top: 27px;
+          margin-bottom: 52px; }
+          section .innbox .section-content .leftside ul li {
+            margin-bottom: 8px;
+            height: 30px; }
+            section .innbox .section-content .leftside ul li a {
+              padding-left: 15px;
+              display: block;
+              color: #7c7979; }
+              section .innbox .section-content .leftside ul li a:hover {
+                background: #58636d;
+                color: #fff; }
+            section .innbox .section-content .leftside ul li span {
+              font-size: 16px;
+              line-height: 30px; }
+        section .innbox .section-content .leftside .phone {
+          width: 110px;
+          height: 35px;
+          font-size: 12px;
+          line-height: 20px;
+          font-family: "微软雅黑";
+          color: #7c7c7c;
+          margin-left: 38px; }
+          section .innbox .section-content .leftside .phone i {
+            float: left;
+            height: 100%; }
+          section .innbox .section-content .leftside .phone::after {
+            content: "";
+            display: block;
+            clear: both; }
+      section .innbox .section-content .main {
+        margin-left: 22px;
+        width: 732px; }
+        section .innbox .section-content .main .title {
+          width: 652px;
+          padding-bottom: 3px;
+          border-bottom: 2px solid #fff;
+          margin: 0 auto;
+          margin-bottom: 44px; }
+          section .innbox .section-content .main .title::after {
+            content: "";
+            display: block;
+            clear: both; }
+          section .innbox .section-content .main .title h1 {
+            font-size: 26px;
+            color: #fff;
+            float: right;
+            line-height: 26px; }
+            section .innbox .section-content .main .title h1:nth-child(1) {
+              font-family: "宋体";
+              float: left; }
+        section .innbox .section-content .main .content {
+          background: #fff;
+          padding-top: 42px;
+          padding-bottom: 5px;
+          margin-bottom: 70px; }
+          section .innbox .section-content .main .content h1 {
+            font-size: 28px;
+            line-height: 28px;
+            text-align: center;
+            margin-top: 46px;
+            margin-bottom: 36px; }
+          section .innbox .section-content .main .content .position {
+            margin: 0 auto;
+            padding: 0 28px;
+            width: 100%;
+            height: 26px;
+            line-height: 26px;
+            position: relative;
+            border-bottom: 1px solid #c4c4c5; }
+            section .innbox .section-content .main .content .position .current {
+              color: #3f4142; }
+            section .innbox .section-content .main .content .position span, section .innbox .section-content .main .content .position a {
+              font-size: 12px;
+              line-height: 26px;
+              color: #000;
+              vertical-align: middle; }
+            section .innbox .section-content .main .content .position span {
+              position: absolute;
+              right: 28px; }
+          section .innbox .section-content .main .content ul li {
+            width: 732px; }
+            section .innbox .section-content .main .content ul li h2 {
+              font-size: 19px;
+              line-height: 19px;
+              margin-bottom: 15px; }
+            section .innbox .section-content .main .content ul li p {
+              text-indent: 2em;
+              color: #6b6c6d;
+              font-size: 14px;
+              line-height: 25px; }
+              section .innbox .section-content .main .content ul li p:last-child {
+                margin-bottom: 60px; }
+            section .innbox .section-content .main .content ul li .img {
+              max-width: 708px;
+              width: 100%;
+              padding: 0 12px; }
+              section .innbox .section-content .main .content ul li .img img {
+                width: 100%;
+                margin-bottom: 42px; }
+              section .innbox .section-content .main .content ul li .img:last-child {
+                margin-top: 41px;
+                margin-bottom: 60px; }
+            section .innbox .section-content .main .content ul li:last-child .img:last-child {
+              margin-bottom: 0; }
+              section .innbox .section-content .main .content ul li:last-child .img:last-child img {
+                margin-bottom: 0; }
+
+/*# sourceMappingURL=details.css.map */

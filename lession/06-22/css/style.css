@@ -1,0 +1,25 @@
+.web p {
+  width: 1000px;
+  background: skyblue;
+  color: pink;
+  font-size: 20px;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); }
+.web .nav {
+  overflow: hidden; }
+  .web .nav li {
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background: gray;
+    list-style: none; }
+    .web .nav li a {
+      color: #fff;
+      text-decoration: none;
+      background: skyblue;
+      font-size: 12px; }
+
+/*# sourceMappingURL=style.css.map */
