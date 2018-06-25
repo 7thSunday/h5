@@ -83,7 +83,7 @@ ul li:hover .left {
 }
 
 .bottom {
-	bottom: -1px;
+	top: 30px;
 	left: 80px;
 	transform: rotate(180deg);
 	transform-origin: top left;
@@ -92,7 +92,7 @@ ul li:hover .left {
 }
 
 .left {
-	bottom: -1px;
+	top: 30px;
 	left: 0;
 	transform: rotate(-90deg);
 	transform-origin: top left;
