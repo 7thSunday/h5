@@ -69,14 +69,13 @@ ul li:hover .left {
 .top {
 	top: 0;
 	left: 0;
-	width: 0;
 	transition-duration: 0.3s;
 	transition-delay: 0.5s;
 }
 
 .right {
 	top: 0;
-	left: 100%;
+	left: 80px;
 	transform: rotate(90deg);
 	transform-origin: top left;
 	transition-duration: 0.1s;
@@ -85,7 +84,7 @@ ul li:hover .left {
 
 .bottom {
 	bottom: -1px;
-	left: 100%;
+	left: 80px;
 	transform: rotate(180deg);
 	transform-origin: top left;
 	transition-duration: 0.3s;
