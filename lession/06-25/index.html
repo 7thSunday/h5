@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		/*让元素居中在父元素中*/
+		.test {
+			width: 300px;
+			height: 500px;
+			background: skyblue;
+			position: relative;
+		}
+		.test1 {
+			width: 100px;
+			height: 100px;
+			background: pink;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			/*需要知道自身的宽高*/
+			/*margin-left: -50px;
+			margin-top: -50px;*/
+
+			/*不需要知道自身的宽高，但需注意兼容性*/
+			transform: translate(-50%,-50%);
+			-webkit-transform: translate(-50%,-50%);
+			-moz-transform: translate(-50%,-50%);
+			-ms-transform: translate(-50%,-50%);
+
+			/*清除textarea的拖动效果*/
+			resize: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="test">
+		<div class="test1"></div>
+	</div>
+</body>
+</html>
