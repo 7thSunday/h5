@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.wokong {
+			width: 200px;
+			height: 180px;
+			background: url(wukong.png) no-repeat;
+			animation-name: walk;
+			animation-duration: 1.5s;
+			/***********************/
+			/*瞬间跳转*/
+			animation-timing-function: steps(1,start);
+			/***********************/
+			animation-iteration-count: infinite;
+		}
+		.bajie {
+			width: 200px;
+			height: 180px;
+			background: url(bajie.png) no-repeat;
+			animation-name: walk;
+			animation-timing-function: steps(1,start);
+			animation-duration: 1.5s;
+			animation-iteration-count: infinite;
+		}
+		@keyframes walk {
+			0% {
+				background-position-x: 0; 
+			}
+			12.5% {
+				background-position-x: -200px;
+			}
+			25% {
+				background-position-x: -400px;
+			}
+			37.5% {
+				background-position-x: -600px;
+			}
+			50% {
+				background-position-x: -800px;
+			}
+			62.5% {
+				background-position-x: -1000px;
+			}
+			75% {
+				background-position-x: -1200px;
+			}
+			87.5% {
+				background-position-x: -1400px;
+			}
+			100% {
+				background-position-x: 0;
+			}
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="wokong"></div>
+	<div class="bajie"></div>
+</body>
+</html>

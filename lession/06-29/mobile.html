@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,user-scalable=no">
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		.test {
+			width: 375px;
+			height: 375px;
+			background: skyblue;
+		}
+	</style>
+</head>
+<body>
+	<!-- 布局视口：手机在生产时厂商已经设置好的，为了让更多的内容放到移动端的屏幕上 -->
+	<!-- 设备视口：通常看到的移动设备的屏幕大小 -->
+		<!-- 物理像素：设备的屏幕分辨率，如iphone6的为750*1344 -->
+		<!-- 逻辑像素：代码中书写的像素值，如iphone6的为375*667 -->
+		<!-- 设备像素比：设备生产时已经设置好的，如iphone6的为2 -->
+			<!-- 设备像素比越高，手机的屏幕的像素越高 -->
+		<!-- 逻辑像素=物理像素/设备像素比 -->
+	<!-- 理想视口：布局视口等于设备视口 -->
+	<div class="test"></div>
+	<h1>this is a h1 element.</h1>
+	<script type="text/javascript">
+		document.write("布局视口大小：" + document.documentElement.clientWidth);
+		document.write("设备像素比：" + window.devicePixelRatio);
+		// window.devicePixelRatio 查询设备像素比
+	</script>
+</body>
+</html>
