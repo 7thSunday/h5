@@ -1,133 +1,108 @@
-.container {
-  background: #fff; }
-  .container header {
-    overflow: hidden; }
-    .container header .logo {
-      float: left;
-      width: 61.5px;
-      height: 61.5px;
-      overflow: hidden;
-      margin-top: 8.5px;
-      margin-left: 6.5px; }
-      .container header .logo img {
-        height: 100%; }
-    .container header .search {
-      width: 134px;
-      height: 27.5px;
-      border-radius: 11px;
-      border: 1px solid #ff9344;
-      margin: 0 auto;
-      margin-top: 25.5px; }
-      .container header .search input {
-        vertical-align: middle; }
-      .container header .search input[type="text"] {
-        width: 85.5px;
-        height: 22.5px;
-        margin-top: 2px;
-        border: 0;
-        margin-left: 14px;
-        font-size: 12px; }
-      .container header .search input[type="image"] {
-        width: 18px;
-        height: 17px;
-        margin-left: 7.5px; }
-    .container header .sel {
-      float: right;
-      margin-top: 23.5px;
-      margin-right: 10.5px;
-      width: 81.5px;
-      height: 30px;
-      border: 1.5px solid #ff9344;
-      position: relative; }
-      .container header .sel select {
-        border: 0;
-        background: transparent;
-        appearance: none;
-        -moz-appearance: none;
-        -webkit-appearance: none;
-        width: 100%;
-        height: 100%;
-        padding-left: 3.5px; }
-      .container header .sel select::-ms-expand {
-        display: none; }
-      .container header .sel::after {
-        content: "";
-        border-top: 8px solid #ff9344;
-        border-right: 8px solid transparent;
-        border-left: 8px solid transparent;
-        display: block;
-        width: 0;
-        height: 0;
-        position: absolute;
-        right: 5.5px;
-        top: 11px; }
-  .container section .scroll {
+.container section .scroll {
+  width: 100%;
+  height: 142.5px;
+  position: relative;
+  margin-top: 5px;
+  margin-bottom: 17px;
+  overflow: hidden; }
+  .container section .scroll img {
     width: 100%;
-    height: 142.5px;
-    position: relative;
-    margin-top: 5px;
-    margin-bottom: 17px;
-    overflow: hidden; }
-    .container section .scroll img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto; }
+.container section .block .block-1 .content {
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 8.5px; }
+  .container section .block .block-1 .content li {
+    width: 120px;
+    height: 46.5px;
+    float: left;
+    margin-bottom: 15px; }
+    .container section .block .block-1 .content li:nth-child(2n) {
+      float: right; }
+    .container section .block .block-1 .content li .img {
+      display: block;
       width: 100%;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: auto; }
-  .container section .block .block-1 .block-head .title {
-    margin-left: 10.5px; }
-    .container section .block .block-1 .block-head .title .icon {
-      width: 28px;
-      height: 27px;
-      text-align: center;
-      float: left; }
-      .container section .block .block-1 .block-head .title .icon img {
-        width: 100%; }
-    .container section .block .block-1 .block-head .title h2 {
-      float: left;
-      font-size: 14.5px;
-      line-height: 14.5px;
-      font-weight: normal;
-      margin-top: 5px;
-      margin-left: 4.5px; }
-  .container section .block .block-1 .block-head .more {
-    float: right;
-    line-height: 28px;
-    margin-right: 10.5px; }
-    .container section .block .block-1 .block-head .more span {
-      font-size: 12px;
-      line-height: 12px;
-      color: #000;
-      vertical-align: middle; }
-    .container section .block .block-1 .block-head .more img {
-      width: 12.5px;
-      height: 13px;
-      vertical-align: middle; }
-  .container section .block .block-1 .content {
-    width: 300px;
-    margin: 0 auto;
-    margin-top: 8.5px; }
-    .container section .block .block-1 .content li {
-      width: 120px;
-      height: 46.5px;
-      float: left;
-      margin-bottom: 15px; }
-      .container section .block .block-1 .content li:nth-child(2n) {
-        float: right; }
-      .container section .block .block-1 .content li .img {
-        display: block;
+      height: 100%;
+      position: relative; }
+      .container section .block .block-1 .content li .img img {
         width: 100%;
-        height: 100%;
-        position: relative; }
-        .container section .block .block-1 .content li .img img {
-          width: 100%;
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          margin: auto; }
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto; }
+.container section .block .block-2 .content {
+  margin-top: 12.5px;
+  margin-left: 10.5px; }
+  .container section .block .block-2 .content .item {
+    height: 82px;
+    margin-bottom: 15px; }
+    .container section .block .block-2 .content .item a {
+      display: block; }
+      .container section .block .block-2 .content .item a .intro {
+        float: left; }
+        .container section .block .block-2 .content .item a .intro .img {
+          display: inline-block;
+          width: 105.5px;
+          height: 82px;
+          position: relative;
+          float: left; }
+          .container section .block .block-2 .content .item a .intro .img img {
+            height: 100%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto; }
+        .container section .block .block-2 .content .item a .intro .text {
+          float: left;
+          margin-left: 10.5px; }
+          .container section .block .block-2 .content .item a .intro .text h3 {
+            font-size: 15px;
+            line-height: 15px;
+            font-weight: normal;
+            color: #000;
+            margin-top: 15.5px;
+            margin-bottom: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; }
+          .container section .block .block-2 .content .item a .intro .text div {
+            font-size: 11px;
+            line-height: 11px;
+            margin-bottom: 11px;
+            color: #494949; }
+            .container section .block .block-2 .content .item a .intro .text div span {
+              margin: 0 2.5px; }
+              .container section .block .block-2 .content .item a .intro .text div span:nth-child(2) {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis; }
+          .container section .block .block-2 .content .item a .intro .text .price {
+            font-size: 16px;
+            line-height: 16px;
+            color: #ff9344;
+            margin-left: 3.5px; }
+      .container section .block .block-2 .content .item a .status {
+        float: right;
+        color: #494949;
+        font-size: 11px;
+        line-height: 11px;
+        text-align: right;
+        margin-right: 7.5px; }
+        .container section .block .block-2 .content .item a .status .distance {
+          margin-top: 18px;
+          margin-bottom: 36px; }
+.container footer .nav-bar .nav .home {
+  background: url(../img/bnav-home-active.png) no-repeat;
+  background-size: 37px 37px;
+  background-position: center 2.5px; }
 
 /*# sourceMappingURL=index.css.map */

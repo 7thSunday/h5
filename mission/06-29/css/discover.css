@@ -1,0 +1,81 @@
+.container section .search {
+  width: 134px;
+  height: 27.5px;
+  border-radius: 11px;
+  border: 1px solid #ff9344;
+  margin: 0 auto;
+  margin-top: 17px;
+  margin-bottom: 16px; }
+  .container section .search input {
+    vertical-align: middle; }
+  .container section .search input[type="text"] {
+    width: 85.5px;
+    height: 22.5px;
+    margin-top: 2px;
+    border: 0;
+    margin-left: 14px;
+    font-size: 12px; }
+  .container section .search input[type="image"] {
+    width: 18px;
+    height: 17px;
+    margin-left: 7.5px; }
+.container section .block .head-line h2 {
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 7.5px; }
+.container section .block .head-line ul {
+  width: 272px;
+  margin: 0 auto; }
+  .container section .block .head-line ul li {
+    width: 62px;
+    height: 31.5px;
+    float: left;
+    background: #dcdcdc;
+    margin: 0 1.5px;
+    margin-bottom: 2.5px; }
+    .container section .block .head-line ul li a {
+      width: 100%;
+      height: 100%;
+      display: block;
+      font-size: 10px;
+      color: #898989;
+      line-height: 31.5px;
+      text-align: center; }
+.container section .block .block-head {
+  margin-bottom: 8px; }
+  .container section .block .block-head .title .icon {
+    width: 20.5px;
+    height: 23.5px; }
+  .container section .block .block-head .title h2 {
+    margin-top: 6px; }
+  .container section .block .block-head .more {
+    line-height: 24px; }
+.container section .block .block-1 .content {
+  width: 100%; }
+  .container section .block .block-1 .content li {
+    padding: 0 3px;
+    float: left; }
+    .container section .block .block-1 .content li:nth-child(1) a {
+      width: 40%; }
+    .container section .block .block-1 .content li:nth-child(2) a {
+      width: 60%; }
+    .container section .block .block-1 .content li:nth-child(3) a {
+      width: 30%; }
+    .container section .block .block-1 .content li:nth-child(4) a {
+      width: 30%; }
+    .container section .block .block-1 .content li a {
+      display: block;
+      position: relative;
+      height: auto; }
+      .container section .block .block-1 .content li a img {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto; }
+
+/*# sourceMappingURL=discover.css.map */

@@ -1,0 +1,57 @@
+.container section .swiper-container {
+  margin-top: 9.5px;
+  height: 108.5px; }
+  .container section .swiper-container .swiper-slide {
+    text-align: center; }
+    .container section .swiper-container .swiper-slide img {
+      width: 74px;
+      height: 74px;
+      border-radius: 50%; }
+    .container section .swiper-container .swiper-slide p {
+      font-size: 13px;
+      line-height: 13px;
+      color: #000; }
+  .container section .swiper-container .swiper-pagination {
+    bottom: 0; }
+  .container section .swiper-container .swiper-pagination-bullet-active {
+    background: #FF9344; }
+.container section .block .block-head {
+  margin-bottom: 8px; }
+  .container section .block .block-head .title .icon {
+    width: 33px;
+    height: 29px; }
+  .container section .block .block-head .title h2 {
+    margin-top: 13.5px; }
+  .container section .block .block-head .more {
+    line-height: 36px; }
+.container section .block .content {
+  width: 100%;
+  padding: 0 10.5px;
+  margin-bottom: 26px; }
+  .container section .block .content::after {
+    content: "";
+    display: block;
+    clear: both; }
+  .container section .block .content li {
+    width: 25%;
+    float: right; }
+    .container section .block .content li a {
+      display: block;
+      width: 66.5px;
+      height: 66.5px;
+      position: relative;
+      margin: 0 auto; }
+      .container section .block .content li a img {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto; }
+.container footer .nav-bar .nav .type {
+  background: url(../img/bnav-type-active.png) no-repeat;
+  background-size: 37px 37px;
+  background-position: center 2.5px; }
+
+/*# sourceMappingURL=catagory.css.map */

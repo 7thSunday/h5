@@ -1,0 +1,90 @@
+@charset "utf-8";
+@function p($px){
+    @return $px/2+px;
+}
+.container {
+    section {
+        .swiper-container {
+            margin-top: p(19);
+            height: p(217);
+            .swiper-slide {
+                text-align: center;
+                img {
+                    width: p(148);
+                    height: p(148);
+                    border-radius: 50%;
+                }
+                p {
+                    font-size: p(26);
+                    line-height: p(26);
+                    color: #000;
+                }
+            }
+            .swiper-pagination {
+                bottom: 0;
+            }
+            .swiper-pagination-bullet-active {
+                background: #FF9344;
+            }
+        }
+        .block {
+            .block-head {
+                margin-bottom: p(16);
+                .title {
+                    .icon {
+                        width: p(66);
+                        height: p(58);
+                    }
+                    h2 {
+                        margin-top: p(27);
+                    }
+                }
+                .more {
+                    line-height: p(72);
+                }
+            }
+            .content {
+                width: 100%;
+                padding: 0 p(21);
+                margin-bottom: p(52);
+                &::after {
+                    content: "";
+                    display: block;
+                    clear: both;
+                }
+                li {
+                    width: 25%;
+                    float: right;
+                    a {
+                        display: block;
+                        width: p(133);
+                        height: p(133);
+                        position: relative;
+                        margin: 0 auto;
+                        img {
+                            width: 100%;
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            margin: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        .nav-bar {
+            .nav {
+                .type {
+                    background: url(../img/bnav-type-active.png) no-repeat;
+                    background-size: p(74) p(74);
+                    background-position: center p(5);
+                }
+            }
+        }
+    }
+}
+

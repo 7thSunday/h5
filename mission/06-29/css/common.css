@@ -1,0 +1,149 @@
+.container {
+  background: #fff; }
+  .container header {
+    overflow: hidden; }
+    .container header .logo {
+      float: left;
+      width: 61.5px;
+      height: 61.5px;
+      overflow: hidden;
+      margin-top: 8.5px;
+      margin-left: 6.5px; }
+      .container header .logo img {
+        height: 100%; }
+    .container header .search {
+      width: 134px;
+      height: 27.5px;
+      border-radius: 11px;
+      border: 1px solid #ff9344;
+      margin: 0 auto;
+      margin-top: 25.5px; }
+      .container header .search input {
+        vertical-align: middle; }
+      .container header .search input[type="text"] {
+        width: 85.5px;
+        height: 22.5px;
+        margin-top: 2px;
+        border: 0;
+        margin-left: 14px;
+        font-size: 12px; }
+      .container header .search input[type="image"] {
+        width: 18px;
+        height: 17px;
+        margin-left: 7.5px; }
+    .container header .sel {
+      float: right;
+      margin-top: 23.5px;
+      margin-right: 10.5px;
+      width: 81.5px;
+      height: 30px;
+      border: 1.5px solid #ff9344;
+      position: relative; }
+      .container header .sel select {
+        border: 0;
+        background: transparent;
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        width: 100%;
+        height: 100%;
+        padding-left: 3.5px; }
+      .container header .sel select::-ms-expand {
+        display: none; }
+      .container header .sel::after {
+        content: "";
+        border-top: 8px solid #ff9344;
+        border-right: 8px solid transparent;
+        border-left: 8px solid transparent;
+        display: block;
+        width: 0;
+        height: 0;
+        position: absolute;
+        right: 5.5px;
+        top: 11px; }
+    .container header .back {
+      float: left;
+      margin-left: 11.5px;
+      margin-top: 24px; }
+      .container header .back a {
+        text-align: center;
+        line-height: 28.5px;
+        display: block;
+        width: 61.5px;
+        height: 28.5px;
+        border: 1px solid #FF9344;
+        border-radius: 9px; }
+    .container header .title h1 {
+      font-size: 13px;
+      line-height: 13px;
+      color: #000;
+      font-weight: normal;
+      text-align: center;
+      margin-top: 32.5px; }
+  .container section {
+    margin-bottom: 75px; }
+    .container section .block .block-head .title {
+      margin-left: 10.5px; }
+      .container section .block .block-head .title .icon {
+        width: 28px;
+        height: 27px;
+        text-align: center;
+        float: left; }
+        .container section .block .block-head .title .icon img {
+          width: 100%; }
+      .container section .block .block-head .title h2 {
+        float: left;
+        font-size: 14.5px;
+        line-height: 14.5px;
+        font-weight: normal;
+        margin-top: 5px;
+        margin-left: 4.5px; }
+    .container section .block .block-head .more {
+      float: right;
+      line-height: 28px;
+      margin-right: 10.5px; }
+      .container section .block .block-head .more span {
+        font-size: 12px;
+        line-height: 12px;
+        color: #000;
+        vertical-align: middle; }
+      .container section .block .block-head .more img {
+        width: 12.5px;
+        height: 13px;
+        vertical-align: middle; }
+  .container footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 68px;
+    background: #fff; }
+    .container footer .nav-bar .nav li {
+      float: left;
+      width: 25%;
+      text-align: center; }
+      .container footer .nav-bar .nav li a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding-top: 47.5px;
+        font-size: 13px;
+        line-height: 13px;
+        color: #000; }
+    .container footer .nav-bar .nav .home {
+      background: url(../img/bnav-home.png) no-repeat;
+      background-size: 37px 37px;
+      background-position: center 2.5px; }
+    .container footer .nav-bar .nav .type {
+      background: url(../img/bnav-type.png) no-repeat;
+      background-size: 37px 37px;
+      background-position: center 2.5px; }
+    .container footer .nav-bar .nav .discover {
+      background: url(../img/bnav-discover.png) no-repeat;
+      background-size: 37px 37px;
+      background-position: center 2.5px; }
+    .container footer .nav-bar .nav .mine {
+      background: url(../img/bnav-mine.png) no-repeat;
+      background-size: 37px 37px;
+      background-position: center 2.5px; }
+
+/*# sourceMappingURL=common.css.map */
