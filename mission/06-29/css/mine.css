@@ -1,0 +1,154 @@
+.container header .message {
+  position: relative; }
+  .container header .message::after {
+    text-align: center;
+    display: block;
+    width: 14px;
+    height: 14px;
+    content: "2";
+    position: absolute;
+    color: #fff;
+    font-size: 10px;
+    line-height: 14px;
+    background: #fa5050;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+    transform: translateY(-50%); }
+.container section {
+  margin: 0 10.5px;
+  margin-top: 10px;
+  margin-bottom: 75px; }
+  .container section .info .avatar {
+    float: left;
+    width: 85px;
+    height: 85px;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden; }
+    .container section .info .avatar img {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto; }
+  .container section .info .status {
+    padding-top: 17px;
+    margin-left: 12px;
+    float: left; }
+    .container section .info .status span {
+      color: #000;
+      font-size: 15px;
+      line-height: 15px; }
+    .container section .info .status p {
+      margin-top: 19px;
+      color: #9d9d9d;
+      font-size: 13px;
+      line-height: 13px; }
+  .container section .info .go {
+    float: right;
+    width: 20.5px;
+    height: 23px;
+    margin-top: 29px; }
+    .container section .info .go img {
+      width: 100%; }
+  .container section .card {
+    margin-top: 13px; }
+    .container section .card .comment {
+      background: url(../img/mine-bg-01.jpg) no-repeat;
+      background-size: 100%;
+      float: left; }
+    .container section .card .collection {
+      background: url(../img/mine-bg-02.jpg) no-repeat;
+      background-size: 100%;
+      margin: 0 auto; }
+    .container section .card .price-off {
+      background: url(../img/mine-bg-03.jpg) no-repeat;
+      background-size: 100%;
+      float: right; }
+    .container section .card a {
+      color: #000;
+      font-size: 13px;
+      line-height: 13px;
+      display: block;
+      width: 30%;
+      padding-top: 21.25%;
+      margin: 0 1.66%;
+      position: relative; }
+      .container section .card a span {
+        position: absolute;
+        white-space: nowrap;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 5%; }
+  .container section .list-1 {
+    margin-top: 12px;
+    margin-bottom: 35px; }
+    .container section .list-1 li {
+      margin-bottom: 7px; }
+  .container section .list-1 .block-head .title,
+  .container section .list-2 .block-head .title {
+    margin-left: 10.5px; }
+    .container section .list-1 .block-head .title .icon,
+    .container section .list-2 .block-head .title .icon {
+      width: 29px;
+      height: 37px;
+      float: left;
+      position: relative; }
+      .container section .list-1 .block-head .title .icon img,
+      .container section .list-2 .block-head .title .icon img {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto; }
+    .container section .list-1 .block-head .title h2,
+    .container section .list-2 .block-head .title h2 {
+      float: left;
+      font-size: 14.5px;
+      line-height: 14.5px;
+      font-weight: normal;
+      margin-top: 13px;
+      margin-left: 4.5px; }
+  .container section .list-1 .block-head .more,
+  .container section .list-2 .block-head .more {
+    float: right;
+    line-height: 37px;
+    margin-right: 10.5px; }
+    .container section .list-1 .block-head .more span,
+    .container section .list-2 .block-head .more span {
+      font-size: 12px;
+      line-height: 12px;
+      color: #000;
+      vertical-align: middle; }
+    .container section .list-1 .block-head .more img,
+    .container section .list-2 .block-head .more img {
+      width: 12.5px;
+      height: 13px;
+      vertical-align: middle; }
+  .container section .btn-group {
+    margin-top: 10px; }
+    .container section .btn-group > div {
+      width: 50%;
+      float: left; }
+    .container section .btn-group a {
+      width: 73.5px;
+      height: 38px;
+      display: block;
+      margin: 0 auto;
+      font-size: 12px;
+      line-height: 38px;
+      text-align: center;
+      color: #fff;
+      background: #FF9344;
+      border-radius: 18px; }
+.container footer .nav-bar .nav .mine {
+  background: url(../img/bnav-mine-active.png) no-repeat;
+  background-size: 37px 37px;
+  background-position: center 2.5px; }
+
+/*# sourceMappingURL=mine.css.map */

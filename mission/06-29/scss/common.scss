@@ -81,6 +81,7 @@
                 text-align: center;
                 line-height: p(57);
                 display: block;
+                color: #000;
                 width: p(123);
                 height: p(57);
                 border: p(2) solid #FF9344;
@@ -95,6 +96,25 @@
                 font-weight: normal;
                 text-align: center;
                 margin-top: p(65);
+            }
+        }
+        .message {
+            float: right;
+            width: p(62);
+            height: p(42);
+            margin-right: p(18);
+            margin-top: p(50);
+            img {
+                width: 100%;
+            }
+        }
+        .star {
+            float: right;
+            margin-right: p(21);
+            margin-top: p(40);
+            height: p(60);
+            img {
+                height: 100%;
             }
         }
     }

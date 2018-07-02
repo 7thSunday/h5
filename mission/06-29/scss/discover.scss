@@ -31,6 +31,7 @@
         }
         .block {
             .head-line {
+                margin-bottom: p(38);
                 h2 {
                     font-size: p(26);
                     line-height: p(26);
@@ -60,6 +61,35 @@
                     }
                 }
             }
+            .block-1 {
+                margin-bottom: p(30);
+            }
+            .block-2 {
+                .content {
+                    li {
+                        width: 33.33%;
+                        height: p(198);
+                        float: left;
+                        padding: 0 p(6);
+                        a {
+                            display: block;
+                            position: relative;
+                            width: 100%;
+                            height: 100%;
+                            overflow: hidden;
+                            img {
+                                height: 100%;
+                                position: absolute;
+                                top: 0;
+                                bottom: 0;
+                                left: 0;
+                                right: 0;
+                                margin: auto;
+                            }
+                        }
+                    }
+                }
+            }
             .block-head {
                 margin-bottom: p(16);
                 .title {
@@ -75,49 +105,82 @@
                     line-height: p(48);
                 }
             }
-            .block-1 {
-                .content {
-                    width: 100%;
-                    li {
-                        padding: 0 p(6);
-                        float: left;
-                        &:nth-child(1) {
-                            a {
-                                width: 40%;
-                            }
+            .content {
+                margin: 0 p(21);
+                .layer-1 {
+                    float: left;
+                    font-size: 0;
+                    overflow: hidden;
+                    position: relative;
+                    &:nth-child(1) {
+                        width: 39.5%;
+                        margin-right: 1%;
+                        padding-top: 49.71%;
+                        img {
+                            position: absolute;
+                            top: 0;
+                            width: 100%;
                         }
-                        &:nth-child(2) {
-                            a {
-                                width: 60%;
-                            }
+                    } 
+                    &:nth-child(2) {
+                        width: 59.5%;
+                    } 
+                }
+                .layer-2 {
+                    &:nth-child(1) {
+                        padding-top: 34.7%;
+                        position: relative;
+                        margin-bottom: 2.5%;
+                        overflow: auto;
+                        img {
+                            width: 100%;
+                            position: absolute;
+                            top: 0;
                         }
-                        &:nth-child(3) {
-                            a {
-                                width: 30%;
-                            }
+                    }
+                }
+                .layer-3 {
+                    float: left;
+                    img {
+                        width: 100%;
+                    }
+                    &:nth-child(1) {
+                        width: 46.4%;
+                        padding-top: 46.6%;
+                        overflow: hidden;
+                        margin-right: 3.4%;
+                        position: relative;
+                        img {
+                            position: absolute;
+                            top: 0;
                         }
-                        &:nth-child(4) {
-                            a {
-                                width: 30%;
-                            }
-                        }
-                        a {
-                            display: block;
-                            position: relative;
-                            height: auto;
-                            img {
-                                width: 100%;
-                                position: absolute;
-                                top: 0;
-                                bottom: 0;
-                                right: 0;
-                                left: 0;
-                                margin: auto;
-                            }
+                    }
+                    &:nth-child(2) {
+                        width: 50.2%;
+                        padding-top: 46.6%;
+                        overflow: hidden;
+                        position: relative;
+                        img {
+                            position: absolute;
+                            top: 0;
                         }
                     }
                 }
             }
         }
     }
+    footer {
+        .nav-bar {
+            .nav {
+                .discover {
+                    background: url(../img/bnav-discover-active.png) no-repeat;
+                    background-size: p(74) p(74);
+                    background-position: center p(5);
+                }
+            }
+        }
+    }
 }
+//padding-top的百分比计算方式：
+//  图片的高度除以其父级元素的宽度
+//padding-top的百分比就等于高度的百分比，所以可以用padding-top值来代替难以设置百分比的高度

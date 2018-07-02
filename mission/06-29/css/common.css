@@ -69,6 +69,7 @@
         text-align: center;
         line-height: 28.5px;
         display: block;
+        color: #000;
         width: 61.5px;
         height: 28.5px;
         border: 1px solid #FF9344;
@@ -80,6 +81,21 @@
       font-weight: normal;
       text-align: center;
       margin-top: 32.5px; }
+    .container header .message {
+      float: right;
+      width: 31px;
+      height: 21px;
+      margin-right: 9px;
+      margin-top: 25px; }
+      .container header .message img {
+        width: 100%; }
+    .container header .star {
+      float: right;
+      margin-right: 10.5px;
+      margin-top: 20px;
+      height: 30px; }
+      .container header .star img {
+        height: 100%; }
   .container section {
     margin-bottom: 75px; }
     .container section .block .block-head .title {

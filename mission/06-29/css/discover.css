@@ -19,30 +19,53 @@
     width: 18px;
     height: 17px;
     margin-left: 7.5px; }
-.container section .block .head-line h2 {
-  font-size: 13px;
-  line-height: 13px;
-  font-weight: normal;
-  text-align: center;
-  margin-bottom: 7.5px; }
-.container section .block .head-line ul {
-  width: 272px;
-  margin: 0 auto; }
-  .container section .block .head-line ul li {
-    width: 62px;
-    height: 31.5px;
-    float: left;
-    background: #dcdcdc;
-    margin: 0 1.5px;
-    margin-bottom: 2.5px; }
-    .container section .block .head-line ul li a {
-      width: 100%;
+.container section .block .head-line {
+  margin-bottom: 19px; }
+  .container section .block .head-line h2 {
+    font-size: 13px;
+    line-height: 13px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 7.5px; }
+  .container section .block .head-line ul {
+    width: 272px;
+    margin: 0 auto; }
+    .container section .block .head-line ul li {
+      width: 62px;
+      height: 31.5px;
+      float: left;
+      background: #dcdcdc;
+      margin: 0 1.5px;
+      margin-bottom: 2.5px; }
+      .container section .block .head-line ul li a {
+        width: 100%;
+        height: 100%;
+        display: block;
+        font-size: 10px;
+        color: #898989;
+        line-height: 31.5px;
+        text-align: center; }
+.container section .block .block-1 {
+  margin-bottom: 15px; }
+.container section .block .block-2 .content li {
+  width: 33.33%;
+  height: 99px;
+  float: left;
+  padding: 0 3px; }
+  .container section .block .block-2 .content li a {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; }
+    .container section .block .block-2 .content li a img {
       height: 100%;
-      display: block;
-      font-size: 10px;
-      color: #898989;
-      line-height: 31.5px;
-      text-align: center; }
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto; }
 .container section .block .block-head {
   margin-bottom: 8px; }
   .container section .block .block-head .title .icon {
@@ -52,30 +75,56 @@
     margin-top: 6px; }
   .container section .block .block-head .more {
     line-height: 24px; }
-.container section .block .block-1 .content {
-  width: 100%; }
-  .container section .block .block-1 .content li {
-    padding: 0 3px;
-    float: left; }
-    .container section .block .block-1 .content li:nth-child(1) a {
-      width: 40%; }
-    .container section .block .block-1 .content li:nth-child(2) a {
-      width: 60%; }
-    .container section .block .block-1 .content li:nth-child(3) a {
-      width: 30%; }
-    .container section .block .block-1 .content li:nth-child(4) a {
-      width: 30%; }
-    .container section .block .block-1 .content li a {
-      display: block;
-      position: relative;
-      height: auto; }
-      .container section .block .block-1 .content li a img {
-        width: 100%;
+.container section .block .content {
+  margin: 0 10.5px; }
+  .container section .block .content .layer-1 {
+    float: left;
+    font-size: 0;
+    overflow: hidden;
+    position: relative; }
+    .container section .block .content .layer-1:nth-child(1) {
+      width: 39.5%;
+      margin-right: 1%;
+      padding-top: 49.71%; }
+      .container section .block .content .layer-1:nth-child(1) img {
         position: absolute;
         top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        margin: auto; }
+        width: 100%; }
+    .container section .block .content .layer-1:nth-child(2) {
+      width: 59.5%; }
+  .container section .block .content .layer-2:nth-child(1) {
+    padding-top: 34.7%;
+    position: relative;
+    margin-bottom: 2.5%;
+    overflow: auto; }
+    .container section .block .content .layer-2:nth-child(1) img {
+      width: 100%;
+      position: absolute;
+      top: 0; }
+  .container section .block .content .layer-3 {
+    float: left; }
+    .container section .block .content .layer-3 img {
+      width: 100%; }
+    .container section .block .content .layer-3:nth-child(1) {
+      width: 46.4%;
+      padding-top: 46.6%;
+      overflow: hidden;
+      margin-right: 3.4%;
+      position: relative; }
+      .container section .block .content .layer-3:nth-child(1) img {
+        position: absolute;
+        top: 0; }
+    .container section .block .content .layer-3:nth-child(2) {
+      width: 50.2%;
+      padding-top: 46.6%;
+      overflow: hidden;
+      position: relative; }
+      .container section .block .content .layer-3:nth-child(2) img {
+        position: absolute;
+        top: 0; }
+.container footer .nav-bar .nav .discover {
+  background: url(../img/bnav-discover-active.png) no-repeat;
+  background-size: 37px 37px;
+  background-position: center 2.5px; }
 
 /*# sourceMappingURL=discover.css.map */

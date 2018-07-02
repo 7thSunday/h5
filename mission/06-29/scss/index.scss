@@ -24,22 +24,18 @@
 	    .block {
 	        .block-1 {
 	            .content {
-	                width: p(600);
-	                margin: 0 auto;
 	                margin-top: p(17);
 	                li {
-	                    width: p(240);
-	                    height: p(93);
 	                    float: left;
+	                    width: 50%;
+	                    text-align: center;
 	                    margin-bottom: p(30);
-	                    &:nth-child(2n) {
-	                        float: right;
-	                    }
 	                    .img {
-	                        display: block;
-	                        width: 100%;
-	                        height: 100%;
+	                        display: inline-block;
+	                        width: p(241);
+	                        height: p(94);
 	                        position: relative;
+	                        overflow: hidden;
 	                        img {
 	                            width: 100%;
 	                            position: absolute;

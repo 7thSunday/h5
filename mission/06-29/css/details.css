@@ -1,0 +1,139 @@
+.container section {
+  margin: 0 10.5px;
+  margin-top: 13px;
+  margin-bottom: 75px; }
+  .container section .details .img {
+    width: 100%;
+    height: 130px;
+    position: relative;
+    overflow: hidden; }
+    .container section .details .img img {
+      height: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto; }
+  .container section .details .price {
+    margin-top: 19px; }
+    .container section .details .price p {
+      float: left;
+      font-size: 36px;
+      line-height: 36px;
+      color: #FF9344; }
+    .container section .details .price a {
+      float: right;
+      text-align: center;
+      color: #fff;
+      background: #FF9344;
+      font-size: 15px;
+      width: 55.5px;
+      height: 29.5px;
+      border-radius: 9px;
+      line-height: 29.5px; }
+  .container section .details .status {
+    padding: 0 9px; }
+    .container section .details .status > div {
+      float: left;
+      height: 31px; }
+      .container section .details .status > div img {
+        width: 20px;
+        float: left;
+        margin-right: 3px;
+        margin-top: 2px; }
+      .container section .details .status > div p {
+        float: left;
+        font-size: 15px;
+        line-height: 31px;
+        color: #000; }
+        .container section .details .status > div p span {
+          margin-top: 8px;
+          color: #FF9344; }
+    .container section .details .status p {
+      float: right;
+      font-size: 13px;
+      line-height: 31px;
+      color: #8e8e8e; }
+  .container section .list {
+    padding: 0 11.5px; }
+    .container section .list .head-line {
+      display: block;
+      font-size: 15px;
+      line-height: 33.5px;
+      height: 33.5px;
+      color: #fff;
+      background: #FF9344;
+      margin-bottom: 5px; }
+      .container section .list .head-line p {
+        float: left;
+        margin-left: 5.5px; }
+      .container section .list .head-line span {
+        float: right;
+        margin-right: 5.5px; }
+    .container section .list ul li {
+      height: 88px;
+      margin-bottom: 5px; }
+      .container section .list ul li .info {
+        width: 78%;
+        float: left; }
+        .container section .list ul li .info .img {
+          width: 88px;
+          height: 88px;
+          position: relative;
+          float: left;
+          margin-right: 13px; }
+          .container section .list ul li .info .img img {
+            height: 100%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto; }
+        .container section .list ul li .info .text {
+          border: 1px solid transparent; }
+          .container section .list ul li .info .text p {
+            font-size: 15px;
+            line-height: 15px;
+            color: #000;
+            margin: 7px 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; }
+          .container section .list ul li .info .text div {
+            line-height: 20px;
+            height: 20px;
+            margin-bottom: 4px; }
+            .container section .list ul li .info .text div img {
+              height: 20px;
+              margin: 0 -2px; }
+            .container section .list ul li .info .text div span {
+              color: #929292;
+              font-size: 13px;
+              line-height: 20px;
+              vertical-align: top;
+              margin-top: 7px;
+              margin-left: 5px; }
+          .container section .list ul li .info .text > span {
+            font-size: 12px;
+            line-height: 12px;
+            color: #929292; }
+          .container section .list ul li .info .text > a {
+            display: block;
+            color: #FF9344;
+            font-size: 10px;
+            line-height: 10px;
+            margin-top: 3px; }
+      .container section .list ul li .go {
+        margin-top: 40px;
+        float: right;
+        text-align: center;
+        border-radius: 9px;
+        width: 55.5px;
+        height: 29.5px;
+        color: #fff;
+        line-height: 29.5px;
+        background: #FF9344; }
+
+/*# sourceMappingURL=details.css.map */

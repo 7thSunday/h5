@@ -1,0 +1,175 @@
+@charset "utf-8";
+@function p($px){
+    @return $px/2+px;
+}
+.container {
+    section {
+        margin: 0 p(21);
+        margin-top: p(26);
+        margin-bottom: p(150);
+        .details {
+            .img {
+                width: 100%;
+                height: p(260);
+                position: relative;
+                overflow: hidden;
+                img {
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                }
+            }
+            .price {
+                margin-top: p(38);
+                p {
+                    float: left;
+                    font-size: p(72);
+                    line-height: p(72);
+                    color: #FF9344;
+                }
+                a {
+                    float: right;
+                    text-align: center;
+                    color: #fff;
+                    background: #FF9344;
+                    font-size: p(30);
+                    width: p(111);
+                    height: p(59);
+                    border-radius: p(18);
+                    line-height: p(59);
+                }
+            }
+            .status {
+                padding: 0 p(18);
+                > div {
+                    float: left;
+                    height: p(62);
+                    img {
+                        width: p(40);
+                        float: left;
+                        margin-right: p(6);
+                        margin-top: p(4);
+                    }
+                    p {
+                        float: left;
+                        font-size: p(30);
+                        line-height: p(62);
+                        color: #000;
+                        span {
+                            margin-top: p(16);
+                            color: #FF9344;
+                        }
+                    }
+                }
+                p {
+                    float: right;
+                    font-size: p(26);
+                    line-height: p(62);
+                    color: #8e8e8e;
+                }
+            }
+        }
+        .list {
+            padding: 0 p(23);
+            .head-line {
+                display: block;
+                font-size: p(30);
+                line-height: p(67);
+                height: p(67);
+                color: #fff;
+                background: #FF9344;
+                margin-bottom: p(10);
+                p {
+                    float: left;
+                    margin-left: p(11);
+                }
+                span {
+                    float: right;
+                    margin-right: p(11);
+                }
+            }
+            ul {
+                li {
+                    height: p(176);
+                    margin-bottom: p(10);
+                    .info {
+                        width: 78%;
+                        float: left;
+                        .img {
+                            width: p(176);
+                            height: p(176);
+                            position: relative;
+                            float: left;
+                            margin-right: p(26);
+                            img {
+                                height: 100%;
+                                position: absolute;
+                                top: 0;
+                                bottom: 0;
+                                left: 0;
+                                right: 0;
+                                margin: auto;
+                            }
+                        }
+                        .text {
+                            border: 1px solid transparent;
+                            p {
+                                font-size: p(30);
+                                line-height: p(30);
+                                color: #000;
+                                margin: p(14) 0;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
+                            div {
+                                line-height: p(40);
+                                height: p(40);
+                                margin-bottom: p(8);
+                                img {
+                                    height: p(40);
+                                    margin: 0 p(-4);
+                                }
+                                span {
+                                    color: #929292;
+                                    font-size: p(26);
+                                    line-height: p(40);
+                                    vertical-align: top;
+                                    margin-top: p(14);
+                                    margin-left: p(10);
+                                }
+                            }
+                            > span {
+                                font-size: p(24);
+                                line-height: p(24);
+                                color: #929292;
+                            }
+                            > a {
+                                display: block;
+                                color: #FF9344;
+                                font-size: p(20);
+                                line-height: p(20);
+                                margin-top: p(6);
+                            }
+                        }
+                    }
+                    .go {
+                        margin-top: p(80);
+                        float: right;
+                        text-align: center;
+                        border-radius: p(18);
+                        width: p(111);
+                        height: p(59);
+                        color: #fff;
+                        line-height: p(59);
+                        background: #FF9344;
+                    }
+                }
+            }
+        }
+    }
+}
