@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- rem:相对单位 -->
+		<!-- 相对于html元素的字体大小 -->
+
+	<!-- em:相对单位 -->
+		<!-- 相对于自身的字体大小 -->
+	<style type="text/css">
+		html {
+			font-size: 12px;
+		}
+		.test,
+		.test1 {
+			font-size: 30px;
+		}
+		p {
+			font-size: 0.5rem;
+		}
+		.test1 .p {
+			font-size: 20px;
+			width: 500px;
+			text-indent: 2em;
+		}
+	</style>
+	<div class="test">
+		this is a div.
+		<p>this is a p element.</p>
+	</div>
+	<div class="test1">
+		<p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla doloribus necessitatibus optio officiis quae aperiam, earum voluptatum totam ab cumque error, dolorum eligendi! Voluptatibus, corrupti. Id excepturi, iste nam obcaecati!</p>
+	</div>
+	
+</body>
+</html>

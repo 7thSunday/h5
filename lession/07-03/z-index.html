@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div {
+			width: 200px;
+			height: 200px;
+			background: skyblue;
+			position: absolute;
+		}
+		div:nth-child(2n) {
+			background: pink;
+		}
+		div:nth-child(1) {
+			top: 0;
+		}
+		div:nth-child(2) {
+			top: 20px;
+			z-index: 1;
+		}
+		div:nth-child(3) {
+			top: 40px;
+		}
+		div:nth-child(4) {
+			top: 60px;
+		}
+		div:nth-child(5) {
+			top: 80px;
+		}
+		/*z-index用来调整元素的层级关系，数值越大，层级越高*/
+		/*注意:z-index只有设置了定位才有效*/
+	</style>
+</head>
+<body>
+	<div class="test1">1</div>
+	<div class="test2">2</div>
+	<div class="test3">3</div>
+	<div class="test4">4</div>
+	<div class="test5">5</div>
+	<p style="height: 300px;"></p>
+
+
+	<style type="text/css">
+		.tst1,.tst2,.tst3 {
+			position: static;
+		}
+		.tst2 {
+			transform: scale(1.2);
+		}
+	</style>
+	<div class="tst1"></div>
+	<div class="tst2"></div>
+	<div class="tst3"></div>
+</body>
+</html>

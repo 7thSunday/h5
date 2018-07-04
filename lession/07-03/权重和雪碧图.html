@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- 权重值 ==> 选择器优先级 -->
+
+	<!-- 选择器					权重值 -->
+
+	<!-- 行内样式				1000 -->
+	<!-- id选择器				100 -->
+	<!-- 类，伪类，属性选择器		10 -->
+	<!-- 元素选择器，伪对象		1 -->
+
+	<!-- 权重越大优先级越高 -->
+	<!-- 在属性值后面添加 !important 时，该属性的优先级最高。 -->
+	<style type="text/css">
+		.test {/*10*/
+			color: red !important;
+		}
+		div.test {/*1+10*/
+			color: skyblue;
+		}
+		.web div.test {/*10+1+10*/
+			color: pink;
+		}
+		div.test:nth-child(2) {/*10+10*/
+			color: gray;
+		}
+	</style>
+	<div class="web">
+		<div class="test">this is a div.</div>
+	</div>
+
+	<style type="text/css">
+		.btn {
+			display: block;
+			width: 179px;
+			height: 49px;
+			background: url(spr.jpg) no-repeat;
+			background-position: 0 -61px;
+			border-radius: 23px;
+		}
+		.btn:hover {
+			background-position: -420px -61px;
+		}
+	</style>
+	<a href="" class="btn"></a>
+</body>
+</html>
