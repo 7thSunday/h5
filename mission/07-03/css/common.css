@@ -2,51 +2,98 @@ html,
 body {
   height: 100%; }
 
-.mobile header {
-  width: 100%;
-  height: 0.89rem;
-  background: #b20000;
-  overflow: hidden; }
-  .mobile header .login {
-    margin-top: 0.32rem;
-    margin-left: 0.23rem;
-    float: left; }
-    .mobile header .login li {
-      width: 0.3rem;
-      height: 0.04rem;
-      background: #fff;
-      color: #fff;
-      margin-top: 0.06rem;
-      position: relative; }
-      .mobile header .login li::before {
-        display: block;
-        content: "";
-        width: 0.04rem;
+.mobile {
+  background: #fff;
+  position: relative;
+  height: 100%; }
+  .mobile header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 0.89rem;
+    background: #b20000;
+    overflow: hidden; }
+    .mobile header .login {
+      margin-top: 0.32rem;
+      margin-left: 0.23rem;
+      float: left; }
+      .mobile header .login li {
+        width: 0.3rem;
         height: 0.04rem;
         background: #fff;
-        position: absolute;
-        top: 0;
-        left: -0.05rem; }
-  .mobile header .logo {
-    float: left;
-    width: 2.64rem;
-    height: 0.39rem;
-    font-size: 0;
-    margin-top: 0.25rem;
-    margin-left: 1.34rem;
-    overflow: hidden; }
-    .mobile header .logo img {
-      height: 100%; }
-  .mobile header .search {
-    float: right;
-    width: 0.43rem;
-    height: 0.43rem;
-    overflow: hidden;
-    font-size: 0;
-    margin-right: 0.17rem;
-    margin-top: 0.25rem; }
-    .mobile header .search img {
-      width: 100%; }
+        color: #fff;
+        margin-top: 0.06rem;
+        position: relative; }
+        .mobile header .login li::before {
+          display: block;
+          content: "";
+          width: 0.04rem;
+          height: 0.04rem;
+          background: #fff;
+          position: absolute;
+          top: 0;
+          left: -0.05rem; }
+    .mobile header .logo {
+      float: left;
+      width: 2.64rem;
+      height: 0.39rem;
+      font-size: 0;
+      margin-top: 0.25rem;
+      margin-left: 1.34rem;
+      overflow: hidden; }
+      .mobile header .logo img {
+        height: 100%; }
+    .mobile header .search {
+      float: right;
+      width: 0.43rem;
+      height: 0.43rem;
+      overflow: hidden;
+      font-size: 0;
+      margin-right: 0.17rem;
+      margin-top: 0.25rem; }
+      .mobile header .search img {
+        width: 100%; }
+  .mobile section {
+    position: absolute;
+    top: 0.89rem;
+    bottom: 0.96rem;
+    width: 100%;
+    overflow: auto; }
+  .mobile footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%; }
+    .mobile footer .nav {
+      width: 100%;
+      height: 0.96rem;
+      background: #f5f5f5;
+      border-top: 0.01rem solid #bbb9ba; }
+      .mobile footer .nav li {
+        width: 20%;
+        height: 100%;
+        float: left;
+        font-size: 0; }
+        .mobile footer .nav li .active {
+          color: #b60005; }
+        .mobile footer .nav li a {
+          text-align: center;
+          display: block;
+          color: #8b8b8b;
+          position: relative;
+          width: 100%;
+          height: 100%;
+          padding-top: 0.15rem; }
+          .mobile footer .nav li a p {
+            font-size: 0.17rem;
+            line-height: 0.17rem;
+            position: absolute;
+            bottom: 0.12rem;
+            left: 50%;
+            transform: translateX(-50%); }
+          .mobile footer .nav li a .iconfont {
+            font-size: 0.41rem; }
+          .mobile footer .nav li a img {
+            height: 0.41rem; }
 
 #check {
   display: none; }
@@ -61,19 +108,23 @@ body {
   position: fixed;
   top: 0;
   transform: translateX(-100%);
-  transition: 0.5s; }
-  .login-box .back {
-    width: 0.43rem;
-    height: 0.43rem;
-    line-height: 0.43rem;
-    background: #b60005;
-    font-size: 0.4rem;
-    color: #fff;
-    text-align: center;
-    border-radius: 50%;
-    display: block;
-    position: absolute;
-    top: 0.32rem;
-    left: 0.23rem; }
+  transition: 0.5s;
+  z-index: 2;
+  padding-top: 0.32rem; }
+  .login-box .head-line {
+    width: 6.11rem;
+    margin: 0 auto;
+    border-bottom: 0.01rem solid #484848; }
+    .login-box .head-line .back {
+      width: 0.43rem;
+      height: 0.43rem;
+      line-height: 0.43rem;
+      background: #b60005;
+      font-size: 0.4rem;
+      color: #fff;
+      text-align: center;
+      border-radius: 50%;
+      display: block;
+      margin-bottom: 0.18rem; }
 
 /*# sourceMappingURL=common.css.map */

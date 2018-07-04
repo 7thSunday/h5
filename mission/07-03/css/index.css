@@ -109,6 +109,8 @@
         left: 0;
         right: 0;
         margin: auto; }
+  .mobile section .content .block-2 h2 {
+    margin-bottom: 0.12rem; }
   .mobile section .content .block-2 .img-block {
     height: 1.23rem;
     width: 100%; }
