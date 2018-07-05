@@ -2,6 +2,15 @@ html,
 body {
   height: 100%; }
 
+.img-fix-width {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto; }
+
 .mobile {
   background: #fff;
   position: relative;
@@ -95,6 +104,18 @@ body {
           .mobile footer .nav li a img {
             height: 0.41rem; }
 
+.more {
+  display: block;
+  font-size: 0.22rem;
+  line-height: 0.22rem;
+  color: #bbb;
+  margin: 0 auto;
+  width: 5.83rem;
+  padding-bottom: 0.17rem;
+  text-align: center;
+  padding-top: 0.2rem;
+  border-top: 0.01rem solid #e6e6e6; }
+
 #check {
   display: none; }
 
@@ -102,6 +123,7 @@ body {
   transform: translateX(0); }
 
 .login-box {
+  overflow: auto;
   width: 100%;
   height: 100%;
   background: #222;
@@ -114,6 +136,7 @@ body {
   .login-box .head-line {
     width: 6.11rem;
     margin: 0 auto;
+    margin-bottom: 0.85rem;
     border-bottom: 0.01rem solid #484848; }
     .login-box .head-line .back {
       width: 0.43rem;
@@ -126,5 +149,347 @@ body {
       border-radius: 50%;
       display: block;
       margin-bottom: 0.18rem; }
+  .login-box .avatar {
+    width: 1.29rem;
+    height: 1.29rem;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative; }
+    .login-box .avatar img {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto; }
+  .login-box .folder {
+    width: 5.83rem;
+    margin: 0 auto; }
+    .login-box .folder > ul > li {
+      position: relative;
+      line-height: 0.9rem; }
+      .login-box .folder > ul > li:not(:last-child)::before {
+        content: "";
+        display: block;
+        height: 0.01rem;
+        background: #2d2d2d;
+        position: absolute;
+        top: 0.9rem;
+        width: 100%; }
+      .login-box .folder > ul > li p {
+        font-size: 0.23rem;
+        color: #7f7f7f; }
+        .login-box .folder > ul > li p:nth-child(1) {
+          float: right; }
+      .login-box .folder > ul > li .pin {
+        transform: rotate(0); }
+      .login-box .folder > ul > li > ul {
+        display: none;
+        width: 100%; }
+        .login-box .folder > ul > li > ul > li {
+          margin: 0 auto;
+          height: 0.85rem;
+          width: 4.3rem; }
+          .login-box .folder > ul > li > ul > li a {
+            text-align: center;
+            display: block;
+            color: #fff;
+            line-height: 0.85rem;
+            height: 100%;
+            font-size: 0.21rem; }
+          .login-box .folder > ul > li > ul > li:first-child ~ li {
+            border-top: 0.01rem solid #2d2d2d; }
+  .login-box .offline .not-login p {
+    text-align: center; }
+  .login-box .offline .not-login .login-now {
+    font-size: 0.24rem;
+    line-height: 0.24rem;
+    color: #fff;
+    margin-top: 0.25rem;
+    margin-bottom: 0.12rem; }
+  .login-box .offline .not-login .forget-psw {
+    font-size: 0.19rem;
+    line-height: 0.19rem;
+    color: #525252;
+    text-decoration: underline; }
+  .login-box .offline .not-login::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0.24rem;
+    background: #303030;
+    margin-top: 0.64rem; }
+  .login-box .login-page {
+    display: none; }
+    .login-box .login-page .logo {
+      width: 1.61rem;
+      height: 1.36rem;
+      position: relative;
+      overflow: hidden;
+      margin: 0 auto;
+      margin-bottom: 0.47rem;
+      margin-top: 1.61rem; }
+      .login-box .login-page .logo img {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto; }
+    .login-box .login-page .login {
+      font-size: 0;
+      width: 4.92rem;
+      margin: 0 auto; }
+      .login-box .login-page .login .account .iconfont,
+      .login-box .login-page .login .psw .iconfont {
+        float: left;
+        text-align: center;
+        width: 0.61rem;
+        height: 0.53rem;
+        font-size: 0.3rem;
+        line-height: 0.53rem;
+        color: #ccc;
+        background: #303030; }
+      .login-box .login-page .login input {
+        width: 4.31rem;
+        height: 0.53rem;
+        font-size: 0.2rem;
+        color: #cdcdcd;
+        border: 0;
+        padding-left: 0.39rem;
+        background: #3d3d3d; }
+      .login-box .login-page .login .account {
+        margin-bottom: 0.16rem; }
+      .login-box .login-page .login .forget {
+        display: block;
+        line-height: 0.19rem;
+        font-size: 0.19rem;
+        color: #fff;
+        text-align: right;
+        margin-top: 0.27rem;
+        margin-bottom: 0.6rem; }
+        .login-box .login-page .login .forget .iconfont {
+          font-size: 0.19rem;
+          margin-right: 0.05rem; }
+      .login-box .login-page .login .btn-group {
+        font-size: 0.23rem;
+        color: #cdcdcd;
+        text-align: center; }
+        .login-box .login-page .login .btn-group p {
+          letter-spacing: 0.1rem;
+          line-height: 0.53rem;
+          height: 0.53rem; }
+          .login-box .login-page .login .btn-group p:nth-child(1) {
+            background: #b60005;
+            margin-bottom: 0.14rem; }
+          .login-box .login-page .login .btn-group p:nth-child(2) {
+            border: 0.02rem solid #b60005;
+            background: #303030; }
+  .login-box .logined {
+    display: none;
+    font-size: 0; }
+    .login-box .logined .user .info .name {
+      height: 0.22rem;
+      line-height: 0.22rem;
+      text-align: center;
+      margin-top: 0.15rem; }
+      .login-box .logined .user .info .name span {
+        color: #fff;
+        font-size: 0.24rem;
+        line-height: 0.24rem;
+        vertical-align: middle;
+        margin-right: 0.2rem; }
+      .login-box .logined .user .info .name a {
+        text-align: center;
+        line-height: 0.22rem;
+        display: inline-block;
+        width: 0.94rem;
+        height: 0.22rem;
+        color: #fff;
+        font-size: 0.14rem;
+        border: 0.01rem solid #fff;
+        vertical-align: middle; }
+    .login-box .logined .user .info .level {
+      margin-top: 0.07rem;
+      text-align: center; }
+      .login-box .logined .user .info .level .iconfont {
+        font-size: 0.2rem;
+        line-height: 0.2rem;
+        color: #eeca02;
+        margin: 0 0.02rem; }
+    .login-box .logined .user .info .relation {
+      text-align: center;
+      font-size: 0.23rem;
+      line-height: 0.23rem;
+      color: #fff;
+      position: relative;
+      margin-top: 0.12rem; }
+      .login-box .logined .user .info .relation .divide {
+        display: inline-block;
+        height: 0.22rem;
+        width: 0.02rem;
+        background: #a2a2a2;
+        margin: 0 0.12rem;
+        vertical-align: middle; }
+      .login-box .logined .user .info .relation em {
+        color: #b60005;
+        margin-left: 0.09rem; }
+    .login-box .logined .user .info .my-btn {
+      font-size: 0;
+      text-align: center;
+      margin-top: 0.2rem; }
+      .login-box .logined .user .info .my-btn a {
+        display: inline-block;
+        margin: 0 0.11rem;
+        width: 2.19rem;
+        height: 0.52rem;
+        text-align: center;
+        font-size: 0.23rem;
+        line-height: 0.52rem;
+        border-radius: 0.26rem;
+        background: #cdcdcd;
+        color: #fff; }
+        .login-box .logined .user .info .my-btn a:nth-child(1) {
+          background: #b60005; }
+      .login-box .logined .user .info .my-btn::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 0.24rem;
+        background: #303030;
+        margin-top: 0.2rem; }
+    .login-box .logined .user .info .folder .logout {
+      margin: 0.2rem auto;
+      width: 1.79rem;
+      height: 0.52rem;
+      font-size: 0.23rem;
+      line-height: 0.52rem;
+      color: #fff;
+      background: #B60005;
+      border-radius: 0.26rem;
+      text-align: center;
+      letter-spacing: 0.05rem; }
+
+.search-box {
+  transition: 0.5s;
+  transform: translateY(-100%);
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  background: #f1f1f1;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  font-size: 0; }
+  .search-box .head-line {
+    height: 0.87rem;
+    width: 100%;
+    margin: 0 auto;
+    background: #1d1d1d;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0.32rem; }
+    .search-box .head-line .back {
+      position: absolute;
+      top: 50%;
+      left: 0.12rem;
+      transform: translateY(-50%);
+      width: 0.43rem;
+      height: 0.43rem;
+      line-height: 0.43rem;
+      background: #b60005;
+      font-size: 0.4rem;
+      color: #fff;
+      text-align: center;
+      border-radius: 50%;
+      float: left;
+      margin-bottom: 0.18rem; }
+    .search-box .head-line .search-bar {
+      width: 5.34rem;
+      height: 0.52rem;
+      border: 0.02rem solid #fff;
+      border-radius: 0.26rem;
+      margin-left: 0.88rem;
+      margin-top: 0.19rem;
+      line-height: 0.52rem; }
+      .search-box .head-line .search-bar input {
+        font-size: 0.26rem;
+        color: #7e7e7e;
+        background: #1D1D1D;
+        border: 0;
+        height: 0.4rem;
+        vertical-align: middle; }
+      .search-box .head-line .search-bar .iconfont {
+        vertical-align: middle;
+        font-size: 0.27rem;
+        color: #fff;
+        margin-left: 0.15rem;
+        margin-right: 0.3rem; }
+  .search-box .content {
+    width: 5.83rem;
+    margin: 0 auto; }
+    .search-box .content h2 {
+      color: #211d1d;
+      font-size: 0.26rem;
+      line-height: 0.26rem;
+      font-weight: normal;
+      margin-bottom: 0.17rem; }
+    .search-box .content .tag-box .tag {
+      margin-bottom: 0.1rem;
+      background: #fff;
+      padding: 0 0.18rem;
+      color: #8b8b8b;
+      font-size: 0.29rem;
+      line-height: 0.57rem;
+      height: 0.57rem;
+      display: inline-block;
+      border: 0.01rem solid #e4e4e4;
+      margin-right: 0.08rem; }
+      .search-box .content .tag-box .tag:hover {
+        background: #B60005;
+        color: #fff; }
+  .search-box .result {
+    display: none; }
+    .search-box .result ul {
+      width: 5.83rem;
+      margin: 0 auto; }
+      .search-box .result ul li {
+        background: #fff;
+        padding: 0 0.18rem;
+        margin-bottom: 0.15rem; }
+        .search-box .result ul li a {
+          display: block;
+          width: 100%;
+          height: 2.49rem;
+          overflow: hidden; }
+          .search-box .result ul li a h2 {
+            margin-top: 0.22rem;
+            margin-bottom: 0.17rem;
+            font-size: 0.26rem;
+            line-height: 0.26rem;
+            color: #595757;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; }
+            .search-box .result ul li a h2 em {
+              color: #B60005; }
+          .search-box .result ul li a p {
+            font-size: 0.22rem;
+            line-height: 0.32rem;
+            color: #898989;
+            margin-bottom: 0.15rem;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical; }
+          .search-box .result ul li a .status {
+            font-size: 0.18rem;
+            color: #898989;
+            line-height: 0.18rem; }
+            .search-box .result ul li a .status .author {
+              margin-right: 0.3rem; }
 
 /*# sourceMappingURL=common.css.map */

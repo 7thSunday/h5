@@ -1,0 +1,174 @@
+@charset "utf-8";
+@function r($px) {
+    @return $px/100+rem;
+}
+.mobile {
+    .section-1 {
+        display: none;
+        .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+            bottom: r(-10);
+        }
+        .swiper-container {
+            width: r(640);
+            height: r(350);
+            margin: 0 auto;
+            .swiper-wrapper {
+                width: 100%;
+                height: 100%;
+            }
+            .swiper-pagination-bullet-active {
+                background: #b60005;
+            }
+            .swiper-slide {
+                .slide-box {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                    .img {
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                        overflow: hidden;
+                        img {
+                            position: absolute;
+                            width: 100%;
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            margin: auto;
+                        }
+                    }
+                    .intro {
+                        position: absolute;
+                        bottom: 0;
+                        color: #fff;
+                        width: 100%;
+                        height: r(104);
+                        background: rgba(0,0,0,0.5);
+                        div {
+                            margin: 0 auto;
+                            margin-top: r(19);
+                            width: r(583);
+                            font-size: r(26);
+                            line-height: r(26);
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            span {
+                                display: inline-block;
+                                background: #b20000;
+                                padding: r(5);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        .content {
+            padding-top: r(20);
+            font-size: 0;
+            > ul {
+                > li {
+                    width: 50%;
+                    float: left;
+                    margin-bottom: r(22);
+                    a {
+                        margin: 0 auto;
+                        width: r(282);
+                        height: r(343);
+                        background: #f6f6f6;
+                        display: block;
+                        .img {
+                            width: 100%;
+                            height: r(182);
+                            position: relative;
+                            img {
+                                width: 100%;
+                                position: absolute;
+                                top: 0;
+                                bottom: 0;
+                                left: 0;
+                                right: 0;
+                                margin: auto;
+                            }
+                        }
+                        h2 {
+                            margin: r(12) 0;
+                            padding: 0 r(4);
+                            color: #000;
+                            font-weight: normal;
+                            font-size: r(22);
+                            line-height: r(28);
+                            overflow: hidden;  
+                            display: -webkit-box;  
+                            -webkit-line-clamp: 2;  
+                            -webkit-box-orient: vertical;
+                        }
+                        .status,
+                        .release {
+                            padding: 0 r(7);
+                        }
+                        .status {
+                            margin-bottom: r(14);
+                            .type {
+                                display: inline-block;
+                                font-size: r(18);
+                                width: r(88);
+                                height: r(27);
+                                line-height: r(27);
+                                text-align: center;
+                                color: #fff;
+                                background: #b20000;
+                                border-radius: r(4);
+                            }
+                            .status-box {
+                                float: right;
+                                font-size: r(20);
+                                color: #c5c5c5;
+                                .iconfont {
+                                    margin-right: r(4);
+                                }
+                                .like {
+                                    margin-right: r(5);
+                                }
+                                > * {
+                                    display: inline-block;
+                                    height: r(27);
+                                    line-height: r(27);
+                                    > * {
+                                        vertical-align: middle;
+                                    }
+                                }
+                            }
+                        }
+                        .release {
+                            font-size: r(18);
+                            line-height: r(35);
+                            color: #c5c5c5;
+                            span {
+                                vertical-align: middle;
+                            }
+                            .author {
+                                vertical-align: middle;
+                                display: inline-block;
+                                line-height: r(35);
+                                margin-right: r(11);
+                                .avatar {
+                                    margin-right: r(7);
+                                    vertical-align: middle;
+                                    width: r(35);
+                                    height: r(35);
+                                    display: inline-block;
+                                    position: relative;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -22,7 +22,6 @@
 						<li></li>
 					</ul>
 				</label>
-				
 				<div class="logo"><img src="img/logo.png" alt="logo" /></div>
 				<div class="search"><img src="img/search.png" alt="search" /></div>
 			</header>
@@ -196,7 +195,7 @@
 			<footer>
 				<ul class="nav clear_fix">
 					<li>
-						<a href="" class="active">
+						<a href="index.html" class="active">
 							<i class="iconfont icon-home"></i>
 							<p>首页</p>
 						</a>
@@ -208,7 +207,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="">
+						<a href="article.html">
 							<i class="iconfont icon-pencil"></i>
 							<p>文章</p>
 						</a>
@@ -230,11 +229,226 @@
 		</div>
 		<!--登录弹窗-->
 		<div class="login-box">
-			<div class="head-line">
-				<label for="check"><span class="back">×</span></label>
+			<!--未登录-->
+			<div class="offline">
+				<div class="head-line">
+					<label for="check"><span class="back">×</span></label>
+				</div>
+				<div class="not-login">
+					<div class="avatar"><img src="img/avatar-unlogin.jpg" alt="image" /></div>
+					<p class="login-now">立即登录</p>
+					<p class="forget-psw">忘记密码</p>
+				</div>
+				<div class="folder">
+					<ul>
+						<li class="clear_fix">
+							<p class="pin">&gt;</p>
+							<p>GIMC</p>
+							<ul>
+								<li><a href="">省广介绍</a></li>
+								<li><a href="">新闻资讯</a></li>
+							</ul>
+						</li>
+						<li class="clear_fix">
+							<p class="pin">&gt;</p>
+							<p>文章</p>
+							<ul>
+								<li><a href="">省广介绍</a></li>
+								<li><a href="">新闻资讯</a></li>
+							</ul>
+						</li>
+						<li class="clear_fix">
+							<p class="pin">&gt;</p>
+							<p>资源</p>
+							<ul>
+								<li><a href="">省广介绍</a></li>
+								<li><a href="">新闻资讯</a></li>
+							</ul>
+						</li>
+						<li class="clear_fix">
+							<p class="pin">&gt;</p>
+							<p>课程</p>
+							<ul>
+								<li><a href="">省广介绍</a></li>
+								<li><a href="">新闻资讯</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
 			</div>
-			
+			<!--登录填写-->
+			<div class="login-page">
+				<div class="logo"><img src="img/logo-large.png" alt="" /></div>
+				<div action="" class="login">
+					<div class="account clear_fix">
+						<i class="iconfont icon-account"></i>
+						<input type="text" name="" id="" value="" placeholder="请输入已验证的手机号或邮箱" />
+					</div>
+					<div class="psw clear_fix">
+						<i class="iconfont icon-lock"></i>
+						<input type="password" name="" id="" value="" placeholder="请输入密码" />
+					</div>
+					<a href="" class="forget"><i class="iconfont icon-question"></i>忘记密码</a>
+					<div class="btn-group">
+						<p class="btn-login">登录</p>
+						<p>注册</p>
+					</div>
+				</div>
+			</div>
+			<!--已登录-->
+			<div class="logined">
+				<div class="head-line">
+					<label for="check"><span class="back">×</span></label>
+				</div>
+				<div class="user">
+					<div class="avatar"><img src="img/avatar.jpg" alt="image" /></div>
+					<div class="info">
+						<div class="name">
+							<span>王大锤</span>
+							<a href="">个人中心></a>
+						</div>
+						<div class="level">
+							<i class="iconfont icon-star"></i>
+							<i class="iconfont icon-star"></i>
+							<i class="iconfont icon-star"></i>
+							<i class="iconfont icon-star"></i>
+							<i class="iconfont icon-star"></i>
+						</div>
+						<div class="relation">
+							<span>关注<em>36</em></span>
+							<span class="divide"></span>
+							<span>粉丝<em>299</em></span>
+						</div>
+						<div class="my-btn">
+							<a href="">我的收藏</a>
+							<a href="">我的发布</a>
+						</div>
+						<div class="folder">
+							<ul>
+								<li class="clear_fix">
+									<p class="pin">&gt;</p>
+									<p>GIMC</p>
+									<ul>
+										<li><a href="">省广介绍</a></li>
+										<li><a href="">新闻资讯</a></li>
+									</ul>
+								</li>
+								<li class="clear_fix">
+									<p class="pin">&gt;</p>
+									<p>文章</p>
+									<ul>
+										<li><a href="">省广介绍</a></li>
+										<li><a href="">新闻资讯</a></li>
+									</ul>
+								</li>
+								<li class="clear_fix">
+									<p class="pin">&gt;</p>
+									<p>资源</p>
+									<ul>
+										<li><a href="">省广介绍</a></li>
+										<li><a href="">新闻资讯</a></li>
+									</ul>
+								</li>
+								<li class="clear_fix">
+									<p class="pin">&gt;</p>
+									<p>课程</p>
+									<ul>
+										<li><a href="">省广介绍</a></li>
+										<li><a href="">新闻资讯</a></li>
+									</ul>
+								</li>
+							</ul>
+							<p class="logout">退出</p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
+		
+		<!--搜索弹窗-->
+		<div class="search-box">
+			<div class="head-line">
+				<span class="back">×</span>
+				<div class="search-bar">
+					<i class="iconfont icon-search"></i>
+					<input type="text" placeholder="Search" />
+				</div>
+			</div>
+			<div class="content">
+				<h2>热搜</h2>
+				<div class="tag-box">
+					<span class="tag">省广股份</span>
+					<span class="tag">移动互联网</span>
+					<span class="tag">细分平台业务</span>
+					<span class="tag">O2O</span>
+					<span class="tag">媒介平台</span>
+					<span class="tag">拥抱变革，创造未来</span>
+					<span class="tag">拼命平台</span>
+					<span class="tag">上海金投赏创意节</span>
+				</div>
+			</div>
+			<!--搜索结果-->
+			<div class="result">
+				<ul>
+					<li>
+						<a href="">
+							<h2><em>GIMC</em>VS易车，汽车电商“风口”上的2种姿势</h2>
+							<p>2014年11月易车市值接近汽车之家时，正值公布上季度财报，而在2014年Q3业绩易车网净1.86亿，超过汽车1.71亿。看来美国投资人是完全按净利润、自由现金流为这两家公司估值，对汽车电商...</p>
+							<div class="status">
+								<span class="author">王大锤</span>
+								<span class="time">2015-11-12 06:57</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<h2><em>GIMC</em>VS易车，汽车电商“风口”上的2种姿势</h2>
+							<p>2014年11月易车市值接近汽车之家时，正值公布上季度财报，而在2014年Q3业绩易车网净1.86亿，超过汽车1.71亿。看来美国投资人是完全按净利润、自由现金流为这两家公司估值，对汽车电商...</p>
+							<div class="status">
+								<span class="author">王大锤</span>
+								<span class="time">2015-11-12 06:57</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<h2><em>GIMC</em>VS易车，汽车电商“风口”上的2种姿势</h2>
+							<p>2014年11月易车市值接近汽车之家时，正值公布上季度财报，而在2014年Q3业绩易车网净1.86亿，超过汽车1.71亿。看来美国投资人是完全按净利润、自由现金流为这两家公司估值，对汽车电商...</p>
+							<div class="status">
+								<span class="author">王大锤</span>
+								<span class="time">2015-11-12 06:57</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<h2><em>GIMC</em>VS易车，汽车电商“风口”上的2种姿势</h2>
+							<p>2014年11月易车市值接近汽车之家时，正值公布上季度财报，而在2014年Q3业绩易车网净1.86亿，超过汽车1.71亿。看来美国投资人是完全按净利润、自由现金流为这两家公司估值，对汽车电商...</p>
+							<div class="status">
+								<span class="author">王大锤</span>
+								<span class="time">2015-11-12 06:57</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<h2><em>GIMC</em>VS易车，汽车电商“风口”上的2种姿势</h2>
+							<p>2014年11月易车市值接近汽车之家时，正值公布上季度财报，而在2014年Q3业绩易车网净1.86亿，超过汽车1.71亿。看来美国投资人是完全按净利润、自由现金流为这两家公司估值，对汽车电商...</p>
+							<div class="status">
+								<span class="author">王大锤</span>
+								<span class="time">2015-11-12 06:57</span>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		
+		
+		
+		
+		<!--********************-->
 		<script type="text/javascript" src="js/common.js"></script>
 		<!-- Swiper JS -->
 		  <script src="js/swiper.min.js"></script>
@@ -247,5 +461,8 @@
 		      },
 		    });
 		  </script>
+		<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/myScript.js"></script>
+		<!--*********************-->
 	</body>
 </html>

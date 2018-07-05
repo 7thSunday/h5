@@ -9,14 +9,21 @@
             bottom: r(-10);
         }
 		.swiper-container {
+		    width: r(640);
+		    height: r(358);
+		    margin: 0 auto;
+		    .swiper-wrapper {
+		        width: 100%;
+		        height: 100%;
+		    }
 		    .swiper-pagination-bullet-active {
 		        background: #b60005;
 		    }
 			.swiper-slide {
 				.slide-box {
 					display: block;
-					width: r(640);
-					height: r(358);
+					width: 100%;
+					height: 100%;
 					position: relative;
 					.img {
 						width: 100%;
@@ -87,7 +94,9 @@
                 display: block;
                 margin-bottom: r(17);
                 padding-bottom: r(19);
-                border-bottom: r(1) solid #e2e2e2;
+                &:not(:last-child) {
+                    border-bottom: r(1) solid #e2e2e2;
+                }
             }
             h2 {
                 font-size: r(24);
@@ -246,15 +255,6 @@
                     }
                 }
             }
-        }
-//      加载更多
-        .more {
-            display: block;
-            font-size: r(22);
-            line-height: r(22);
-            color: #bbb;
-            padding-bottom: r(17);
-            text-align: center;
         }
 	}
 }
