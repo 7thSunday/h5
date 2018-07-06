@@ -1,0 +1,174 @@
+.mobile .section-1 .swiper-container-horizontal > .swiper-pagination-bullets, .mobile .section-1 .swiper-pagination-custom, .mobile .section-1 .swiper-pagination-fraction {
+  bottom: -0.1rem; }
+.mobile .section-1 .swiper-container {
+  width: 6.4rem;
+  height: 3.2rem;
+  margin: 0 auto; }
+  .mobile .section-1 .swiper-container .swiper-wrapper {
+    width: 100%;
+    height: 100%; }
+  .mobile .section-1 .swiper-container .swiper-pagination-bullet-active {
+    background: #b60005; }
+  .mobile .section-1 .swiper-container .swiper-slide .slide-box {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative; }
+    .mobile .section-1 .swiper-container .swiper-slide .slide-box .img {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden; }
+      .mobile .section-1 .swiper-container .swiper-slide .slide-box .img img {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto; }
+    .mobile .section-1 .swiper-container .swiper-slide .slide-box .intro {
+      position: absolute;
+      bottom: 0;
+      color: #fff;
+      width: 100%;
+      height: 0.9rem;
+      padding: 0 0.29rem;
+      padding-top: 0.23rem;
+      background: rgba(0, 0, 0, 0.5); }
+      .mobile .section-1 .swiper-container .swiper-slide .slide-box .intro h2 {
+        font-weight: normal;
+        font-size: 0.26rem;
+        line-height: 0.26rem;
+        margin-bottom: 0.04rem; }
+      .mobile .section-1 .swiper-container .swiper-slide .slide-box .intro p {
+        font-size: 0.22rem;
+        line-height: 0.22rem; }
+      .mobile .section-1 .swiper-container .swiper-slide .slide-box .intro .status,
+      .mobile .section-1 .swiper-container .swiper-slide .slide-box .intro .iconfont {
+        font-size: 0.17rem;
+        line-height: 0.17rem; }
+      .mobile .section-1 .swiper-container .swiper-slide .slide-box .intro .status {
+        float: right;
+        margin-top: 0.08rem; }
+.mobile .section-1 .content {
+  font-size: 0; }
+  .mobile .section-1 .content ul li {
+    width: 5.83rem;
+    margin: 0 auto;
+    padding: 0.35rem 0;
+    border-bottom: 0.01rem solid #cecece; }
+    .mobile .section-1 .content ul li .rebox {
+      position: relative;
+      width: 5.83rem;
+      height: 1.41rem; }
+      .mobile .section-1 .content ul li .rebox .img {
+        width: 2.09rem;
+        height: 1.41rem;
+        float: left;
+        margin-right: 0.16rem;
+        position: relative; }
+      .mobile .section-1 .content ul li .rebox h2 {
+        font-size: 0.26rem;
+        line-height: 0.26rem;
+        color: #000;
+        margin-bottom: 0.14rem;
+        font-weight: normal; }
+      .mobile .section-1 .content ul li .rebox p {
+        color: #c5c5c5;
+        font-size: 0.22rem;
+        line-height: 0.24rem;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical; }
+      .mobile .section-1 .content ul li .rebox .status {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        font-size: 0.18rem;
+        line-height: 0.18rem;
+        color: #939393; }
+        .mobile .section-1 .content ul li .rebox .status span {
+          vertical-align: middle; }
+        .mobile .section-1 .content ul li .rebox .status .view {
+          display: inline-block;
+          vertical-align: middle; }
+          .mobile .section-1 .content ul li .rebox .status .view > * {
+            vertical-align: middle; }
+          .mobile .section-1 .content ul li .rebox .status .view .iconfont {
+            margin-left: 0.18rem;
+            margin-right: 0.08rem; }
+.mobile .section-2 {
+  display: none;
+  font-size: 0;
+  padding-top: 0.42rem; }
+  .mobile .section-2 .content {
+    width: 5.83rem;
+    margin: 0 auto;
+    padding-bottom: 0.29rem;
+    border-bottom: 0.01rem solid #e6e6e6; }
+    .mobile .section-2 .content h1 {
+      font-size: 0.3rem;
+      line-height: 0.3rem;
+      font-weight: normal;
+      margin-bottom: 0.18rem; }
+    .mobile .section-2 .content .status {
+      font-size: 0.22rem;
+      line-height: 0.22rem;
+      margin-bottom: 0.5rem;
+      color: #c5c5c5; }
+      .mobile .section-2 .content .status > * {
+        vertical-align: middle; }
+      .mobile .section-2 .content .status .iconfont {
+        vertical-align: middle;
+        margin-left: 0.18rem;
+        margin-right: 0.08rem; }
+    .mobile .section-2 .content p {
+      font-size: 0.22rem;
+      line-height: 0.28rem;
+      color: #8b8b8b;
+      margin-bottom: 0.24rem; }
+    .mobile .section-2 .content .img {
+      width: 5.81rem;
+      height: 3.37rem;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden; }
+  .mobile .section-2 .contact {
+    padding-top: 0.37rem; }
+    .mobile .section-2 .contact p {
+      font-size: 0.28rem;
+      line-height: 0.28rem;
+      color: #8e8d8d;
+      margin-left: 0.28rem;
+      margin-bottom: 0.09rem; }
+    .mobile .section-2 .contact .contact-block {
+      background: #b20000;
+      color: #fff; }
+      .mobile .section-2 .contact .contact-block p {
+        color: #fff;
+        margin: 0; }
+      .mobile .section-2 .contact .contact-block li {
+        position: relative;
+        text-align: center;
+        float: left;
+        width: 33.33%;
+        height: 1.51rem;
+        padding-top: 0.36rem; }
+        .mobile .section-2 .contact .contact-block li .iconfont {
+          font-size: 0.42rem; }
+        .mobile .section-2 .contact .contact-block li p {
+          margin-top: 0.18rem;
+          font-size: 0.22rem; }
+        .mobile .section-2 .contact .contact-block li:not(:last-child)::after {
+          content: "";
+          display: block;
+          width: 0.01rem;
+          height: 1.15rem;
+          background: #fff;
+          position: absolute;
+          right: 0;
+          top: 0.18rem; }
+
+/*# sourceMappingURL=resource.css.map */
