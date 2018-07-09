@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>item</title>
+	<style>
+		.web1 {
+			width: 1000px;
+			height: 350px;
+			border: 1px solid #000;
+			display: flex;
+		}
+		.test {
+			background: skyblue;
+			width: 200px;
+			height: 100px;
+		}
+		.test:nth-child(odd) {
+			background: pink;
+		}
+		.test:nth-child(1) {
+			flex-grow: 1;
+		}
+		.test:nth-child(2) {
+			flex-grow: 2;
+			align-self: flex-end;
+		}
+		.test:nth-child(3) {
+			flex-grow: 3;
+		}
+	</style>
+</head>
+<body>
+	<!-- 项目的属性： -->
+		<!-- order 设置项目的排列顺序 -->
+			<!-- 数值越小越靠前，默认值为0，允许设置负值 -->
+		<!-- flex-grow 将剩余的宽度按照设置的比例分配给对应的项目，有放大作用 -->
+			<!-- 默认值为0，即分配的比例为0 -->
+		<!-- flex-shrink 当容器空间不足时，按照设置的比例将项目缩小 -->
+			<!-- 默认值为1 -->
+		<!-- flex-basis 设置项目的大小，相当于width -->
+			<!-- 默认值为auto，宽度由内容撑开 -->
+		<!-- flex 可以用这种方式把flex-grow flex-shrink flex-basis写在一行 -->
+			<!-- 默认值： 0 1 auto; -->
+			<!-- 快捷值： auto ===> 1 1 auto -->
+					<!-- none ===> 0 0 auto -->
+					<!-- 1 ===> 1 1 0% -->
+		<!-- align-self 设置单个项目的对齐方式 -->
+			<!-- flex-start 对齐到交叉轴的开始位置 -->
+			<!-- flex-end 对齐到交叉轴的结束位置 -->
+			<!-- flex-center 对齐到交叉轴的中心位置 -->
+			<!-- baseline 项目的文字基线对齐 -->
+			<!-- stretch 默认值，占满容器高度 -->
+	<div class="web1">
+		<div class="test">1</div>
+		<div class="test">2</div>
+		<div class="test">3</div>
+		<div class="test">4</div>
+		<div class="test">5</div>
+		<div class="test">6</div>
+		<div class="test">7</div>
+		<div class="test">8</div>
+		<div class="test">9</div>
+	</div>
+</body>
+</html>

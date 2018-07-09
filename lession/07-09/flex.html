@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>flex</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		.web1 {
+			width: 100%;
+			height: 600px;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+		}
+		.test {
+			width: 100px;
+			height: 100px;
+			background: skyblue;
+		}
+		.test:nth-child(2n) {
+			background: pink;
+		}
+		.web2 {
+			display: flex;
+			flex-wrap: wrap-reverse;
+		}
+	</style>
+</head>
+<body>
+	<!-- flex布局（即弹性布局） -->
+		<!-- 当一个元素设置了flex布局之后，该元素会转变成弹性盒子，称为容器 -->
+		<!-- 其子元素称为项目，且默认情况下所有子元素都在一行排列（无论是块级元素还是行内元素） -->
+		<!-- 当宽或高不够时会对项目进行压缩 -->
+		<!-- 只对子元素有影响，对子元素以下的后代元素没有影响 -->
+
+		<!-- 容器默认右两个轴线 -->
+			<!-- 水平方向上的叫主轴，默认从左到右 -->
+			<!-- 垂直方向上的叫交叉轴，默认从上到下 -->
+
+	<!-- 容器上的属性： -->
+		<!-- flex-direction 设置项目的排列方向 -->
+			<!-- row 默认值，从左往右排列 -->
+			<!-- row-reverse 从右到左排列 -->
+			<!-- column 从上到下 -->
+			<!-- column-reverse 从下到上 -->
+			<!-- 设置这个属性时，实际上是改变了主轴的方向 -->
+		<!-- flex-wrap 设置项目是否换行 -->
+			<!-- nowrap 默认值，不换行 -->
+			<!-- wrap 往下换行 -->
+			<!-- wrap-reverse 往上换行 -->
+		<!-- flex-flow 可以把flex-direction和flex-wrap以这种方式写在一行， -->
+			<!-- 如flex-flow:row-reverse nowrap; -->
+		<!-- justify-content 设置主轴方向上的对齐方式 -->
+			<!-- flex-start 对齐到主轴的开始位置 -->
+			<!-- flex-end 对齐到主轴的结束位置 -->
+			<!-- center 对齐到主轴的中心位置 -->
+			<!-- space-between 对齐到主轴两端，只在项目和项目之间留白 -->
+			<!-- space-around 对齐到主轴两端，项目的左右都有留白 -->
+		<!-- align-items 设置交叉轴上的对齐方式 -->
+			<!-- flex-start 对齐到交叉轴的开始位置 -->
+			<!-- flex-end 对齐到交叉轴的结束位置 -->
+			<!-- center 对齐到交叉轴的中心位置 -->
+			<!-- baseline 对齐到文字基线 -->
+		<!-- align-content 设置多个轴线的对齐方式，注意只有一个轴线时不会生效 -->
+			<!-- flex-start 对齐到交叉轴的开始位置 -->
+			<!-- flex-end 对齐到交叉轴的结束位置 -->
+			<!-- center 对齐到交叉轴的中心位置 -->
+			<!-- space-around 对齐到交叉轴两端，项目的周围有留白 -->
+			<!-- space-between 对齐到交叉轴两端，只在项目之间留白 -->
+			<!-- stretch 默认值，占满容器高度 -->
+	<div class="web1">
+		<div class="test">1</div>
+		<span class="test">2</span>
+		<div class="test">3</div>
+	</div>
+	<p>this is a p element.</p>
+	<div class="web2">
+		<div class="test">1</div>
+		<span class="test">2</span>
+		<div class="test">3</div>
+		<div class="test">4</div>
+		<div class="test">5</div>
+		<div class="test">6</div>
+		<div class="test">7</div>
+		<div class="test">8</div>
+		<div class="test">9</div>
+		<div class="test">10</div>
+	</div>
+	<div class="web3">
+		<div class="test">1</div>
+		<span class="test">2</span>
+		<div class="test">3</div>
+		<div class="test">4</div>
+		<div class="test">5</div>
+		<div class="test">6</div>
+		<div class="test">7</div>
+		<div class="test">8</div>
+		<div class="test">9</div>
+		<div class="test">10</div>
+	</div>
+</body>
+</html>
