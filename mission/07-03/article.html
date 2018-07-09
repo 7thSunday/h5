@@ -369,7 +369,7 @@
 							<div class="comment-content clear_fix">
 								<p>在这个互相仇恨的年代，抓的点不错</p>
 								<span class="actime">2015-11-8 11:04</span>
-								<div class="show-reply">(<span>2</span>)回复</div>
+								<div class="show-reply">(<span>2</span>)回复<span class="pin">&gt;</span></div>
 							</div>
 							<div class="reply-box clear_fix">
 								<ul>
@@ -683,7 +683,17 @@
 			var showReply = $(".show-reply");
 			showReply.click(function(){
 				var replyBox = $(".reply-box");
-				replyBox.slideToggle();
+				replyBox.slideToggle(function(){
+					if (replyBox.css("display") === "block") {
+						$(".show-reply .pin").css(
+							"transform" , "rotate(90deg)"
+						)
+					} else {
+						$(".show-reply .pin").css(
+							"transform" , "rotate(0deg)"
+						)
+					}
+				});
 			});
 		</script>
 	</body>

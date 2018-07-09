@@ -379,6 +379,10 @@
                             text-align: right;
                             color: #444;
                             font-size: r(19);
+                            .pin {
+                                color: gray;
+                                display: inline-block;
+                            }
                         }
                     }
                     .reply-box {
@@ -418,6 +422,7 @@
                             }
                         }
                         textarea {
+                            font-size:r(16);
                             padding-left: r(3);
                             margin: 0 auto;
                             margin-top: r(20);

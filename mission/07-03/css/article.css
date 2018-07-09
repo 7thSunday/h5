@@ -299,6 +299,9 @@
           text-align: right;
           color: #444;
           font-size: 0.19rem; }
+          .mobile .section-2 .comment .comment-box .floor .comment-content .show-reply .pin {
+            color: gray;
+            display: inline-block; }
       .mobile .section-2 .comment .comment-box .floor .reply-box {
         display: none;
         background: #fafafa;
@@ -329,6 +332,7 @@
             text-align: right;
             margin-bottom: 0.14rem; }
         .mobile .section-2 .comment .comment-box .floor .reply-box textarea {
+          font-size: 0.16rem;
           padding-left: 0.03rem;
           margin: 0 auto;
           margin-top: 0.2rem;
