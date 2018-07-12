@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="jquery.fullpage.css">
+	<link rel="stylesheet" href="">
+	<style>
+		.section3 p {
+			text-align: center;
+			position: relative;
+			left: -100%;
+		}
+		.menu {
+			position: fixed;
+			top: 0;
+			left: 0;
+			display: flex;
+			z-index: 1;
+		}
+		.menu li {
+			width: 100px;
+			height: 35px;
+			background: #000;
+			text-align: center;
+			line-height: 35px;
+			list-style: none;
+		}
+		.menu li:hover {
+			background: gray;
+		}
+		.menu li a {
+			text-decoration: none;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<ul class="menu">
+		<li data-menuanchor="page1">
+			<a href="#page1">111</a>
+		</li>
+		<li data-menuanchor="page2">
+			<a href="#page2">222</a>
+		</li>
+		<li data-menuanchor="page3">
+			<a href="#page3">333</a>
+		</li>
+	</ul>
+	<div class="web">
+		<div class="section section1">this is the first page.</div>
+		<div class="section section2">
+			<div class="slide">the first page of the second page</div>
+			<div class="slide">the second page of the second page</div>
+			<div class="slide">the third page of the second page</div>
+		</div>
+		<div class="section section3">
+			<p>this is the third page.</p>
+		</div>
+	</div>
+	<script src="jquery-1.8.3.min.js"></script>
+	<script src="jquery.fullPage.min.js"></script>
+	<script src="jquery.easing.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".web").fullpage({
+				// 设置背景颜色
+				sectionsColor:["skyblue","pink","gray"],
+
+				// 循环滚动
+				continuousVertical:true,
+
+				anchors:["page1","page2","page3"],
+				menu:".menu",
+
+				// 回调函数
+				afterLoad:function(anchorLink,index) {
+					// 进入时的函数
+					if(index===3) {
+						$(".section3").find("p").delay(1000).animate({
+							left:"0"
+						},1500,"easeOutExpo")
+					}
+				},
+
+				onLeave:function(index,direction) {
+					// 离开时的效果
+					if (index === 3) {
+						$(".section3").find("p").delay(0).animate({
+							left:"-100%"
+						},1000,"easeOutExpo")
+					}
+				}
+			});
+			// 自动滚动
+			// setInterval(function(){
+	  		// $.fn.fullpage.moveSectionDown();
+	  		// }, 2500);
+		})
+	</script>
+</body>
+</html>

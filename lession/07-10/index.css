@@ -1,0 +1,29 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.web {
+	display: flex;
+	justify-content: space-around;
+}
+.test {
+	width: 150px;
+	height: 150px;
+	background: skyblue;
+}
+
+@media only screen and (max-width: 320px) {
+	.test {
+		width: 130px;
+		height: 130px;
+		background: pink;
+	}
+}
+
+@media only screen and (min-width: 320px) and (max-width: 375px) {
+	.test {
+		width: 135px;
+		height: 135px;
+		background: gray;
+	}
+}

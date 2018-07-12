@@ -1,0 +1,55 @@
+@charset "utf-8";
+@function r($px) {
+    @return $px/100+rem;
+}
+.show-mark-1 {
+    animation-name: flying-mark;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.show-mark-2 {
+    animation-name: flying-mark;
+    animation-duration: 5s;
+    animation-delay: 0.8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.show-mark-3 {
+    animation-name: flying-mark;
+    animation-duration: 5s;
+    animation-delay: 3.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.show-mark-4 {
+    animation-name: flying-mark;
+    animation-duration: 5s;
+    animation-delay: 2.6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.show-mark-5 {
+    animation-name: flying-mark;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes flying-mark {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    90% {
+        transform: translateY(r(-350));
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+}
