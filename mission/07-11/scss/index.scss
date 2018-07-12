@@ -58,6 +58,14 @@
     .fp-controlArrow {
         display: none;
     }
+    .logo {
+        width: r(103);
+        height: r(38);
+        position: relative;
+        overflow: hidden;
+        margin-left: r(45);
+        margin-bottom: r(79);
+    }
 //  首页
     .home {
         font-size: 0;
@@ -66,14 +74,6 @@
         padding-top: r(44);
         position: relative;
         z-index: -5;
-        .logo {
-            width: r(103);
-            height: r(38);
-            position: relative;
-            overflow: hidden;
-            margin-left: r(45);
-            margin-bottom: r(79);
-        }
         .title-group {
             width: 100%;
             height: r(306);
@@ -107,7 +107,7 @@
                 height: r(29);
             }
         }
-        .charactor {
+        .character {
             width: 100%;
             height: r(435);
             position: absolute;
@@ -164,6 +164,8 @@
             position: relative;
             padding-top: r(105);
             h2 {
+                position: relative;
+                top: -300%;
                 padding: 0 r(45);
                 line-height: r(50);
                 font-size: r(33);
@@ -172,6 +174,7 @@
                 margin-bottom: r(42);
             }
             .img {
+                opacity: 0;
                 display: block;
                 margin: 0 auto;
                 width: r(250);
@@ -210,9 +213,34 @@
                 width: r(345);
                 height: r(247);
             }
-            .img-8 {
-                width: r(250);
-                height: r(350);
+            .img-12 {
+                margin-top: r(100);
+                width: r(322);
+                height: r(247);
+            }
+            .img-15 {
+                margin-top: r(100);
+                width: r(291);
+                height: r(291);
+            }
+            .img-16 {
+                margin-top: r(100);
+                width: r(345);
+                height: r(325);
+            }
+            .img-17 {
+                margin-top: r(100);
+                width: r(350);
+                height: r(250);
+            }
+            .img-19 {
+                margin-top: r(100);
+                width: r(233);
+                height: r(282);
+            }
+            .img-22 {
+                width: r(376);
+                height: r(314);
             }
             .selection-block {
                 height: r(336);
@@ -224,6 +252,7 @@
                 bottom: r(117);
                 .selection {
                     position: relative;
+                    top: 300%;
                     width: r(368);
                     height: r(63);
                     &:hover .out-sel {
@@ -302,6 +331,18 @@
                     }
                 }
             }
+        }
+        .q-22 {
+            .selection-block .selection span {
+                left: 0;
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+        }
+        .result {
+            position: relative;
+            padding-top: r(44);
         }
     }
 }

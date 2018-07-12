@@ -11,12 +11,32 @@ $(function(){
 				$(".question").find(".mark-4").addClass("show-mark-4");
 				$(".question").find(".mark-3").addClass("show-mark-3");
 			}
+		},
+		
+		afterSlideLoad:function(anchorLink,index,slideIndex,direction) {
+			$(".question").find(".active").find(".selection").animate({
+				"top": "0%"
+			},500,"easeOutExpo");
+			$(".question").find(".active").find("h2").animate({
+				"top": "0%"
+			},300,"easeOutExpo");
+			$(".question").find(".active").find(".img").addClass("fadeIn");
+		},
+		
+		onSlideLeave:function(anchorLink,index,slideIndex,direction) {
+			$(".question").find(".active").find(".selection").animate({
+				"top": "300%"
+			},500,"easeOutExpo");
+			$(".question").find(".active").find("h2").animate({
+				"top": "-300%"
+			},300,"easeOutExpo");
+			$(".question").find(".active").find(".img").removeClass("fadeIn");
 		}
 	});
 	
 //	开始测试
 	$(".start").click(function(){
-		$.fn.fullpage.moveSectionDown();
+		$.fn.fullpage.moveTo(2,0);
 	})
 	
 //	选择选项
