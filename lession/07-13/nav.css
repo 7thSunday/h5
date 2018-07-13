@@ -1,0 +1,69 @@
+.nav {
+	width: 100%;
+	padding: 15px 20px;
+	background: gray;
+	display: flex;
+	justify-content: space-around;
+	position: relative;
+}
+.btn div {
+	display: none;
+	font-size: 14px;
+}
+.btn input[type="checkbox"] {
+	display: none;
+}
+.menu {
+	display: flex;
+}
+.menu a {
+	font-size: 18px;
+	color: #fff;
+	padding: 15px 10px;
+}
+.menu a:hover {
+	background: gainsboro;
+	color: #000;
+}
+/*iphone 6plus*/
+@media only screen and (max-width: 414px) {
+	.nav {
+		justify-content: space-between;
+	}
+	.btn div {
+		display: block;
+		width: 80px;
+		height: 38px;
+		background: #666;
+		border-radius: 10px;
+		color: #fff;
+		text-align: center;
+		line-height: 38px;
+	}
+	.menu {
+		display: none;
+		width: 100%;
+		top: 68px;
+		left: 0;
+		background: gray;
+		position: absolute;
+		flex-direction: column;
+	}
+	.menu li {
+		padding: 18px 0;
+		border-bottom: 1px solid #555;
+	}
+	.menu li:nth-child(1) {
+		border-top: 1px solid #555;
+	}
+	.menu li a {
+		display: block;
+		padding: 0 10px;
+	}
+	.menu li a:hover {
+		background: gray;
+	}
+	.btn #check:checked ~ .menu {
+		display: flex;
+	}
+}

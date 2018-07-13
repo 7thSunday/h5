@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,user-scalable=no">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.css">
+	<style>
+		.container {
+			line-height: 100px;
+			text-align: center;
+			color: #fff;
+		}
+		.header,
+		.footer {
+			background: gray;
+		}
+		.left {
+			background: red;
+		}
+		.right {
+			background: blue;
+		}
+		.center {
+			background: green;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-12 header">header</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 col-12 left">left</div>
+			<div class="col-md-9 col-12">
+				<div class="row">
+					<div class="col-12 col-md-12 col-lg-9 center">center</div>
+					<div class="col-12 col-md-12 col-lg-3 right">right</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 footer">footer</div>
+		</div>
+	</div>
+</body>
+</html>

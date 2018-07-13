@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,user-scalable=no">
+	<link rel="stylesheet" href="bootstrap.css">
+	<link rel="stylesheet" href="index.css">
+</head>
+<body>
+	<!-- 响应式布局： -->
+		<!-- 原理：	 1.媒体查询 -->
+				<!-- 2.百分比 -->
+				<!-- 3.flex布局 -->
+
+	<!-- bootstrap提供的两种容器 -->
+		<!-- .container 定宽 -->
+		<!-- .container-fluid 宽度为100% -->
+
+	<!-- 栅格系统 -->
+		<!-- 把容器分为12列 -->
+
+	<!-- 类名前缀				 设备宽度范围 -->
+		<!-- col-					 < 576 -->
+		<!-- col-sm-				>= 576 -->
+		<!-- col-md-				>= 768 -->
+		<!-- col-lg-				>= 992 -->
+		<!-- col-xl-				>= 1200 -->
+
+	<!-- 常用类 -->
+		<!-- w-100 宽100%的元素 -->
+		<!-- col-auto  /  col-*-auto 宽度自适应 -->
+	<div class="container"></div>
+	<div class="container-fluid"></div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-1 col-sm-2 col-md-3 col-lg-4 col-xl-6">1</div>
+			<div class="col-1 col-sm-2 col-md-3 col-lg-4 col-xl-6">2</div>
+			<div class="col-1 col-sm-2 col-md-3 col-lg-4 col-xl-6">3</div>
+			<div class="col-1 col-sm-2 col-md-3 col-lg-4 col-xl-6">4</div>
+			<div class="col-1 col-sm-2 col-md-3 col-lg-4 col-xl-6">5</div>
+			<div class="col-1 col-sm-2 col-md-3 col-lg-4 col-xl-6">6</div>
+			<div class="col-1 col-sm-2 col-md-3 col-lg-4 col-xl-6">7</div>
+			<div class="col-1 col-sm-2 col-md-3 col-lg-4 col-xl-6">8</div>
+			<div class="col-1 col-sm-2 col-md-3 col-lg-4 col-xl-6">9</div>
+			<div class="col-1 col-sm-2 col-md-3 col-lg-4 col-xl-6">10</div>
+			<div class="col-1 col-sm-2 col-md-3 col-lg-4 col-xl-6">11</div>
+			<div class="col-1 col-sm-2 col-md-3 col-lg-4 col-xl-6">12</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-4">
+					<div class="row">
+						<div class="col-3 col-sm-6">1</div>
+						<div class="col-3 col-sm-6">2</div>
+						<div class="col-3 col-sm-6">3</div>
+						<div class="col-3 col-sm-6">4</div>
+					</div>
+				</div>
+				<div class="col-4">2</div>
+				<div class="col-4">3</div>
+			</div>
+			<div class="row">
+				<div class="col-3">1</div>
+				<div class="col-9">2</div>
+			</div>
+		</div>
+	</div>
+	
+	<div style="height: 100px;"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col">1</div>
+			<div class="col">2</div>
+			<div class="w-100"></div><!-- 宽100%的元素 -->
+			<div class="col">3</div>
+			<div class="col">4</div>
+		</div>
+		<div class="row">
+			<div class="col">1</div>
+			<div class="col-auto">2</div>
+			<div class="col col-lg-auto">3</div><!-- col-auto  /  col-*-auto 宽度自适应 -->
+		</div>
+
+		<!-- 容器上的对齐方式 -->
+			<!-- align-items-start 对齐到交叉轴的起始位置 -->
+			<!-- align-items-end 对齐到交叉轴的结束位置 -->
+			<!-- align-items-center 对齐到交叉轴中心位置 --> 
+
+		<!-- 项目的对齐方式 -->
+			<!-- align-self-start 对齐到交叉轴的起始位置 -->
+			<!-- align-self-end 对齐到交叉轴的结束位置 -->
+			<!-- align-self-center 对齐到交叉轴中心位置 -->
+
+			<!-- justify-content-start 对齐到主轴的起始位置 -->
+			<!-- justify-content-end 对齐到主轴的结束位置 -->
+			<!-- justify-content-center 对齐到主轴的中心位置 -->
+			<!-- justify-content-between -->
+			<!-- justify-content-around -->
+		
+		<!-- no-gutters 清除row的外边距，同时清除内部col的内边距 -->
+		<!-- d-none  /  d-*-none 隐藏元素 -->
+		<!-- d-block  /  d-*-block 显示元素 -->
+		<div class="row rowh no-gutters">
+			<div class="col">1</div>
+			<div class="col align-self-center d-none d-lg-block">2</div>
+			<div class="col align-self-end">3</div>
+			<div class="col">4</div>
+		</div>
+
+		<!-- offset-num  /  offset-*-num 偏移量 -->
+		<div class="row">
+			<div class="col-4">1</div>
+			<div class="col-4 offset-4">2</div>
+		</div>
+
+		<!-- ml-auto  /  ml-*-auto 设置自动左外边距 -->
+		<!-- mr-auto  /  mr-*-auto 设置自动右外边距 -->
+		<!-- mx-auto  /  mx-*-auto 设置自动左右外边距 -->
+		<div class="row">
+			<div class="col-4 mx-auto">1</div>
+			<div class="col-4  ml-auto mr-auto">2</div>
+		</div>
+	</div>
+
+	<script src="jquery-slim.min.js"></script>
+	<script src="popper.min.js"></script>
+	<script src="bootstrap.js"></script>
+</body>
+</html>

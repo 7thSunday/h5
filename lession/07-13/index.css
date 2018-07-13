@@ -1,0 +1,20 @@
+.container {
+	background: skyblue;
+}
+.container-fluid {
+	height: 50px;
+	background: pink;
+}
+.col,
+.col-1,
+.col-4,
+.col-6 {
+	border: 1px solid #000;
+}
+.rowh {
+	height: 100px;
+	border: 1px solid #000;
+}
+.rowh .col {
+	height: 30px;
+}
