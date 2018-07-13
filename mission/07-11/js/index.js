@@ -21,6 +21,7 @@ $(function(){
 				"top": "0%"
 			},300,"easeOutExpo");
 			$(".question").find(".active").find(".img").addClass("fadeIn");
+			$(".question").find(".active").find(".result-block").addClass("flip");
 		},
 		
 		onSlideLeave:function(anchorLink,index,slideIndex,direction) {
@@ -45,4 +46,10 @@ $(function(){
 		$(this).siblings(".selection").find(".correct").css("display","none");
 	})
 	
+	var cover = $(".cover");
+	cover.click(function(){
+		if($(this).css("display") !== "none") {
+			$(this).fadeOut();
+		}
+	})
 })

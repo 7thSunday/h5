@@ -277,5 +277,283 @@
   .container .question .result {
     position: relative;
     padding-top: 0.44rem; }
+    .container .question .result .result-block {
+      margin: 0 auto;
+      position: relative;
+      width: 5.34rem;
+      height: 8.46rem;
+      background: url(../img/bg-result.png) no-repeat;
+      background-size: cover;
+      padding-top: 0.82rem;
+      text-align: center; }
+      .container .question .result .result-block h1 {
+        font-size: 0.5rem;
+        line-height: 0.5rem;
+        color: #f6ff00;
+        font-weight: normal;
+        text-shadow: 0 0 0.1rem #000;
+        margin-bottom: 0.47rem; }
+      .container .question .result .result-block p {
+        margin-bottom: 0.29rem;
+        font-size: 0.36rem;
+        line-height: 0.36rem;
+        color: #fff;
+        text-align: center;
+        text-shadow: 0 0 0.15rem #000; }
+        .container .question .result .result-block p em {
+          color: #36ff00; }
+      .container .question .result .result-block .btn-share {
+        position: absolute;
+        right: 0.63rem;
+        bottom: 0.79rem;
+        width: 2rem;
+        height: 0.71rem;
+        background: url(../img/bg-btn-1.png) no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .container .question .result .result-block .btn-share span {
+          letter-spacing: 0.03rem;
+          font-size: 0.32rem;
+          line-height: 0.32rem;
+          color: #384000; }
+    .container .question .result .character {
+      width: 2.6rem;
+      height: 3.33rem;
+      position: absolute;
+      left: 1.01rem;
+      bottom: 0.57rem; }
+  .container .question .comment {
+    position: relative;
+    padding-top: 0.44rem;
+    text-align: center; }
+    .container .question .comment .logo {
+      margin-bottom: 0.34rem; }
+    .container .question .comment .avatar {
+      margin: 0 auto;
+      position: relative;
+      width: 1.73rem;
+      height: 1.73rem;
+      background: #fff;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-bottom: 0.14rem; }
+    .container .question .comment p {
+      font-size: 0.28rem;
+      line-height: 0.28rem;
+      color: #fff;
+      margin-bottom: 0.27rem; }
+      .container .question .comment p em {
+        color: #fff000; }
+    .container .question .comment .label-block {
+      margin: 0 auto;
+      margin-top: 0.9rem;
+      width: 5.39rem;
+      height: 5.04rem;
+      position: relative; }
+      .container .question .comment .label-block p {
+        font-size: 0.21rem;
+        line-height: 0.21rem;
+        color: #d5d5d5;
+        text-align: left; }
+      .container .question .comment .label-block .label {
+        position: absolute;
+        font-size: 0.25rem;
+        height: 0.56rem;
+        line-height: 0.56rem;
+        display: inline-block;
+        padding: 0 0.14rem;
+        border-radius: 0.28rem;
+        color: #2f3400;
+        background: #bccbd9; }
+        .container .question .comment .label-block .label:nth-child(3) {
+          top: 0.57rem;
+          right: 0.5rem; }
+        .container .question .comment .label-block .label:nth-child(4) {
+          background: #5c727a;
+          top: 1.25rem;
+          left: 0.38rem; }
+        .container .question .comment .label-block .label:nth-child(5) {
+          top: 1.53rem;
+          left: 1.82rem;
+          background: #a1b05e; }
+        .container .question .comment .label-block .label:nth-child(6) {
+          top: 2.03rem;
+          right: 0;
+          background: #c3c126; }
+      .container .question .comment .label-block .comment-block {
+        margin: 0 auto;
+        width: 4.95rem;
+        height: 1.82rem;
+        position: absolute;
+        bottom: 0; }
+        .container .question .comment .label-block .comment-block p {
+          text-align: center;
+          margin-bottom: 0.19rem; }
+        .container .question .comment .label-block .comment-block textarea {
+          font-size: 0.2rem;
+          line-height: 1.4;
+          padding: 0.05rem;
+          color: #fff;
+          width: 4.95rem;
+          height: 0.71rem;
+          border: 0.02rem solid #fff;
+          background: transparent;
+          resize: none;
+          margin-bottom: 0.19rem; }
+        .container .question .comment .label-block .comment-block > div {
+          display: inline-block;
+          font-size: 0.23rem;
+          line-height: 0.47rem;
+          text-align: center;
+          letter-spacing: 0.03rem;
+          width: 1.38rem;
+          height: 0.47rem;
+          background: #deff00;
+          border-radius: 0.1rem;
+          box-shadow: 0.03rem 0.03rem 0rem 0.03rem #4e580e; }
+          .container .question .comment .label-block .comment-block > div:nth-child(3) {
+            margin-right: 0.54rem; }
+    .container .question .comment .cover {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.9);
+      padding-top: 2.83rem; }
+      .container .question .comment .cover img {
+        width: 1.68rem;
+        height: 1.66rem;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 0.42rem; }
+      .container .question .comment .cover p {
+        text-align: center;
+        font-size: 0.31rem;
+        line-height: 0.31rem;
+        color: #fff;
+        letter-spacing: 0.02rem; }
+  .container .question .view-comment {
+    letter-spacing: 0.03rem;
+    position: relative;
+    padding-top: 0.44rem;
+    text-align: center; }
+    .container .question .view-comment .logo {
+      margin-bottom: 0.34rem; }
+    .container .question .view-comment .avatar {
+      margin: 0 auto;
+      position: relative;
+      width: 1.73rem;
+      height: 1.73rem;
+      background: #fff;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-bottom: 0.14rem; }
+    .container .question .view-comment .how {
+      margin: 0.26rem auto;
+      text-align: left;
+      padding-left: 0.16rem;
+      width: 3.97rem;
+      height: 0.53rem;
+      font-size: 0.23rem;
+      line-height: 0.65rem;
+      background: url(../img/bg-comment-01.png) no-repeat;
+      background-size: cover;
+      color: #fff; }
+    .container .question .view-comment p {
+      font-size: 0.18rem;
+      line-height: 0.18rem;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 0.24rem; }
+    .container .question .view-comment .comment-list {
+      width: 4.69rem;
+      margin: 0 auto; }
+      .container .question .view-comment .comment-list li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0.36rem; }
+        .container .question .view-comment .comment-list li .c-avatar {
+          width: 0.59rem;
+          height: 0.59rem;
+          background: #fff;
+          overflow: hidden;
+          position: relative;
+          border-radius: 50%; }
+        .container .question .view-comment .comment-list li .comment-content {
+          width: 4.02rem;
+          height: 0.44rem;
+          background: url(../img/bg-comment-02.png) no-repeat;
+          background-size: cover;
+          font-size: 0.24rem;
+          line-height: 0.44rem;
+          color: #fff;
+          padding-left: 0.22rem;
+          text-align: left; }
+    .container .question .view-comment .bottom-line {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      height: 0.7rem;
+      background: #2c2c2c;
+      display: flex;
+      justify-content: space-around;
+      align-items: center; }
+      .container .question .view-comment .bottom-line span {
+        font-size: 0.2rem;
+        color: #fff;
+        line-height: 0.2rem; }
+      .container .question .view-comment .bottom-line a {
+        width: 1.11rem;
+        height: 0.47rem;
+        color: #384000;
+        font-size: 0.22rem;
+        line-height: 0.47rem;
+        background: #deff00;
+        display: block;
+        border-radius: 0.09rem; }
+      .container .question .view-comment .bottom-line .btn-nav > div {
+        margin-bottom: 0.07rem; }
+        .container .question .view-comment .bottom-line .btn-nav > div::before {
+          content: "";
+          display: inline-block;
+          background: #fff;
+          width: 0.05rem;
+          height: 0.05rem;
+          margin-right: 0.04rem; }
+        .container .question .view-comment .bottom-line .btn-nav > div::after {
+          content: "";
+          display: inline-block;
+          background: #fff;
+          width: 0.27rem;
+          height: 0.05rem; }
+    .container .question .view-comment .cover {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.9); }
+      .container .question .view-comment .cover .qr {
+        width: 3.14rem;
+        height: 3.14rem;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 0.53rem;
+        overflow: hidden;
+        position: relative; }
+      .container .question .view-comment .cover p {
+        text-align: center;
+        font-size: 0.31rem;
+        line-height: 0.31rem;
+        color: #fff;
+        letter-spacing: 0.02rem;
+        margin-bottom: 0.2rem; }
 
 /*# sourceMappingURL=index.css.map */
