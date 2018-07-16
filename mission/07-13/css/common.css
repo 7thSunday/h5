@@ -1,0 +1,37 @@
+/*pc端*/
+@media only screen and (min-width: 768px) {
+	.content-width {
+		max-width: 1000px;
+	}
+	/*导航*/
+	.navbar {
+		padding: 0;
+	}
+	.navbar .content-width .navbar-brand {
+		padding: 0;
+	}
+}
+
+/*移动端*/
+@media only screen and (max-width: 414px) {
+	.navbar .content-width .navbar-collapse {
+		overflow: auto;
+	}
+}
+
+
+.navbar .content-width .navbar-collapse .nav-item a {
+	font-size: 14px;
+	padding: 18px 15px;
+	white-space: nowrap;
+}
+/*选中状态*/
+.navbar .content-width .navbar-collapse .navbar-nav .active {
+	background: #080808;
+}
+
+.navbar .content-width .navbar-collapse .dropdown .btn-language {
+	background: 0;
+	border: 0;
+	color: #9d9d9d;
+}

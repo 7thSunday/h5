@@ -1,0 +1,13 @@
+.kv {
+	margin-top: 56px;
+}
+.kv .pagination {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	border: 1px solid #fff;
+	background: none;
+}
+.kv .active {
+	background: #fff;
+}
