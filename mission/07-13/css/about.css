@@ -1,0 +1,186 @@
+.img-top {
+	margin-top: 56px;
+	padding: 0;
+}
+.img-top img {
+	width: 100%;
+}
+
+/*公司简介*/
+.company-intro {
+	background: #fff;
+	color: #2a2a2a;
+	padding-top: 94px;
+	padding-bottom: 74px;
+}
+.company-intro h2,
+.recuit h2 {
+	font-size: 36px;
+	line-height: 36px;
+	margin-bottom: 32px;
+}
+.company-intro .left h3 {
+	font-size: 21px;
+	line-height: 29px;
+	margin-bottom: 27px;
+}
+.company-intro .left .content p,
+.recuit .left .content p,
+.recuit .right p {
+	font-size: 14px;
+	line-height: 30px;
+}
+.company-intro .left .content p {
+	text-indent: 2em;
+	margin-bottom: 22px;
+}
+.company-intro .left .content p:last-child {
+	margin-bottom: 0;
+}
+.company-intro .right {
+	display: flex;
+	align-items: flex-end;
+}
+.company-intro .right img {
+	width: 100%;
+}
+
+/*人才招聘*/
+.recuit {
+	background: #8cc11f;
+	color: #fff;
+	padding-top: 94px;
+	padding-bottom: 74px;
+}
+.recuit .left {
+	padding-right: 30px;
+}
+.recuit .right a {
+	display: block;
+	border-radius: 3px;
+	text-align: center;
+	line-height: 48px;
+	width: 219px;
+	height: 48px;
+	font-size: 24px;
+	background: #fff;
+	color: #8cc11f;
+	margin-bottom: 15px;
+	text-decoration: none;
+}
+
+/*职位列表*/
+.recuit-list {
+	background: #fff;
+	padding-top: 50px;
+}
+.recuit-list .recuit-item {
+	border-bottom: 1px solid #d2d2d2;
+	padding-top: 72px;
+	padding-left: 15px;
+}
+.recuit-list .recuit-item:last-child {
+	border-bottom: 0;
+}
+.recuit-list .recuit-item h3 {
+	font-size: 26px;
+	line-height: 26px;
+	color: #8cc11f;
+	font-weight: normal;
+	margin-bottom: 41px;
+}
+.recuit-list .recuit-item .recuit-info {
+	color: #2a2a2a;
+}
+.recuit-list .recuit-item .recuit-info h4 {
+	font-size: 18px;
+	line-height: 18px;
+	margin-bottom: 16px;
+}
+.recuit-list .recuit-item .recuit-info p {
+	font-size: 14px;
+	line-height: 20px;
+	margin-bottom: 0;
+}
+.recuit-list .recuit-item .recuit-info p:not(:last-child) {
+	margin-bottom: 18px;
+}
+.recuit-list .recuit-item .recuit-info .desc-content {
+	margin-bottom: 17px;
+	padding-left: 22px;
+}
+.recuit-list .recuit-item .recuit-info .req-content {
+	margin-bottom: 66px;
+	padding-left: 22px;
+}
+
+/*联系方式*/
+.contact {
+	background: #f4f4f4;
+	padding-top: 44px;
+	padding-bottom: 42px;
+}
+.contact h2 {
+	font-size: 36px;
+	line-height: 36px;
+	font-weight: normal;
+	margin-bottom: 36px;
+}
+.contact .contact-block {
+	padding: 0 15px;
+	margin-bottom: 20px;
+}
+.contact .inner {
+	display: flex;
+	align-items: center;
+	border: 1px solid #e3e3e3;
+	border-radius: 4px;
+	background: #fff;
+	padding: 20px 20px;
+}
+.contact .inner p {
+	margin: 0;
+	color: #2a2a2a;
+	font-size: 16px;
+	line-height: 24px;
+}
+.contact .inner .img {
+	flex-shrink: 0;
+	width: 70px;
+	height: 70px;
+	overflow: hidden;
+	margin-right: 20px;
+}
+.contact .inner .img img {
+	width: 100%;
+}
+
+@media only screen  and (max-width: 768px) {
+	.company-intro .right {
+		margin-top: 30px;
+	}
+}
+
+@media only screen and (max-width: 414px) {
+	.recuit-list .recuit-item .recuit-info p {
+		font-size: 17px;
+		line-height: 22px;
+	}
+	.recuit-list .recuit-item {
+		padding-left: 0;
+	}
+	.recuit .right a {
+		width: 160px;
+		height: 40px;
+		line-height: 40px;
+		font-size: 18px;
+	}
+	.company-intro h2, .recuit h2 {
+		font-size: 28px;
+		line-height: 28px;
+	}
+	.company-intro .left .content p, .recuit .left .content p,
+	.recuit .right p {
+		font-size: 16px;
+	}
+}

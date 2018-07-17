@@ -314,6 +314,9 @@
 	.family .content-width .family-block .family-icon-block {
 		margin-bottom: 25px;
 	}
+	.partner .partner-list .partner-item {
+		height: 55px;
+	}
 }
 
 /*ip5*/
@@ -323,5 +326,8 @@
 	}
 	.laya-flash .container .row .flash-product .flash-product-desc p {
 		width: 200px;
+	}
+	.partner .partner-list .partner-item {
+		height: 40px;
 	}
 }

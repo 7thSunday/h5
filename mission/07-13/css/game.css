@@ -1,3 +1,4 @@
+/*轮播*/
 .kv {
 	margin-top: 56px;
 }
@@ -10,4 +11,112 @@
 }
 .kv .active {
 	background: #fff;
+}
+
+/*游戏介绍*/
+.game-ep .game-ep-block {
+	padding-bottom: 30px;
+}
+.game-ep .game-ep-block .game-desc {
+	text-align: right;
+	padding-top: 34px;
+}
+.game-ep .game-ep-block .game-desc h2 {
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 30px;
+	color: #2a2a2a;
+}
+.game-ep .game-ep-block .game-desc p {
+	font-size: 12px;
+	line-height: 30px;
+	color: #898989;
+	margin-bottom: 21px;
+}
+.game-ep .game-ep-block .game-desc .game-pic > div {
+	margin-bottom: 30px;
+}
+.game-ep .game-ep-block .game-desc .game-pic > div img {
+	width: 100%;
+	border-radius: 5px;
+}
+/*猎刃2*/
+.game-ep .game-1 {
+	background: url(../img/game-img-01.png) no-repeat;
+	background-position: 0 41px;
+}
+/*上吧主公*/
+.game-ep .game-2 {
+	background: url(../img/game-img-10.png) no-repeat;
+	background-position: right 45px;
+}
+.game-ep .game-2 .game-desc {
+	text-align: left;
+}
+/*更多案例*/
+.more h2 {
+	font-size: 36px;
+	line-height: 36px;
+	font-weight: normal;
+	margin-bottom: 34px;
+}
+.more .more-game-list .more-item {
+	margin-bottom: 30px;
+}
+.more .more-game-list .more-item a {
+	display: block;
+	text-decoration: none;
+}
+.more .more-game-list .more-item a .img-more {
+	width: 100%;
+	overflow: hidden;
+}
+.more .more-game-list .more-item a .img-more img {
+	width: 100%;
+	border-radius: 5px;
+}
+.more .more-game-list .more-item a p {
+	text-align: center;
+	font-size: 14px;
+	color: #2a2a2a;
+	line-height: 14px;
+	margin: 13px 0;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+	.game-ep .game-ep-block .game-desc {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+	}
+	.game-ep .game-ep-block .game-desc p {
+		width: 85%;
+	}
+	.game-ep .game-2 .game-desc {
+		align-items: flex-start;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.game-ep .game-ep-block {
+		background: none;
+	}
+}
+
+@media only screen and (max-width: 414px) {
+	.game-ep .game-ep-block {
+		padding-bottom: 10px;
+	}
+	.game-ep .game-ep-block .game-desc h2 {
+		font-size: 26px;
+	}
+	.game-ep .game-ep-block .game-desc p {
+		line-height: 24px;
+	}
+	.more h2 {
+		font-size: 30px;
+	}
+	.more .more-game-list .more-item {
+		margin-bottom: 20px;
+	}
 }

@@ -1,5 +1,8 @@
+* {
+	font-family: "微软雅黑";
+}
 /*pc端*/
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
 	.content-width {
 		max-width: 1000px;
 	}
@@ -93,4 +96,24 @@
 }
 .footer .footer-right ul li .qr img {
 	width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+	.footer .content-width {
+		flex-direction: column;
+	}
+	.footer .content-width .footer-right {
+		margin-top: 20px;
+	}
+	.footer .content-width .footer-left {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+@media only screen and (max-width: 414px) {
+	.footer .content-width .footer-right {
+		display: none;
+	}
 }
