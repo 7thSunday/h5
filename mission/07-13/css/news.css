@@ -145,9 +145,6 @@
 		-webkit-line-clamp: 3;  
 		-webkit-box-orient: vertical; 
 	}
-	.content-block .news-list li .desc {
-		flex-shrink: 0;
-	}
 }
 @media only screen and (max-width: 414px) {
 	.content-block .news-list li .img {
@@ -184,6 +181,17 @@
 }
 @media only screen and (max-width: 320px) {
 	.content-block .pager .inner ul li.num {
+		display: none;
+	}
+	.content-block .news-list li .img {
+		width: 100px;
+		height: 62px;
+	}
+	.content-block h1 {
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+	.content-block .news-list li .desc .time {
 		display: none;
 	}
 }
