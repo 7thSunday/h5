@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js</title>
+	<style>
+		.test {
+			display: none;
+			background: #777;
+			width: 500px;
+		}
+	</style>
+</head>
+<body>
+	<p id="pin">menu</p>
+	<div id="content" class="test">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi vitae, corporis blanditiis velit voluptates a magnam repellat saepe cupiditate aut enim veniam quis, rem omnis tempore culpa veritatis. Obcaecati, cupiditate.</div>
+
+	<p onclick="alert('hi, this is Ted.')">click me!!</p>
+	<script>
+		document.getElementById("pin").onmouseover = function(){
+			document.getElementById("content").style.display = "block";
+		}
+	</script>
+	<script src="js/index.js"></script>
+
+	<style type="text/css">
+		.trigger {
+			color: skyblue;
+		}
+	</style>
+	<div class="container">
+		<div class="trigger" id="trigger">trigger</div>
+	</div>
+	<script>
+		var num = 1;
+		var onColor = true;
+		var trigger = document.getElementById("trigger");
+		trigger.onclick = function(){
+			if(onColor === true) {
+				trigger.style.color = "pink";
+				// onColor = false;
+			} else {
+				trigger.style.color = "skyblue";
+				// onColor = true;
+			}
+			onColor = !onColor;
+		}
+	</script>
+	<!-- JavaScript由三个部分构成
+		ECMAScript:描述了JavaScript的核心语法
+		DOM(document object model):文档对象模型，用来操作html文档
+		BOW(browser oject model):浏览器对象模型，用来操作浏览器 -->
+
+	<!-- JavaScript是一门弱类型脚本语言 -->
+		<!-- 同一个变量可以改变其数据类型 -->
+		<!-- var y = 5; -->
+		<!-- y = "test"; -->
+
+	<!-- 将js引入到网页中 -->
+		<!-- 通过在script标签中书写js代码插入到网页中 -->
+		<!-- 把js代码直接插入到元素的标签中 -->
+		<!-- 通过script标签的src属性引入外部脚本 -->
+
+	<!-- 变量的命名规则 -->
+		<!-- 第一个字母必须是字母、下划线或$ -->
+		<!-- 变量名中间不能用空格或者其他特殊符号，下划线和$除外 -->
+		<!-- 变量名区分大小写 -->
+		<!-- 不能使用关键字和保留字 -->
+
+	<script>
+		// 数据类型
+			// 储存方式不同：
+				// 原始类型的值储存在栈里
+				// 引用类型的值储存在堆里
+
+			// 简单数据类型(原始类型)
+				// 字符串(string)
+				var str = "hello world!";
+				// 数值(number)
+				var num = 7;
+				var num16 = 0xfff;
+				var num8 = 010;
+				var ini = +Infinity;
+				var inim = -Infinity;
+				var nnn = NaN;
+				// isNaN()检查参数是否是非数值
+				// 字符串类型的数字使用时会被隐式转换为数值类型
+				console.log(num8,num16,ini,inim);
+				// 布尔型(boolean)
+				var success = true;
+				var falied = false;
+				// 未定义(undefined)
+				var str1;
+				console.log(str1);
+				// 空，表示对空对象的引用(null)
+				var sex = null;
+				console.log(typeof(sex));
+				// 可以用null来清空变量的值
+			// 复杂数据类型(引用类型)
+				// 对象(object)，属性和方法的集合
+				var people = {
+					name:"TED",
+					age:"22"
+				}
+				var obj = people;
+				console.log(people,obj);
+				obj.name = "Owen";
+
+
+
+
+		// 通过typeof()可以得到数据类型
+		console.log(typeof(str));
+		console.log(typeof num);
+
+		var good = "fine";
+		var friend = "girlfriend";
+		var go = "go shopping";
+		document.write("The weather is " + good + ", I want to " + go + " with my " + friend + ".");
+	</script>
+
+</body>
+</html>
