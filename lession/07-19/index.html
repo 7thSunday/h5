@@ -75,48 +75,41 @@
 
 			// 简单数据类型(原始类型)
 				// 字符串(string)
-				var str = "hello world!";
+					var str = "hello world!";
 				// 数值(number)
-				var num = 7;
-				var num16 = 0xfff;
-				var num8 = 010;
-				var ini = +Infinity;
-				var inim = -Infinity;
-				var nnn = NaN;
+					var num = 7;
+					var num16 = 0xfff;
+					var num8 = 010;
+					var ini = +Infinity;
+					var inim = -Infinity;
+					var nnn = NaN;
 				// isNaN()检查参数是否是非数值
 				// 字符串类型的数字使用时会被隐式转换为数值类型
-				console.log(num8,num16,ini,inim);
+					console.log(num8,num16,ini,inim);
 				// 布尔型(boolean)
-				var success = true;
-				var falied = false;
+					var success = true;
+					var falied = false;
 				// 未定义(undefined)
-				var str1;
-				console.log(str1);
+					var str1;
+					console.log(str1);
 				// 空，表示对空对象的引用(null)
-				var sex = null;
-				console.log(typeof(sex));
+					var sex = null;
+					console.log(typeof(sex));
 				// 可以用null来清空变量的值
+				// js有垃圾自动回收机制，在变量不需要使用时，系统会自动把此变量赋值为null，即清空
+				// 通过typeof()可以得到数据类型
+				console.log(typeof(str));
+				console.log(typeof num);
+
+				var good = "fine";
+				var friend = "girlfriend";
+				var go = "go shopping";
+				document.write("The weather is " + good + ", I want to " + go + " with my " + friend + ".");
+
+
 			// 复杂数据类型(引用类型)
-				// 对象(object)，属性和方法的集合
-				var people = {
-					name:"TED",
-					age:"22"
-				}
-				var obj = people;
-				console.log(people,obj);
-				obj.name = "Owen";
 
-
-
-
-		// 通过typeof()可以得到数据类型
-		console.log(typeof(str));
-		console.log(typeof num);
-
-		var good = "fine";
-		var friend = "girlfriend";
-		var go = "go shopping";
-		document.write("The weather is " + good + ", I want to " + go + " with my " + friend + ".");
+		
 	</script>
 
 </body>

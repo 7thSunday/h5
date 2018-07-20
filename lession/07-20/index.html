@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>comp</title>
+</head>
+<body>
+	<script>
+		// 复杂数据类型(引用类型)
+			// 对象(object)，属性和方法的集合
+				var people = {
+					"name":"TED",
+					"age":"22",
+					"greeting":function(){
+						console.log("hello!");
+						return "My name is Ted.";
+					}
+					// 键值对写法："key":"value"
+				}
+				var obj = people;
+				console.log(people,obj);
+				// 通过.来访问对象上的属性和方法
+				console.log(people.name);
+				console.log(people.greeting);
+				console.log(people.greeting());
+				obj.name = "Owen";
+			//数组(array)特殊的对象
+				var arr = ["abc",123,true,["a",12,{"name":"Ted"}]];
+				console.log(arr[3][2].name);
+				console.log(arr);
+				console.log(arr[0].length);
+				console.log(arr[0][1]);
+				console.log(arr[0]);
+				console.log(typeof(arr));
+				// 获取数组长度
+				console.log(arr.length);
+			// 函数(function)具有一定功能的代码块
+				function goodbye() {
+					// alert弹窗会阻塞js代码的运行
+					// alert("See you tomorrow.");
+					return "OK";
+				}
+				goodbye();
+				// 不能直接声明一个匿名函数，需要有事件来触发或者赋值给一个变量的时候才可以声明
+				var fun = function (){
+					console.log("This function has no name.");
+				}
+				fun();
+
+				function intro(name,age,sex){
+					return "Hi, I'm " + name + ", my age is " + age + ", " + sex +".";
+				}
+				console.log(intro("Ted",22,"male"));
+
+		// 数据类型的转换
+			// toString() 将其他类型的数据转换为字符串，转换数值时可传入参数，代表转换的进制数
+				var num = 123;
+				var str = num.toString();
+				console.log(str ,typeof(str));
+				var bool = true;
+				console.log(typeof(bool.toString()));//string
+				var und = undefined;
+				var nul = null;
+				// 报错
+				// console.log(typeof(und.toString()));
+				// console.log(typeof(nul.toString()));
+				var num1 = 255;
+				var num2 = num1.toString(16);
+				console.log(num2);
+			// toFixed() 将数值转换为字符串，可传入参数规定保留的小数位数，默认0
+				var num = 123.366666;
+				console.log(num.toFixed(2));
+			// parseInt() 将字符串转换为整型数值，从开始位置进行检测，遇到非数字则停止并返回前面检测到的数字，若字符串不是以数字开头，则返回NaN
+				// 可以再传入参数，规定源字符串的进制数，最后返回的是十进制的数
+				var str = "12e6789";
+				console.log(parseInt(str));//12
+				var str1 = "12.34";
+				console.log(parseInt(str1));//12
+				var str2 = "string";
+				console.log(parseInt(str2));//NaN
+				var bool = true;
+				console.log(parseInt(bool));//NaN
+				var str3 = "a123";
+				console.log(parseInt(str3));//NaN
+				var str4 = "a";
+				console.log(parseInt(str4,16));//10
+			// parseFloat() 将其他类型的数据转换为浮点数值类型
+				console.log(parseFloat("12.33.33"));//12.33
+				console.log(parseFloat("aa12.33"));//NaN
+				console.log(parseFloat("12e3"));//12000
+				console.log(parseFloat(".444"));//0.444
+				console.log(parseFloat("123.000"));//123
+
+			// Boolean() 强制转换为布尔值
+				// 非空字符串转换为布尔值都为true，空字符串为false
+				var str = "string";
+				console.log(Boolean(str));//true
+				var str1 = "";
+				console.log(Boolean(str1));//false
+				// 非0数值转换为布尔值都为true，0为false
+				var num = 0;
+				console.log(Boolean(num));//false
+				var num1 = 123;
+				console.log(Boolean(num1));//true
+				var num2 = -222;
+				console.log(Boolean(num2));//true
+				// undefined和null都转换为false
+				var un = undefined;
+				console.log(Boolean(un));//false
+				var nu = null;
+				console.log(Boolean(nu));//false
+			// Number() 强制转换为数字类型
+				var str = "12string";
+				console.log(Number(str));//NaN
+				var str = "12.23";
+				console.log(Number(str));//12.23
+				var str = "12.23.34";
+				console.log(Number(str));//NaN
+				console.log(Number(true));//1
+				console.log(Number(true));//1
+				console.log(Number(undefined));//NaN
+				console.log(Number(null));//0
+				console.log(Number(""));//0
+			// String() 强制转化为字符串
+				console.log(String(undefined));//"undefined"
+				console.log(String(null));//"null"
+
+
+		// 运算符
+			// 算术运算符
+				// + - * / % ++ --
+					// 加法运算符
+						var num1 = 23;
+						var num2 = 27;
+						var str = "10";
+						console.log(num1 + num2);//50
+						// 如果加号左右两边都为数字类型，则进行加法运算
+						// 如果加号左右有其中一个为字符串类型的数据，则进行字符串拼接
+						// 如果在字符串前面加一个加号，会隐式将字符串转换为数值类型
+						console.log(+ str + num1);//33
+						console.log(num1 + true);//24
+						var num1 = 0.1;
+						var num2 = 0.2;
+						console.log(num1 + num2);//0.3000000000000004
+						console.log((num1 + num2).toFixed(1));//"0.3"
+					// 减法运算符
+						// 自带隐式转换
+						// 在字符串前加一个减号会将字符串转换为符号相反的数字类型
+						var num1 = 12;
+						var num2 = 10;
+						console.log(num2 - num1);
+						var str = "222";
+						console.log(str - num2);//212
+						var str1 = "111";
+						console.log(str - str1);//111
+						console.log(typeof(-str1),-str);//number -222
+						console.log(num2 - true);//9
+						console.log(num2 - "");//10
+						console.log(num2 - undefined);//NaN
+					// 乘法运算符
+						var num1 = 2;
+						var num2 = 3;
+						console.log(num1 * num2);//6
+						var num3 = "10";
+						console.log(num1 * num3);//20
+						var num4 = "20";
+						console.log(num3 * num4);//200
+					// 除法运算符
+						// 在js的除法中，分母可以为0，且分母为0时结果为Infinity
+						var num = 10;
+						var num1 = 5;
+						console.log(num / num1);//2
+						var num2 = 0;
+						console.log(num2 / num1);//0
+						console.log(num1 / num2);//Infinity
+					// 求余运算符
+						var num1 = 10;
+						var num2 = 2;
+						var num3 = 0;
+						console.log(num1%num2);//0
+						console.log(num2%num1);//2
+						console.log(num1%num3);//NaN
+					// 自增
+						// 前增量/后增量
+							// 后增量的优先级比较低，通常是最后和计算
+							// 前增量的优先级比较高，通常是最先计算
+						// 自增1
+						var i = 10;
+						console.log(i++);//10
+						console.log(1);//11
+						var i = 10;
+						console.log(++i);//11
+						var a = i++;
+						console.log(a);//11
+					// 自减
+						// 用法同自增
+	</script>
+</body>
+</html>
