@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// 转义字符
+			// \" 双引号
+			// \' 单引号
+			// \n 换行
+			// \b 退格
+			// \\ 反斜杠
+
+		// 运算符
+			// 赋值运算符
+				// += -= *= /= %=
+				// +=
+				var num = 10;
+				num += 1;// => num = num + 1;
+				num += 10;// => num = num + 10;
+				var num1 = 20;
+				var num2 = 30;
+				num1 += num2;// => num1 = num1 + num2; => 50
+				// -= *= /= %=
+					// 用同+=
+
+			// 比较运算符
+				// > < >= <= != !== == ===
+				var num1 = 0.1;
+				var num2 = 0.2;
+				var num3 = 0.3;
+				// 浮点数进行运算时，存在不准确性
+				console.log(num3 == num1 + num2);//false
+
+				console.log(2 != "2");//false
+				console.log(2 !== "2");//true
+
+				var obj = {
+					"name":"Ted"
+				}
+				var obj1 = {
+					"name":"Ted"
+				}
+				var obj2 = obj1;
+				// 比较对象时，当两个操作数都返回同一个命名空间的时候，返回true
+				console.log(obj == obj1);//false
+				console.log(obj1 == obj2);//true
+
+				// 只要操作数有一个为NaN，则返回false
+				console.log(NaN == NaN);//false
+				console.log(0 == -0);//true
+
+				// 如果比较的操作数都是字符串，会进行字符串比较
+					// 字符串比较根据Unicode编码进行逐位比较，直到比较出结果
+				console.log("23" > "5");//false
+
+			// 逻辑运算符
+				// && 与运算
+				// || 或运算
+				// ! 非运算
+				var bool = true;
+				var bool1 = true;
+				var bool2 = false;
+				if (bool && bool1) {
+					console.log("Oh Yeah!");
+				}
+				console.log(bool1 || bool2);
+				// 当逻辑与运算的操作数不是布尔值的时候，返回值就不一定是布尔值。
+					// 当第一个操作数为对象时，返回第二个操作数的值
+					// 当第二个操作数为对象时，若第一个操作数的值为true则返回第二个操作数，
+						// 若为false，则返回false
+					// 当两个操作数都为对象时，返回第二个操作数
+					// 当有一个操作数为NaN/null/undefined时，对应返回NaN/null/undefined
+				var obj = new Object();
+				console.log(obj && bool2);//false
+				var str = "123";
+				console.log(obj && str);//"123"
+				console.log(bool2 && obj);//false
+				console.log(bool && obj);//obj{}
+				// 当逻辑或运算的操作数不是布尔值的时候，返回值就不一定是布尔值。
+					// 当第一个操作数为对象时，返回第一个操作数
+					// 当第二个操作数为对象时，若第一个操作数的值为true则返回true，
+						// 若为false，则返回第二个操作数
+					// 当两个操作数都为对象时，返回第二个操作数
+					// 当有一个操作数为NaN/null/undefined时，对应返回NaN/null/undefined
+				// 逻辑非运算还能够将操作数强制转换为布尔值
+				var str = "123";
+				console.log(!str);//false
+				console.log(!!str);//true
+
+			// 条件运算符(三目运算符)
+				// case ? do1 : do2
+				// 若case = true，执行do1，否则执行do2
+				var num1 = 10;
+				var num2 = 20;
+				var num3 = 30;
+				// var num3 = num1 > num2 ? num1 : num2;
+				// console.log(num3);//20
+				console.log(num1>num2?num1:num3>num2?num3:num1);
+
+			// 位运算符
+				// 根据二进制来进行计算
+					// 左移 <<
+				var num1 = 4;
+				var num2 = num1 << 2;
+				console.log(num2);
+					// 右移 >>
+				var num3 = 3;
+				var num2 = num3 >> 2;
+				console.log(num2);
+	</script>
+</body>
+</html>
