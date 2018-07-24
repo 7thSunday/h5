@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>for</title>
+</head>
+<body>
+	<script>
+		// for循环
+		for(var i=0;i<5;) {
+			console.log(++i);
+		}
+
+		for(var i=2;i<=10;i+=2){
+			console.log(i);
+		}
+
+		var num = 5;
+		var result =1;
+		for(var i=1;i<=num;i++) {
+			result *= i;
+		}
+		console.log(result);
+
+		var result = 0;
+		for(var i=0;i<=10;i++) {
+			result += i;
+		}
+		console.log(result);
+	</script>
+	<script>
+		// 在循环中用break结束整个循环
+		// 在循环中用continue结束当前的循环节
+		for(var i=0;i<5;i++) {
+			console.log(i);
+			if (i==2) {
+				break;
+			}
+		}
+		for(var i=0;i<5;i++) {
+			if (i==2) {
+				continue;
+			}
+			console.log(i);
+		}
+	</script>
+	<script>
+		for(var i=0;i<3;i++) {
+			console.log("outside");
+			for(var j=0;j<5;j++){
+				console.log("inside");
+			}
+		}
+	</script>
+	<script>
+		
+		for(var i=0;i<4;i++){
+			for(var j=0;j<6;j++) {
+				document.write("*");
+			}
+			document.write("<br/>");
+		}
+		for(var i=0;i<5;i++) {
+			for(var j=0;j<=i;j++) {
+				document.write("*");
+			}
+			document.write("<br/>");
+		}
+		
+		for(var i=0;i<5;i++) {
+			for(var j=0;j<5;j++){
+				if (j<4-i) {
+					document.write("#");
+				}else {
+					document.write("*");
+				}
+			}
+			document.write("<br/>");
+		}
+	</script>
+	<script>
+		for(var i=0;i<5;i++){
+			for(var j=1;j<=9;j++) {
+				if((j==5-i)||(j==5+i)||(i==4)){
+					document.write("*");
+				}else {
+					document.write("#");
+				}
+			}
+			document.write("<br>");
+		}
+	</script>
+	<script>
+		var money = 1000;
+		for(var i=1;i<=30;i++) {
+			money = money + money * 0.01;
+		}
+		console.log(money);
+	</script>
+</body>
+</html>

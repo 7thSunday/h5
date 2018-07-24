@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function tab(){
+			//
+			document.write("<table>");
+			for(var i=1;i<=9;i++) {
+				document.write("<tr>");
+				for(var j=1;j<=i;j++) {
+					var str = j + "*" + i + "=" + i*j ;
+					document.write("<td>" + str + "</td>")
+				}
+				document.write("</tr>");
+			}
+			document.write("</table>");
+			//
+			document.write("<hr/>");
+			//
+			document.write("<table>");
+			for(var i=1;i<=9;i++) {
+				document.write("<tr>");
+				for(var j=1;j<=9;j++) {
+					if(j<10-i) {
+						var str = "";
+					}else {
+						var str = (10-j) + "*" + i + "=" + i*(10-j) ;
+					}
+					document.write("<td>" + str + "</td>")
+				}
+				document.write("</tr>");
+			}
+			document.write("</table>");
+			//
+			document.write("<hr/>");
+			//
+			document.write("<table>");
+			for(var i=1;i<=9;i++) {
+				document.write("<tr>");
+				for(var j=1;j<=9;j++) {
+					if(j>10-i) {
+						var str = "";
+					}else {
+						var str = i + "*" + (10-j) + "=" + i*(10-j) ;
+					}
+					document.write("<td>" + str + "</td>")
+				}
+				document.write("</tr>");
+			}
+			document.write("</table>");
+			//
+			document.write("<hr/>");
+			//
+			document.write("<table>");
+			for(var i=1;i<=9;i++) {
+				document.write("<tr>");
+				for(var j=1;j<=9;j++) {
+					if(j>=i) {
+						var str = i + "*" + j + "=" + i*j ;
+					}else {
+						var str = " ";
+					}
+					document.write("<td>" + str + "</td>")
+				}
+				document.write("</tr>");
+			}
+			document.write("</table>");
+			//
+		}
+		tab();
+		document.write("<hr/>");
+	</script>
+</body>
+</html>
