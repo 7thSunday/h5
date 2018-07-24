@@ -6,73 +6,39 @@
 </head>
 <body>
 	<script>
-		function tab(){
-			//
-			document.write("<table>");
-			for(var i=1;i<=9;i++) {
-				document.write("<tr>");
-				for(var j=1;j<=i;j++) {
-					var str = j + "*" + i + "=" + i*j ;
-					document.write("<td>" + str + "</td>")
-				}
-				document.write("</tr>");
-			}
-			document.write("</table>");
-			//
-			document.write("<hr/>");
-			//
-			document.write("<table>");
-			for(var i=1;i<=9;i++) {
-				document.write("<tr>");
-				for(var j=1;j<=9;j++) {
-					if(j<10-i) {
-						var str = "";
-					}else {
-						var str = (10-j) + "*" + i + "=" + i*(10-j) ;
+		function exchange(){
+			var count = 0;
+			for(var a=0;a<=5;a++) {
+				for(var b=0;b<=10;b++){
+					for(var c=0;c<=20;c++){
+						for(var d=0;d<=50;d++){
+							for(var e=0;e<=100;e++){
+								if(20*a+10*b+5*c+2*d+e==100&&a+b+c+d+e==30){
+									count++;
+								}
+							}
+						}
 					}
-					document.write("<td>" + str + "</td>")
 				}
-				document.write("</tr>");
 			}
-			document.write("</table>");
-			//
-			document.write("<hr/>");
-			//
-			document.write("<table>");
-			for(var i=1;i<=9;i++) {
-				document.write("<tr>");
-				for(var j=1;j<=9;j++) {
-					if(j>10-i) {
-						var str = "";
-					}else {
-						var str = i + "*" + (10-j) + "=" + i*(10-j) ;
+			document.write(count + "<br/>");
+			var count = 0;
+			for(var a=1;a<5;a++) {
+				for(var b=1;b<10;b++){
+					for(var c=1;c<20;c++){
+						for(var d=1;d<50;d++){
+							for(var e=1;e<100;e++){
+								if(20*a+10*b+5*c+2*d+e==100&&a+b+c+d+e==30){
+									count++;
+								}
+							}
+						}
 					}
-					document.write("<td>" + str + "</td>")
 				}
-				document.write("</tr>");
 			}
-			document.write("</table>");
-			//
-			document.write("<hr/>");
-			//
-			document.write("<table>");
-			for(var i=1;i<=9;i++) {
-				document.write("<tr>");
-				for(var j=1;j<=9;j++) {
-					if(j>=i) {
-						var str = i + "*" + j + "=" + i*j ;
-					}else {
-						var str = " ";
-					}
-					document.write("<td>" + str + "</td>")
-				}
-				document.write("</tr>");
-			}
-			document.write("</table>");
-			//
+			document.write(count + "<br/>");
 		}
-		tab();
-		document.write("<hr/>");
+		exchange();
 	</script>
 </body>
 </html>
