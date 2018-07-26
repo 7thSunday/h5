@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function xMp(day){
+			if(day==0){
+				return 1010;
+			}
+			return (day%7==0||day%7==6)?xMp(day-1):xMp(day-1)*1.01;
+		}
+		console.log(xMp(30));
+	</script>
+	<script>
+		function calAge(person) {
+			if(person==1) {
+				return 10;
+			}
+			return calAge(person-1)+2;
+		}
+		console.log(calAge(5));
+	</script>
+	<script>
+		var current = 2;
+		function duck(village) {
+			if(village==8) {
+				return 2;
+			}
+			current = (duck(village+1)+1)*2;
+			console.log("经过第" +village+"个村庄，卖出了"+ (current/2+1) +"只鸭子，" + "剩下"+(current-(current/2+1))+"只鸭子");
+			return current;
+		}
+		console.log("刚开始时有"+duck(1)+"只鸭子");
+	</script>
+	<script>
+		function cal(x,y){
+          return Math.pow(x,y);
+        }
+      	console.log(cal(2,4));
+			
+	</script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// 函数:具有一定功能的代码块
+		function greeting(){
+			console.log("How do you do ?");
+		}
+		greeting();
+		function add(num1,num2) {
+			return num1+num2;
+		}
+		console.log(add(3,5));
+		function calculate(num1,num2,cal){
+			// eval()可以将括号内的字符串解析成js代码
+			return eval(num1+cal+num2);
+		}
+		console.log(calculate(3,5,"/"));
+
+		function argum(num1,num2,num3,way) {
+			// 创建函数后，会有一个arguments属性，用来接收传入的参数
+			console.log(arguments);
+		}
+		argum(2,3,4,"*");
+
+		function jisuan(way) {
+			console.log(arguments);
+			var result = arguments[1];
+			for(var i=2;i<arguments.length;i++) {
+				result = eval(result + way + arguments[i]);
+			}
+			return result;
+		}
+		console.log(jisuan("*",1,2,3,4,5,6));
+
+		// 可以用arguments模拟函数重载，即用一个函数名实现多种功能的函数
+
+
+		// 函数的属性和方法
+			// length 获取形参的个数
+			// toString()/valueOf() 将整一个函数转换为字符串
+
+		// 当函数进行嵌套时会产生闭包
+		// 闭包的作用：使变量能够在声明它的作用域之外的地方被访问到
+		// 闭包的缺点：大量使用闭包会导致内存泄漏，有大量的局部变量的内存无法得到释放
+		// 全局变量的生命周期：浏览器关闭就销毁
+		// 局部变量的生命周期：函数执行完就销毁
+		function test1(){
+			var str = "123";//不会被销毁
+			function test2() {
+				console.log(str);
+			}
+			return test2();
+		}
+
+		// 递归函数
+			// 调用自身的函数
+		// 计算5的阶乘
+		var result = 1;
+		function myFun(i){
+			result *= i;
+			i--;
+			if(i==1) {
+				return result;
+			}
+			myFun(i);
+		}
+		myFun(5);
+		console.log(result);
+		// 计算5的阶乘
+		function diGui(num) {
+			if(num==1) {
+				return 1;
+			}
+			return num*diGui(num-1);
+		}
+		console.log(diGui(5));
+
+		function xM(day){
+			if(day==0){
+				return 1000;
+			}
+			return xM(day-1)*1.01;
+		}
+		console.log(xM(30));
+
+		function peach(day) {
+			if(day==10) {
+				return 1;
+			}
+			return (peach(day+1)+1)*2;
+		}
+		console.log(peach(1));
+
+		function rabbit(month) {
+			if(month==1) {//month<2
+				return 1;
+			}
+			return month%2==0?rabbit(month-1)*2:rabbit(month-1);
+			//return rabbit(month-2)*2;
+		}
+		console.log(rabbit(10));
+
+		// 冒泡排序
+		var arr = [2,5,1,0,6,8,3];
+		function orderBy(arr){
+			for(var i=0;i<arr.length;i++){
+				for(var j=0;j<arr.length-i;j++) {
+					if(arr[j+1]<arr[j]) {
+						var temp = arr[j+1];
+						arr[j+1] = arr[j];
+						arr[j] = temp;
+					}
+				}
+			}
+			console.log(arr);
+		}
+		orderBy(arr);
+	</script>
+</body>
+</html>

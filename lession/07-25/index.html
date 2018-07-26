@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var arr = [1,2,3,4,5,6];
+		for(item in arr) {
+			console.log(arr[item]);
+		}
+
+		var person = {
+			"name":"Ted",
+			"age":"20",
+			"sex":"male",
+			"greeting":function(){
+				console.log("How do you do ?");
+			}
+		}
+		for(item in person) {
+			console.log(item,person[item]);
+		}
+
+		// 把对象的键名保存到数组
+		var i = 0;
+		var arr1 = [];
+		for(arr1[i++] in person){}
+		console.log(arr1);
+
+		var str = "asdfg";
+		for(item in str ){
+			console.log(str[item]);
+		}
+
+		// 清空数组
+			// 方法一
+			// arr1 = [];
+			// console.log(arr1);
+
+			// 方法二
+			// arr1.length = 0;
+			// arr1.length = 2;删除尾部的元素
+
+
+		try {
+			// var str3 = "789";
+			console.log(str3);
+		}catch(e){
+			// e代表当出现错误时，传递过来的参数
+			console.log(e);
+			var err = e.message;
+			alert("Opps! " + err);
+		}
+
+		function test(){
+			var num = prompt("请输入一个大于3的数值");
+			try {
+				//空字符串在这里会被转换为0，需要先进行空字符串的判断操作
+				if(num=="") throw "你输入的数值呢？？？";
+				if(num == null) throw "你取消了操作！";
+				if(num<=3) throw "你输入的数值太小了！";
+				if(isNaN(num)) throw "你输入的不是数值！";
+			}catch (e) {
+				// e会获取到throw的内容
+				console.log(e);
+			}
+		}
+		test();
+	</script>
+</body>
+</html>
