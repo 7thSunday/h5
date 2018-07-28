@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// 内置对象
+			// 数字对象(Number)
+				var num = 123;
+				var num1 = new Number(23);
+				// 通过valueOf可以获取数字对象的值
+				console.log(num,num1.valueOf());
+				console.log(typeof(num1));
+				var num2 = Number(89);
+				console.log(typeof(num2),num2);
+				// Number对象下的属性和方法
+					// .MAX_VALUE 最大值
+					// .MIN_VALUE 最小值
+					// .toString() 转换为字符串
+					// .valueOf() 获取数值 
+
+			// 字符串对象(String)
+				var str = new String("this is a string.");
+				console.log(str);
+				console.log(str.valueOf());
+				// .constructor指向对象的构造函数
+				console.log(str.constructor);
+				// .length 获取长度
+				console.log(str.length);//17
+				// .charAt() 返回指定位置的字符
+				console.log(str.charAt(1));//h
+				// .concat() 拼接多个字符串，不会影响原来的字符串
+				var str1 = "How ";
+				var str2 = "are ";
+				var str3 = "you ?";
+				console.log(str1.concat(str2,str3));
+				// .indexOf() 检索字符串中首次出现某个字符的位置，返回该字符的下标
+					// 在传入的参数中可以设置检索的起始位置
+					// 检索失败时返回-1
+				var str4 = "Hello World!";
+				console.log(str4.indexOf("l"));//2
+				// .match() 检索指定的字符或正则匹配，返回匹配到的第一个值
+					// 以数组的形式返回
+					// 通过对象的方法可以获取检索的字符在字符串中首次出现的下标值
+					// 检索失败时返回null
+				console.log(str4.match("l"));
+				var str5 = str4.match("l");
+				console.log(str5[0]);//"l"
+				console.log(str5.index);//2
+				// .replace(oldStr,newStr) 替换指定字符串，返回一个新的字符串
+				var str = "今天天气真好，好！";
+				var str6 = str.replace("天","日");
+				console.log(str6);
+				// .slice(start,end) 提取字符串的一段字符串，返回一个新的字符串
+				var str7 = str.slice(2,4);
+				console.log(str7);
+				// .split() 指定字符作为分隔符把字符串分割为数组
+				console.log(str.split(""));
+				console.log(str.split("气"));
+				console.log(str.split("天"));//天和天之间有空字符串
+				// .substr(start,length) 截取指定字符的开始位置和长度的某端字符 
+				console.log(str.substr(0,6));
+				// .trim() 清除字符两端的空格
+				var str8 = "      今天晚上有点烦躁！       ";
+				console.log(str8.length);
+				var str9 = str8.trim();
+				console.log(str9.length);
+				// .toUpperCase() 将字母转换为大写
+				var str10 = "asdf";
+				console.log(str10.toUpperCase());
+				// .toLowerCase() 将字母转换为小写
+				var str11 = "ASDF";
+				console.log(str11.toLowerCase());
+	</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>es6</title>
+</head>
+<body>
+	<script>
+		// ECMAScript的第6个版本
+
+
+		// windowd对象是打开的浏览器窗口
+
+		// console.log(str);//报错
+		// let关键字声明不具有提升作用
+			let str = "this is a string.";
+			// 解构赋值
+			let [a,b,c] = [2,3,"abc"];
+			console.log(a);
+			var str1 = "var var";
+		// 通过var声明的全局变量会挂载到window对象下，成为window对象下的一个属性
+		// let则不会
+			console.log(window.str1);
+			console.log(window.str);
+
+			for(var i=0;i<3;i++) {
+				var i =2;
+				console.log(i);//一个2
+			}
+			console.log(i);//3
+			// let声明的变量在大小括号中分别存在不同的作用域，两者之间互不干扰
+			for(let j=0;j<3;j++) {
+				let j =2;
+				console.log(j);//三个2
+			}
+			// console.log(j);
+
+		// let不能重复声明变量
+			let y ="2";
+			// let y ="5";报错
+
+		// 在es6中可以通过关键字consts声明一个常量
+			const num = 123;
+
+		// 在es6中可以用``作为字符串的标识符，拼接的时候比较方便
+			var str2 = `abc`;
+			console.log(typeof(str2));
+			document.write(`<h1>${str2}</h1>`);
+
+		// 在es6用省略号传入不定个数的参数
+			function es6(num1,num2,...other){
+				console.log(other);
+			}
+			es6(1,2,3,4,5,6);
+
+		// 在es6中，可以给函数的参数设定默认值
+			function my(num1=2,num2=3){
+				console.log(num1,num2);
+			}
+			my(10);
+
+		// 箭头函数(匿名函数)
+			let fun =()=> {
+				let a = 1;
+				let b = 2;
+				console.log(a+b);
+			}
+			fun();
+
+			let func = (num1,num2) => {
+				return num1+num2;
+			}
+			console.log(func(2,3));
+	</script>
+</body>
+</html>
