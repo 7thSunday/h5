@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var text = "and in it he says Any damn fool could";
+		var a = text.slice(18);
+		document.write(`${a}<br>`);
+		var b = text.slice(0,3);
+		document.write(`${b}<br>`);
+		var c = text.slice(-5);
+		document.write(`${c}<br>`);
+
+		var digite = "0123456789";
+	    var arr = digite.slice(0,5).split("");
+	    document.write(arr);
+
+	    function toCamelCase(str) {
+	    	let temp = str.split("-");
+	    	let result = temp[0];
+	    	for(let i=1;i<temp.length;i++) {
+	    		let str = temp[i][0].toUpperCase();
+	    		result = result.concat(str,temp[i].slice(1));
+	    	}
+	    	return result;
+	    }
+	    var str = "get-element-by-id";
+	    document.write(`<br>${toCamelCase(str)}<br>`);
+
+	    function find(str) {
+	    	let line = "今天是什么鬼天气，这么热，明天要去游泳！";
+	    	let start = 0;
+	    	while(1){
+	    		let position = line.indexOf(str,start);
+	    		if(position==-1) {
+	    			break;
+	    		} 
+	    		document.write(`[${position}] `);
+	    		start = position + 1;
+	    	}
+	    }
+	    var str = "天";
+	    find(str);
+
+	    function rep(str,newStr) {
+	    	let line = "今天是什么鬼天气，这么热，明天要去游泳！";
+	    	let myCode = `line.replace(/${str}/g,\"${newStr}\")`;
+	    	return eval(myCode);
+	    }
+	    var str = "天";
+	    var newStr = "日";
+	    document.write(rep(str,newStr));
+	</script>
+</body>
+</html>
