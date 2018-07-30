@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1></h1>
+	<script>
+		// Date()对象
+
+		// 定时器
+			// setTimeout(callback,time);
+			// 在time毫秒后，执行callback
+				// setTimeout(function(){
+					// alert("Surprised!");
+				// },3000);
+
+			// setInterval(callback,time);
+			// 每隔time毫秒，执行一次callback
+			var i = 0;
+			var timer = setInterval(function(){
+				console.log("skr~");
+				i++;
+				if(i>=10) {
+					clearInterval(timer);
+				}
+			},1000);
+
+			var j = 10;
+			var h1 = document.querySelector("h1");
+			var myTimer = setInterval(function(){
+				if(j==0) {
+					clearInterval(myTimer);
+				}
+				h1.innerText = j--;
+			},1000);
+	</script>
+</body>
+</html>

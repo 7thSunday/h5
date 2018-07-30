@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var arr = [1,2,3,4,2];
+		var result = arr.filter(function(item){
+			return item!=2;
+		});
+		console.log(result);
+
+		function addMelon(arr) {
+			var result = [];
+			arr.forEach(function(item) {
+				result = result.concat(item);
+				if(item == 2) {
+					result= result.concat("Melon");
+				}
+			});
+			return result;
+		}
+		var result = addMelon(arr);
+		console.log(result);
+
+		var i = 0;
+		arr.forEach(function(item){
+			if (item==2) {
+				i++;
+			}
+		});
+		console.log(i);
+
+		console.log(arr);
+	</script>
+	<script>
+		var arr = [1, 2, 3, "melon", 4, "melon", 2, 4, "melon"];
+	    var list = {};
+	    var newArr = [];
+	    arr.forEach(function(item){
+	    	var key = typeof(item) + item;
+	        if(!list[key]){
+	         	list[key] = true;
+	        }else {
+	        	newArr.push(item);
+	        }
+    	});
+    	console.log(list);
+    	console.log(list.number1);
+    	console.log(newArr);
+	</script>
+
+</body>
+</html>
