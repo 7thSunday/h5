@@ -47,9 +47,47 @@
 	        	newArr.push(item);
 	        }
     	});
-    	console.log(list);
-    	console.log(list.number1);
+    	newArr = Array.from(new Set(newArr));
     	console.log(newArr);
+
+    	var arr = [
+					{ name: "111", sex: "boy", age: 18 },
+					{ name: "222", sex: "girl", age: 17 },
+					{ name: "333", sex: "boy", age: 16 },
+					{ name: "444", sex: "girl", age: 15 },
+					{ name: "555", sex: "boy", age: 20 }
+				]
+		arr.forEach(function(item){
+			if(item.age<17) {
+				console.log(item);
+			}
+		});
+
+		var arr = [1,2,2,3,4,4,4,4];
+		//es6
+		arr = Array.from(new Set(arr));
+		console.log(arr);
+		//es5
+		var list = {};
+		var newArr = [];
+		var arr1 = [1,2,2,3,4,4,4,4];
+		arr1.forEach(function(item){
+			var key = typeof(item) + item;
+			if(!list[key]){
+				list[key] = true;
+				newArr.push(item);
+			}
+		});
+		console.log(newArr);
+
+		var arr = [1, 2, 3, 4, 'a', {a:3}];
+		var result = arr.every(function(item){
+			if(isNaN(item)) {
+				return true;
+			}
+			return item>0;
+		});
+		console.log(result);
 	</script>
 
 </body>
