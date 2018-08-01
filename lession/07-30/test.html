@@ -82,13 +82,26 @@
 
 		var arr = [1, 2, 3, 4, 'a', {a:3}];
 		var result = arr.every(function(item){
-			if(isNaN(item)) {
+			if(typeof(item)!="number") {
 				return true;
 			}
 			return item>0;
 		});
 		console.log(result);
 	</script>
-
+	<script>
+		// 找重
+		function nine(arr) {
+			var newArr = [];
+			arr.sort();
+			arr.forEach(function(item,index){
+				if(newArr.indexOf(item) == -1 && arr[index]==arr[index+1]) {
+					newArr.push(item);
+				}
+			})
+			console.log(newArr);
+		}
+		// nine(arr);
+	</script>
 </body>
 </html>

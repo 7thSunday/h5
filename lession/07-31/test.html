@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h2 class="line"></h2>
+	<script>
+		setInterval(function(){
+			var line = document.querySelector(".line");
+			var currentTime = new Date();
+			var nextChristmasEve = new Date(currentTime.getFullYear(),11,24);
+			if(nextChristmasEve - currentTime <= 0) {
+				nextChristmasEve = new Date(currentTime.getFullYear()+1,11,24);
+			}
+			var time = nextChristmasEve - currentTime;
+			function setTime(strTime){
+				strTime = Math.floor(strTime/1000);
+				var day = Math.floor(strTime/(60*60*24));
+				var hour = Math.floor((strTime/(60*60))%24);
+				var minu = Math.floor((strTime/60)%60);
+				var sec = Math.floor(strTime%60);
+				line.innerText = "距离平安夜还有" + day + "天" + hour + "小时" + minu + "分钟" + sec + "秒~";
+			}
+			setTime(time);
+		},1000);
+	</script>
+	<script>
+		var arr = [];
+		while(1) {
+			var item =  Math.floor(Math.random()*13+10);
+			if(arr.indexOf(item) == -1) {
+				arr.push(item);
+			}
+			if(arr.length==5) {
+				break;
+			}
+		}
+		console.log(arr.sort());
+	</script>
+	<script>
+		function add(){
+			var start = new Date();
+			var addResult = 0;
+			for(var i=1;i<=1000000;i++) {
+				addResult += i;
+			}
+			var finish = new Date();
+			console.log(addResult);
+			return (finish - start) + "ms";
+		}
+		console.log(add());
+	</script>
+</body>
+</html>

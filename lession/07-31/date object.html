@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	// Date()对象
+		// 获取设备上当前的时间
+		var day = new Date();
+		console.log(day);
+			// 获取指定的日期
+		var day1 = new Date("2017/07/30");// -的兼容性不如/
+		console.log(day1);
+		var day2 = new Date("2018-04-21 12:12:12");
+		console.log(day2);
+		// toLocaleString() 转换为本地的日期格式
+		console.log(day2.toLocaleString());
+			// 传入毫秒数
+		var day3 = new Date(1000);
+		console.log(day3);
+
+		var day4 = new Date(2014,11,12,23,23,23);
+		console.log(day4);
+		// .getFullYear() 获取年份
+		var day = new Date();
+		console.log(day.getFullYear());
+		// .getMonth() 获取月份
+		console.log(day.getMonth());//月份从0开始进化
+		// .getDate() 获取日
+		console.log(day.getDate());
+		// .getDay() 获取周
+		console.log(day.getDay());
+		// .getHours() 获取时
+		console.log(day.getHours());
+		// .getMinutes() 获取分
+		console.log(day.getMinutes());
+		// .getSeconds() 获取秒
+		console.log(day.getSeconds());
+		// .getMilliseconds() 获取毫秒
+		console.log(day.getMilliseconds());
+		// .getTime() 从1970年1月1日至今的毫秒数
+		console.log(day.getTime());
+
+		var strTime = "221767622";
+		function setTime(strTime){
+			strTime = parseInt(strTime/1000);
+			var day = parseInt(strTime/(60*60*24));
+			var hour = parseInt((strTime/(60*60))%24);
+			var minu = parseInt((strTime/60)%60);
+			var sec = parseInt(strTime%60);
+			return day + " days " + hour + " hours " + minu + " minutes " + sec + " seconds left !!!";
+		}
+		console.log(setTime(strTime));
+
+		// .parse() 获取1970年1月1日到指定日期的毫秒数
+		var day = Date.parse("2012/3/2");
+		console.log(day);
+
+		var day1 = new Date();
+		console.log(day1.getFullYear());
+		day1.setFullYear(1999);
+		console.log(day1.getFullYear());
+		// 设置月份和日期，两个参数同时写上
+		day1.setMonth(8,22);
+			// day1.setDate(22);
+		console.log(day1);
+
+		Date.prototype.toLocaleString = function() {
+			return this.getFullYear()+"-"+(this.getMonth()+1)+"-"+this.getDate();
+		};
+		var day2 = new Date();
+		console.log(day2.toLocaleString());
+	</script>
+</body>
+</html>

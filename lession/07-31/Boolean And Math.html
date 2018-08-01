@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// Boolean() 布尔值对象
+		var bool = new Boolean(true);
+		console.log(bool.valueOf());
+		var bool = new Boolean(null);
+		console.log(bool.toString());
+
+		// Math() 数学对象
+		// Math.random() 生成一个随机数，区间[0,1)
+		var ran = Math.random();
+		console.log(ran);
+		// Math.abs() 取绝对值
+		console.log(Math.abs("-3"));
+		// 5到20的随机数
+		console.log(Math.random()*15+5);
+		// Math.sqrt() 平方根
+		console.log(Math.sqrt(16));
+		// Math.pow(x,y) x的y次幂
+		console.log(Math.pow(16,2));
+		console.log(Math.pow(16,0.5));
+		// Math.PI 圆周率
+		console.log(Math.PI);
+		// Math.ceil() 向上取整
+		console.log(Math.ceil(3.3));
+		// Math.floor() 向下取整
+		console.log(Math.floor(3.3));
+		// Math.round() 四舍五入取整
+		console.log(Math.round(3.5));
+		console.log(Math.round(3.3));
+		// Math.max() 求最大值
+		console.log(Math.max(2,3,4,16,10));
+		// Math.min() 求最小值
+		console.log(Math.min(2,3,4,5,1));
+	</script>
+</body>
+</html>
