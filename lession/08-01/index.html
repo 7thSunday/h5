@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	// js的设计模式
+
+		// 字面量对象
+			// 优点：简单明了
+			// 缺点：复用性差
+		var obj = {
+			"name":"Ted",
+			"age":"22",
+			"greeting":function(){
+				console.log("How do you do ?");
+			}
+		}
+		console.log(obj);
+
+		// 工厂模式
+			// 优点：方便批量生产
+			// 缺点：不能识别到对象由谁实例化出来
+		function factory(name,age){
+			return {
+				"name":name,
+				"age":age,
+				"greeting":function(){
+					console.log("How do you do ?");
+				}
+			}
+		}
+		var ted = factory("Ted","22");
+		console.log(ted);
+			// instanceof 检测对象是由谁实例化的
+		console.log(ted instanceof factory);//false 工厂模式的缺点 
+
+		// 构造函数模式
+			// 优点：没有显式地创建一个对象，直接将属性和方法赋给了对象，不需要return语句
+			// 缺点：同一个方法，实例化的时候会创建不同的空间，会造成内存浪费
+
+			// 实例化过程：
+				// 创建一个对象
+				// 将构造函数地作用域赋值给新对象，即this指向新对象
+				// 执行构造函数中的代码
+				// 返回新对象
+		function Person(name,sex,age,skill) {
+			this.name = name;
+			this.sex = sex;
+			this.age = age;
+			this.skill = skill;
+			this.pSkill = function(){
+				console.log("eat");
+			}
+		}
+		var girlFriend = new Person("Aya","female","22",function(){
+			console.log("Ayayayayaya~");
+		});
+		console.log(girlFriend);
+		girlFriend.skill();
+		console.log(girlFriend instanceof Person);
+		console.log(girlFriend.constructor);//指向对象的构造函数
+		var me = new Person("Ted","male","23",function(){
+			console.log("Nice to meet you .");
+		});
+		console.log(me.pSkill == girlFriend.pSkill);//false 构造函数模式的缺点
+
+		// 原型模式
+			// 优点：解决构造函数模式的空间浪费问题
+			// 缺点:省略了为构造函数传递初始化参数的环节,使得所有的实例化对象在默认情况下都取得相同的属性值(不能批量生产)；原型中的所有属性都被实例共享，共享适用于函数，但对于包含引用类型值的属性就会造成问题
+			// Date.prototype ---> 指向构造函数的原型对象
+			console.log(Date.prototype);
+			console.log(Date.prototype.constructor);//指向Date对象的构造函数
+			// 实例化的对象通过原型链(__proto__)找到其构造函数的原型对象，从而继承其构造函数的方法和属性
+			var day = new Date();
+			console.log(day.__proto__);//实例化对象的原型链
+			console.log(day.__proto__ == Date.prototype);//true
+
+			function fun(){};
+			fun.prototype.name = "Aya";
+			fun.prototype.age = "22";
+			fun.prototype.skill = function() {
+				console.log("Ayayayayaya~");
+			}
+			var fun1 = new fun();
+			console.log(fun1);
+			var fun2 = new fun();
+			console.log(fun2);
+			console.log(fun1.skill == fun2.skill);//true
+
+		// 混合模式(构造函数和原型模式结合)
+			function People(name,age,sex) {
+				this.name = name;
+				this.age = age;
+				this.sex = sex;
+			}
+			People.prototype.eat = function(){
+				console.log("Eating...");
+			}
+			var people1 = new People("Alice",20,"female");
+			var people2 = new People("Cirno",12,"female");
+			console.log(people1.skill == people2.skill);//true
+
+			// es6
+			class Es6Person {
+				constructor(name,sex,age) {
+					this.name = name;
+					this.sex = sex;
+					this.age = age;
+				}
+				eat() {
+					console.log("Eating...");
+				}
+			}
+			var people3 = new Es6Person("Ted","male",23);
+			console.log(people3);
+			// people3.eat();
+			var people4 = new Es6Person("Aya","female",22);
+			console.log(people3.eat == people4.eat);//true
+			console.log(people3.__proto__);
+
+			// 检测对象中是否有某个属性或方法
+			// 无法检测到构造函数的原型对象中的方法或属性
+			console.log("name" in people3);
+
+			// 检测实例化的对象是否有某个属性或方法，注意通过原型链继承的属性和方法无法被检测到
+			console.log(people3.hasOwnProperty("age"));
+
+			// 删除对象中的属性
+				// 不能直接删除构造函数中的属性，因为对象还未实例化，this的指向尚未明确
+			delete people3.name;
+			console.log(people3);
+	</script>
+</body>
+</html>

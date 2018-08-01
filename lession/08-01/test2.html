@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function webBar(){
+			while(1) {
+				var idCode = prompt("请输入您的身份证号码：");
+				// console.log(idCode);
+				if(idCode!=null&&idCode!=""&&idCode.length==18) {
+					break;
+				}
+				alert("请输入有效的身份证号码！");
+			}
+			var birth = new Date(parseInt(idCode.substr(6,4)),parseInt(idCode.substr(10,2)),parseInt(idCode.substr(12,2)));
+			// console.log(birth);
+			var current = new Date();
+			function judge(age) {
+				age = age/1000;
+				if(year = age/(60*60*24*365)>=18){
+					return true;
+				}
+				return false;
+			}
+			if(judge(current - birth)) {
+				alert("欢迎您！");
+			}else {
+				alert("您未满18周岁！");
+			}
+		}
+		webBar();
+	</script>
+	<script>
+		var myCar = {
+			"brand":"Ferrari",
+			"model":"F430",
+			"price":"450w",
+			"length":"4.51",
+			"width":"1.92",
+			"height":"1.19",
+			"maxSpeed":"320",
+			"sits":"2",
+			"run":function(){
+				console.log("Running...");
+			},
+			"lightsUp":function(){
+				console.log("Lights up now !");
+			},
+			"broken":function(){
+				console.log("Your car needs to be fixed.");
+			}
+		}
+
+		function Car(brand,model,price,length,width,height,maxSpeed,sits){
+			this.brand = brand;
+			this.model = model;
+			this.price = price;
+			this.length = length;
+			this.width = width;
+			this.height = height;
+			this.maxSpeed = maxSpeed;
+			this.sits = sits;
+		}
+		Car.prototype = {
+			"run":function(){
+				console.log("Running...");
+			},
+			"lightsUp":function(){
+				console.log("Lights up now !");
+			},
+			"broken":function(){
+				console.log("Your car needs to be fixed.");
+			}
+		}
+		var newCar = new Car("Nissan","GT-R","160w","4.65","1.89","1.37","315","4");
+		console.log(newCar);
+	</script>
+</body>
+</html>

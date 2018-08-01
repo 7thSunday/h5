@@ -41,12 +41,12 @@
 	</script>
 	<script>
 		function add(){
-			var start = new Date();
+			var start = new Date().getTime();
 			var addResult = 0;
 			for(var i=1;i<=1000000;i++) {
 				addResult += i;
 			}
-			var finish = new Date();
+			var finish = new Date().getTime();
 			console.log(addResult);
 			return (finish - start) + "ms";
 		}

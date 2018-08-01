@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function gundom(gModel,height,weight,callback) {
+			return {
+				"gModel":gModel,
+				"height":height,
+				"weight":weight,
+				"shoot":function (){
+					console.log("BiuBiuBiu~");
+				},
+				"callback":callback
+			}
+		}
+		var strikeGundom = gundom("GAT-X105","17.72","64.8",function(){
+			console.log("GAT-X105");
+		});
+		var freedomGundom = gundom("ZGMF-X10A","18.3","71.5",function(){
+			console.log("ZGMF-X10A");
+		});
+	</script>
+</body>
+</html>
