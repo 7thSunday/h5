@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div style="background: skyblue;height: 1500px;">
+		<button class="btn">click me!</button>
+	</div>
+	<script>
+	// BOM(borwser object model)浏览器对象模型
+	// 提供了一些能够操作浏览器或者浏览器的信息的方法
+
+		// window对象
+			// 一个浏览器窗口代表一个window对象，如果一个页面中嵌套了框架，框架也拥有自己的window对象
+			// JS中的全局变量或函数都会自动成为window对象下的属性或方法
+		/*
+		if(confirm("close this page ?")){
+			window.close();//关闭浏览器窗口，不兼容火狐
+		}
+		*/
+		// window.open("http://www.baidu.com","_blank","width=300px,height=300px"); // 打开浏览器窗口
+		// window.moveBy(x,y) 设置新窗口打开的像素偏移
+		// window.moveTo(x,y) 把窗口左上角移动到指定的坐标
+
+		// window.scrollBy(x,y) 按照指定的像素值滚动内容，需要通过事件触发
+		var btn = document.getElementsByClassName("btn")[0];
+		btn.addEventListener("click",function(){
+			window.scrollBy(0,500);
+		});
+
+		// 获取窗口的宽和高，不包括滚动条，工具栏，地址栏等
+			// 不兼容低版本ie
+		console.log(window.innerWidth);
+		console.log(window.innerHeight);
+
+		console.log(document.documentElement.clientWidth);//ie
+		console.log(document.body.clientWidth);
+
+		// 获取整个浏览器的宽高
+		console.log(window.outerWidth);
+		console.log(window.outerHeight);
+
+		// 获取或设置文档的偏移，即滚动条的位置
+		console.log(window.pageXOffset);
+		console.log(window.pageYOffset);
+
+		// 获取浏览器到屏幕左上角的距离
+			// 不兼容火狐
+		console.log(window.screenLeft);
+		console.log(window.screenTop);
+		
+		console.log(window.screenX);//火狐
+		console.log(window.screenY);//火狐
+	</script>
+</body>
+</html>

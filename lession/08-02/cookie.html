@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	// cookie对象 用来存储web端用户信息
+
+		// 声明周期：
+			// 没设置过期时间，浏览器关闭时就清除
+			// 设置了过期时间，到达时间后就清除
+
+		// 存储的大小最大为4k
+
+		function setCookie(cname,cvalue,exdays) {//键名，键值，过期时间
+			var current = new Date();
+			current.setTime(current.getTime() + (exdays*24*60*60*1000));
+			var expires = "expires" + "=" + current.toGMTString();
+			document.cookie = cname + "=" + cvalue + ";" + expires;
+		}
+
+		function getCookie() {
+			var userName = document.cookie;
+			return userName;
+		}
+
+		function checkCookie() {
+			var user = prompt("请输入用户名");
+			setCookie("userName",user,7);
+		}
+		checkCookie();
+	</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<a href="#myanchor">test</a>
+	<button class="btn">bitton</button>
+	<script>
+	// location对象 用来获取地址栏信息
+
+		var btn = document.querySelector(".btn");
+		btn.addEventListener("click",function(){
+			console.log(location.hash);//获取锚点信息
+			// location.search; // 获取?后的内容
+			// location.host; // 获取主机和端口
+			// location.hostname; // 获取主机名
+			// location.href; // 获取或设置完整的URL
+			// location.pathname; //  获取页面的url路径部分
+			// location.port; // 获取端口号
+			// location.protocol; //  返回当前url的协议
+		})
+	</script>
+</body>
+</html>
