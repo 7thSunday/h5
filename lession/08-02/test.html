@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var str="?username=admin&psw=admin123&sex=0&validity=1";
+		function getString(str){
+			var obj={};
+			var arr = str.slice(1).split("&");
+			arr.forEach(function(item){
+				var temp = item.split("=");
+				insert(temp[0],temp[1]);
+			});
+			function insert(key,value) {
+				obj[key] = value;
+			}
+			return obj;
+		}
+		//下面代码请勿更改
+		var objStr = JSON.stringify(getString(str), null, 4);
+		var html = objStr.replace(/\n/g, '<br>').replace(/\s/g, '&nbsp');
+		document.body.innerHTML=html;
+	</script>
+</body>
+</html>
