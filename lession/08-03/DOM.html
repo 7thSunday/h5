@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div class="test">div1</div>
+	<div class="test">div2</div>
+	<div class="test" id="third">div3</div>
+	<img src="../sample.jpg" style="width:300px;height:300px;" alt="aya">
+	<script>
+	// DOM(document object model) 文档对象模型
+		// 把html文档分为一个个节点
+
+		// document对象
+			// 当html文档载入浏览器时，会把html文档自动添加到document对象下
+
+			// 输出内容到html文档中
+			document.write("123");
+			document.writeln("345");//末尾空格
+			document.writeln("345");
+
+			// 选择器
+				// 如果选择有多个同样选择器的元素时，只能获取到第一个具有该选择器的元素
+			var test = document.querySelector(".test");
+			console.log(test);
+				// 返回节点列表
+			var allTest = document.querySelectorAll(".test");
+			console.log(allTest);
+				// 通过元素名获取元素，返回元素集合
+			var allTag = document.getElementsByTagName("div");
+			console.log(allTag);
+				// 通过类名获取元素，返回元素集合
+			var allClass = document.getElementsByClassName("test");
+			console.log(allClass);
+				// 通过id获取元素，返回该元素
+			var getById = document.getElementById("third");
+			console.log(getById);
+
+			// querySelector和get方法获取元素的区别
+				// get的性能更好
+				// querySelector静态获取元素 get动态获取元素
+
+		// 添加事件监听(时间句柄)
+			// document.addEventListener(event,callback);
+				// event：事件类型  callback：回调函数
+					// click 单击事件
+					// dblclick 双击事件
+
+
+		// 添加元素
+			// 创建元素，括号内为元素名
+			var p = document.createElement("p");
+			// 向...添加子元素p
+			getById.appendChild(p);
+			// 创建和添加文本节点到p中，不会覆盖原来的文本
+			var txt = document.createTextNode("this is a p element.");
+			p.appendChild(txt);
+			// 会覆盖原来的内容
+			var h1 = document.createElement("h1");
+			h1.innerText = "this is a h1 element.";
+			document.body.appendChild(h1);
+			var h2 = document.createElement("h2");
+			// innerHTML可以识别标签
+			document.body.appendChild(h2);
+			h2.innerHTML = "this is a h2 element.";
+
+		// 添加元素属性
+			// 创建属性名，如class
+			var cname = document.createAttribute("class");
+			// 通过value给节点赋值
+			cname.value = "h2";
+			h2.setAttributeNode(cname);
+
+		// 返回文档的根节点
+			console.log(document.documentElement);
+
+		// 获取所有img元素
+			var imgs = document.images;
+			console.log(imgs);
+			console.log(imgs[0].alt);
+
+		// 移除事件句柄
+			document.addEventListener("click",myFun);
+			function myFun(){
+				console.log("event listener enable !");
+			}
+			document.removeEventListener("click",myFun);
+	</script>
+</body>
+</html>

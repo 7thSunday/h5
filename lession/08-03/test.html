@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		.test2 {
+			transition: 1s;
+		}
+		.bigger {
+			font-size: 60px;
+		}
+	</style>
+</head>
+<body>
+	<div class="test1">
+		<p>第<span>1</span>段</p>
+		<p>第<span>2</span>段</p>
+		<p>第<span>3</span>段</p>
+		<p>第<span>4</span>段</p>
+		<p>第<span>5</span>段</p>
+	</div>
+	<br>
+	<div class="test2">Skr~</div>
+	<script>
+		var test1 = document.getElementsByTagName("span");
+		setInterval(function(){
+			for(var i=0;i<5;i++) {
+				if(test1[i].innerText == 5) {
+					test1[i].innerText = 1;
+				}else {
+					test1[i].innerText ++;
+				}
+			}
+		},1000);
+
+		// var outer = document.querySelector(".test1");
+		// setInterval(function(){
+		// 	var ali = document.querySelectorAll("p");
+		// 	outer.appendChild(ali[0]);
+		// },1000);
+
+		var test2 = document.getElementsByClassName("test2")[0];
+		// setInterval(function(){
+		// 	test2.classList.add("bigger");
+		// 	setTimeout(function(){
+		// 		test2.classList.remove("bigger");
+		// 	},500);
+		// },1000)
+
+		setInterval(function(){
+			test2.classList.toggle("bigger");
+		},800);
+	</script>
+</body>
+</html>

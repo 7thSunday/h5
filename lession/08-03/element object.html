@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.container {
+			width: 200px;
+			height: 200px;
+			background: skyblue;
+			border: 1px solid #000;
+			/*box-sizing: border-box;*/
+			position: absolute;
+			margin: 10px;
+			top: 0;
+			left: 0;
+		}
+	</style>
+</head>
+<body>
+	<img src="../sample.jpg" width="300" alt="">
+	<div class="test">
+		<p class="one two three">this is a p element.</p>
+		<h1>this is a h1 element.</h1>
+	</div>
+	<div>div1</div>
+	<div>div2</div>
+	<div class="container" contenteditable="true">123456</div>
+	<script>
+		var img = document.querySelector("img");
+		// attributes 获取元素的属性，返回一个属性数组
+		console.log(img.attributes);
+		console.log(img.attributes[0].value);
+		// img.attributes[0].value = "../img/aya.png";
+
+		var test = document.querySelector(".test");
+		// 获取元素的子节点
+		var child = test.childNodes;
+		console.log(child);//换行符也是文本节点
+		// .classList 获取元素的类名，返回一个类名数组
+		var testClass = document.querySelector(".one");
+		console.log(testClass.classList);//获取
+		testClass.classList.add("myClass");//添加类名，多个类名用逗号隔开
+		testClass.classList.remove("two");//移除类名，多个类名用逗号隔开
+		// testClass.classList.toggle("myClass"); 切换类名 参考jquery的.toggle()
+		console.log(testClass.classList.contains("four"));//检查类名
+		console.log(testClass.classList.item(0));//用索引获取类名，检索失败返回null
+		console.log(testClass.classList[0]);//同上，检索失败返回undefined
+		// .className 获取或设置元素的类名，返回字符串
+		console.log(testClass.className);
+		testClass.className = "Aya";//添加类名并覆盖原来的所有类名
+		testClass.className += " Shameimaru";
+		console.log(testClass.className);
+
+		var container = document.querySelector(".container");
+		// 获取元素的宽高，不包括边框、外边距、滚动条
+		console.log(container.clientWidth);
+		console.log(container.clientHeight);
+		// 获取元素宽高，不包括外边距
+		console.log(container.offsetWidth);
+		console.log(container.offsetHeight);
+		// 获取元素和html浏览器的距离
+		console.log(container.offsetTop);
+		console.log(container.offsetLeft);
+		// .cloneNode() 克隆节点并返回一个新节点，默认只克隆元素本身，参数为true时会将所有子节点都进行克隆
+		var cloneE = container.cloneNode(true);
+		console.log(cloneE);
+		// document.body.appendChild(cloneE);
+		// 设置元素的可编辑性
+		container.contentEditable = false;
+		// 返回元素的第一个子节点，如果没有子节点则返回null
+		console.log(container.firstChild);
+		// 修改元素的css属性
+		container.style.background = "pink";
+		container.style.fontSize = "20px";
+
+	// querySelector静态获取元素
+	// getElement动态获取元素
+
+		// 通过js动态添加元素时，getElement依然能够获得该元素，而querySelector就不能获取了
+		// 除非再重新获取一遍
+
+		var div = document.querySelectorAll(".test");
+		console.log(div);
+		var div1 = document.getElementsByClassName("test");
+		console.log(div1);
+
+		var div2 = document.createElement("div");
+		document.body.appendChild(div2);
+		div2.classList.add("test");
+		console.log(div);
+		console.log(div1);
+
+	</script>
+</body>
+</html>
