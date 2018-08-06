@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		img {
+			/*width: 100%;*/
+		}
+	</style>
+</head>
+<body>
+	<div class="img"><img src="http://img1.imgtn.bdimg.com/it/u=671228016,700798795&fm=27&gp=0.jpg" alt=""></div>
+	<div class="btn">
+		<button>up</button>
+		<button>down</button>
+		<button>toggle</button>
+	</div>
+	<script>
+		window.onload = function(){
+			var img = document.querySelector("img");
+			var imgEleW;
+			var imgEleH;
+			var imgBox = document.querySelector(".img");
+			imgEleW = img.offsetWidth;
+			imgEleH = img.offsetHeight;
+			imgBox.style.width = imgEleW + "px";
+			imgBox.style.height = imgEleH + "px";
+			imgBox.style.overflow = "hidden";
+			var btn = document.querySelectorAll("button");
+			btn[0].addEventListener("click",function(){
+				var timer = setInterval(function(){
+					imgEleH--;
+					imgBox.style.height = imgEleH + "px";
+					if(imgEleH == 0) {
+						clearInterval(timer);
+					}
+				},1)
+			})
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" placeholder="请输入学号" />
+		<input type="text" placeholder="请输入姓名" />
+		<input type="text" placeholder="请输入性别" />
+		<input type="text" placeholder="请输入班级" />
+		<input type="button" class="add" value="添加" />
+		<input type="text" id="search" placeholder="请输入搜索内容" />
+		<input type="button" id="go" value="搜索" />
+		<!--根据学号排序-->
+		<input type="button" id="sort" value="排序" />
+		<table border="" width="600">
+			<tr><th>学号</th><th>姓名</th><th>性别</th><th>班级</th><th>操作</th></tr>
+		</table>
+		<script type="text/javascript">
+			//添加条目
+			function getInfo(){
+				var inps = document.querySelectorAll("input[type='text']"),
+					num = inps[0].value,
+					name = inps[1].value,
+					sex = inps[2].value,
+					clas = inps[3].value;
+				//es5字符串拼接方法
+				//var tr = "<tr><td>"+num+"</td><td>"+name+"</td><td>"+sex+"</td><td>"+clas+"</td></tr>";
+				//es6字符串拼接方法
+				var tr = `
+						<tr class="content-row">
+							<td class="num">${num}</td>
+							<td class="name">${name}</td>
+							<td class="sex">${sex}</td>
+							<td class="clas">${clas}</td>
+							<td align="center"><button class="del">删除</button>
+							<button class="edit">修改</button>
+							<button class="confirm">确认修改</button></td>
+						</tr>
+						`
+				return tr;
+			}
+			var add = document.querySelector(".add");
+			var tab = document.querySelector("table"),
+				del,
+				edit,
+				confirm,
+				sort = document.getElementById("sort");
+			add.addEventListener("click",function(){
+				tab.innerHTML += getInfo();
+				del = document.getElementsByClassName("del");
+				edit = document.getElementsByClassName("edit");
+				confirm = document.getElementsByClassName("confirm");
+				for(let i=0;i<del.length;i++) {
+					del[i].addEventListener("click",function(){
+						this.parentNode.parentNode.parentNode.remove();
+					});
+					edit[i].addEventListener("click",function(){
+						let currentNode = this.parentNode.parentNode;
+						currentNode.getElementsByClassName("num")[0].setAttribute("contenteditable","true");
+						currentNode.getElementsByClassName("num")[0].focus();
+						currentNode.getElementsByClassName("name")[0].setAttribute("contenteditable","true");
+						currentNode.getElementsByClassName("sex")[0].setAttribute("contenteditable","true");
+						currentNode.getElementsByClassName("clas")[0].setAttribute("contenteditable","true");
+					});
+					confirm[i].addEventListener("click",function(){
+						let currentNode = this.parentNode.parentNode;
+						currentNode.getElementsByClassName("num")[0].removeAttribute("contenteditable");
+						currentNode.getElementsByClassName("name")[0].removeAttribute("contenteditable");
+						currentNode.getElementsByClassName("sex")[0].removeAttribute("contenteditable");
+						currentNode.getElementsByClassName("clas")[0].removeAttribute("contenteditable");
+					});
+				}
+			});
+			var order = false;
+			sort.addEventListener("click",function(){
+				var contentRow = getElementsByClassName("content-row");
+				var arr = [];
+				for(let i=0;i<contentRow.length;i++) {
+					arr.push(contentRow[i]);
+				}
+				arr.sort(function(a,b){return a-b})
+			})
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div class="web">
+		<div class="test" name="111">111</div>
+		<div class="test" name="222">222</div>
+		<div class="test">333</div>
+	</div>
+	<input type="text" id="accountId">
+	<input type="checkbox" checked="checked" id="check">
+	<script>
+		var div = document.createElement("div");
+		var web = document.querySelector(".web");
+		var test = web.querySelectorAll(".test");
+		// 插入元素
+		web.insertBefore(div,test[1]);
+		// 移除属性/属性节点
+		test[0].removeAttribute("name");//无返回值
+		var att = document.createAttribute("id");
+		att.value = "333";
+		test[2].setAttributeNode(att);
+		test[2].removeAttributeNode(att);//返回属性节点
+		// 移除子元素
+		// web.removeChild(test[1]);
+		// 移除本身
+		// test[0].remove();
+		// 替换子元素
+		var p = document.createElement("p");
+		p.innerText = "ppppp";
+		web.replaceChild(p,test[2]);
+		// 返回元素的最后一个子节点，包括文本节点
+		console.log(web.lastChild);//#text
+		// 返回元素的下一个兄弟节点，包括文本节点
+		console.log(test[0].nextSibling);//#text
+		// 返回元素的父节点
+		console.log(test[0].parentNode);
+		var inp = document.getElementById("accountId");
+		// 获取焦点
+		inp.focus();
+		var check = document.getElementById("check");
+		// 获取元素的属性值，必须在文档中写了才能获取到
+		console.log(check.getAttribute("checked"));
+		// 获取元素宽高，不包括边框
+			// scrollWidth  /  scrollHeight
+		// 获取元素滚动条位置
+			// scrollTop  /  scrollLeft
+
+
+		var tab = document.createElement("table");
+		tab.setAttribute("border","1");
+		tab.setAttribute("cellpadding","5");
+		document.body.appendChild(tab);
+		tab.innerHTML = "<tr><td>1</td><td>2</td><td>3</td></tr>\n<tr><td>4</td><td>5</td><td>6</td></tr>\n<tr><td>7</td><td>8</td><td>9</td></tr>"
+	</script>
+</body>
+</html>

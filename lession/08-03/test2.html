@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div class="img"><img src="http://img1.imgtn.bdimg.com/it/u=671228016,700798795&fm=27&gp=0.jpg" alt=""></div>
+	<button id="change">change!</button>
+	<script>
+		var imageList = ["http://img1.imgtn.bdimg.com/it/u=671228016,700798795&fm=27&gp=0.jpg",
+		"http://img2.imgtn.bdimg.com/it/u=3962704464,4221487848&fm=27&gp=0.jpg",
+		"http://img5.imgtn.bdimg.com/it/u=2542971004,419662501&fm=27&gp=0.jpg",
+		"http://img4.imgtn.bdimg.com/it/u=4238073161,2082144501&fm=27&gp=0.jpg",
+		"http://img3.imgtn.bdimg.com/it/u=3583636097,3791582510&fm=27&gp=0.jpg",
+		"http://img4.imgtn.bdimg.com/it/u=183268348,1566031476&fm=27&gp=0.jpg",
+		"http://img1.imgtn.bdimg.com/it/u=2976461202,3068990513&fm=27&gp=0.jpg"]
+		var img = document.images[0];
+		var button = document.getElementById("change");
+		button.addEventListener("click",function(){
+			while(1) {
+				var count = Math.floor(Math.random()*imageList.length);
+				if (img.src != imageList[count]) {
+					break;
+				}
+			}
+			img.src = imageList[count];
+			// console.log(count);
+		})
+	</script>
+</body>
+</html>
