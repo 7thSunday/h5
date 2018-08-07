@@ -26,9 +26,10 @@
 }
 .block .spec-list .spec-item .selection-list li {
     padding: 5px 10px;
-    border: 1px solid transparent;
+    border: 1px solid #999;
     margin-right: 10px;
     cursor: pointer;
+    color: #999;
 }
 .block .price-tag .price {
     font-size: 22px;
@@ -47,6 +48,10 @@
 }
 
 /* *************** */
-.block .spec-list .spec-item .selection-list .active {
+.block .spec-list .spec-item .selection-list .active,
+.block .spec-list .spec-item .selection-list li:hover {
     border-color: orangered;
+}
+.block .spec-list .spec-item .selection-list .active {
+    color: orangered;
 }

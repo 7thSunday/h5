@@ -12,6 +12,9 @@
         this.storage = storage;
         this.version = version;
         this.getPrice = function() {
+            if(this.screenSize==""||this.color==""||this.storage==""||this.version=="") {
+                return `￥5288 - ￥7688`;
+            }
             var price = 5288;
             if(this.screenSize == "5.5") {
                 price += 800;
@@ -22,7 +25,7 @@
             if(this.storage == 128) {
                 price += 1600;
             }
-            return price;
+            return `￥${price}`;
         }
     }
     // 初始化
@@ -36,8 +39,11 @@
             case 1 :
                 screenSize = "5.5";
                 break;
-            default :
+            case 0 :
                 screenSize = "4.7";
+                break;
+            default :
+                screenSize = "";
                 break;
         }
         // 获取颜色
@@ -48,8 +54,12 @@
             case 1 :
                 color = "golden";
                 break;
-            default : 
+            case 0 :
                 color = "sliver";
+                break;
+            default : 
+                color = "";
+                break;
         }
         // 获取内存
         switch(getActive(storageList)) {
@@ -59,8 +69,11 @@
             case 1 :
                 storage = 64;
                 break;
-            default :
+            case 0 :
                 storage = 16;
+                break;
+            default :
+                storage = "";
                 break;
         }
         // 获取版本
@@ -71,13 +84,16 @@
             case 1 :
                 version = "ChinaMobile";
                 break;
-            default :
+            case 0 :
                 version = "open";
+                break;
+            default :
+                version = "";
                 break;
         }
         phone = new Phone(screenSize,color,storage,version);
         console.log(phone);
-        price.innerHTML = `￥${phone.getPrice()}`;
+        price.innerHTML = phone.getPrice();
         console.log("initializing...");
     }
     init();
@@ -86,10 +102,14 @@
     for(let i=0;i<allSelection.length;i++) {
         allSelection[i].onclick = function(){
             let currentSpec = allSelection[i].parentNode.children;
-            for(let i=0;i<currentSpec.length;i++) {
-                currentSpec[i].classList.remove("active");
+            if(this.classList.contains("active")) {
+                this.classList.remove("active");
+            }else {
+                for(let i=0;i<currentSpec.length;i++) {
+                    currentSpec[i].classList.remove("active");
+                }
+                allSelection[i].classList.add("active");
             }
-            allSelection[i].classList.add("active");
             init();
         }
     }
