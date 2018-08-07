@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM事件</title>
+    <style>
+        .btn {
+            width:100px;
+            height: 50px;
+            border-radius: 10px;
+            background: gray;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+            color: #fff;
+        }
+        .test {
+            width: 200px;
+            height: 200px;
+            background: skyblue;
+            margin-top: 100px;
+        }
+        .one {
+            width: 100px;
+            height: 100px;
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="btn">button</div>
+    <div class="test">
+        <div class="one"></div>
+    </div>
+    <script>
+    // 鼠标事件
+        // 单击事件
+        var btn = document.querySelector(".btn");
+        btn.addEventListener("click",function(){
+            console.log("you click a button !");
+        });
+        // 双击事件
+        btn.addEventListener("dblclick",function(){
+            console.log("double click !");
+        });
+        // 按下事件
+        btn.addEventListener("mousedown",function(){
+            console.log("mouse down !");
+        });
+        // 抬起事件
+        btn.addEventListener("mouseup",function(){
+            console.log("mouse up !");
+        });
+        // 鼠标移入
+        btn.addEventListener("mouseenter",function(){
+            console.log("mouse enter !");
+        });
+        btn.addEventListener("mouseover",function(){
+            console.log("mouse over !");
+        });
+        // 鼠标离开
+        btn.addEventListener("mouseleave",function(){
+            console.log("mouse leave !");
+        });
+        btn.addEventListener("mouseout",function(){
+            console.log("mouse out !");
+        });
+
+        // 事件冒泡(主流的浏览器默认的事件触发过程，都是事件冒泡过程)
+            // 先触发子元素的事件再触发父元素的事件
+        // mouseover mouseout 遵循事件冒泡过程
+        // mouseenter mouseleave 不遵循事件冒泡过程
+        var test = document.querySelector(".test");
+        var one = document.querySelector(".one");
+        test.addEventListener("click",function(){//mouseover,mouseenter
+            alert("father:.test");
+        });
+        one.addEventListener("click",function(){//mouseover,mouseenter
+            alert("son:.one");
+        });
+        // 鼠标移动
+        btn.addEventListener("mousemove",function(){
+            console.log("mouse move !");
+        });
+        // 点击鼠标右键
+        document.addEventListener("contextmenu",function(){
+            console.log("click right button !");
+        });
+
+    // 键盘事件
+        // 按键按下
+        document.addEventListener("keydown",function(){
+            console.log("key down !");
+        });
+        // 按键抬起
+        document.addEventListener("keyup",function(){
+            console.log("key up !");
+        });
+        document.addEventListener("keypress",function(){
+            console.log("key press !");
+        });
+    </script>
+</body>
+</html>

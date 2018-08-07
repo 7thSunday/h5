@@ -35,14 +35,13 @@
 	var cardTitle = document.querySelectorAll(".card-title li");
 	var cardContent = document.querySelectorAll(".card-content li");
 	for(let i=0;i<cardTitle.length;i++) {
-		cardTitle[i].index = i;
 		cardTitle[i].addEventListener("click",function(){
 			for(let j=0;j<cardTitle.length;j++) {
 				cardTitle[j].classList.remove("selected");
 				cardContent[j].classList.remove("show-content");
 			}
 			this.classList.add("selected");
-			cardContent[this.index].classList.add("show-content");
+			cardContent[i].classList.add("show-content");
 		});
 	}
 }())

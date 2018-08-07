@@ -5,10 +5,10 @@
 		<title></title>
 	</head>
 	<body>
-		<input type="text" placeholder="请输入学号" />
-		<input type="text" placeholder="请输入姓名" />
-		<input type="text" placeholder="请输入性别" />
-		<input type="text" placeholder="请输入班级" />
+		<input type="number" class="user-info" placeholder="请输入学号" />
+		<input type="text" class="user-info" placeholder="请输入姓名" />
+		<input type="text" class="user-info" placeholder="请输入性别" />
+		<input type="text" class="user-info" placeholder="请输入班级" />
 		<input type="button" class="add" value="添加" />
 		<input type="text" id="search" placeholder="请输入搜索内容" />
 		<input type="button" id="go" value="搜索" />
@@ -20,11 +20,15 @@
 		<script type="text/javascript">
 			//添加条目
 			function getInfo(){
-				var inps = document.querySelectorAll("input[type='text']"),
+				var inps = document.querySelectorAll(".user-info"),
 					num = inps[0].value,
 					name = inps[1].value,
 					sex = inps[2].value,
 					clas = inps[3].value;
+				if(num==""||name==""||sex==""||clas=="") {
+					alert("q请完善信息！");
+					return "";
+				}
 				//es5字符串拼接方法
 				//var tr = "<tr><td>"+num+"</td><td>"+name+"</td><td>"+sex+"</td><td>"+clas+"</td></tr>";
 				//es6字符串拼接方法
@@ -36,7 +40,7 @@
 							<td class="clas">${clas}</td>
 							<td align="center"><button class="del">删除</button>
 							<button class="edit">修改</button>
-							<button class="confirm">确认修改</button></td>
+							<button class="conf">确认修改</button></td>
 						</tr>
 						`
 				return tr;
@@ -45,44 +49,70 @@
 			var tab = document.querySelector("table"),
 				del,
 				edit,
-				confirm,
-				sort = document.getElementById("sort");
+				conf,
+				sorT = document.getElementById("sort");
 			add.addEventListener("click",function(){
 				tab.innerHTML += getInfo();
 				del = document.getElementsByClassName("del");
 				edit = document.getElementsByClassName("edit");
-				confirm = document.getElementsByClassName("confirm");
+				conf = document.getElementsByClassName("conf");
 				for(let i=0;i<del.length;i++) {
 					del[i].addEventListener("click",function(){
-						this.parentNode.parentNode.parentNode.remove();
+						this.parentNode.parentNode.remove();
 					});
 					edit[i].addEventListener("click",function(){
-						let currentNode = this.parentNode.parentNode;
-						currentNode.getElementsByClassName("num")[0].setAttribute("contenteditable","true");
-						currentNode.getElementsByClassName("num")[0].focus();
-						currentNode.getElementsByClassName("name")[0].setAttribute("contenteditable","true");
-						currentNode.getElementsByClassName("sex")[0].setAttribute("contenteditable","true");
-						currentNode.getElementsByClassName("clas")[0].setAttribute("contenteditable","true");
+						let current = this.parentNode.parentNode.children;
+						for(let j=0;j<current.length-1;j++) {
+							current[j].contentEditable = true;
+						}
+						current[0].focus();
 					});
-					confirm[i].addEventListener("click",function(){
-						let currentNode = this.parentNode.parentNode;
-						currentNode.getElementsByClassName("num")[0].removeAttribute("contenteditable");
-						currentNode.getElementsByClassName("name")[0].removeAttribute("contenteditable");
-						currentNode.getElementsByClassName("sex")[0].removeAttribute("contenteditable");
-						currentNode.getElementsByClassName("clas")[0].removeAttribute("contenteditable");
+					conf[i].addEventListener("click",function(){
+						let current = this.parentNode.parentNode.children;
+						for(let j=0;j<current.length-1;j++) {
+							current[j].contentEditable = false;
+						}
 					});
 				}
 			});
-			var order = false;
-			sort.addEventListener("click",function(){
-				var contentRow = getElementsByClassName("content-row");
+			var btnSearch = document.getElementById("go");
+			btnSearch.addEventListener("click",function(){
+				var search = document.getElementById("search").value;
+				let list = document.getElementsByClassName("content-row");
+				let size = list.length;
+				let check = false;
+				for(let i=0;i<size;i++) {
+					let currentRow = list[i];
+					if(currentRow.children[1].innerText == search) {
+						currentRow.style.background = "green";
+						check = true;
+					}else {
+						currentRow.style.background = "#fff";
+					}
+				}
+				if(!check) {
+					alert("没有你想要的内容！");
+				}
+			});
+			var order = true;
+			sorT.addEventListener("click",function(){
+				var contentRow = document.getElementsByClassName("content-row");
 				var arr = [];
-				for(let i=0;i<contentRow.length;i++) {
+				let size = contentRow.length;
+				for(let i=0;i<size;i++) {
 					arr.push(contentRow[i]);
 				}
-				arr.sort(function(a,b){return a-b})
-			})
-			
+				if(order) {
+					arr.sort(function(a,b){return a.children[0].innerText-b.children[0].innerText});
+				}else {
+					arr.sort(function(a,b){return b.children[0].innerText-a.children[0].innerText});
+				}
+				tab.innerHTML = "<tr><th>学号</th><th>姓名</th><th>性别</th><th>班级</th><th>操作</th></tr>";
+				for(let i=0;i<size;i++) {
+					tab.appendChild(arr[i]);
+				}
+				order = !order;
+			});
 		</script>
 	</body>
 </html>
