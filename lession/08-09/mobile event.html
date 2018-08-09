@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 移动端事件
+            // 事件对象
+                // .touches 触发事件时所有的触发点
+                // .target 被点击的元素
+        // touchstart 触摸
+        document.addEventListener("touchstart",function(e){
+            e = window.event || e;
+            console.log(e);
+        });
+        // touchmove 触摸并移动
+        document.addEventListener("touchmove",function(){
+            console.log("touch and moving !");
+        });
+        // touchend 结束触摸
+        document.addEventListener("touchend",function(){
+            console.log("touch end !");
+        });
+        // touchcancel 当高级事件发生时，取消触摸事件，如来电，短信
+    </script>
+</body>
+</html>

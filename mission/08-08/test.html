@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .circle {
+            width: 30px;
+            height: 30px;
+            background: green;
+            border-radius: 50%;
+            position: relative;
+            transform: translateX(-15px) translateY(-15px);
+        }
+    </style>
+</head>
+<body>
+    <div class="circle"></div>
+    <script>
+        function addDblClick(){
+            var isClick = false;
+            document.addEventListener("click",function(){
+                if(isClick) {
+                    console.log("double click !");
+                    isClick = false;
+                    clearTimeout(t);
+                }else {
+                    isClick = true;
+                    var t = setTimeout(function(){
+                        isClick = false;
+                    },500);
+                }
+            })
+        }
+        addDblClick();
+        var circle = document.querySelector(".circle");
+        circle.addEventListener("mousedown",function(){
+            document.onmousemove = function(e){
+                circle.style.left = e.clientX + "px";
+                circle.style.top = e.clientY + "px";
+            }
+        });
+        circle.addEventListener("mouseup",function(){
+            document.onmousemove = null;
+        });
+    </script>
+</body>
+</html>

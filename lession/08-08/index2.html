@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="number" class="userInfo" placeholder="请输入学号" />
+		<input type="text" class="userInfo" placeholder="请输入姓名" />
+		<input type="text" class="userInfo" placeholder="请输入性别" />
+		<input type="number" class="userInfo" placeholder="请输入班级" />
+		<input type="button" class="add" value="添加" />
+		<input type="text" class="search" placeholder="请输入搜索内容" />
+		<!--根据姓名搜索-->
+		<input type="button" class="searchBtn" value="搜索" />
+		<!--根据学号排序-->
+		<input type="button" class="sortBtn" value="排序" />
+		<table border="" width="600">
+			<tr><th>学号</th><th>姓名</th><th>性别</th><th>班级</th><th>操作</th></tr>
+		</table>
+		<script type="text/javascript">
+			//添加条目
+			function getInfo(){
+				var inps = document.querySelectorAll(".userInfo"),
+					num = inps[0].value,
+					name = inps[1].value,
+					sex = inps[2].value,
+					clas = inps[3].value;
+				if(num=="" ||name=="" || sex==""||clas==""){
+					alert("请输入完整信息！")
+					return "";
+				}
+				//es5字符串拼接方法
+				//var tr = "<tr><td>"+num+"</td><td>"+name+"</td><td>"+sex+"</td><td>"+clas+"</td></tr>";
+				//es6字符串拼接方法
+				var tr = `
+						<tr>
+							<td>${num}</td>
+							<td>${name}</td>
+							<td>${sex}</td>
+							<td>${clas}</td>
+							<td align="center"><button class="del">删除</button><button class="change">修改</button></button><button class="conf">确认修改</button></td>
+						</tr>
+						`
+				return tr;
+			}
+			var add = document.querySelector(".add");
+			var tab = document.querySelector("table");
+			add.addEventListener("click",function(){
+				//添加条目
+				tab.innerHTML += getInfo();
+			})
+            // 删除条目
+			tab.addEventListener("click",function(e){
+                if(e.target.className == "del") {
+                    e.target.parentNode.parentNode.remove();
+                }
+            })
+		</script>
+	</body>
+</html>

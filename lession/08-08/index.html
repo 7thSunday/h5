@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .one {
+            width: 100px;
+            height: 100px;
+            background: pink;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="one"></div>
+    <input type="text">
+    <div class="comment-box" style="width: 300px;height: 200px;position: relative;">
+        <textarea name="" id="comment" cols="30" rows="10" maxlength="100" style="resize: none;width: 100%;
+        height: 100%;"></textarea>
+        <span style="position: absolute;bottom: 0;right: 0;">100</span>
+    </div>
+    
+    <!-- 事件捕获：事件传递过程和事件冒泡相反，先触发父元素的事件，再触发子元素的事件 -->
+    <script>
+        // 键盘事件不能监听到某个具体的对象，只能监听到document
+        // 事件对象：用户在对网页进行操作的时候发生的事情，在事件发生的过程中产生
+            // 事件对象会以回调函数的第一个参数形式传入
+        // 注意大小写字母keyCodes是一致的，key不一致
+        // document.addEventListener("keydown",function(event){
+        //     if(event.key == "A") {
+        //         console.log("A");
+        //     }
+        // });
+        var one = document.querySelector(".one");
+        document.addEventListener("keydown",function(e){
+            // 叠加位移，但是宽度不能叠加，因为宽度只有一个参数
+            if(e.keyCode == 37) {
+                one.style.transform += "translateX(-10px)";
+            }
+            if(e.keyCode == 38) {
+                one.style.transform += "translateY(-10px)";
+            }
+            if(e.keyCode == 39) {
+                one.style.transform += "translateX(10px)";
+            }
+            if(e.keyCode == 40) {
+                one.style.transform += "translateY(10px)";
+            }
+            if(e.keyCode == 13) {
+                div.style.right = "-1000px";
+                div.style.opacity = "0";
+            }
+        });
+        var div = document.createElement("div");
+        one.appendChild(div);
+        div.style = "width:20px;height:20px;border-radius:50%;background:pink;transition:3s;position:absolute;right:0"
+        // 窗口大小改变事件
+        window.addEventListener("resize",function(){
+            console.log("window resized !");
+        });
+        // 文档滚动事件
+        window.addEventListener("scroll",function(){
+            console.log(window.pageYOffset);
+        });
+        // 页面关闭事件
+        document.addEventListener("unload",function(){
+            alert("close!");
+        });
+        // 失去焦点
+        var inp = document.querySelector("input");
+        inp.addEventListener("blur",function(){
+            console.log("blur");
+        });
+        // 获取焦点
+        inp.addEventListener("focus",function(){
+            console.log("focus");
+        });
+        // 内容改变后回车或失焦
+        inp.addEventListener("change",function(){
+            console.log("change");
+        });
+        // 输入时触发
+        inp.addEventListener("input",function(){
+            console.log("input !");
+        });
+
+        var textArea = document.getElementById("comment");
+        var limit = document.querySelector(".comment-box span");
+        textArea.addEventListener("input",function(){
+            limit.innerHTML = 100;
+            var content = textArea.value;
+            limit.innerHTML = limit.innerHTML - content.length;
+        });
+        
+
+        // reset 表单重置事件，只对表单有效
+        // select 选中文字时触发
+
+        // 剪贴板事件
+            // copy 复制内容时触发
+            // cut 剪切内容时触发
+            // paste 粘贴时触发
+        
+        // 动画事件
+        // 过渡事件
+
+        // 添加事件监听
+            // addEventListener
+                // 可以注册多个事件监听
+                // 可以传入第三个参数，用来设置事件传递方式
+                    // true 捕获过程
+                    // false 冒泡过程
+            // on...
+                // 只能注册一个同类型的事件监听
+                // 后面注册的事件会覆盖前面的事件
+
+        // 阻止默认事件
+        document.addEventListener("contextmenu",function(e){
+            e.preventDefault();
+            console.log("right click !");
+        });
+        // 阻止事件冒泡
+            // e.stopPropagation();
+    </script>
+</body>
+</html>
