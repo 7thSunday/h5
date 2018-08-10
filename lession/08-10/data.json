@@ -1,0 +1,27 @@
+[
+    {
+        "id":"1",
+        "name":"Ted",
+        "score":"20"
+    },
+    {
+        "id":"2",
+        "name":"Aya",
+        "score":"100"
+    },
+    {
+        "id":"3",
+        "name":"Linus",
+        "score":"30"
+    },
+    {
+        "id":"4",
+        "name":"Denis",
+        "score":"60"
+    },
+    {
+        "id":"5",
+        "name":"Edward",
+        "score":"70"
+    }
+]

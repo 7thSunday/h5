@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="list"></ul>
+    <ul class="my-list"></ul>
+    <ul class="sec-list"></ul>
+    <script>
+    // ajax(Asynchronous JavaScript And XML)
+        // 1.通过new实例化一个XMLHttpRequest对象
+        // 2.设置请求方式和地址
+        // 3.发送请求
+        // 4.监听请求过程，并获取请求结果
+        var xhr = new XMLHttpRequest();//readyState = 1
+        xhr.open("GET","data.json");//readyState = 2
+        xhr.send(null);//readyState = 3
+        xhr.addEventListener("readystatechange",function(){
+            // console.log(xhr.status);//状态码
+                // 200:服务器成功处理了请求
+                // 300:请求没有成功
+                // 500:服务器错误
+            // console.log(xhr.readyState);//状态值
+                // 0:请求未初始化
+                // 1:服务器连接已建立
+                // 2:请求已接收
+                // 3:请求处理中
+                // 4:请求完成
+            if(xhr.readyState == 4) {
+                if(xhr.status == 200) {
+                    // JSON.parse()将字符串转换为json对象
+                    var result = JSON.parse(xhr.responseText);
+                    // JSON.stringify()将json对象转换为字符串
+                    // console.log(JSON.stringify(result));
+
+                    show(result);
+                }else {
+                    console.log("request failed.");
+                }
+            }
+        });
+        var list = document.querySelector(".list");
+        function show(res) {
+            res.sort(function(a,b){return b.score-a.score;});
+            for(let i=0;i<res.length;i++) {
+                var li = `<li><span>No</span><span>name</span> ${res[i].name} <span>score</span> ${res[i].score} </li>`
+                list.innerHTML += li;
+            }
+        }
+    </script>
+    <script>
+        var myXHR = new XMLHttpRequest();
+        myXHR.open("GET","http://120.76.31.111/app/XhlGetSubjectTypeList");
+        myXHR.send(null);
+        myXHR.addEventListener("readystatechange",function() {
+            if(myXHR.readyState == 4) {
+                if(myXHR.status == 200) {
+                    showMyList(JSON.parse(myXHR.responseText));
+                }else {
+                    console.log("request failed.");
+                }
+            }
+        });
+        var myList = document.querySelector(".my-list");
+        function showMyList(res) {
+            for(let i=0;i<res.length;i++) {
+                let txt = `<li><span class="Id">ID:${res[i].Id}</span>  <span>Name:${res[i].Name}</span></li>`;
+                myList.innerHTML += txt;
+            }
+            var myListArr = myList.querySelectorAll(".Id");
+            for(let j=0;j<myListArr.length;j++) {
+                myListArr[j].onclick = function() {
+                    var myXHR = new XMLHttpRequest();
+                    var url = `http://120.76.31.111/app/gettypeexercisesubject?typeId=${this.innerHTML.slice(3)}`;
+                    myXHR.open("GET",url);
+                    myXHR.send(null);
+                    myXHR.addEventListener("readystatechange",function() {
+                        if(myXHR.readyState == 4) {
+                            if(myXHR.status == 200) {
+                                showAnotherList(JSON.parse(myXHR.responseText)[0].List);
+                            }else {
+                                console.log("request failed.");
+                            }
+                        }
+                    });
+                }
+            }
+        }
+        var anotherList = document.querySelector(".sec-list");
+        function showAnotherList(res) {
+            anotherList.innerHTML = "";
+            for(let i=0;i<res.length;i++) {
+                let txt = `<li><span class="Id">ID:${res[i].Id}</span>  <span>Name:${res[i].Name}</span></li>  <span>Name:${res[i].OnlineUsers}</span></li>`;
+                anotherList.innerHTML += txt;
+            }
+        }
+
+        //还可以使用事件代理
+            // id设置绝对定位z-index，确保点击到的是装id的span标签
+        // ul.addEventListener("click",function(e){
+        //     var id = e.target.innerText;
+        //     getD(id);
+        // })
+
+        // 自定义元素属性
+        // <span data-myAttr=${res[i].Id}></span>
+        // getAttribute("data-myAttr");
+    </script>
+</body>
+</html>

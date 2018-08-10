@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+        }
+        .extab {
+            width: 500px;
+            height: 300px;
+            margin: 20px auto;
+            border: 1px solid #000;
+        }
+        .extab .title-list {
+            display: flex;
+            justify-content: space-around;
+            border-bottom: 1px solid #000;
+            padding: 10px 0;
+        }
+        .extab .title-list .title {
+            cursor: pointer;
+        }
+        .extab .content-list {
+            padding: 20px;
+        }
+        .extab .content-list .content {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="extab">
+        <ul class="title-list">
+            <li class="title">card1</li>
+            <li class="title">card2</li>
+            <li class="title">card3</li>
+        </ul>
+        <ul class="content-list">
+            <li class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi reprehenderit ipsa sunt autem aspernatur dolorum fuga sapiente quam? Sunt, consequatur. Aliquid laborum atque, dicta architecto reprehenderit optio praesentium quibusdam? Ducimus!</li>
+            <li class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae libero adipisci vel maiores corrupti. Placeat, laborum illo. Sequi deleniti repellendus minima tempore, sapiente quasi porro illum delectus, quos maxime saepe.</li>
+            <li class="content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora, dolorum. Nobis officia magnam nesciunt, sed illum quidem consectetur, quaerat necessitatibus a possimus perspiciatis vel alias deserunt delectus? At, alias laborum.</li>
+        </ul>
+    </div>
+    <script>
+        function ExTab(el) {
+            var that = this;
+            this.El = document.querySelector(el);
+            this.titleList = this.El.querySelectorAll(".title");
+            this.contentList = this.El.querySelectorAll(".content");
+            this.size = this.titleList.length;
+            ExTab.prototype.init = function() {
+                this.contentList[0].style.display = "block";
+                for(let i=0;i<this.size;i++) {
+                    this.titleList[i].onclick = function() {
+                        for(let j=0;j<that.size;j++) {
+                            that.contentList[j].style.display = "none";
+                        }
+                        that.contentList[i].style.display = "block";
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        var extab = new ExTab(".extab");
+        extab.init();
+    </script>
+</body>
+</html>

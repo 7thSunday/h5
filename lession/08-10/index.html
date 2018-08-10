@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				text-decoration: none;
+			}
+			.wrap{
+				width: 960px;
+				height: 540px;
+				overflow: hidden;
+				margin: 0 auto;
+				position: relative;
+			}
+			.imgBox{
+				width: 9999px;
+			}
+			.imgBox::after{
+				content: "";
+				display: block;
+				clear: both;
+			}
+			.imgBox li{
+				float: left;
+				width: 960px;
+				height: 540px;
+			}
+			.imgBox li img{
+				width: 100%;
+			}
+			.next,.pre{
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 30px;
+				height: 30px;
+				border-radius: 50%;
+				background: rgba(0,0,0,0.2);
+				color: #fff;
+				font-size: 20px;
+				line-height: 30px;
+				text-align: center;
+				cursor: pointer;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+			}
+			.next:hover,.pre:hover{
+				background: rgba(0,0,0,0.5);
+			}
+			.next{
+				right: 0;
+			}
+			.pre{
+				left: 0;
+			}
+			.tran{
+				transition: 500ms;
+			}
+			.pager{
+				position: absolute;
+				bottom: 20px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			.pager span{
+				display: inline-block;
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background: #fff;
+				margin: 0 3px;
+				cursor: pointer;
+			}
+			.pager .active{
+				background: skyblue;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<!--图片区-->
+			<ul class="imgBox">
+                <li><img src="http://imgs.aixifan.com/o_1c9qqb2u11ln01549jg05n6q1927.png" alt=""></li>
+                <li><img src="http://i2.hdslb.com/bfs/archive/252e1e1a2bc5b365ecaf9261b62bdcd1242bff0c.jpg" alt=""></li>
+                <li><img src="http://i0.hdslb.com/bfs/archive/0482f8aa3df7ea661710c11a87b0745b7c97c877.jpg" alt=""></li>
+                <li><img src="http://pic1.win4000.com/wallpaper/2017-10-26/59f1abc3b8685.jpg" alt=""></li>
+			</ul>
+			<!--左右按钮-->
+			<div class="next">&gt;</div>
+			<div class="pre">&lt;</div>
+			<!--分页器-->
+            <div class="pager"></div>
+            <script src="scroll.js"></script>
+            <script>
+                var scroll = new ScrollImg(".wrap");
+                scroll.init();
+            </script>
+		</div>
+	</body>
+</html>

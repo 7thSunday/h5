@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+        }
+        .acc-menu {
+            width: 600px;
+            height: 400px;
+            display: flex;
+        }
+        .acc-menu .acc-item:nth-child(1) {
+            background: pink;
+        }
+        .acc-menu .acc-item:nth-child(2) {
+            background: skyblue;
+        }
+        .acc-menu .acc-item:nth-child(3) {
+            background: green;
+        }
+        .acc-menu .acc-item:nth-child(4) {
+            background: blueviolet;
+        }
+        .acc-menu .acc-item .title {
+            width: 50px;
+        }
+        .acc-menu .acc-item {
+            width: 50px;
+            overflow: hidden;
+            transition: 700ms;
+        }
+        .acc-menu .acc-item .content {
+            width: 450px;
+            display: none;
+        }
+        .acc-menu .active {
+            width: 450px;
+        }
+        .acc-menu .active .title {
+            display: none;
+        }
+        .acc-menu .active .content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="acc-menu">
+        <div class="acc-item">
+            <div class="title">title1</div>
+            <div class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt explicabo sunt amet, dignissimos aspernatur enim voluptatum quis ratione inventore neque porro dolor deleniti perspiciatis qui reiciendis, quisquam cupiditate esse molestiae!</div>
+        </div>
+        <div class="acc-item">
+            <div class="title">title2</div>
+            <div class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam labore, quo, ea repudiandae voluptate illo accusamus fuga quae aperiam at veritatis. Sint beatae porro minus magni eaque, id sunt dignissimos.</div>
+        </div>
+        <div class="acc-item">
+            <div class="title">title3</div>
+            <div class="content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut repudiandae minima, ut voluptatem ex cumque? Cupiditate labore facilis minima. Libero illum atque nostrum cupiditate voluptatum! Voluptatum placeat quaerat reiciendis. Nesciunt.</div>
+        </div>
+        <div class="acc-item">
+            <div class="title">title4</div>
+            <div class="content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos debitis pariatur natus nihil doloribus autem modi fugiat, recusandae molestias amet repudiandae necessitatibus cumque dicta! Magnam rem quis unde quaerat eveniet!</div>
+        </div>
+    </div>
+    <script src="test.js"></script>
+    <script>
+        var acc = new Accordion(".acc-menu");
+        acc.init();
+    </script>
+</body>
+</html>
