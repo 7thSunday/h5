@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        var xhr = new XMLHttpRequest();
+        var url = "http://api.money.126.net/data/feed/0000001,1399001?callback=refreshPrice";
+        xhr.open("get",url);
+        xhr.send(null);
+        xhr.addEventListener("readystatechange",function() {
+            if(xhr.readyState == 4) {
+                if(xhr.status == 200) {
+                    console.log(xhr.responseText);
+                }else {
+                    console.log("failed.");
+                    //报错,No 'Access-Control-Allow-Origin'
+                    // 表示进行了跨域请求
+                }
+            }
+        })
+    // 请求
+        // 1.请求的协议相同
+        // 2.请求的域名相同
+        // 3.请求的端口号相同
+    // 只要请求的地址不满足以上三个条件的其中一个，都是跨域请求
+
+    // 同源策略
+        // 同源指的是同协议，同域名，同端口
+        // 同源策略是浏览器最核心，最基本的安全策略
+    </script> -->
+     
+    <!-- JSONP解决跨域请求问题 -->
+        <!-- jsonP不是万能的，能不能跨域决定权在后台手中 -->
+    <script>
+        function refreshPrice(res) {
+            console.log(res);
+        }
+        var spt = document.createElement("script");
+        spt.src = "http://api.money.126.net/data/feed/0000001,1399001?callback=refreshPrice";
+        document.body.appendChild(spt);
+
+        // 封装jsonp
+        // function jsonP(url) {
+        //     var spt = document.createElement("script");
+        //     spt.src = url;
+        //     document.body.appendChild(spt);
+        // }
+        // callback();
+    </script>
+    <!-- <script src="http://api.money.126.net/data/feed/0000001,1399001?callback=refreshPrice"></script> -->
+</body>
+</html>

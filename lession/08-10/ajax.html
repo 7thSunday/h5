@@ -16,8 +16,12 @@
         // 2.设置请求方式和地址
         // 3.发送请求
         // 4.监听请求过程，并获取请求结果
+    // 缺点
+        // 干掉了浏览器的back按钮
+        // 安全问题，数据容易泄露
         var xhr = new XMLHttpRequest();//readyState = 1
         xhr.open("GET","data.json");//readyState = 2
+        // open接收第三个参数，用来设置异步或同步，默认true异步
         xhr.send(null);//readyState = 3
         xhr.addEventListener("readystatechange",function(){
             // console.log(xhr.status);//状态码
