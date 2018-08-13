@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="loader"></div>
+    <script src="preloadjs.min.js"></script>
+    <script src="my_ajax.js"></script>
+    <script>
+        var loader = document.querySelector(".loader");
+        // var xhr = new XMLHttpRequest();
+        // xhr.open("get","img.json");
+        // xhr.send();
+        // xhr.addEventListener("readystatechange",function() {
+        //     if(this.readyState == 4) {
+        //         if(this.status == 200) {
+        //             var res = JSON.parse(this.responseText);
+        //             // console.log(res);
+        //             var loading = new createjs.LoadQueue();
+        //             loading.loadManifest(res);
+        //             loading.on("progress",function(event) {
+        //                 // console.log(event.progress);
+        //                 var current = Math.floor(event.progress*100);
+        //                 loader.innerHTML = current + "%";
+        //             });
+        //         }else {
+        //             console.log("request failed.");
+        //         }
+        //     }
+        // });
+        var url = "img.json";
+        my_ajax(url,"get",function(res){
+            var loading = new createjs.LoadQueue();
+            loading.loadManifest(res);
+            loading.on("progress",function(event) {
+                // console.log(event.progress);
+                var current = Math.floor(event.progress*100);
+                loader.innerHTML = current + "%";
+            });
+            loading.on("complete",function() {
+                console.log("load completed!");
+            });
+            loading.on("error",function() {
+                console.log("load error!");
+            });
+        });
+    </script>
+</body>
+</html>
