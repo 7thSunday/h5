@@ -47,13 +47,14 @@ function Game(frame,panel,start) {
         var speed = 1;
         var step = this.deviceWidth/3;
         var distance = step;
+        // 加速吧!
         this.levelup = setInterval(function() {
             speed = speed*0.8;
-            console.log("speed up!",speed);
+            console.log("speed up!");
         },10000);
+        // 动起来!
         this.gamePanel.style = "transition: all " + speed*0.8*1000 + "ms linear 0s";
         this.gamePanel.style.transform = "translateY(" + distance + "px)";
-
         this.gamePanel.addEventListener("transitionend",function() {
             if(that.running) {
                 var newLine = document.createElement("tr");
@@ -73,8 +74,19 @@ function Game(frame,panel,start) {
                 distance += step;
                 this.style.transform = "translateY(" + distance + "px)";
                 for(var i=0;i<4;i++) {
-                    if(this.children[that.index].children[i].classList.contains("target")) {
-                        that.gameOver();
+                    var item = this.children[that.index].children[i];
+                    if(item.classList.contains("target")) {
+                        this.style = "transition: all " + 200 + "ms linear 0s";
+                        this.style.transform = "translateY(" + (distance-step*2) + "px)";
+                        var timer = setInterval(function(){
+                            item.classList.toggle("miss");
+                        },300);
+                        that.running = false;
+                        setTimeout(function(){
+                            clearInterval(timer);
+                            that.gameOver();
+                        },1500);
+                        break;
                     }
                 }
                 that.index ++;
@@ -96,7 +108,14 @@ function Game(frame,panel,start) {
                     that.score ++;
                     showScore.innerHTML = "SCROE: " + that.score;
                 } else {
-                    that.gameOver();
+                    var timer = setInterval(function(){
+                        e.target.classList.toggle("miss");
+                    },300);
+                    that.running = false;
+                    setTimeout(function(){
+                        clearInterval(timer);
+                        that.gameOver();
+                    },1600);
                 }
             }
         });
