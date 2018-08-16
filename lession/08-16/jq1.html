@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="web">
+        <p>this is a p element.</p>
+        <ul>
+            <li>1</li>
+            <li>444422222</li>
+            <li>3</li>
+        </ul>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script>
+        $("p,li").css({
+            "color":"red",
+            "font-size":"20px",
+            "background":"skyblue"
+        });
+        $("p").animate({
+            "font-size":"35px"
+        },1000);
+        // :animated 获取正在进行jq动画的元素
+        $("p:animated").css("color","green");
+        // :eq(index) 选择集合中，索引值为index的元素
+        $("li:eq(4)").css("background","green");
+        // :even  /  :odd 选择集合中索引值为 偶数 / 奇数 的元素
+        $("li:odd").css("color","blue");
+        // :gt(index)  /  :lt(index) 选择集合中索引值 大于index / 小于index 的所有元素
+        $("li:gt(2)").css("background","violet");
+        // :contains(text) 筛选出集合中，文本包含text的元素
+        $("li:contains('2')").css("font-size","50px");
+
+        // .hide(duration,easing,callback)
+            // duration:动画持续时间
+            // easing:时间函数，只接受swing和linear
+            // callback:动画结束后的回调函数
+
+        // .animate(property,duration,easing,callback)
+    </script>
+</body>
+</html>
