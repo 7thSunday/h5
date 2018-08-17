@@ -6,28 +6,65 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
         .container {
-            height: 3000px;
-            background: linear-gradient(to top,blueviolet,skyblue);
+            height: 6000px;
+            background: linear-gradient(to top,blueviolet,blue,skyblue);
         }
         .back-to-top {
-            width: 106px;
-            height: 131px;
+            width: 148px;
+            height: 163px;
             overflow: hidden;
             position: fixed;
             right: 5%;
             bottom: 5%;
-            border: 1px solid #000;
+            cursor: pointer;
+            /* border: 1px solid #000; */
+            animation-name: rise;
+        }
+        .back-to-top:hover img {
+            left: -148px;
         }
         .back-to-top img {
             position: absolute;
-            top: -14%;
-            left: -160%;
+            top: -18px;
+            left: 0;
+        }
+        .rocket {
+            animation-name: fireUp;
+            animation-duration: 800ms;
+            animation-timing-function: steps(1);
+        }
+        @keyframes fireUp {
+            0% {left: -148px;}
+            15% {left: -296px;}
+            30% {left: -444px;}
+            45% {left: -592px;}
+            100% {left: -740px;}
         }
     </style>
 </head>
 <body>
     <div class="container"></div>
     <div class="back-to-top"><img src="rocket.png" alt="top"></div>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script>
+        var btn = $(".back-to-top");
+        btn.click(function(){
+            if($('body,html').scrollTop()>0) {
+                $(this).children().addClass("rocket");
+                $(this).children()[0].addEventListener("animationend",function(){
+                    $(this).removeClass("rocket");
+                });
+                $(this).animate({"bottom":"100%"},800,function(){
+                    $(this).css("bottom","5%");
+                });
+                $('body,html').animate({scrollTop:0},800);
+            }
+        });
+    </script>
 </body>
 </html>
