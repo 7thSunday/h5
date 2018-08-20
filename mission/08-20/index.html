@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .controlor {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="controlor">
+        <table>
+            <tr>
+                <td>ID</td>
+                <td><input class="Id" type="text"></td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td><input class="name" type="text"></td>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td><input class="age" type="number"></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td><input class="gender" type="text"></td>
+            </tr>
+        </table>
+        <div class="btn-group">
+            <button class="add">ADD</button>
+            <button class="remove">REMOVE SELECTED</button>
+            <button class="sort">SORT</button>
+        </div>
+    </div>
+    <table class="table" cellspacing="2" cellpadding="5" border="1">
+        <tr class="thead"><th>ID</th><th><input type="checkbox"></th><th>Name</th><th>Age</th><th>Gender</th><th>Control</th></tr>
+        
+    </table>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script>
+        var mytable = $(".table");
+        //insert
+        var addBtn = $(".btn-group .add");
+        addBtn.click(function(){
+            var idContent = $(".Id").val();
+            var nameContent = $(".name").val();
+            var ageContent = $(".age").val();
+            var genderContent = $(".gender").val();
+            var newline = `<tr>
+                                <td>${idContent}</td>
+                                <td><input type='checkbox'></td>
+                                <td>${nameContent}</td>
+                                <td>${ageContent}</td>
+                                <td>${genderContent}</td>
+                                <td><button>DELETE</button></td>
+                            </tr>`;
+            mytable.append(newline);
+        });
+        //delete
+        mytable.on("click","button",function(){
+            $(this).parent().parent().remove();
+        });
+        //select and delete
+        var removeSelected = $(".btn-group .remove");
+        removeSelected.click(function(){
+            var checkList = $(".table tr").not(".thead");
+            for(var i=0;i<checkList.length;i++) {
+                // console.log(checkList.eq(i).find("input").prop('checked'));
+                if(checkList.eq(i).find("input").prop('checked') == true) {
+                    checkList.eq(i).remove();
+                }
+                $(".table .thead input").prop("checked",false);
+            }
+        });
+        var selectAll = $(".table .thead input");
+        selectAll.on("change",function(){
+            $(".table tr").not(".thead").find("input").prop("checked",$(this).prop("checked"));
+        });
+        //sort
+        var sortDir = true;
+        var sortBtn = $(".btn-group .sort");
+        sortBtn.click(function(){
+            var dataList = $(".table tr").not(".thead");
+            var dataArr = [];
+            for(var i=0;i<dataList.length;i++) {
+                dataArr.push(dataList.eq(i)[0]);
+            }
+            if(sortDir) {
+                dataArr.sort(function(a,b){
+                    return $(a).find("td:nth-child(4)").html() - $(b).find("td:nth-child(4)").html();
+                });
+            }else {
+                dataArr.sort(function(a,b){
+                    return $(b).find("td:nth-child(4)").html() - $(a).find("td:nth-child(4)").html();
+                });
+            }
+            sortDir = !sortDir;
+            $(".table tr").not(".thead").remove();
+            dataArr.forEach(function(item){
+                $(item).appendTo(mytable);
+            });
+        });
+    </script>
+</body>
+</html>
