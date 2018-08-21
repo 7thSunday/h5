@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img {
+            width: 640px;
+            height: 360px;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534834259938&di=4403ebfc94c43c18feb09274a96adc66&imgtype=0&src=http%3A%2F%2Fuploads.5068.com%2Fallimg%2F160725%2F65-160H5143K4.jpg" alt="image">
+    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534834259938&di=4403ebfc94c43c18feb09274a96adc66&imgtype=0&src=http%3A%2F%2Fuploads.5068.com%2Fallimg%2F160725%2F65-160H5143K4.jpg" alt="image">
+    <img class="lazyload" data-src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534834259938&di=4403ebfc94c43c18feb09274a96adc66&imgtype=0&src=http%3A%2F%2Fuploads.5068.com%2Fallimg%2F160725%2F65-160H5143K4.jpg" alt="">
+    <img class="lazyload" data-src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534834259938&di=4403ebfc94c43c18feb09274a96adc66&imgtype=0&src=http%3A%2F%2Fuploads.5068.com%2Fallimg%2F160725%2F65-160H5143K4.jpg" alt="">
+    <img class="lazyload" data-src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534834259938&di=4403ebfc94c43c18feb09274a96adc66&imgtype=0&src=http%3A%2F%2Fuploads.5068.com%2Fallimg%2F160725%2F65-160H5143K4.jpg" alt="">
+    <img class="lazyload" data-src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534834259938&di=4403ebfc94c43c18feb09274a96adc66&imgtype=0&src=http%3A%2F%2Fuploads.5068.com%2Fallimg%2F160725%2F65-160H5143K4.jpg" alt="">
+    <img class="lazyload" data-src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534834259938&di=4403ebfc94c43c18feb09274a96adc66&imgtype=0&src=http%3A%2F%2Fuploads.5068.com%2Fallimg%2F160725%2F65-160H5143K4.jpg" alt="">
+    <img class="lazyload" data-src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534834259938&di=4403ebfc94c43c18feb09274a96adc66&imgtype=0&src=http%3A%2F%2Fuploads.5068.com%2Fallimg%2F160725%2F65-160H5143K4.jpg" alt="">
+    <img class="lazyload" data-src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534834259938&di=4403ebfc94c43c18feb09274a96adc66&imgtype=0&src=http%3A%2F%2Fuploads.5068.com%2Fallimg%2F160725%2F65-160H5143K4.jpg" alt="">
+    <img class="lazyload" data-src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534834259938&di=4403ebfc94c43c18feb09274a96adc66&imgtype=0&src=http%3A%2F%2Fuploads.5068.com%2Fallimg%2F160725%2F65-160H5143K4.jpg" alt="">
+    <img class="lazyload" data-src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534834259938&di=4403ebfc94c43c18feb09274a96adc66&imgtype=0&src=http%3A%2F%2Fuploads.5068.com%2Fallimg%2F160725%2F65-160H5143K4.jpg" alt="">
+    <img class="lazyload" data-src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534834259938&di=4403ebfc94c43c18feb09274a96adc66&imgtype=0&src=http%3A%2F%2Fuploads.5068.com%2Fallimg%2F160725%2F65-160H5143K4.jpg" alt="">
+    <img class="lazyload" data-src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534834259938&di=4403ebfc94c43c18feb09274a96adc66&imgtype=0&src=http%3A%2F%2Fuploads.5068.com%2Fallimg%2F160725%2F65-160H5143K4.jpg" alt="">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script>
+        // 浏览器可视窗口高度
+        var winHeight = $(window).innerHeight();
+        // 文档滚到浏览器外的高度
+        $(document).scroll(function(){
+            var scrTop = $(this).scrollTop();
+            lazyLoad(scrTop);
+        });
+        // 图片相对文档顶部的高度
+        function lazyLoad(scrTop) {
+            $(".lazyload").each(function(index,item){
+                var imgTop = $(this).offset().top;
+
+                if(imgTop-scrTop-winHeight<0) {
+                    var src = $(this).data("src");
+                    $(this).prop("src",src);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
