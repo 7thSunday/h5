@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.frame {
+    position: relative;
+}
+.frame .box {
+    position: absolute;
+    top: 50%;
+}
+.frame .box .cover {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
