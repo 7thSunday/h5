@@ -9,7 +9,6 @@
             data:"",
             dataType:"json",
             success:function(res){
-                console.log(111)
                 var loading = new createjs.LoadQueue();
                 loading.loadManifest(res);
                 loading.on("progress",function(event) {
