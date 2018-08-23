@@ -1,0 +1,12 @@
+[
+    {
+        "id":"1",
+        "src":"img/cover.png"
+    },{
+        "id":"2",
+        "src":"img/target.png"
+    },{
+        "id":"3",
+        "src":"img/gameBg.jpg"
+    }
+]

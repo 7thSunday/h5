@@ -8,14 +8,34 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+    <div class="loading">
+        <div class="load-bar">
+            <div class="load-block"></div>
+        </div>
+        <div class="load-status"></div>
+        <div class="start">CLICK ME TO START !!!</div>
+    </div>
     <div class="frame">
-        <div class="box"><img src="img/cover.png" alt="cover" class="cover"></div>
-        <div class="box"><img src="img/cover.png" alt="cover" class="cover"></div>
-        <div class="box"><img src="img/cover.png" alt="cover" class="cover"></div>
+        <div class="status">
+            <div class="chance"></div>
+            <div class="score"></div>
+        </div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="hint">
+            <div class="next">NEXT STAGE !</div>
+            <div class="reset">Play Again !</div>
+            <div class="guess">Guess where am I .</div>
+        </div>
+        <div class="alert">
+            <div class="correct">Correct !</div>
+            <div class="wrong">Wrong ! HaHa !</div>
+        </div>
         <div class="top-cover"></div>
     </div>
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
-    <script src="js/jquery.transit.js"></script>
+    <script src="js/preloadjs.min.js"></script>
     <script src="js/game.js"></script>
     <script src="js/index.js"></script>
 </body>

@@ -1,19 +1,40 @@
+(function(){
+    $(".loading").css({
+        "width":$(window).innerWidth(),
+        "height":$(window).innerHeight()
+    });
+    var myUrl = "js/img.json";
+        $.ajax({
+            url:myUrl,
+            data:"",
+            dataType:"json",
+            success:function(res){
+                console.log(111)
+                var loading = new createjs.LoadQueue();
+                loading.loadManifest(res);
+                loading.on("progress",function(event) {
+                    // console.log(event.progress);
+                    var current = Math.floor(event.progress*100);
+                    $(".load-status").text(current+"%");
+                    $(".load-block").css("width",current+"%");
+                });
+                loading.on("complete",function() {
+                    console.log("load completed!");
+                    $(".start").fadeIn();
+                    $(".frame .box").append(`<img src="img/cover.png" alt="cover" class="cover">`);
+                    $(".frame .box").eq(1).prepend(`<img class="target" src="img/target.png" alt="target">`);
+                    //click event of start button
+                    $(".start").on("click",function(){
+                        $(".loading").css("display","none");
+                        var game = new Game(".frame");
+                        game.init();
+                        game.start();
+                    });
+                });
+                loading.on("error",function() {
+                    console.log("load error!");
+                });
+            }
+        });
+}())
 
-var game = new Game(".frame");
-game.init();
-$(".top-cover").css({
-    "width":"1000px",
-    "height":"1000px",
-    "position":"absolute",
-    "z-index":"10",
-    "background":"rgba(0,0,0,0.5)"
-});
-var i=0;
-var timer = setInterval(function(){
-    i++;
-    game.exchange(1000);
-    if(i==10) {
-        clearInterval(timer);
-        $(".top-cover").css("display","none");
-    }
-},1000)
