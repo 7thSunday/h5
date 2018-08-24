@@ -45,7 +45,7 @@ class Game {
                 clearTimeout(showTarget);
             },300);
             if($(e.target).parent().find(".target").length==0) {
-                //correct
+                //wrong
                 that.chance --;
                 var txt = that.frame.find(".chance").text();
                 txt = txt.slice(1);
@@ -57,7 +57,7 @@ class Game {
                 }
                 that.frame.find(".wrong").fadeIn();
             }else {
-                //wrong
+                //correct
                 that.score += that.stageCount;
                 that.frame.find(".score").text("SCORE : " + that.score);
                 that.frame.find(".correct").fadeIn();
