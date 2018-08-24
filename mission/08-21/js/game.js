@@ -36,12 +36,14 @@ class Game {
             $(this).siblings(".top-cover").css("display","block");
             $(this).find(".cover").animate({
                 "top":"-100%"
-            },function(){
+            });
+            var showTarget = setTimeout(function(){
                 that.frame.find(".target").parent().find(".cover").animate({
                     "top":"-100%"
                 });
                 that.frame.find(".next").fadeIn();
-            });
+                clearTimeout(showTarget);
+            },300);
             if($(e.target).parent().find(".target").length==0) {
                 //correct
                 that.chance --;
@@ -84,7 +86,7 @@ class Game {
         this.stageCount ++;
         if(this.stageCount<8) {
             this.exTime = Math.floor(this.exTime*0.8);
-        }else {
+        }else if(this.stageCount<15){
             this.exTime = this.exTime - 15;
         }
         this.runCurrentStage();
@@ -115,6 +117,7 @@ class Game {
             var i=0;
             var exTimer = setInterval(function(){
                 i++;
+                // console.log("ex");
                 that.exchange();
                 if(i==10) {
                     clearInterval(exTimer);
@@ -195,6 +198,7 @@ class Box {
     setPosition(newPosition,time) {
         let prePosition = this.position;
         this.position = newPosition;
+        // console.log(prePosition,newPosition);
         // 0 => 1
         if(prePosition==0&&newPosition==1) {
             $(this.el).css("z-index","1");
