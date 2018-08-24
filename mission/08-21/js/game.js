@@ -138,14 +138,14 @@ class Game {
             b = Math.floor(Math.random()*3);
         }
         //exchange position a with position b
-        for(let i=0;i<3;i++) {
-            if(Math.abs(a-b)==2) {
-                for(let j=0;j<3;j++) {
-                    if(this.boxCtrlr[i].position==1) {
-                        $(this.boxCtrlr[i].el).css("z-index","2");
-                    }
+        if(Math.abs(a-b)==2) {
+            for(let j=0;j<3;j++) {
+                if(this.boxCtrlr[j].position==1) {
+                    $(this.boxCtrlr[j].el).css("z-index","2");
                 }
             }
+        }
+        for(let i=0;i<3;i++) {
             if(this.boxCtrlr[i].position == a) {
                 this.boxCtrlr[i].setPosition(b,this.exTime);
             }else if(this.boxCtrlr[i].position == b) {
