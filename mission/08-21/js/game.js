@@ -33,7 +33,7 @@ class Game {
         //box click event
         this.frame.on("click",".box",function(e){
             that.frame.find(".guess").fadeOut();
-            $(this).siblings(".top-cover").css("display","block");
+            that.frame.find(".top-cover").css("display","block");
             $(this).find(".cover").animate({
                 "top":"-100%"
             });
@@ -122,7 +122,7 @@ class Game {
                 if(i==10) {
                     clearInterval(exTimer);
                     clearTimeout(go);
-                    $(".top-cover").css("display","none");
+                    that.frame.find(".top-cover").css("display","none");
                     that.frame.find(".guess").fadeIn();
                 }
             },that.exTime+100);
