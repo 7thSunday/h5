@@ -1,0 +1,1 @@
+!function(){console.log("glup test");for(var o=0,l=0;l<5;l++)o+=l;console.log(o)}();
