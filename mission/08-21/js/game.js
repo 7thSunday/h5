@@ -88,6 +88,8 @@ class Game {
             this.exTime = Math.floor(this.exTime*0.8);
         }else if(this.stageCount<15){
             this.exTime = this.exTime - 15;
+        }else {
+            this.exTime -= 2;
         }
         this.runCurrentStage();
         // console.log("stage",this.stageCount);
@@ -148,8 +150,10 @@ class Game {
         for(let i=0;i<3;i++) {
             if(this.boxCtrlr[i].position == a) {
                 this.boxCtrlr[i].setPosition(b,this.exTime);
+                continue;
             }else if(this.boxCtrlr[i].position == b) {
                 this.boxCtrlr[i].setPosition(a,this.exTime);
+                continue;
             }
         }
     }

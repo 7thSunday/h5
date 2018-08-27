@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+        {{myContent}}
+        <p v-html="myContent+imgTitle" v-on:click="changeP('123',$event)"></p>
+        <img v-bind:src="imgPath" v-bind:title="imgTitle" alt="">
+        <h1 v-if="isShow">this is a h1 element.</h1>
+        <h2 v-show="isShow">this is a h2 element.</h2>
+        <ul>
+            <!-- <li v-for="(item,index) in mylist">{{index}} --- {{item}}</li> -->
+            <li v-for="(item,index) in obj">{{index}} --- {{item}}</li>
+        </ul>
+        <input type="text" @keydown.enter="ent">
+    </div>
+    <script src="js/vue.js"></script>
+    <script>
+    // 数据驱动视图，尽量减少DOM操作
+        // 使用：
+            // 通过new关键词实例化一个Vue对象
+            // {{}} 插值表达式，不识别标签
+            // v-html 可以将数据中的标签识别出来
+            // v-bind 用来绑定元素的属性，可简写为:
+                // v-bind:src => :src
+            // v-on 用来注册事件监听，可简写为@
+                // v-on:click => @click
+                // 事件修饰符
+                    // .stop 阻止事件冒泡 v-on:click.stop
+                    // .prevent 阻止默认事件
+                    // .capture 将传递过程改为事件捕获
+                    // .once 只能触发一次
+                    // .passive 滚动事件的默认行为 (即滚动行为) 将会立即触发，而不会等待 `onScroll` 完成 能够提高移动端性能
+            // v-if 用来判断结构是否渲染到页面上，控制html的节点
+            // v-show 用来判断结构是否渲染到页面上，控制css的display属性
+            // v-for 遍历数组或对象
+                // v-for="(item,index) in mylist" 遍历数组mylist，并把数组里的每一个元素赋值给item
+
+            // 按键修饰符 @keyup @keydown
+                // .enter 回车
+                // .tab 
+                // .esc
+            // exact 精确触发
+        var vm = new Vue({
+            el:".app",// el代表vue对象控制的DOM对象范围，值为css选择器或DOM对象
+            data:{// data用来储存数据
+                myContent:"<b>hello world!</b>",
+                imgPath:"../sample.jpg",
+                imgTitle:"Ayayayayaya...",
+                isShow:false,
+                mylist:[
+                    "123456",
+                    "6789"
+                ],
+                obj:{
+                    "name":"Ted",
+                    "gender":"male",
+                    "age":"22"
+                }
+            },
+            methods:{// methods用来定义方法
+                changeP:function(index,e){
+                    this.myContent = "goodbye";
+                    this.isShow = true;
+                    console.log(this);//在VUE中，this始终指向vue实例对象
+                    console.log(index);
+                    console.log(e.target);
+                },
+                ent:function(){
+                    console.log("ENTER");
+                }
+            }
+        });
+        // setTimeout(function(){
+        //     vm.myContent = "test";
+        // },2000);
+    </script>
+</body>
+</html>

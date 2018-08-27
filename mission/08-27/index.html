@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .card-block {
+            width: 500px;
+            margin: 0 auto;
+        }
+        .card-block .card-title {
+            display: flex;
+            justify-content: space-around;
+            font-size: 18px;
+            width: 100%;
+        }
+        .card-block .card-title li {
+            width: 100%;
+            text-align: center;
+            box-sizing: border-box;
+            height: 50px;
+            line-height: 50px;
+            border: 1px solid transparent;
+            border-bottom: 1px solid #9c27b0;
+            cursor: default;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+        }
+        .card-block .card-content {
+            overflow: hidden;
+            width: 100%;
+            height: 250px;
+            border: 1px solid #9c27b0;
+            border-top: 0;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            box-sizing: border-box;
+        }
+        .card-block .card-content li {
+            display: none;
+        }
+        .card-block .card-content p {
+            font-size: 20px;
+            line-height: 1.4;
+            text-indent: 2em;
+            padding: 0 15px;
+        }
+
+        /**********************/
+        .card-block .card-content li.show-content {
+            display: block;
+        }
+        .card-block .card-title .selected {
+            border: 1px solid #9c27b0;
+            border-bottom: 0;
+            color: #9c27b0;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-block">
+        <ul class="card-title">
+            <li class="title-item" :class="{'selected':show1}" @click="isClick1">Card 1</li>
+            <li class="title-item" :class="{'selected':show2}" @click="isClick2">Card 2</li>
+            <li class="title-item" :class="{'selected':show3}" @click="isClick3">Card 3</li>
+        </ul>
+        <ul class="card-content">
+            <li :class="{'show-content':show1}">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus unde, consequuntur omnis dolore similique ipsa quod! Aliquid incidunt ad iste deserunt, vitae quidem officiis, nobis, excepturi eveniet voluptatibus dignissimos ex.</p>
+            </li>
+            <li :class="{'show-content':show2}">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto modi perferendis optio adipisci unde nobis quod reprehenderit necessitatibus eaque explicabo magnam sed perspiciatis ullam consectetur odio officiis dolores, ipsum deleniti.</p>
+            </li>
+            <li :class="{'show-content':show3}">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium error nam culpa voluptas hic quos blanditiis corrupti omnis doloribus, dolorum porro repellat, temporibus nobis ipsum aliquid deleniti odit quidem odio.</p>
+            </li>
+        </ul>
+    </div>
+    <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+    <script>
+        var block = new Vue({
+            el: ".card-block",
+            data: {
+                show1: true,
+                show2: false,
+                show3: false
+            },
+            methods: {
+                isClick1: function(){
+                    this.reset();
+                    this.show1 = true;
+                },
+                isClick2: function(){
+                    this.reset();
+                    this.show2 = true;
+                },
+                isClick3: function(){
+                    this.reset();
+                    this.show3 = true;
+                },
+                reset: function(){
+                    this.show1 = false;
+                    this.show2 = false;
+                    this.show3 = false;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .test {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+        .test1{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <div :class="{test:isClick,test1:isPink}"></div>
+        <div @click="changeOr" :class="classObj">{{message}}</div>
+        <div>{{revOrder}}</div>
+        <button @click="changeClass">trigger</button>
+        <div :class="[one,two]" :style="styleObj">123</div>
+    </div>
+    <script src="js/vue.js"></script>
+    <script>
+        // 添加类名
+            // 对象语法 :class="{cName1,cName2...}"
+            // 数组语法：class="[cName1,cName2]"
+        var app = new Vue({
+            el: ".app",
+            data: {
+                isClick: true,
+                isPink:false,
+                message:"hello",
+                one:"one",
+                two:"two",
+                styleObj: {
+                    fontSize: "50px",
+                    color: "skyblue"
+                }
+            },
+            methods: {
+                changeClass:function(){
+                    this.isClick = !this.isClick;
+                    this.isPink = !this.isPink;
+                },
+                changeOr: function(){
+                    this.message = this.revOrder;
+                }
+            },
+            computed: {
+                revOrder: function(){
+                    return this.message.split("").reverse().join("");
+                },
+                classObj: function(){
+                    return "test";
+                }
+            }
+        });
+    </script>
+</body>
+</html>

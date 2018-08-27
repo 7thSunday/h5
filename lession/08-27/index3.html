@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="app">
+        <button v-if="isShow">submit</button>
+        <button v-else @click="conf">yes</button>
+        <ul>
+            <li :key="id"></li>
+        </ul>
+    </div>
+    <script src="js/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el:".app",
+            data: {
+                isShow:false
+            },
+            methods: {
+                conf: function(){
+                    this.isShow = true;
+                }
+            }
+        });
+        // key的作用：
+        //     更加高效地渲染虚拟DOM
+        //     vue在使用同标签名元素的过渡切换时，会用到key属性，vue可以根据key来区分这些元素
+
+        // 如果通过数组的下标值来改变数组内容的话，不会触发视图更新
+            // 会触发视图更新的有以下几种方法：
+                // splice()
+                // push()
+                // pop()
+                // shift()
+                // unshift()
+                // sort()
+                // reverse()
+    </script>
+</body>
+</html>
