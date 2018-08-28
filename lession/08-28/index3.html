@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue的生命周期</title>
+</head>
+<body>
+    <div class="app"></div>
+    <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el: ".app",
+            data: {
+                name: "Ted"
+            },
+            beforeCreate: function() {
+                // 对象实例化后会立刻执行该钩子函数
+                // 此时没有任何数据
+                console.log(this.$data,this.$el,this);
+            },
+            created: function() {
+                // 可以获取到数据，el模板还没渲染到页面
+                // 通常会在这个钩子函数中进行ajax请求
+                console.log(this.$data,this.$el);
+            },
+            beforeMount: function() {
+                // el模板已经渲染到页面
+                console.log(this.$el);
+            },
+            mounted: function() {
+                // 可以在这里写一些事件监听
+            },
+            beforeUpdate: function() {
+                // 数据更新前触发
+            },
+            updated: function() {
+                // 数据更新后触发
+            },
+            beforeDestroy: function() {
+                // vue实例销毁前触发
+            },
+            destroyed: function() {
+                // vue实例销毁后触发
+            }
+        });
+    </script>
+</body>
+</html>

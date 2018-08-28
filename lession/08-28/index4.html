@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>组件</title>
+</head>
+<body>
+    <div class="app">
+        <test></test>
+        <mytest></mytest>
+        <input type="text" v-model="inpVal">
+        <button @click="add">ADD</button>
+        <ul>
+            <test v-for="item in list" :content="item"></test>
+        </ul>
+        <newtest v-bind:content="data1">{{data1}}</newtest>
+        <testmul></testmul>
+        <test3 ref="child" @toparent="receive"></test3>
+        <p @click="changeData">{{data2}}</p>
+    </div>
+    <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+    <script>
+        // 全局组件
+        Vue.component("test",{
+            props: ["content"],
+            template: "<li>{{content}}</li>"
+        });
+    // 父组件向子组件传递数据
+        // 1
+        Vue.component("newtest",{
+            props: ["content"],
+            template: "<p>here's the children component:{{content}}</p>"
+        });
+        // 2
+        Vue.component("testmul",{
+            props: ["content"],
+            template: `<div>
+                            <h1>{{$root.data1}}</h1>
+                        </div>`
+        });
+    // 子组件向父组件传递数据
+        // 1 通过事件传递，还需要使用vue提供的$emit()方法
+        // 2 通过this.$refs获取，需要通过ref属性设置子组件的名称
+        Vue.component("test3",{
+            template: `<h1 @click="pass">{{childdata}}</h1>`,
+            data: function() {
+                return {
+                    childdata: "this data belongs to children component."
+                }
+            },
+            methods: {
+                pass: function() {
+                    // $emit("functionName",data) 
+                        // functionName: 方法名称
+                        // data：要传递的数据
+                    this.$emit("toparent",this.childdata);
+                }
+            }
+        })
+
+        // 局部组件，需要在vue实例中进行注册，data是一个函数，返回一个对象
+        var test2 = {
+            template: `<p>789{{val}}
+                            <span>{{$root.data1}}</span>
+                        </p>`,
+            data: function() {
+                return {
+                    val:"1223"
+                }
+            }
+        }
+
+        var vm = new Vue({
+            el: ".app",
+            components: {// 注册局部组件
+                mytest: test2
+            },
+            data: {
+                inpVal: "",
+                list: [],
+                data1: "this data belongs to parent component.",
+                data2: "origin data"
+            },
+            methods: {
+                add: function() {
+                    this.list.push(this.inpVal);
+                },
+                receive: function(data) {
+                    console.log(data);
+                },
+                changeData: function() {
+                    this.data2 = this.$refs.child.childdata;
+                    console.log(this.data2);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

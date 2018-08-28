@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表单元素/自定义指令</title>
+</head>
+<body>
+    <div class="app">
+        <!-- v-model 双向绑定 -->
+        <input type="text" v-model="inpVal">
+        <!-- <p>{{inpVal}}</p> -->
+        <button @click="add">ADD</button>
+        <ul>
+            <li v-for="item in arr">{{item}}</li>
+        </ul>
+        <!-- textarea -->
+        <textarea v-model="textVal" name="" id="" cols="30" rows="10"></textarea>
+        <p>{{textVal}}</p>
+        <!-- checkbox -->
+        <input value="coding" type="checkbox" id="coding" name="hobby" v-model="checkeds"><label for="coding">coding</label>
+        <input value="swimming" type="checkbox" id="swimming" name="hobby" v-model="checkeds"><label for="swimming">swimming</label>
+        <input value="hiking" type="checkbox" id="hiking" name="hobby" v-model="checkeds"><label for="hiking">hiking</label>
+        <p>{{checkeds}}</p>
+        <!-- radio -->
+        <input type="radio" value="male" v-model="radioVal" id="male" name="sex"><label for="male">male</label>
+        <input type="radio" value="female" v-model="radioVal" id="female" name="sex"><label for="female">female</label>
+        <p>{{radioVal}}</p>
+        <!-- select -->
+        <select name="city" id="city" v-model="selVal" >
+            <option value="" disabled>Select</option>
+            <option value="Shanghai">Shanghai</option>
+            <option value="Guangzhou">Guangzhou</option>
+            <option value="Hongkong">Hongkong</option>
+        </select>
+        <p>{{selVal}}</p>
+        <p v-fontcolor="'skyblue'">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi libero quidem iure tempora adipisci voluptatum omnis laboriosam atque veniam, numquam blanditiis eius dolorem cumque dolor fugiat maiores necessitatibus neque recusandae?</p>
+    </div>
+    <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+    <script>
+        // 自定义指令
+        Vue.directive("fontcolor",function(el,binding) {
+            el.style.color = binding.value;
+        });
+
+
+        var vm = new Vue({
+            el: ".app",
+            data: {
+                inpVal: "123",
+                arr: [],
+                textVal: "",
+                checkeds: ["coding"],
+                radioVal: "male",
+                selVal: ""
+            },
+            methods: {
+                add: function() {
+                    this.arr.push(this.inpVal);
+                    console.log(this.$data);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
