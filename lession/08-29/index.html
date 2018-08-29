@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>组件之间的数据传递</title>
+</head>
+<body>
+    <div class="app">
+        <test1></test1>
+        <test2></test2>
+    </div>
+    <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+    <script>
+        // 组件之间的数据传递
+            // 实例化一个vue对象
+            // 在组件中通过实例化的对象调用$.emit方法自定义一个事件
+            // 在另一个组件中通过实例化的对象调用$.on方法接收数据
+                    // $.on(自定义事件,回调函数)
+        var vm = new Vue();
+        Vue.component("test1",{
+            template:"<p @click='toother'>{{content}}</p>",
+            data: function() {
+                return {
+                    content: "component 1"
+                }
+            },
+            methods: {
+                toother: function() {
+                    vm.$emit("receive",this.content);
+                }
+            },
+            created: function() {
+                var that = this;
+                vm.$on("receivefromcomp2",function(res) {
+                    // console.log(res);
+                    // this.content = res;//这里的this指向的是vm这个对象
+                    that.content = res;
+                });
+            }
+        });
+        Vue.component("test2",{
+            template:"<h2 @click='tocomp1'>{{message}}</h2>",
+            data: function() {
+                return {
+                    message: "component 2"
+                }
+            },
+            methods: {
+                tocomp1: function() {
+                    vm.$emit("receivefromcomp2",this.message);
+                }
+            },
+            created: function() {
+                vm.$on("receive",function(res){
+                    console.log(res);
+                });
+            }
+        });
+        new Vue({
+            el: ".app"
+
+        });
+    </script>
+</body>
+</html>

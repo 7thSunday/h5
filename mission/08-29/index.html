@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="app">
+        <div class="inp-box">
+            <div class="name"><label for="">Name</label><input type="text" v-model="name"></div>
+            <div class="age"><label for="">Age</label><input type="text" v-model="age"></div>
+            <div class="gender"><label for="">Gender</label><input type="text" v-model="gender"></div>
+            <div class="btn-group">
+                <button>SORT</button>
+                <button @click="deleteselected">DELETE SELECTED</button>
+                <button @click="add">ADD</button>
+            </div>
+        </div>
+        <vtable ref="child" @vselect="selectall">
+            <vtr @vdelete="deleteone" v-for="(obj,index) in dataList" :obj="obj"></vtr>
+        </vtable>
+    </div>
+    <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+    <script>
+        Vue.component("vtable",{
+            template: `<table class="show">
+                            <tr><th>id</th><th><input type="checkbox" v-model="isselectall" @change="doselectall" /></th><th>Name</th><th>Age</th><th>Gender</th><th>Op</th></tr>
+                            <slot></slot>
+                        </table>`,
+            data: function() {
+                return {
+                    isselectall: false
+                }
+            },
+            methods: {
+                doselectall: function() {
+                    this.$emit("vselect",this.isselectall);
+                }
+            }
+        });
+        Vue.component("vtr",{
+            props: ["obj"],
+            template: `<tr>
+                        <td>{{obj.id}}</td>
+                        <td><input type="checkbox" v-model="obj.ischeck" @change="$emit('change',$event.target.checked)" /></td>
+                        <td>{{obj.name}}</td>
+                        <td>{{obj.age}}</td>
+                        <td>{{obj.gender}}</td>
+                        <td><button @click="dodel(obj.id)">DELETE</button></td>
+                    </tr>`,
+            data: function (){
+                return {
+                    // ischeck: false
+                }
+            },
+            methods: {
+                dodel: function(Id) {
+                    this.$emit("vdelete",Id);
+                }
+            }
+        });
+        var vm = new Vue({
+            el: ".app",
+            data: {
+                dataList: [],
+                id: 0,
+                name: "",
+                age: "",
+                gender: ""
+            },
+            methods: {
+                add: function() {
+                    var newLine = {};
+                    newLine.id = this.id;
+                    newLine.ischeck = false;
+                    newLine.name = this.name;
+                    newLine.age = this.age;
+                    newLine.gender = this.gender;
+                    this.dataList.push(newLine);
+                    this.id ++;
+                },
+                deleteone: function(Id) {
+                    for(let i=0;i<this.dataList.length;i++) {
+                        if(this.dataList[i].id == Id) {
+                            this.dataList.splice(i,1);
+                            break;
+                        }
+                    }
+                },
+                deleteselected: function() {
+                    var temp = this.dataList.filter(function(item){
+                        return item.ischeck == false;
+                    });
+                    this.dataList = temp;
+                },
+                selectall: function(val) {
+                    for(let i=0;i<this.dataList.length;i++) {
+                        this.dataList[i].ischeck = val;
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

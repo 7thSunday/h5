@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>在组件中使用v-model</title>
+</head>
+<body>
+    <div class="app">
+        <inp v-model="msg"></inp>
+        <!-- <inp v-model="msg" @inp="getdata"></inp> -->
+        <p>{{msg}}</p>
+    </div>
+    <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+    <script>
+        // 在组件中实现表单的双向绑定
+            // 将父组件中的数据传递给子组件
+            // 监听子组件的input事件，将子组件中的数据传递给父组件
+            // 父组件中接收子组件传递过来的参数，然后将数据赋值给绑定的变量
+        Vue.component("inp",{
+            props: ["value"],//value为必须
+            template:`<input :value='value' @input='$emit("input",$event.target.value)' />`
+        });
+        var vm = new Vue({
+            el: ".app",
+            data: {
+                msg: "123"
+            }
+        });
+
+        
+        // Vue.component("inp",{
+        //     props: ["value"],//value为必须
+        //     template:`<input :value='value' @input='$emit("inp",$event.target.value)' />`
+        // });
+        // var vm = new Vue({
+        //     el: ".app",
+        //     data: {
+        //         msg: "123"
+        //     },
+        //     methods: {
+        //         getdata: function(mydata) {
+        //             this.msg = mydata;
+        //         }
+        //     }
+        // });
+    </script>
+</body>
+</html>

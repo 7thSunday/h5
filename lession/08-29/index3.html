@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>动态组件</title>
+</head>
+<body>
+    <div class="app">
+        <test></test>
+        <button v-for="(item,index) in list" @click="changeComp(index)">{{item}}</button>
+        <component :is="comp[index]"></component>
+    </div>
+    <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+    <script>
+        Vue.component("test",{
+            template: "<p>{{msg}}</p>",
+            data: function() {
+                return {
+                    msg: "hello world"
+                }
+            }
+        });
+        Vue.component("test1",{
+            template: "<p>{{msg}}</p>",
+            data: function() {
+                return {
+                    msg: "hello Ted"
+                }
+            }
+        });
+        Vue.component("test2",{
+            template: "<p>{{msg}}</p>",
+            data: function() {
+                return {
+                    msg: "hello Aya"
+                }
+            }
+        });
+        new Vue({
+            el: ".app",
+            data: {
+                list: ["Card 1","Card 2","Card 3"],
+                comp: ["test","test1","test2"],
+                index: 0
+            },
+            methods: {
+                changeComp: function(val) {
+                    // console.log(val);
+                    this.index = val;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>插槽</title>
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="app" v-cloak>
+        <test>
+            <p>1234</p>
+            <p>6789</p>
+        </test>
+        <test2>
+            <p slot="section">this p element is in section.</p>
+            <p>hello world</p>
+        </test2>
+    </div>
+    <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+    <script type="text/template" id="myitem">
+        <div>123456</div>
+    </script>
+    <script>
+        Vue.component("test",{
+            template: "<div>{{msg}}<slot></slot></div>",//slot插槽，使组件能嵌套其他标签
+            data: function() {
+                return {
+                    msg: "this is a test."
+                }
+            }
+        });
+        Vue.component("test2",{
+            // template: "#myitem"
+            //具名插槽
+            template: `<div class="contain">
+                            <header><slot></slot></header>
+                            <section><slot name="section"></slot></section>
+                            <footer></footer>
+                        </div>`
+        });
+        new Vue({
+            el: ".app"
+        });
+    </script>
+</body>
+</html>
