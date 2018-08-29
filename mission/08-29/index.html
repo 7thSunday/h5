@@ -5,6 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        .app .inp-box {
+            margin: 20px auto;
+            width: 400px;
+            border: 1px solid blueviolet;
+            border-radius: 20px;
+        }
+        .app .inp-box > div {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+            align-items: center;
+        }
+        .app .inp-box input {
+            width: 250px;
+            outline: 0;
+            border: 1px solid blueviolet;
+            height: 20px;
+            padding-left: 5px;
+            border-radius: 5px;
+        }
+        .app .inp-box .btn-group {
+            justify-content: center;
+        }
+        .app .inp-box .btn-group button {
+            margin: 0 5px;
+            border: 1px solid blueviolet;
+            color: blueviolet;
+            background: #fff;
+            padding: 8px 10px;
+            border-radius: 6px;
+            outline: 0;
+            cursor: pointer;
+        }
+        .app .inp-box .btn-group button:hover {
+            background: blueviolet;
+            color: #fff;
+        }
+        .app .show {
+            border: 1px solid blueviolet;
+            margin: 0 auto;
+            width: 480px;
+            text-align: center;
+        }
+        .app .show tr {
+            height: 30px;
+            display: flex;
+            justify-content: space-between;
+            margin: 3px;
+            border: 1px solid blueviolet;
+        }
+        .app .show .thead {
+            overflow: hidden;
+        }
+        .app .show tr td {
+            width: 15%;
+            line-height: 30px;
+        }
+        .app .show tr td button {
+            border: 1px solid blueviolet;
+            color: blueviolet;
+            background: #fff;
+            cursor: pointer;
+            outline: 0;
+            height: 25px;
+            vertical-align: top;
+            margin-top: 1px;
+        }
+        .app .show tr td button:hover {
+            color: #fff;
+            background: blueviolet;
+        }
+    </style>
 </head>
 <body>
     <div class="app">
@@ -13,7 +86,7 @@
             <div class="age"><label for="">Age</label><input type="text" v-model="age"></div>
             <div class="gender"><label for="">Gender</label><input type="text" v-model="gender"></div>
             <div class="btn-group">
-                <button>SORT</button>
+                <button @click="sortlist">SORT</button>
                 <button @click="deleteselected">DELETE SELECTED</button>
                 <button @click="add">ADD</button>
             </div>
@@ -26,7 +99,7 @@
     <script>
         Vue.component("vtable",{
             template: `<table class="show">
-                            <tr><th>id</th><th><input type="checkbox" v-model="isselectall" @change="doselectall" /></th><th>Name</th><th>Age</th><th>Gender</th><th>Op</th></tr>
+                            <tr class="thead"><td>id</td><td><input type="checkbox" v-model="isselectall" @change="doselectall" /></td><td>Name</td><td>Age</td><td>Gender</td><td>Op</td></tr>
                             <slot></slot>
                         </table>`,
             data: function() {
@@ -68,7 +141,8 @@
                 id: 0,
                 name: "",
                 age: "",
-                gender: ""
+                gender: "",
+                sortDir: true
             },
             methods: {
                 add: function() {
@@ -94,11 +168,24 @@
                         return item.ischeck == false;
                     });
                     this.dataList = temp;
+                    this.$refs.child.isselectall = false;
                 },
                 selectall: function(val) {
                     for(let i=0;i<this.dataList.length;i++) {
                         this.dataList[i].ischeck = val;
                     }
+                },
+                sortlist: function() {
+                    if(this.sortDir) {
+                        this.dataList.sort(function(a,b){
+                            return a.age - b.age;
+                        });
+                    }else {
+                        this.dataList.sort(function(a,b){
+                            return b.age - a.age;
+                        });
+                    }
+                    this.sortDir = !this.sortDir;
                 }
             }
         });
