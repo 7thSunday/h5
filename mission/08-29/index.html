@@ -117,7 +117,7 @@
             props: ["obj"],
             template: `<tr>
                         <td>{{obj.id}}</td>
-                        <td><input type="checkbox" v-model="obj.ischeck" @change="$emit('change',$event.target.checked)" /></td>
+                        <td><input type="checkbox" v-model="obj.ischeck" /></td>
                         <td>{{obj.name}}</td>
                         <td>{{obj.age}}</td>
                         <td>{{obj.gender}}</td>
@@ -164,10 +164,9 @@
                     }
                 },
                 deleteselected: function() {
-                    var temp = this.dataList.filter(function(item){
+                    this.dataList = this.dataList.filter(function(item){
                         return item.ischeck == false;
                     });
-                    this.dataList = temp;
                     this.$refs.child.isselectall = false;
                 },
                 selectall: function(val) {
