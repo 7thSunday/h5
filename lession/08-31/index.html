@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue router</title>
+</head>
+<body>
+    <div class="app">
+        <!-- 使用router-link组件来导航 -->
+        <router-link to="/test1">go to first.</router-link>
+        <router-link to="/test2">go to second.</router-link>
+        <!-- 定义路由出口 -->
+        <router-view></router-view>
+    </div>
+    <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <script>
+        // 创建局部组件
+        const test1 = {template: "<div>this is the first component.</div>"};
+        const test2 = {template: "<div>this is the second component.</div>"};
+        // 创建路由
+        const routers = [
+            {path:"/test1",component:test1},
+            {path:"/test2",component:test2}
+        ];
+        // 实例化路由
+        const myRouter = new VueRouter({
+            routes: routers
+        });
+        // 创建和挂载vue实例
+        new Vue({
+            router: myRouter
+        }).$mount(".app");
+    </script>
+</body>
+</html>
