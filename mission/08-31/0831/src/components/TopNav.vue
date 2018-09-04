@@ -55,7 +55,7 @@
                 </router-link>
             </li>
             <li>
-                <router-link to="/about">
+                <router-link to="/about/Aya">
                     <div class="img"><img src="../assets/icon/nav-about.png" alt="关于"></div>
                     <span>关于</span>
                 </router-link>

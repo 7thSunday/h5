@@ -17,6 +17,7 @@ export default {
   methods: {
     changeC:function() {
       this.$store.commit("changeName",{name:"Aya"});
+      console.log(this.$route.params.name);
     }
   }
 }

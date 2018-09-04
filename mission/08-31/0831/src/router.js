@@ -20,18 +20,35 @@ export default new Router({
       name: 'home',
       component: Home
     },
-    {
-      path: '/about',
+    {//动态路由
+      path: '/about/:name',
       name: 'about',
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
     },
-    {
+    {//子路由
       path: "/client",
       name: "client",
-      component: Client
+      component: Client,
+      children: [
+        {
+          path:"",
+          name:"one",
+          component:()=>import("./components/one.vue")
+        },
+        {
+          path:"one",
+          name:"one",
+          component:()=>import("./components/one.vue")
+        },
+        {
+          path:"two",
+          name:"two",
+          component:()=>import("./components/two.vue")
+        }
+      ]
     },
     {
       path: "/design",
