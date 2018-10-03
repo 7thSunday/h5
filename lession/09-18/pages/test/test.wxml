@@ -1,0 +1,9 @@
+<!--pages/test/test.wxml-->
+<text>{{msg}}</text>
+<view>
+  <view wx:for="{{arr}}" wx:key="index">{{index}}-----{{item}}</view>
+  <view wx:key="myindex" wx:for="{{list}}" wx:for-item="myitem" wx:for-index="myindex">{{myindex}}---{{myitem}}</view>
+</view>
+<text>text element</text>
+<text>hello world</text>
+<view bindtap='show'>click me!</view>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Promise用来处理异步操作，使得比传统的回调函数的方式更加合理美观
+        function testPromise(a,b) {
+            return new Promise(function(resolve,reject){
+                setTimeout(function(){
+                    resolve(a*b);
+                })
+            })
+        } 
+        testPromise(2,3)
+        .then(function(res) {
+            console.log(res);
+        });
+
+        // Promise封装ajax
+        function ajaxPromise(method,url,data) {
+            return new Promise((resolve,reject) => {
+                let xhr = new XMLHttpRequest();
+                xhr.open(method,url);
+                xhr.send(data);
+                xhr.addEventListener("readystatechange",function() {
+                    if(this.readyState==4) {
+                        if(this.status==200) {
+                            resolve(JSON.parse(this.responseText));
+                        }else {
+                            reject("Request Error.");
+                        }
+                    }
+                });
+            });
+        }
+        ajaxPromise("get","http://120.76.31.111/app/XhlGetSubjectTypeList",null)
+        .then((res) => {
+            console.log(res);
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+    </script>
+</body>
+</html>

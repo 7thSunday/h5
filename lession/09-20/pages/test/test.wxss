@@ -1,0 +1,6 @@
+/* pages/test/test.wxss */
+.img {
+  width: 600rpx;
+  height: 600rpx;
+  border: 1px solid red;
+}

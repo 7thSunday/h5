@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class='box' style='text-align:center'>
+  <image mode='aspectFit' src='{{imgPath}}'></image>
+  <view class='btn-group'>
+    <button bindtap='selectImg'>select</button>
+    <button bindtap='upload'>upload</button>
+  </view>
+</view>

@@ -1,0 +1,47 @@
+<!--pages/test/test.wxml-->
+<text bindtap='taptest'>pages/test/test.wxml</text>
+<view>
+  <view hidden='{{index>1}}' wx:for="{{arr}}" wx:key="index">{{item}}</view>
+</view>
+<view class='block'>
+  <view class='title-list'>
+    <view class='title' data-idx='{{index}}' wx:for="{{card}}" bindtap='change'>{{item}}</view>
+  </view>
+  <template is="{{card[idx]}}"></template>
+</view>
+
+<template name="card1">
+  <view class="content">hello world!hello world!hello world!hello world!hello world!hello world!hello world!hello world!</view>
+</template>
+<template name="card2">
+  <view class="content">How do you do ?How do you do ?How do you do ?How do you do ?How do you do ?How do you do ?How do you do ?How do you do ?</view>
+</template>
+<template name="card3">
+  <view class="content">Goodbye! Goodbye! Goodbye! Goodbye! Goodbye! Goodbye! Goodbye! Goodbye! Goodbye! </view>
+</template>
+
+<swiper class='block'>
+  <swiper-item class="item">
+    <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537352641316&di=4458f0df7c61d873e2e2b90248ad0546&imgtype=0&src=http%3A%2F%2Fimg4.duitang.com%2Fuploads%2Fitem%2F201407%2F09%2F20140709203033_JxsCu.jpeg'></image>
+  </swiper-item>
+  <swiper-item class="item">
+    <image src='https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1952570802,874829568&fm=26&gp=0.jpg'></image>
+  </swiper-item>
+  <swiper-item class="item">
+    <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537352788130&di=a33fab3c6b61309e5c949712a7a75e96&imgtype=0&src=http%3A%2F%2Fattach.bbs.miui.com%2Fforum%2F201408%2F22%2F182749s2rguzt8n4wugirg.gif'></image>
+  </swiper-item>
+</swiper>
+
+<movable-area class="mova">
+  <movable-view class='movv' scale direction="all"></movable-view>
+</movable-area>
+
+<icon type='clear' size='100'></icon>
+
+<text selectable>this is a test demo.</text>
+<progress activeColor='green' backgroundColor='red' percent='65'></progress>
+<picker mode="date" bindchange='selectDate'>select date:<text>{{date}}</text></picker>
+<picker mode="region">select region</picker>
+<picker mode="selector" range='{{arr}}'>please select</picker>
+
+<view style='height:200rpx'></view>

@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/test/test",
+    "pages/req/req"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ce00cc",
+    "navigationBarTitleText": "ARC",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "default",
+    "backgroundColor": "#ccc",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#000",
+    "borderStyle": "white",
+    "position": "bottom",
+    "selectedColor": "#ce00cc",
+    "backgroundColor": "#eee",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "HOME",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-active.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "LOGS",
+        "iconPath": "images/list.png",
+        "selectedIconPath": "images/list-active.png"
+      },
+      {
+        "pagePath": "pages/test/test",
+        "text": "TEST",
+        "iconPath": "images/test.png",
+        "selectedIconPath": "images/test-active.png"
+      }
+    ]
+  }
+}

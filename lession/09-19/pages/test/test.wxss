@@ -1,0 +1,27 @@
+/* pages/test/test.wxss */
+.block {
+  width: 100%;
+}
+.title-list {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20rpx;
+}
+.content {
+  border: 1rpx solid #ccc;
+  padding: 25rpx;
+}
+
+.item image {
+  width: 100%;
+}
+.mova {
+  width: 600rpx;
+  height: 600rpx;
+  border: 1px solid #aaa;
+}
+.movv {
+  width: 100rpx;
+  height: 100rpx;
+  background: skyblue;
+}

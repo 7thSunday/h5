@@ -1,0 +1,9 @@
+<view class="list">
+  <view class='item' wx:key="{{item._id}}" wx:for="{{imgList}}">
+    <image mode='aspectFit' src='{{item.imgID}}'></image>
+    <text class='like' bindtap='doLike' data-status='{{item.like}}' data-xid="{{item._id}}">
+      <text hidden='{{item.like}}'>☆</text>
+      <text style='color:red' hidden='{{!item.like}}'>★</text>
+    </text>
+  </view>
+</view>
