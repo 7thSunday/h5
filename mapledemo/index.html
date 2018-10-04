@@ -6,19 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Maple Demo</title>
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <div class="container"></div>
+    <div class="container">
+        <h1>欢迎来到幻想的国度~</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore suscipit iure illum nostrum eveniet nemo dolorem, quos perspiciatis eos fugit necessitatibus sequi repellat sed, ut laudantium! Asperiores harum sit saepe!</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni animi delectus eum modi sapiente nihil at molestiae non, possimus atque? Delectus optio minima hic deserunt ipsum blanditiis nemo, quo velit?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores veritatis cupiditate optio odio. Quia unde voluptatibus optio deserunt similique laborum. Natus excepturi ea odio molestias unde, possimus reprehenderit doloremque ullam!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, fugiat necessitatibus laboriosam nesciunt ab dolor numquam quasi tempora natus illum veritatis voluptatum consequuntur a minus iure, delectus molestiae. Minus, doloremque.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae aliquid quam suscipit dolores blanditiis et facere eaque quos voluptates enim, harum corporis explicabo, accusantium consequatur voluptatem pariatur sequi. Officiis, quidem?</p>
+    </div>
     <canvas id="myCanvas">
         Hey bro, your borswer do not support canvas. Updated it now.
     </canvas>
-    <!-- <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script> -->
-    <script src="js/preloadjs.min.js"></script>
-    <script src="js/scene.js"></script>
     <script src="js/maple.js"></script>
+    <script src="js/scene.js"></script>
     <script>
-        let scene = new Scene("myCanvas");
+        let src = ["../img/sample01.png","../img/sample02.png"];
+        let scene = new Scene("myCanvas",src);
         scene.init();
+
+        let canvas = document.getElementById("myCanvas");
+        let alpha = 0.6;
+        let bool = true;
+        setInterval( ()=> {
+            if(alpha<0.8&&bool) {
+                alpha += 0.01;
+            }else if(alpha>0.4&&(!bool)){
+                alpha -= 0.01;
+            }
+            if(alpha<=0.4) {
+                bool = true;
+            }else if(alpha>=0.8) {
+                bool = false;
+            }
+            canvas.style.background = `rgba(0,0,0,${alpha})`;
+        },200);
     </script>
 </body>
 </html>
