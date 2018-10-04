@@ -7,7 +7,7 @@ class Scene {
         this.src = src;
         this.img = [];
         this.fps = 60;// refresh rate
-        this.count = 100;// amount of maple leaf
+        this.count = 30;// default amount of maple leaf
         this.texture = [];// render texture
     }
     // initialize
@@ -17,6 +17,14 @@ class Scene {
             this.ctx = this.canvas.getContext('2d');
         }else {
             return
+        }
+        // set amount of maple leaf
+        if(this.devWidth>=1600) {
+            this.count = 100;
+        }else if(this.devWidth>=1024) {
+            this.count = 70;
+        }else if(this.devWidth>=768) {
+            this.count = 50;
         }
         // init canvas
         this.canvas.width = this.devWidth;
