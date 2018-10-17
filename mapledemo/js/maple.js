@@ -1,10 +1,12 @@
 class Maple {
-    constructor(canvas,texture) {
+    constructor(canvas,texture,ratio) {
         this.canvas = canvas;
         this.ctx = this.canvas.getContext('2d');
         this.texture = texture;
+        this.ratio = ratio;
         this.w = texture.width / 8;
         this.h = texture.height / 8;
+        this.time;
         this.init();
     }
     // initialize
@@ -17,11 +19,11 @@ class Maple {
         // rotate
         this.rotateDer = Math.random()>0.5 ? true : false;
         this.rotateDeg = 0;
-        this.rotateSpeed = Math.random() / 50;
+        this.rotateSpeed = Math.random() / 50 * this.ratio;
         // drop
-        this.dropDer = Math.random()>0.5 ? true : false;
-        this.dropSpeed = Math.random()*0.2+2;
-        this.xSpeed = Math.random() / 1.6;
+        this.dropDir = Math.random()>0.5 ? true : false;
+        this.dropSpeed = (Math.random()*0.2+2)*this.ratio;
+        this.xSpeed = Math.random() / 1.6 * this.ratio;
         // existence time
         this.extTime = Math.floor(Math.random()*3+3)*1000;
         this.crtTime = new Date().getTime();
@@ -35,24 +37,24 @@ class Maple {
     drop() {
         // rotate
         this.rotateDer ? this.rotateDeg += this.rotateSpeed : this.rotateDeg -= this.rotateSpeed;
-        // x pivot
-        this.dropDer ? this.x += this.xSpeed : this.x -= this.xSpeed;
-        // y pivot
+        // x offset
+        this.dropDir ? this.x += this.xSpeed : this.x -= this.xSpeed;
+        // y offset
         this.y += this.dropSpeed;
     }
     // draw on canvas
     draw() {
-        let time = new Date().getTime();
+        this.time = new Date().getTime();
         // drop or init
-        if(time-this.crtTime < this.extTime) {
+        if(this.time-this.crtTime < this.extTime) {
             this.drop();
         }else {
             this.init();
         }
         // alpha animation
-        if(time-this.crtTime<1000&&this.alpha<this.maxAlpha) {
+        if(this.time-this.crtTime<1000&&this.alpha<this.maxAlpha) {
             this.alpha += 0.02;
-        }else if((time+1000)>(this.crtTime+this.extTime)&&this.alpha>0) {
+        }else if((this.time+1000)>(this.crtTime+this.extTime)&&this.alpha>0) {
             this.alpha -= 0.02;
         }
         // draw image while alpha over 0

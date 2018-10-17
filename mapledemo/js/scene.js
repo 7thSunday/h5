@@ -19,13 +19,7 @@ class Scene {
             return
         }
         // set amount of maple leaf
-        if(this.devWidth>=1600) {
-            this.count = 100;
-        }else if(this.devWidth>=1024) {
-            this.count = 70;
-        }else if(this.devWidth>=768) {
-            this.count = 50;
-        }
+        this.setAmount();
         // init canvas
         this.canvas.width = this.devWidth;
         this.canvas.height = this.devHeight;
@@ -46,12 +40,17 @@ class Scene {
                 }
             }
         }
+        // window resize
+        window.onresize = ()=>{
+            this.canvas.width = window.innerWidth;
+            this.canvas.height = window.innerHeight;
+        }
     }
     // start scene
     start() {
         for(let i=0;i<this.count;i++) {
             let type = Math.floor(Math.random()*this.img.length);
-            let maple = new Maple(this.canvas,this.img[type]);
+            let maple = new Maple(this.canvas,this.img[type],60/this.fps);
             this.texture.push(maple);
         }
         this.run();
@@ -69,5 +68,15 @@ class Scene {
         setTimeout( ()=> {
             this.run();
         },1000/this.fps);
+    }
+    // set amount
+    setAmount() {
+        if(this.devWidth>=1600) {
+            this.count = 100;
+        }else if(this.devWidth>=1024) {
+            this.count = 70;
+        }else if(this.devWidth>=768) {
+            this.count = 50;
+        }
     }
 }
